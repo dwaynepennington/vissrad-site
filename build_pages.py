@@ -21,7 +21,15 @@ def head(title, desc, canon):
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="https://vissrad.com/{canon}">
-<meta property="og:image" content="https://vissrad.com/assets/img/hero-plant.webp">
+<meta property="og:image" content="https://vissrad.com/assets/img/og-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VissRad - nothing gets paid ahead of the field.">
+<meta property="og:site_name" content="VissRad">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+<meta name="twitter:image" content="https://vissrad.com/assets/img/og-card.png">
 <link rel="canonical" href="https://vissrad.com/{canon}">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -632,7 +640,7 @@ COMPANY = page_head(
       <div class="split split--copy-first split--top reveal">
         <div>
           <h2 class="h-2">One house, two halves.</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">Pennington Group Associates is the practice: data driven project management and controls, delivered on live capital projects with advanced analytics and a disciplined CPM schedule management process behind it. Same tagline, same standard &mdash; <em>wisdom in decision making</em>.</p>
+          <p class="body-muted" style="margin-top:var(--space-5)"><a class="link" href="https://penningtongrp.com" rel="noopener">Pennington Group Associates</a> is the practice: data driven project management and controls, delivered on live capital projects with advanced analytics and a disciplined CPM schedule management process behind it. Same tagline, same standard &mdash; <em>wisdom in decision making</em>.</p>
           <p class="body-muted" style="margin-top:var(--space-4)">VissRad is the product. Every screen in it started as a deliverable a client needed under a real deadline &mdash; a progress measurement system, a claim that would not reconcile, a cost report that had to survive an audit. When the same custom build was requested for the third time, it stopped being a workbook and became an application.</p>
           <p class="body-muted" style="margin-top:var(--space-4)">That is why the two halves still reinforce each other. Consulting keeps the software honest about how projects actually run. The software lets the consulting arrive already holding the instrumentation.</p>
           <div class="btn-row" style="margin-top:var(--space-8)">
@@ -756,7 +764,7 @@ COMPANY = page_head(
               <p class="mono tiny">VISSRAD</p>
             </div>
             <div class="ledger__rows">
-              <div class="lrow"><span class="lrow__label">Practice</span><span class="lrow__val mono">Pennington Group</span></div>
+              <div class="lrow"><span class="lrow__label">Practice</span><span class="lrow__val mono"><a class="link" href="https://penningtongrp.com" rel="noopener">Pennington Group</a></span></div>
               <div class="lrow"><span class="lrow__label">Based in</span><span class="lrow__val mono">Houston, Texas</span></div>
               <div class="lrow"><span class="lrow__label">Sectors</span><span class="lrow__val mono">Process &amp; industrial</span></div>
               <div class="lrow"><span class="lrow__label">Applications</span><span class="lrow__val mono">11</span></div>
@@ -835,7 +843,7 @@ CONTACT = page_head(
             <h3 class="h-4">Direct</h3>
             <p class="small" style="margin-top:var(--space-3)">If you would rather write yourself:</p>
             <p style="margin-top:var(--space-3)"><a class="link mono" href="mailto:dpennington@penningtongrp.com">dpennington@penningtongrp.com</a></p>
-            <p class="field__hint" style="margin-top:var(--space-4)">Houston, Texas &middot; United States<br>Pennington Group Associates</p>
+            <p class="field__hint" style="margin-top:var(--space-4)">Houston, Texas &middot; United States<br><a class="link" href="https://penningtongrp.com" rel="noopener">Pennington Group Associates</a></p>
           </div>
           <div class="card" style="margin-top:var(--space-6)">
             <h3 class="h-4">What happens next</h3>
