@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRad Platform &mdash; architecture, Link exchange and deployment</title>
+<meta name="description" content="How the VissRad suite fits together: eleven applications, eleven Link document types, Primavera P6 import, star-schema and ODBC reporting, and standalone, on-premises or cloud deployment.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VissRad Platform &mdash; architecture, Link exchange and deployment">
+<meta property="og:description" content="How the VissRad suite fits together: eleven applications, eleven Link document types, Primavera P6 import, star-schema and ODBC reporting, and standalone, on-premises or cloud deployment.">
+<meta property="og:url" content="https://vissrad.com/platform.html">
+<meta property="og:image" content="https://vissrad.com/assets/img/hero-plant.webp">
+<link rel="canonical" href="https://vissrad.com/platform.html">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="VissRad home">
+      <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="34" height="11">
+      <span class="logo__type">VissRad</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="platform.html" aria-current="page">Platform</a>
+      <a href="modules.html">Modules</a>
+      <a href="demo.html">Demo</a>
+      <a href="company.html">Company</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Request a demo</a>
+      <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="drawer" data-drawer data-open="false">
+  <a href="platform.html" aria-current="page">Platform</a>
+  <a href="modules.html">Modules</a>
+  <a href="demo.html">Demo</a>
+  <a href="company.html">Company</a>
+  <a class="btn btn--primary" href="contact.html">Request a demo</a>
+</div>
+
+<main id="main">
+
+  <section class="pagehead gridbg">
+    <div class="wrap">
+      <p class="eyebrow">Platform</p>
+      <h1 class="h-1">Eleven applications, one accountable chain of record.</h1>
+      <p class="lede" style="margin-top:var(--space-6)">VissRad is deliberately not a monolith. Each application owns its own data and its own users, and they exchange signed business documents through a transport layer called Link. That is how a certified quantity in the field ends up governing what finance is allowed to pay.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="grid grid-3">
+        <div class="stat reveal"><p class="stat__num">11</p><p class="stat__label">Applications across controls, commissioning, packaging and finance</p></div>
+        <div class="stat reveal"><p class="stat__num">11</p><p class="stat__label">Link document types moving between them</p></div>
+        <div class="stat reveal"><p class="stat__num">3</p><p class="stat__label">Deployment shapes &mdash; laptop, plant network or cloud</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ARCHITECTURE ================= -->
+  <section class="section section--panel section--rule">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Architecture</p>
+        <h2 class="h-1">Each application is real software, not a tab.</h2>
+        <p class="lede">The desktop applications are Python and PySide6, built on a shared <span class="mono">vissrad_core</span> library and a shared <span class="mono">vissrad_link</span> client, then packaged independently. A cost engineer installs the cost engineer's tool. Nobody inherits a payables module they will never open.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <p class="chip">Layer 1</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Application</h3>
+          <p class="small" style="margin-top:var(--space-3)">Purpose-built screens for one discipline &mdash; project controls, commissioning, work packaging, payables, general ledger. Own database, own permissions, own release cadence.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Layer 2</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Link exchange</h3>
+          <p class="small" style="margin-top:var(--space-3)">An outbox and inbox on every application. Documents are written as JSON, addressed to a recipient, and acknowledged once posted. Money is carried as decimal strings so nothing rounds in transit.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Layer 3</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Reporting</h3>
+          <p class="small" style="margin-top:var(--space-3)">Star-schema exports and a read-only SQLite ODBC surface, so Power BI, Excel and your existing corporate reporting read the same facts the applications wrote.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LINK ================= -->
+  <section class="section" id="link">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Link exchange</p>
+        <h2 class="h-1">Integration as a document, not a database join.</h2>
+        <p class="lede">Real organisations already move work as documents &mdash; a claim, a certificate, an invoice, a payment advice. Link keeps that shape. Every message has an idempotency key, so a retry after a network drop cannot post the same invoice twice.</p>
+      </div>
+
+      <div class="split" style="margin-top:var(--space-4)">
+        <div class="reveal">
+          <h3 class="h-3">Eleven document types</h3>
+          <ul class="feat" style="margin-top:var(--space-5)">
+            <li><strong>Masters</strong> &mdash; <span class="mono">master_vendor</span>, <span class="mono">master_customer</span>, <span class="mono">master_cost_object</span>, <span class="mono">master_gl_account</span></li>
+            <li><strong>Field &amp; progress</strong> &mdash; <span class="mono">progress_claim</span>, <span class="mono">progress_certificate</span></li>
+            <li><strong>Finance</strong> &mdash; <span class="mono">vendor_invoice</span>, <span class="mono">payment_advice</span>, <span class="mono">journal_entry</span></li>
+            <li><strong>Cost</strong> &mdash; <span class="mono">commitment</span>, <span class="mono">actual_cost</span></li>
+          </ul>
+        </div>
+        <div class="reveal">
+          <h3 class="h-3">Three transports</h3>
+          <ul class="feat" style="margin-top:var(--space-5)">
+            <li><strong>Folder</strong> &mdash; a watched directory. Nothing to install, nothing to open a port for.</li>
+            <li><strong>HTTP</strong> &mdash; the Link Hub REST service with API-key authentication: <span class="mono">POST /messages</span>, <span class="mono">GET /messages</span>, <span class="mono">POST /ack</span>, <span class="mono">GET /health</span>.</li>
+            <li><strong>Direct</strong> &mdash; in-process delivery for a single machine or an automated test harness.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="callout reveal" style="margin-top:var(--space-12)">
+        <h3 class="h-4">Failure is a designed state</h3>
+        <p class="small" style="margin-top:var(--space-3)">Undelivered documents retry on a fixed ladder &mdash; 5 seconds, 15 seconds, 1 minute, 5 minutes, 15 minutes, then 1 hour &mdash; for seven attempts in total. Anything still stuck lands in the hub console, where it can be inspected and replayed. A message is never silently dropped, and a silent gap between two applications never becomes a silent gap in the cost report.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DATA & REPORTING ================= -->
+  <section class="section section--panel section--rule">
+    <div class="wrap">
+      <div class="split split--copy-first">
+        <div class="reveal">
+          <p class="eyebrow">Data &amp; reporting</p>
+          <h2 class="h-1">Your schedule in. Your dashboards out.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">Project controls does not begin on a blank screen. VissRadPCS imports the CSV export of a Primavera P6 schedule &mdash; it needs activity ID, start date and finish date &mdash; matches activities to the work breakdown structure, and reports every activity it could not match rather than quietly absorbing it.</p>
+          <p class="body-muted" style="margin-top:var(--space-4)">On the way out, the same project produces a monthly cost report PDF, a star-schema export for BI tooling, and a read-only SQLite ODBC connection that Power BI Desktop can refresh against directly.</p>
+        </div>
+        <div class="reveal">
+          <ul class="feat">
+            <li><strong>In</strong> &mdash; P6 activity CSV, cost and quantity CSV imports, tag and ITR registers</li>
+            <li><strong>In</strong> &mdash; VissRad4D reads P6 XER, XML, CSV and XLSX directly</li>
+            <li><strong>Out</strong> &mdash; monthly cost report PDF with CPI, EAC and VAC</li>
+            <li><strong>Out</strong> &mdash; star-schema fact and dimension tables for Power BI</li>
+            <li><strong>Out</strong> &mdash; read-only ODBC over the project database</li>
+            <li><strong>Out</strong> &mdash; payment files in NACHA and ISO 20022 <span class="mono">pain.001</span>, plus check register and remittance advice</li>
+          </ul>
+          <p class="field__hint" style="margin-top:var(--space-5)">P6 exchange is file-based. VissRad does not write back into your P6 database.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DEPLOYMENT ================= -->
+  <section class="section" id="deployment">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Deployment</p>
+        <h2 class="h-1">One laptop, one plant network, or your cloud.</h2>
+        <p class="lede">The same applications run in all three shapes. Nothing in the architecture forces you into a hosted subscription to get started, and nothing stops you moving up when the joint venture arrives.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <p class="chip">Single machine</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Standalone</h3>
+          <p class="small" style="margin-top:var(--space-3)">SQLite per application, Link over a watched folder or the direct in-process transport. One estimator or one controls engineer, no servers, no IT ticket.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">On premises</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Plant network</h3>
+          <p class="small" style="margin-top:var(--space-3)">PostgreSQL with a FastAPI Link Hub on the site network and authenticated HTTP transport between applications. Project data never leaves your environment.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Cloud</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Hosted</h3>
+          <p class="small" style="margin-top:var(--space-3)">Managed PostgreSQL with a replicated Link Hub behind TLS, for multi-office teams and joint ventures working the same capital project.</p>
+        </article>
+      </div>
+      <div class="callout callout--neutral reveal" style="margin-top:var(--space-10)">
+        <h3 class="h-4">What VissRad does not claim</h3>
+        <p class="small" style="margin-top:var(--space-3)">There is no single shared database behind the suite &mdash; integration is document exchange, and that is a deliberate choice. Primavera P6 is a file import, not a live two-way link. Payment files follow NACHA and ISO 20022 layouts but are not bank-certified for transmission, and the demo build stamps them accordingly. Bulk invoice import from CSV and PDF is a stub, not a shipping feature. Live 3D model translation depends on your own Autodesk platform entitlements. We would rather you read that here than discover it in month three.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div>
+          <p class="eyebrow">Next</p>
+          <h2 class="h-2">See the applications themselves.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">Six core applications carry most of a capital project. Five more cover estimating, scheduling, reporting and the AI research desk.</p>
+          <div class="btn-row" style="margin-top:var(--space-8)">
+            <a class="btn btn--primary" href="modules.html">All eleven modules</a>
+            <a class="btn btn--ghost" href="demo.html">Open the demo</a>
+          </div>
+        </div>
+        <div>
+          <figure class="figframe">
+            <img src="assets/img/control-room.webp" alt="Industrial control room with monitoring screens" width="1800" height="1013" loading="lazy">
+            <figcaption>Project controls, commissioning and finance reading one record</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="VissRad home">
+          <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="34" height="11">
+          <span class="logo__type">VissRad</span>
+        </a>
+        <p class="footer__tag">Wisdom in decision making</p>
+        <p class="small" style="margin-top:var(--space-5);max-width:34ch">Integrated project controls, completions and finance applications for industrial capital projects.</p>
+      </div>
+      <div>
+        <h3>Product</h3>
+        <ul role="list">
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="modules.html">All modules</a></li>
+          <li><a href="platform.html#link">Link exchange</a></li>
+          <li><a href="platform.html#deployment">Deployment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluate</h3>
+        <ul role="list">
+          <li><a href="demo.html">Live demo</a></li>
+          <li><a href="contact.html">Request a demo</a></li>
+          <li><a href="modules.html#vissrad-computer">VissRad Computer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul role="list">
+          <li><a href="company.html">About</a></li>
+          <li><a href="company.html#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <p>&copy; 2026 VissRad. All rights reserved.</p>
+      <p class="mono">Spring, Texas &middot; vissrad.com</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

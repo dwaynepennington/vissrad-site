@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRad Demo &mdash; see the chain from field quantity to withheld payment</title>
+<meta name="description" content="Guided walkthrough, browser demo and hosted desktop build of the VissRad suite, running on a populated industrial project dataset.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="VissRad Demo &mdash; see the chain from field quantity to withheld payment">
+<meta property="og:description" content="Guided walkthrough, browser demo and hosted desktop build of the VissRad suite, running on a populated industrial project dataset.">
+<meta property="og:url" content="https://vissrad.com/demo.html">
+<meta property="og:image" content="https://vissrad.com/assets/img/hero-plant.webp">
+<link rel="canonical" href="https://vissrad.com/demo.html">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="VissRad home">
+      <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="34" height="11">
+      <span class="logo__type">VissRad</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="platform.html">Platform</a>
+      <a href="modules.html">Modules</a>
+      <a href="demo.html" aria-current="page">Demo</a>
+      <a href="company.html">Company</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Request a demo</a>
+      <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="drawer" data-drawer data-open="false">
+  <a href="platform.html">Platform</a>
+  <a href="modules.html">Modules</a>
+  <a href="demo.html" aria-current="page">Demo</a>
+  <a href="company.html">Company</a>
+  <a class="btn btn--primary" href="contact.html">Request a demo</a>
+</div>
+
+<main id="main">
+
+  <section class="pagehead gridbg">
+    <div class="wrap">
+      <p class="eyebrow">Demo</p>
+      <h1 class="h-1">See the chain from field quantity to withheld payment.</h1>
+      <p class="lede" style="margin-top:var(--space-6)">The demonstration environments run on a populated industrial project dataset. Nothing in them is a click-through mock-up &mdash; the numbers are computed by the same code that would run on your project.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="wrap">
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <p class="chip chip--accent">Recommended</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Guided walkthrough</h3>
+          <p class="small" style="margin-top:var(--space-3)">Forty-five minutes, screen-shared, on your kind of project. We start at a shift quantity entry and end at a payment the approval queue refused to release.</p>
+          <p style="margin-top:var(--space-6)"><a class="btn btn--primary btn--sm" href="contact.html">Book a walkthrough</a></p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Self-serve</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Browser demo</h3>
+          <p class="small" style="margin-top:var(--space-3)">A hosted browser build of the module set, with the demonstration project loaded. Best for getting a feel for the structure and the reports before a call.</p>
+          <p style="margin-top:var(--space-6)"><a class="btn btn--ghost btn--sm" href="contact.html">Request access</a></p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Desktop</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Hosted desktop build</h3>
+          <p class="small" style="margin-top:var(--space-3)">The real PySide6 applications running on a hosted desktop session, for evaluating the actual working software rather than a web approximation.</p>
+          <p style="margin-top:var(--space-6)"><a class="btn btn--ghost btn--sm" href="contact.html">Request credentials</a></p>
+        </article>
+      </div>
+      <p class="field__hint reveal" style="margin-top:var(--space-8)">Demonstration environments are issued per evaluation so the dataset stays clean and we know who to help. Access details arrive by email, usually the same day.</p>
+    </div>
+  </section>
+
+  <!-- ================= WHAT YOU'LL SEE ================= -->
+  <section class="section section--panel section--rule">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">The walkthrough</p>
+        <h2 class="h-1">Four moments worth forty-five minutes.</h2>
+        <p class="lede">We do not tour menus. We follow one piece of work from the field to the bank file and stop wherever you want to argue with it.</p>
+      </div>
+      <div class="grid grid-4">
+        <div class="numitem reveal">
+          <h3 class="h-4">Quantity to progress</h3>
+          <p class="small" style="margin-top:var(--space-3)">A shift entry in PCS moves weighted rule-of-credit steps, and the earned-value picture updates &mdash; no month-end recalculation.</p>
+        </div>
+        <div class="numitem reveal">
+          <h3 class="h-4">Progress to certificate</h3>
+          <p class="small" style="margin-top:var(--space-3)">SU&amp;C shows the gate refusing to advance while ITRs and category A punch remain open against the subsystem.</p>
+        </div>
+        <div class="numitem reveal">
+          <h3 class="h-4">Claim to verification</h3>
+          <p class="small" style="margin-top:var(--space-3)">A subcontractor claim arrives in ARAP, is checked against certified field quantities, and the variance is put in front of the approver.</p>
+        </div>
+        <div class="numitem reveal">
+          <h3 class="h-4">Certificate to money</h3>
+          <p class="small" style="margin-top:var(--space-3)">Retention releases on the certificate, the payment run produces the file, and the cost report and forecast already know about it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMPUTER DEMO ================= -->
+  <section class="section">
+    <div class="wrap">
+      <div class="split split--copy-first reveal">
+        <div>
+          <p class="eyebrow">Also available</p>
+          <h2 class="h-2">VissRad Computer, online and offline.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">The research desk can be demonstrated separately, including the offline mode &mdash; a local reference set indexed over specifications, workbooks and a P6 export, answering with citations and no outbound connection.</p>
+          <p class="body-muted" style="margin-top:var(--space-4)">Bring a folder of your own documents if you want a fair test. That is the only way to know whether the retrieval is any good.</p>
+          <div class="btn-row" style="margin-top:var(--space-8)">
+            <a class="btn btn--primary" href="contact.html">Ask for a Computer demo</a>
+            <a class="btn btn--ghost" href="modules.html#vissrad-computer">What it does</a>
+          </div>
+        </div>
+        <div>
+          <div class="ledger">
+            <div class="ledger__head">
+              <p class="ledger__title">Demonstration dataset</p>
+              <p class="mono tiny">VRPCS</p>
+            </div>
+            <div class="ledger__rows">
+              <div class="lrow"><span class="lrow__label">Project type</span><span class="lrow__val mono">Industrial / process</span></div>
+              <div class="lrow"><span class="lrow__label">Structure</span><span class="lrow__val mono">Unit &rarr; system &rarr; subsystem</span></div>
+              <div class="lrow"><span class="lrow__label">Schedule source</span><span class="lrow__val mono">Primavera P6 export</span></div>
+              <div class="lrow"><span class="lrow__label">Progress method</span><span class="lrow__val mono">Rule of credit</span></div>
+              <div class="lrow"><span class="lrow__label">Certificates</span><span class="lrow__val mono">MCC / RFCC / RFSU</span></div>
+              <div class="lrow lrow--total"><span class="lrow__label">Overclaim caught</span><span class="lrow__val mono">$152,522</span></div>
+            </div>
+          </div>
+          <p class="field__hint" style="margin-top:var(--space-4)">Payment files produced in the demonstration are stamped &ldquo;DEMO &mdash; NOT FOR TRANSMISSION&rdquo;.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rule">
+    <div class="wrap">
+      <div class="cta reveal">
+        <div>
+          <p class="eyebrow">Get started</p>
+          <h2 class="h-2">Tell us what kind of project you run.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">We will set the demonstration up around it &mdash; the right modules, the right progress method, and the reporting shape your organisation already expects.</p>
+          <div class="btn-row" style="margin-top:var(--space-8)">
+            <a class="btn btn--primary" href="contact.html">Request a demo</a>
+            <a class="btn btn--ghost" href="platform.html">How the platform works</a>
+          </div>
+        </div>
+        <div>
+          <ul class="feat">
+            <li><strong>No installation</strong> for the browser and hosted desktop builds</li>
+            <li><strong>Populated dataset</strong> so the reports have something to say</li>
+            <li><strong>Your documents</strong> welcome for the Computer demonstration</li>
+            <li><strong>No sales sequence</strong> &mdash; one engineer, one conversation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="VissRad home">
+          <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="34" height="11">
+          <span class="logo__type">VissRad</span>
+        </a>
+        <p class="footer__tag">Wisdom in decision making</p>
+        <p class="small" style="margin-top:var(--space-5);max-width:34ch">Integrated project controls, completions and finance applications for industrial capital projects.</p>
+      </div>
+      <div>
+        <h3>Product</h3>
+        <ul role="list">
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="modules.html">All modules</a></li>
+          <li><a href="platform.html#link">Link exchange</a></li>
+          <li><a href="platform.html#deployment">Deployment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluate</h3>
+        <ul role="list">
+          <li><a href="demo.html">Live demo</a></li>
+          <li><a href="contact.html">Request a demo</a></li>
+          <li><a href="modules.html#vissrad-computer">VissRad Computer</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul role="list">
+          <li><a href="company.html">About</a></li>
+          <li><a href="company.html#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <p>&copy; 2026 VissRad. All rights reserved.</p>
+      <p class="mono">Spring, Texas &middot; vissrad.com</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>
