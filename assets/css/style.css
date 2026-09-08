@@ -92,18 +92,8 @@
   --shadow-md: 0 8px 28px rgba(18, 20, 26, 0.09);
 }
 
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-    --color-bg: #f4f5f8; --color-surface: #ffffff; --color-surface-2: #fafbfc;
-    --color-surface-offset: #eceef2; --color-border: #d7dbe3; --color-border-strong: #bcc2cd;
-    --color-divider: #e3e6ec; --color-text: #12141a; --color-text-muted: #566072;
-    --color-text-faint: #7d8798; --color-text-inverse: #ffffff; --color-primary: #c22d27;
-    --color-primary-hover: #a52520; --color-accent-text: #b3241f; --color-focus: #c22d27;
-    --color-good: #237a4e; --color-teal: #1f7f7b; --color-amber: #9a6c12;
-    --grid-line: rgba(18, 20, 26, 0.045); --img-veil: 0.5;
-    --shadow-md: 0 8px 28px rgba(18, 20, 26, 0.09);
-  }
-}
+/* No prefers-color-scheme fallback by design: dark is the brand default for every
+   visitor. Light applies only via [data-theme='light'], set by an explicit toggle. */
 
 /* ==========================================================================
    Primitives

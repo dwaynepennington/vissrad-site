@@ -5,7 +5,28 @@
   /* ---------- Theme ---------- */
   var root = document.documentElement;
   var toggle = document.querySelector('[data-theme-toggle]');
-  var mode = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+  var STORE_KEY = 'vissrad-theme';
+
+  /* Dark is the brand default. The operating system preference is deliberately
+     ignored; only an explicit choice by the visitor overrides dark. */
+  function storedTheme() {
+    try {
+      var v = window.localStorage.getItem(STORE_KEY);
+      return v === 'light' || v === 'dark' ? v : null;
+    } catch (e) {
+      return null; /* storage blocked (private mode, sandboxed frame) */
+    }
+  }
+
+  function rememberTheme(m) {
+    try {
+      window.localStorage.setItem(STORE_KEY, m);
+    } catch (e) {
+      /* non-fatal: theme still applies for this page view */
+    }
+  }
+
+  var mode = storedTheme() || 'dark';
 
   var SUN =
     '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M2.5 12h2M19.5 12h2M5.2 5.2l1.4 1.4M17.4 17.4l1.4 1.4M5.2 18.8l1.4-1.4M17.4 6.6l1.4-1.4"/></svg>';
@@ -23,6 +44,7 @@
   if (toggle) {
     toggle.addEventListener('click', function () {
       mode = mode === 'dark' ? 'light' : 'dark';
+      rememberTheme(mode);
       applyTheme(mode);
     });
   }
