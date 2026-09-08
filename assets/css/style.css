@@ -588,3 +588,86 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
 /* Page header (interior pages) */
 .pagehead { padding-block: clamp(var(--space-16), 8vw, var(--space-24)) clamp(var(--space-8), 4vw, var(--space-12)); position: relative; }
 .pagehead .h-1 { max-width: 24ch; }
+
+/* ============================================================
+   CHAIN — the field-quantity → payment custody diagram
+   ============================================================ */
+.chain{
+  --chain-gap: var(--space-4);
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:var(--chain-gap);
+  margin-top:var(--space-10);
+  counter-reset:chainstep;
+}
+.chain__node{
+  position:relative;
+  counter-increment:chainstep;
+  background:var(--color-surface);
+  border:1px solid var(--color-border);
+  border-radius:var(--radius-md);
+  padding:var(--space-6) var(--space-5) var(--space-5);
+  display:flex;flex-direction:column;gap:var(--space-3);
+}
+/* connector between nodes */
+.chain__node::after{
+  content:'';position:absolute;z-index:1;
+  top:50%;right:calc(-1 * var(--chain-gap) - 1px);
+  width:var(--chain-gap);height:1px;
+  background:var(--color-border-strong);
+}
+.chain__node:last-child::after{display:none}
+.chain__node::before{
+  content:counter(chainstep,decimal-leading-zero);
+  font-family:var(--font-mono);font-size:var(--text-xs);
+  letter-spacing:.16em;color:var(--color-primary);
+}
+.chain__node h3{
+  font-family:var(--font-display);font-weight:700;
+  font-size:var(--text-lg);line-height:1.2;
+  letter-spacing:-.01em;color:var(--color-text);margin:0;
+}
+.chain__node p{
+  font-size:var(--text-sm);line-height:1.55;
+  color:var(--color-text-muted);margin:0;
+}
+.chain__proof{
+  margin-top:auto;padding-top:var(--space-4);
+  border-top:1px dashed var(--color-border);
+  font-family:var(--font-mono);font-size:var(--text-xs);
+  letter-spacing:.1em;text-transform:uppercase;
+  color:var(--color-text-subtle);
+}
+/* the gate: last hand-off is the one that releases money */
+.chain__node--gate{
+  border-color:var(--color-primary);
+  box-shadow:0 0 0 1px var(--color-primary) inset;
+}
+.chain__node--gate::before{content:'04 — gate';letter-spacing:.12em}
+.chain__node--gate .chain__proof{
+  color:var(--color-accent-text);
+  border-top-color:color-mix(in srgb,var(--color-primary) 45%,transparent);
+}
+.chain__rule{
+  margin-top:var(--space-6);
+  max-width:78ch;
+  font-size:var(--text-sm);line-height:1.6;
+  color:var(--color-text-muted);
+}
+.chain__rule strong{color:var(--color-text);font-weight:600}
+
+@media (max-width:1000px){
+  .chain{grid-template-columns:repeat(2,1fr)}
+  /* horizontal connector only between columns 1→2 and 3→4 */
+  .chain__node:nth-child(2n)::after{display:none}
+}
+@media (max-width:600px){
+  .chain{grid-template-columns:1fr}
+  .chain__node::after{
+    top:auto;bottom:calc(-1 * var(--chain-gap) - 1px);
+    right:auto;left:var(--space-8);
+    width:1px;height:var(--chain-gap);
+  }
+  .chain__node:nth-child(2n)::after{display:block}
+  .chain__node:last-child::after{display:none}
+}
