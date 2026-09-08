@@ -57,7 +57,7 @@ def header(active):
 {links}
     </nav>
     <div class="header__actions">
-      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch colour theme"></button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch color theme"></button>
       <a class="btn btn--primary btn--sm" href="contact.html">Request a demo</a>
       <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-label="Open menu">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
@@ -87,6 +87,7 @@ FOOTER = """
         </a>
         <p class="footer__tag">Wisdom in decision making</p>
         <p class="small" style="margin-top:var(--space-5);max-width:34ch">Integrated project controls, completions and finance applications for industrial capital projects.</p>
+        <p class="small" style="margin-top:var(--space-5);max-width:34ch">Built by <a class="link" href="https://penningtongrp.com" rel="noopener">Pennington Group Associates</a> &mdash; data driven project management &amp; controls.</p>
       </div>
       <div>
         <h3>Product</h3>
@@ -111,12 +112,13 @@ FOOTER = """
           <li><a href="company.html">About</a></li>
           <li><a href="company.html#services">Services</a></li>
           <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://penningtongrp.com" rel="noopener">Pennington Group</a></li>
         </ul>
       </div>
     </div>
     <div class="footer__base">
       <p>&copy; 2026 VissRad. All rights reserved.</p>
-      <p class="mono">Spring, Texas &middot; vissrad.com</p>
+      <p class="mono">Houston, Texas &middot; vissrad.com</p>
     </div>
   </div>
 </footer>
@@ -191,7 +193,7 @@ PLATFORM = page_head(
       <div class="sec-head reveal">
         <p class="eyebrow">Link exchange</p>
         <h2 class="h-1">Integration as a document, not a database join.</h2>
-        <p class="lede">Real organisations already move work as documents &mdash; a claim, a certificate, an invoice, a payment advice. Link keeps that shape. Every message has an idempotency key, so a retry after a network drop cannot post the same invoice twice.</p>
+        <p class="lede">Real organizations already move work as documents &mdash; a claim, a certificate, an invoice, a payment advice. Link keeps that shape. Every message has an idempotency key, so a retry after a network drop cannot post the same invoice twice.</p>
       </div>
 
       <div class="split" style="margin-top:var(--space-4)">
@@ -353,7 +355,7 @@ MODULES = page_head(
     [("The gate ladder", "RVC to MCC to RFC to SCC to DCC to HOC, each gate holding until its evidence exists."),
      ("Eight tabs", "Dashboard, Systemisation, Check Sheets, Punch List, Packages, Certificates, 3D Model, and Exports &amp; Audit."),
      ("Navisworks, properly", "A COM bridge to a running Navisworks session, plus file exchange &mdash; search-set XML, appearance profiles, TimeLiner CSV and a DataTools ODBC definition."),
-     ("Browser viewer", "A Three.js viewer for reviewing system colouring without a Navisworks seat on every desk.")],
+     ("Browser viewer", "A Three.js viewer for reviewing system coloring without a Navisworks seat on every desk.")],
     ["6 certificate gates", "ITRs &amp; punch", "Navisworks COM", "Search sets", "Audit export"]
 ) + module(
     "vissradcost", "VissRadCost", "Cost management",
@@ -373,7 +375,7 @@ MODULES = page_head(
      ("Payment run", "Exports NACHA, ISO 20022 <span class=\"mono\">pain.001</span>, a check register CSV and a remittance advice PDF."),
      ("Coding", "GL coding with line-total validation, and duplicate detection on invoice intake.")],
     ["3-way match", "Retention", "NACHA", "ISO 20022", "Duplicate detection"],
-    "Payment files are format-correct but not bank-certified; demo output carries a &ldquo;DEMO &mdash; NOT FOR TRANSMISSION&rdquo; banner. Bulk invoice import from CSV and PDF is a labelled stub."
+    "Payment files are format-correct but not bank-certified; demo output carries a &ldquo;DEMO &mdash; NOT FOR TRANSMISSION&rdquo; banner. Bulk invoice import from CSV and PDF is a labeled stub."
 ) + module(
     "vissradawp", "VissRadAWP", "Advanced work packaging",
     "Construction work areas down to installation work packages, with a release gate that actually holds. An IWP is released when its constraints are clear &mdash; materials, drawings, access, permits, labour &mdash; not when the lookahead needs it to be.",
@@ -383,7 +385,7 @@ MODULES = page_head(
      ("Progress", "Package-level progress that reports into the same earned-value picture as PCS.")],
     ["CWA / CWP / EWP / IWP", "Constraint matrix", "IWP release gate", "Lookahead"]
 ) + module(
-    "vissrad4d", "VissRad4D", "4D schedule visualisation",
+    "vissrad4d", "VissRad4D", "4D schedule visualization",
     "Schedule time painted onto a picture of the job. Give it one P6 schedule and one elevation drawing &mdash; no model required &mdash; and it will show the planned sequence, progress against plan, and the forecast, with the SPI and finish variance to argue from.",
     [("Two inputs", "One P6 schedule in XER, XML, CSV or XLSX, and one elevation drawing. That is the whole setup."),
      ("Three modes", "Planned sequence, progress versus plan, and forecast."),
@@ -456,7 +458,7 @@ MODULES = page_head(
             <p class="modrow__name">VissRadERP</p>
             <p class="modrow__role">Financial &amp; management accounting</p>
           </div>
-          <p class="small">General ledger, accounts payable and receivable, cost centre accounting and internal orders, driven from a <span class="mono">Ctrl+K</span> transaction-code command bar with <span class="mono">/n</span> and <span class="mono">/o</span> prefixes and description search. Period close runs posting-period control, balance carry-forward, the recurring-entry run and the <span class="mono">ZCLOSECHK</span> and <span class="mono">ZRECON</span> checks. 276 standard FI and CO codes are catalogued; 66 of 280 screens are fully built.</p>
+          <p class="small">General ledger, accounts payable and receivable, cost centre accounting and internal orders, driven from a <span class="mono">Ctrl+K</span> transaction-code command bar with <span class="mono">/n</span> and <span class="mono">/o</span> prefixes and description search. Period close runs posting-period control, balance carry-forward, the recurring-entry run and the <span class="mono">ZCLOSECHK</span> and <span class="mono">ZRECON</span> checks. 276 standard FI and CO codes are catalogd; 66 of 280 screens are fully built.</p>
         </div>
         <div class="modrow">
           <div>
@@ -597,7 +599,7 @@ DEMO = page_head(
         <div>
           <p class="eyebrow">Get started</p>
           <h2 class="h-2">Tell us what kind of project you run.</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">We will set the demonstration up around it &mdash; the right modules, the right progress method, and the reporting shape your organisation already expects.</p>
+          <p class="body-muted" style="margin-top:var(--space-5)">We will set the demonstration up around it &mdash; the right modules, the right progress method, and the reporting shape your organization already expects.</p>
           <div class="btn-row" style="margin-top:var(--space-8)">
             <a class="btn btn--primary" href="contact.html">Request a demo</a>
             <a class="btn btn--ghost" href="platform.html">How the platform works</a>
@@ -622,22 +624,25 @@ DEMO = page_head(
 # ===========================================================================
 COMPANY = page_head(
     "Company",
-    "Built by the people who had to make the numbers defensible.",
-    "VissRad came out of industrial estimating and project controls work &mdash; piping and equipment takeoff, P6 schedule data, earned-value reporting, procurement and payables &mdash; not out of a product roadmap. Every screen exists because a real project needed it and the spreadsheet had run out of road."
+    "The software arm of a data driven project controls practice.",
+    "VissRad is built by <a class=\"link\" href=\"https://penningtongrp.com\" rel=\"noopener\">Pennington Group Associates</a> &mdash; a Houston project management and controls practice that has spent its working life turning project data into decisions people can defend. VissRad is what happened when the workbooks, the CPM analysis and the Power BI models outgrew the tools they were built in."
 ) + """
   <section class="section section--tight">
     <div class="wrap">
       <div class="split split--copy-first split--top reveal">
         <div>
-          <h2 class="h-2">The problem was never the arithmetic.</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">On industrial capital projects the estimate, the schedule, the field, the cost report and the payables desk each keep a version of the truth. They are all defensible on their own. Put together, they disagree &mdash; and by the time anyone notices, the invoice is paid.</p>
-          <p class="body-muted" style="margin-top:var(--space-4)">Every commercial tool available either solves one slice of that beautifully and ignores the rest, or solves all of it at a price and a rollout length that only suits an owner-operator with a programme office. Neither shape helps an EPC team that needs the chain to hold next month.</p>
-          <p class="body-muted" style="margin-top:var(--space-4)">So VissRad was built the other way round: small applications a discipline can actually adopt, exchanging documents in the same shape the business already uses, with the reporting exported to wherever the organisation already reads its numbers.</p>
+          <h2 class="h-2">One house, two halves.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">Pennington Group Associates is the practice: data driven project management and controls, delivered on live capital projects with advanced analytics and a disciplined CPM schedule management process behind it. Same tagline, same standard &mdash; <em>wisdom in decision making</em>.</p>
+          <p class="body-muted" style="margin-top:var(--space-4)">VissRad is the product. Every screen in it started as a deliverable a client needed under a real deadline &mdash; a progress measurement system, a claim that would not reconcile, a cost report that had to survive an audit. When the same custom build was requested for the third time, it stopped being a workbook and became an application.</p>
+          <p class="body-muted" style="margin-top:var(--space-4)">That is why the two halves still reinforce each other. Consulting keeps the software honest about how projects actually run. The software lets the consulting arrive already holding the instrumentation.</p>
+          <div class="btn-row" style="margin-top:var(--space-8)">
+            <a class="btn btn--ghost" href="https://penningtongrp.com" rel="noopener">Visit Pennington Group</a>
+          </div>
         </div>
         <div>
           <figure class="figframe">
-            <img src="assets/img/4d-elevation.webp" alt="Elevation view of an industrial process structure at dusk" width="1350" height="1800" loading="lazy">
-            <figcaption>Spring, Texas</figcaption>
+            <img src="assets/img/4d-elevation.webp" alt="Elevation view of an industrial process structure rendered as a wireframe" width="1350" height="1800" loading="lazy">
+            <figcaption>Houston, Texas</figcaption>
           </figure>
         </div>
       </div>
@@ -647,21 +652,22 @@ COMPANY = page_head(
   <section class="section section--panel section--rule">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">How we build</p>
-        <h2 class="h-1">Three commitments we hold ourselves to.</h2>
+        <p class="eyebrow">Our expertise</p>
+        <h2 class="h-1">The problem was never the arithmetic.</h2>
+        <p class="lede">On industrial capital projects the estimate, the schedule, the field, the cost report and the payables desk each keep a version of the truth. They are all defensible on their own. Put together they disagree &mdash; and by the time anyone notices, the invoice is paid.</p>
       </div>
       <div class="grid grid-3">
         <div class="numitem reveal">
-          <h3 class="h-3">Evidence before status</h3>
-          <p class="small" style="margin-top:var(--space-3)">A percentage is not progress. A gate does not open because the schedule needs it to. Every status in VissRad has a quantity, a signed check sheet or a certificate behind it, and the software will show you which.</p>
+          <h3 class="h-3">Data before opinion</h3>
+          <p class="small" style="margin-top:var(--space-3)">We leverage project data to help teams make better decisions, manage risk and optimize performance. A percentage is not progress. A gate does not open because the schedule needs it to. Every status has a quantity, a signed check sheet or a certificate behind it, and the software will show you which.</p>
         </div>
         <div class="numitem reveal">
           <h3 class="h-3">Own your data</h3>
-          <p class="small" style="margin-top:var(--space-3)">A project is a file you can copy. The reporting layer exports star schemas and speaks ODBC. Nothing is locked behind a hosted tenancy, and moving off VissRad is a supported operation rather than a negotiation.</p>
+          <p class="small" style="margin-top:var(--space-3)">A project is a file you can copy. The reporting layer exports star schemas and speaks ODBC, so the numbers land in the Power BI and Excel models your organization already reads. Nothing is locked behind a hosted tenancy, and moving off VissRad is a supported operation rather than a negotiation.</p>
         </div>
         <div class="numitem reveal">
           <h3 class="h-3">Say what is not built</h3>
-          <p class="small" style="margin-top:var(--space-3)">Stubs are labelled as stubs. Demo payment files are stamped. The P6 exchange is described as a file import because that is what it is. Overselling a project controls tool costs the buyer far more than it costs us.</p>
+          <p class="small" style="margin-top:var(--space-3)">Stubs are labeled as stubs. Demo payment files are stamped. The P6 exchange is described as a file import because that is what it is. Overselling a project controls tool costs the buyer far more than it costs us.</p>
         </div>
       </div>
     </div>
@@ -671,25 +677,47 @@ COMPANY = page_head(
   <section class="section" id="services">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">Services</p>
+        <p class="eyebrow">Our services</p>
         <h2 class="h-1">We also do the work, not only the software.</h2>
-        <p class="lede">Most engagements start with a real deliverable under a real deadline. If the software helps, we bring it. If a workbook and a Power BI model are the right answer this quarter, we say so.</p>
+        <p class="lede">Most engagements start with a real deliverable under a real deadline. We work closely with you to understand the project's goals, then build the management and analytics plan around them. If VissRad helps, we bring it. If a workbook and a Power BI model are the right answer this quarter, we say so.</p>
       </div>
-      <div class="grid grid-2" style="gap:var(--space-8)">
-        <div class="reveal">
-          <ul class="feat">
-            <li><strong>Industrial estimating</strong> &mdash; piping, equipment, engineering and construction discipline takeoff and cost estimating</li>
-            <li><strong>Project controls</strong> &mdash; progress measurement systems, rule of credit, earned value, cost reporting and forecasting</li>
-            <li><strong>Schedule data</strong> &mdash; Primavera P6 XER, XML, CSV and XLSX extraction, analysis and integration into reporting</li>
+
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <p class="chip">01</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Project management</h3>
+          <p class="small" style="margin-top:var(--space-3)">Project planning, risk identification and resource management aimed at delivery on time and on budget &mdash; with the plan built so its own progress can be measured rather than asserted.</p>
+          <ul class="feat" style="margin-top:var(--space-5)">
+            <li><strong>Planning</strong> &mdash; execution plans, work breakdown structures, responsibility matrices</li>
+            <li><strong>Risk</strong> &mdash; identification, quantification and contingency drawdown discipline</li>
+            <li><strong>Packaging</strong> &mdash; CWP, EWP and IWP structures with constraint-based release</li>
           </ul>
-        </div>
-        <div class="reveal">
-          <ul class="feat">
-            <li><strong>Reporting &amp; BI</strong> &mdash; star-schema data models, Power BI dashboards and executive reporting packs</li>
-            <li><strong>Systems design</strong> &mdash; ERP, procurement, accounts payable and cost workflow design for project organisations</li>
-            <li><strong>Completions &amp; commissioning</strong> &mdash; systemisation, ITR and punch structures, and certificate gate design</li>
+        </article>
+        <article class="card reveal">
+          <p class="chip">02</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Data analysis &amp; visualization</h3>
+          <p class="small" style="margin-top:var(--space-3)">Advanced analytics over your project data alongside a CPM schedule management process, producing the visual insight that shows where performance is actually going &mdash; and the data requirements to keep it coming.</p>
+          <ul class="feat" style="margin-top:var(--space-5)">
+            <li><strong>Schedule data</strong> &mdash; Primavera P6 XER, XML, CSV and XLSX extraction and CPM analysis</li>
+            <li><strong>Reporting &amp; BI</strong> &mdash; star-schema data models, Power BI dashboards, executive packs</li>
+            <li><strong>4D</strong> &mdash; schedule sequence and progress painted onto the job, no model required</li>
           </ul>
-        </div>
+        </article>
+        <article class="card reveal">
+          <p class="chip">03</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Project controls</h3>
+          <p class="small" style="margin-top:var(--space-3)">Full visibility of project cost and trend, with customized controls reports that carry the analytics through instead of restating last month's totals in a new font.</p>
+          <ul class="feat" style="margin-top:var(--space-5)">
+            <li><strong>Progress</strong> &mdash; measurement systems, rule of credit, earned value, forecasting</li>
+            <li><strong>Cost</strong> &mdash; budgets, commitments, change control, cash flow, EAC and VAC</li>
+            <li><strong>Estimating</strong> &mdash; piping, equipment, engineering and construction discipline takeoff</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="callout reveal" style="margin-top:var(--space-12)">
+        <h3 class="h-4">And the parts most people leave out</h3>
+        <p class="small" style="margin-top:var(--space-3)">Completions and commissioning &mdash; systemization, ITR and punch structures, and certificate gate design. Systems design &mdash; ERP, procurement, accounts payable and cost workflow design for project organizations. These are where the chain from field to payment usually breaks, and they are the reason VissRad covers them at all.</p>
       </div>
     </div>
   </section>
@@ -698,9 +726,9 @@ COMPANY = page_head(
     <div class="wrap">
       <div class="cta reveal">
         <div>
-          <p class="eyebrow">Talk to us</p>
+          <p class="eyebrow">Transform your projects</p>
           <h2 class="h-2">Bring the project, not the requirements document.</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">Describe what is going wrong &mdash; the claim you cannot verify, the forecast nobody trusts, the turnover pack that is three weeks behind &mdash; and we will tell you honestly whether VissRad is the answer.</p>
+          <p class="body-muted" style="margin-top:var(--space-5)">Describe what is going wrong &mdash; the claim you cannot verify, the forecast nobody trusts, the turnover pack that is three weeks behind &mdash; and we will tell you honestly whether VissRad is the answer or whether this is a consulting problem.</p>
           <div class="btn-row" style="margin-top:var(--space-8)">
             <a class="btn btn--primary" href="contact.html">Start a conversation</a>
             <a class="btn btn--ghost" href="demo.html">See the demo first</a>
@@ -713,11 +741,11 @@ COMPANY = page_head(
               <p class="mono tiny">VISSRAD</p>
             </div>
             <div class="ledger__rows">
-              <div class="lrow"><span class="lrow__label">Based in</span><span class="lrow__val mono">Spring, Texas</span></div>
+              <div class="lrow"><span class="lrow__label">Practice</span><span class="lrow__val mono">Pennington Group</span></div>
+              <div class="lrow"><span class="lrow__label">Based in</span><span class="lrow__val mono">Houston, Texas</span></div>
               <div class="lrow"><span class="lrow__label">Sectors</span><span class="lrow__val mono">Process &amp; industrial</span></div>
               <div class="lrow"><span class="lrow__label">Applications</span><span class="lrow__val mono">11</span></div>
               <div class="lrow"><span class="lrow__label">Stack</span><span class="lrow__val mono">Python / PySide6 / FastAPI</span></div>
-              <div class="lrow"><span class="lrow__label">Databases</span><span class="lrow__val mono">SQLite or PostgreSQL</span></div>
               <div class="lrow"><span class="lrow__label">Reporting</span><span class="lrow__val mono">Power BI via ODBC</span></div>
             </div>
           </div>
@@ -770,7 +798,7 @@ CONTACT = page_head(
                 <option>Cost management (VissRadCost)</option>
                 <option>Payables and claim verification (VissRadARAP)</option>
                 <option>Advanced work packaging (VissRadAWP)</option>
-                <option>4D schedule visualisation (VissRad4D)</option>
+                <option>4D schedule visualization (VissRad4D)</option>
                 <option>VissRad Computer</option>
                 <option>Consulting &mdash; estimating, controls or reporting</option>
               </select>
@@ -791,7 +819,7 @@ CONTACT = page_head(
             <h3 class="h-4">Direct</h3>
             <p class="small" style="margin-top:var(--space-3)">If you would rather write yourself:</p>
             <p style="margin-top:var(--space-3)"><a class="link mono" href="mailto:dpennington@penningtongrp.com">dpennington@penningtongrp.com</a></p>
-            <p class="field__hint" style="margin-top:var(--space-4)">Spring, Texas &middot; United States</p>
+            <p class="field__hint" style="margin-top:var(--space-4)">Houston, Texas &middot; United States<br>Pennington Group Associates</p>
           </div>
           <div class="card" style="margin-top:var(--space-6)">
             <h3 class="h-4">What happens next</h3>
