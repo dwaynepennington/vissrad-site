@@ -272,13 +272,13 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
 .header--scrolled { border-bottom-color: var(--color-divider); background: rgba(14, 16, 21, 0.96); }
 .header__inner {
   display: flex; align-items: center; gap: var(--space-6);
-  height: 68px; max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6);
+  height: 76px; max-width: var(--content-wide); margin-inline: auto; padding-inline: var(--space-6);
 }
 
-.logo { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--color-text); flex: none; }
-.logo__mark { width: 34px; color: var(--color-primary); flex: none; }
+.logo { display: flex; align-items: center; gap: 0.66rem; text-decoration: none; color: var(--color-text); flex: none; }
+.logo__mark { width: 54px; color: var(--color-primary); flex: none; }
 .logo__type {
-  font-family: var(--font-display); font-weight: 800; font-size: 1.075rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.34rem;
   letter-spacing: 0.11em; text-transform: uppercase; line-height: 1;
 }
 
