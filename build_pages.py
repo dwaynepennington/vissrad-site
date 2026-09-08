@@ -111,7 +111,6 @@ FOOTER = """
         <ul role="list">
           <li><a href="company.html">About</a></li>
           <li><a href="company.html#services">Services</a></li>
-          <li><a href="company.html#positions">Positions</a></li>
           <li><a href="contact.html">Contact</a></li>
           <li><a href="https://penningtongrp.com" rel="noopener">Pennington Group</a></li>
         </ul>
@@ -653,8 +652,23 @@ COMPANY = page_head(
   <section class="section section--panel section--rule">
     <div class="wrap">
       <div class="sec-head reveal">
-        <p class="eyebrow">Our expertise</p>
-        <h2 class="h-1">The problem was never the arithmetic.</h2>
+        <p class="eyebrow">About PGA</p>
+        <h2 class="h-1">Innovative solutions for project management and controls.</h2>
+      </div>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <h3 class="h-3">Our expertise</h3>
+          <p class="body-muted" style="margin-top:var(--space-4)">At PGA we provide innovative solutions for project management and controls using advanced data analytics techniques. We leverage the power of data to help project teams make better decisions, manage risks, and optimize project performance.</p>
+        </div>
+        <div class="card reveal">
+          <h3 class="h-3">Our approach</h3>
+          <p class="body-muted" style="margin-top:var(--space-4)">Our approach involves working closely with our clients to understand their project goals and requirements. We then develop a customized data analytics and management plan that is tailored to their project's specific needs. We leverage the latest data analytics tools and techniques to collect, manage, analyze, and report project data.</p>
+        </div>
+      </div>
+
+      <div class="sec-head reveal" style="margin-top:var(--space-16)">
+        <p class="eyebrow">How we build</p>
+        <h2 class="h-2">The problem was never the arithmetic.</h2>
         <p class="lede">On industrial capital projects the estimate, the schedule, the field, the cost report and the payables desk each keep a version of the truth. They are all defensible on their own. Put together they disagree &mdash; and by the time anyone notices, the invoice is paid.</p>
       </div>
       <div class="grid grid-3">
@@ -680,14 +694,14 @@ COMPANY = page_head(
       <div class="sec-head reveal">
         <p class="eyebrow">Our services</p>
         <h2 class="h-1">We also do the work, not only the software.</h2>
-        <p class="lede">Most engagements start with a real deliverable under a real deadline. We work closely with you to understand the project's goals, then build the management and analytics plan around them. If VissRad helps, we bring it. If a workbook and a Power BI model are the right answer this quarter, we say so.</p>
+        <p class="lede">At PGA, we specialize in providing customized solutions to help businesses optimize their operations, streamline their processes, and achieve their objectives. Most engagements start with a real deliverable under a real deadline &mdash; and if a workbook and a Power BI model are the right answer this quarter, we say so.</p>
       </div>
 
       <div class="grid grid-3">
         <article class="card reveal">
           <p class="chip">01</p>
           <h3 class="h-3" style="margin-top:var(--space-4)">Project management</h3>
-          <p class="small" style="margin-top:var(--space-3)">Project planning, risk identification and resource management aimed at delivery on time and on budget &mdash; with the plan built so its own progress can be measured rather than asserted.</p>
+          <p class="small" style="margin-top:var(--space-3)">Our team of experts bring a wealth of knowledge and expertise to every project and are committed to helping our clients achieve their project goals. We will work with you to develop a project plan, identify risks, and manage resources to ensure successful project delivery both on time and on budget.</p>
           <ul class="feat" style="margin-top:var(--space-5)">
             <li><strong>Planning</strong> &mdash; execution plans, work breakdown structures, responsibility matrices</li>
             <li><strong>Risk</strong> &mdash; identification, quantification and contingency drawdown discipline</li>
@@ -697,7 +711,7 @@ COMPANY = page_head(
         <article class="card reveal">
           <p class="chip">02</p>
           <h3 class="h-3" style="margin-top:var(--space-4)">Data analysis &amp; visualization</h3>
-          <p class="small" style="margin-top:var(--space-3)">Advanced analytics over your project data alongside a CPM schedule management process, producing the visual insight that shows where performance is actually going &mdash; and the data requirements to keep it coming.</p>
+          <p class="small" style="margin-top:var(--space-3)">Our use of advanced analytics techniques along with our CPM schedule management process allows us to analyze your project data and provide visual insights that help you optimize project performance. Our team of experts will help you define data analytics requirements for your project and provide recommendations for data collection, analysis, and reporting.</p>
           <ul class="feat" style="margin-top:var(--space-5)">
             <li><strong>Schedule data</strong> &mdash; Primavera P6 XER, XML, CSV and XLSX extraction and CPM analysis</li>
             <li><strong>Reporting &amp; BI</strong> &mdash; star-schema data models, Power BI dashboards, executive packs</li>
@@ -707,7 +721,7 @@ COMPANY = page_head(
         <article class="card reveal">
           <p class="chip">03</p>
           <h3 class="h-3" style="margin-top:var(--space-4)">Project controls</h3>
-          <p class="small" style="margin-top:var(--space-3)">Full visibility of project cost and trend, with customized controls reports that carry the analytics through instead of restating last month's totals in a new font.</p>
+          <p class="small" style="margin-top:var(--space-3)">With PGA project controls and cost management services, we ensure that you have full visibility of all project associated costs and trends. At PGA we provide customized project controls reports that incorporate data analytics insights and help you manage your project more effectively.</p>
           <ul class="feat" style="margin-top:var(--space-5)">
             <li><strong>Progress</strong> &mdash; measurement systems, rule of credit, earned value, forecasting</li>
             <li><strong>Cost</strong> &mdash; budgets, commitments, change control, cash flow, EAC and VAC</li>
@@ -723,147 +737,13 @@ COMPANY = page_head(
     </div>
   </section>
 
-  <!-- ================= POSITIONS ================= -->
-  <section class="section section--panel section--rule" id="positions">
-    <div class="wrap">
-      <div class="sec-head reveal">
-        <p class="eyebrow">Positions we provide</p>
-        <h2 class="h-1">The people, not just the platform.</h2>
-        <p class="lede">At Pennington Group we provide experienced project management and controls professionals to industrial capital projects. Our team of experts bring a wealth of knowledge and expertise to every project and are committed to helping our clients achieve their project goals. We will place a single specialist or stand up a complete project controls team, tailored to your project's specific needs.</p>
-      </div>
-
-      <div class="reveal">
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Project management</p>
-            <p class="modrow__role">Plan, risk, resources</p>
-          </div>
-          <div>
-            <p class="small">Our project managers will work with you to develop a project plan, identify risks, and manage resources to ensure successful project delivery both on time and on budget. They take accountable ownership of scope, schedule and budget from day one.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Project Manager</span>
-              <span class="chip">Project Engineer</span>
-              <span class="chip">Risk Manager</span>
-              <span class="chip">Interim PMO Lead</span>
-              <span class="chip">Document Control Lead</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Planning &amp; scheduling</p>
-            <p class="modrow__role">CPM, P6, 4D</p>
-          </div>
-          <div>
-            <p class="small">Our planners and schedulers apply a disciplined CPM schedule management process using Primavera P6, developing and maintaining the schedule and analyzing your project data to provide the visual insights that help you optimize project performance.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Planning Engineer</span>
-              <span class="chip">Planner / Scheduler</span>
-              <span class="chip">Lead Scheduler</span>
-              <span class="chip">Schedule Analyst</span>
-              <span class="chip">4D Coordinator</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Cost &amp; estimating</p>
-            <p class="modrow__role">Budget, trend, forecast</p>
-          </div>
-          <div>
-            <p class="small">Our cost professionals ensure that you have full visibility of all project associated costs and trends &mdash; budgets, commitments, change control, cash flow and forecasting &mdash; supported by detailed discipline takeoff for piping, equipment, engineering and construction.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Cost Engineer</span>
-              <span class="chip">Cost Controller</span>
-              <span class="chip">Estimator</span>
-              <span class="chip">Lead Estimator</span>
-              <span class="chip">Change / Claims Analyst</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Project controls</p>
-            <p class="modrow__role">Progress, earned value</p>
-          </div>
-          <div>
-            <p class="small">Our project controls specialists bring the estimate, the schedule, the field and the cost report into one picture, then provide customized project controls reports that incorporate data analytics insights and help you manage your project more effectively.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Project Controls Manager</span>
-              <span class="chip">Project Controls Lead</span>
-              <span class="chip">Progress Measurement Coordinator</span>
-              <span class="chip">Field Quantity Surveyor</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Completions &amp; AWP</p>
-            <p class="modrow__role">Certificates, packages</p>
-          </div>
-          <div>
-            <p class="small">Our completions and work packaging personnel help you carry the project through to handover with confidence &mdash; systemization, ITR and punch structures, gated certificates, and constraint-based work packaging that releases work only when it is genuinely ready.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Completions Manager</span>
-              <span class="chip">Completions Coordinator</span>
-              <span class="chip">Turnover Engineer</span>
-              <span class="chip">AWP Coordinator</span>
-              <span class="chip">WorkFace Planner</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="modrow">
-          <div>
-            <p class="modrow__name">Data &amp; systems</p>
-            <p class="modrow__role">Reporting, ERP, AP</p>
-          </div>
-          <div>
-            <p class="small">Our analysts leverage the latest data analytics tools and techniques to collect, manage, analyze and report project data, and will help you define the data analytics requirements for your project across reporting, ERP, procurement and payables.</p>
-            <div class="btn-row" style="margin-top:var(--space-4);gap:var(--space-2);flex-wrap:wrap">
-              <span class="chip">Project Data Analyst</span>
-              <span class="chip">Power BI Developer</span>
-              <span class="chip">Reporting Analyst</span>
-              <span class="chip">Business Systems Analyst</span>
-              <span class="chip">Cost Systems Analyst</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="grid grid-3" style="margin-top:var(--space-12)">
-        <div class="numitem reveal">
-          <h3 class="h-3">Single placement</h3>
-          <p class="small" style="margin-top:var(--space-3)">We fill a single role with a professional who has held that position before on a comparable project, strengthening the discipline that needs it most.</p>
-        </div>
-        <div class="numitem reveal">
-          <h3 class="h-3">Embedded team</h3>
-          <p class="small" style="margin-top:var(--space-3)">We provide a complete project controls group &mdash; planning, cost and progress &mdash; establishing the function and the reporting cadence together, working closely with your team throughout.</p>
-        </div>
-        <div class="numitem reveal">
-          <h3 class="h-3">Interim &amp; recovery</h3>
-          <p class="small" style="margin-top:var(--space-3)">We cover a vacant leadership position or take on a defined engagement to restore a forecast, a progress measurement system or a turnover plan, and get your project back on track.</p>
-        </div>
-      </div>
-
-      <div class="callout callout--neutral reveal" style="margin-top:var(--space-10)">
-        <h3 class="h-4">Productive from day one</h3>
-        <p class="small" style="margin-top:var(--space-3)">Because our team builds VissRad, our people already work fluently in Primavera P6, Excel, Power BI and the completions and cost systems your project depends on. Where a client runs VissRad, ramp-up is measured in days. Where they run something else, we bring the same discipline to the tools you already have.</p>
-      </div>
-    </div>
-  </section>
-
   <section class="section section--rule">
     <div class="wrap">
       <div class="cta reveal">
         <div>
           <p class="eyebrow">Transform your projects</p>
-          <h2 class="h-2">Bring the project, not the requirements document.</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">Describe what is going wrong &mdash; the claim you cannot verify, the forecast nobody trusts, the turnover pack that is three weeks behind &mdash; and we will tell you honestly whether VissRad is the answer or whether this is a consulting problem.</p>
+          <h2 class="h-2">Let us help you take your business to the next level.</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">At PGA, we specialize in providing customized solutions to help businesses optimize their operations, streamline their processes, and achieve their objectives. Describe what is going wrong &mdash; the claim you cannot verify, the forecast nobody trusts, the turnover pack that is three weeks behind &mdash; and we will tell you honestly whether VissRad is the answer or whether this is a consulting engagement.</p>
           <div class="btn-row" style="margin-top:var(--space-8)">
             <a class="btn btn--primary" href="contact.html">Start a conversation</a>
             <a class="btn btn--ghost" href="demo.html">See the demo first</a>
@@ -903,6 +783,7 @@ CONTACT = page_head(
     <div class="wrap">
       <div class="split split--copy-first">
         <div class="reveal">
+          <h2 class="h-3" style="margin-bottom:var(--space-6)">Drop us a line</h2>
           <form class="form" data-contact-form data-to="dpennington@penningtongrp.com" novalidate>
             <div class="form__row">
               <div class="field">
@@ -936,8 +817,6 @@ CONTACT = page_head(
                 <option>4D schedule visualization (VissRad4D)</option>
                 <option>VissRad Computer</option>
                 <option>Consulting &mdash; estimating, controls or reporting</option>
-                <option>Personnel &mdash; filling a project controls position</option>
-                <option>Personnel &mdash; an embedded project controls team</option>
               </select>
             </div>
             <div class="field">
