@@ -316,7 +316,7 @@ def module(anchor, name, role, lede, blocks, tags, note=None):
     return f"""
   <section class="section section--rule" id="{anchor}">
     <div class="wrap">
-      <div class="split split--copy-first reveal">
+      <div class="split split--copy-first split--top reveal">
         <div>
           <p class="eyebrow">{role}</p>
           <h2 class="h-2">{name}</h2>
@@ -396,7 +396,7 @@ MODULES = page_head(
   <!-- ================= COMPUTER ================= -->
   <section class="section section--panel section--rule" id="vissrad-computer">
     <div class="wrap">
-      <div class="split split--copy-first reveal">
+      <div class="split split--copy-first split--top reveal">
         <div>
           <p class="eyebrow">Research desk</p>
           <h2 class="h-2">VissRad Computer</h2>
@@ -559,7 +559,7 @@ DEMO = page_head(
   <!-- ================= COMPUTER DEMO ================= -->
   <section class="section">
     <div class="wrap">
-      <div class="split split--copy-first reveal">
+      <div class="split split--copy-first split--top reveal">
         <div>
           <p class="eyebrow">Also available</p>
           <h2 class="h-2">VissRad Computer, online and offline.</h2>
@@ -627,7 +627,7 @@ COMPANY = page_head(
 ) + """
   <section class="section section--tight">
     <div class="wrap">
-      <div class="split split--copy-first reveal">
+      <div class="split split--copy-first split--top reveal">
         <div>
           <h2 class="h-2">The problem was never the arithmetic.</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">On industrial capital projects the estimate, the schedule, the field, the cost report and the payables desk each keep a version of the truth. They are all defensible on their own. Put together, they disagree &mdash; and by the time anyone notices, the invoice is paid.</p>

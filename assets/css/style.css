@@ -233,6 +233,7 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
 /* Split layout */
 .split { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(var(--space-8), 5vw, var(--space-20)); align-items: center; }
 .split--copy-first { grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); }
+.split--top { align-items: start; }
 @media (max-width: 900px) { .split, .split--copy-first { grid-template-columns: minmax(0, 1fr); gap: var(--space-10); } }
 
 /* Section head */
@@ -315,6 +316,11 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
   .nav { display: none; }
   .burger { display: inline-grid; }
   .header__actions { margin-left: auto; }
+}
+/* Below tablet the drawer carries the CTA, so the header one would only crowd
+   the bar and push the burger off-screen. */
+@media (max-width: 620px) {
+  .header__actions > .btn { display: none; }
 }
 
 /* Mobile drawer */
