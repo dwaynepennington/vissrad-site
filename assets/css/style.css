@@ -530,6 +530,9 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
 .form__row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-5); }
 @media (max-width: 620px) { .form__row { grid-template-columns: minmax(0, 1fr); } }
 .form__status { font-size: var(--text-sm); color: var(--color-good); min-height: 1.5em; }
+.form__status[data-state="ok"] { color: var(--color-good); }
+.form__status[data-state="error"] { color: #ff9a8f; }
+.form__status[data-state="busy"] { color: var(--color-text-muted); }
 
 /* ==========================================================================
    CTA block

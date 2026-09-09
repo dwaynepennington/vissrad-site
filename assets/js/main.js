@@ -102,12 +102,46 @@
   /* ---------- Contact form → email ---------- */
   var form = document.querySelector('[data-contact-form]');
   if (form) {
+    var endpoint = form.getAttribute('data-endpoint');
+    var to = form.getAttribute('data-to');
+    var status = form.querySelector('[data-form-status]');
+    var btn = form.querySelector('button[type="submit"]');
+    var btnLabel = btn ? btn.textContent : '';
+
+    var say = function (msg, state) {
+      if (!status) return;
+      status.textContent = msg;
+      if (state) { status.setAttribute('data-state', state); }
+      else { status.removeAttribute('data-state'); }
+    };
+    var busy = function (on) {
+      if (!btn) return;
+      btn.disabled = on;
+      btn.textContent = on ? 'Sending\u2026' : btnLabel;
+    };
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
+
+      if (form.checkValidity && !form.checkValidity()) {
+        say('Please complete the required fields.', 'error');
+        var bad = form.querySelector(':invalid');
+        if (bad && bad.focus) { bad.focus(); }
+        return;
+      }
+
       var data = new FormData(form);
-      var get = function (k) {
-        return (data.get(k) || '').toString().trim();
-      };
+      var get = function (k) { return (data.get(k) || '').toString().trim(); };
+
+      // Honeypot: silently accept and discard obvious bots.
+      if (get('_honey')) {
+        form.reset();
+        say('Thank you \u2014 your message has been sent.', 'ok');
+        return;
+      }
+
+      var subject = 'VissRad enquiry \u2014 ' + (get('company') || get('name') || 'website');
+
       var lines = [
         'Name: ' + get('name'),
         'Company: ' + get('company'),
@@ -118,16 +152,51 @@
         'Project scale: ' + get('scale'),
         '',
         'Message:',
-        get('message'),
+        get('message')
       ];
-      var subject = 'VissRad enquiry — ' + (get('company') || get('name') || 'website');
-      var to = form.getAttribute('data-to');
-      var status = form.querySelector('[data-form-status]');
-      window.location.href =
-        'mailto:' + to + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(lines.join('\n'));
-      if (status) {
-        status.textContent = 'Opening your email client with the message ready to send.';
-      }
+
+      var payload = {};
+      data.forEach(function (v, k) {
+        if (k.charAt(0) !== '_') { payload[k] = v; }
+      });
+      payload._subject = subject;
+      payload._template = 'table';
+      payload._replyto = get('email');
+
+      var fallback = function () {
+        say('We could not send that automatically \u2014 opening your email client instead.', 'error');
+        window.location.href = 'mailto:' + to +
+          '?subject=' + encodeURIComponent(subject) +
+          '&body=' + encodeURIComponent(lines.join('\n'));
+      };
+
+      if (!endpoint || typeof window.fetch !== 'function') { fallback(); return; }
+
+      busy(true);
+      say('Sending\u2026', 'busy');
+
+      window.fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function (r) {
+        return r.text().then(function (body) {
+          var parsed = {};
+          try { parsed = JSON.parse(body); } catch (err) { parsed = {}; }
+          return { ok: r.ok, data: parsed };
+        });
+      }).then(function (res) {
+        var accepted = res.ok &&
+          (res.data.success === true || String(res.data.success) === 'true' ||
+           res.data.success === undefined);
+        if (!accepted) { throw new Error('rejected'); }
+        form.reset();
+        say('Thank you \u2014 your message has been sent. We will reply within one business day.', 'ok');
+      }).catch(function () {
+        fallback();
+      }).then(function () {
+        busy(false);
+      });
     });
   }
 })();
