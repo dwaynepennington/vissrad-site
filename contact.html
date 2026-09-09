@@ -77,8 +77,11 @@
       <div class="split split--copy-first">
         <div class="reveal">
           <h2 class="h-3" style="margin-bottom:var(--space-6)">Drop us a line</h2>
-          <form class="form" data-contact-form data-to="info@penningtongrp.com"
-                data-endpoint="https://formsubmit.co/ajax/info@penningtongrp.com" novalidate>
+          <form class="form" data-contact-form method="POST" action="https://formsubmit.co/info@penningtongrp.com"
+                data-to="info@penningtongrp.com">
+            <input type="hidden" name="_next" value="https://vissrad.com/thanks.html">
+            <input type="hidden" name="_subject" value="VissRad enquiry">
+            <input type="hidden" name="_template" value="table">
             <input type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
             <div class="form__row">
               <div class="field">
