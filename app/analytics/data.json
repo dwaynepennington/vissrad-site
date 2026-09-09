@@ -16509,11 +16509,11 @@
 },
 "report_families":[
 {
-"id":"hollyresin_xer",
-"name":"HollyResin EPC Dashboard",
+"id":"resinplant_xer",
+"name":"ResinPlant EPC Dashboard",
 "subtitle":"XER / CSV route",
 "route":"xer_csv",
-"project_ref":"P151HRBP-L3-EPC-BL \u2014 Holly Resin Blend Plant EPC",
+"project_ref":"P151RBP-L3-EPC-BL \u2014 Resin Blend Plant EPC",
 "pages":[
 "Overview",
 "Schedule & Milestones",
@@ -16528,7 +16528,7 @@
 "name":"XER_Folder",
 "type":"Text",
 "required":true,
-"default":"C:\\Users\\DwaynePennington\\Downloads\\HollyResin_EPC_PowerBI\\HollyResinEPC_PBIP\\data",
+"default":"C:\\VissRad\\PowerBI\\ResinPlant_EPC_PowerBI\\ResinPlantEPC_PBIP\\data",
 "hint":"Folder holding the 7 CSVs produced by Convert-XER.py"
 }
 ],
@@ -16541,17 +16541,17 @@
 "dim_date",
 "dim_project"
 ],
-"package_file":"HollyResin_EPC_PowerBI.zip",
+"package_file":"ResinPlant_EPC_PowerBI.zip",
 "converter":"Convert-XER.py",
 "update_script":"Update-Dashboard.bat",
 "refresh_note":"Drag a new .xer export onto Update-Dashboard.bat (or run it with no argument to pick up the newest .xer already in the folder). It shells out to Convert-XER.py, which rewrites the 7 CSVs, then re-open the .pbit or click Refresh."
 },
 {
-"id":"hollyresin_xml",
-"name":"HollyResinEPC (direct P6 XML)",
+"id":"resinplant_xml",
+"name":"ResinPlantEPC (direct P6 XML)",
 "subtitle":"Direct P6 PM/XML route",
 "route":"xml",
-"project_ref":"P151HRBP-L3-EPC-BL \u2014 Holly Resin Blend Plant EPC",
+"project_ref":"P151RBP-L3-EPC-BL \u2014 Resin Blend Plant EPC",
 "pages":[
 "Overview",
 "Schedule & Milestones",
@@ -16586,17 +16586,17 @@
 "dim_date",
 "dim_project"
 ],
-"package_file":"HollyResin_EPC_PowerBI.zip",
+"package_file":"ResinPlant_EPC_PowerBI.zip",
 "converter":null,
 "update_script":null,
 "refresh_note":"Export from P6 via File > Export > Primavera P6 XML (not .xer, not MS Project XML), drop the file in XML_Folder, then Refresh \u2014 the query always picks the newest .xml by Date modified."
 },
 {
-"id":"hollyresin_eva",
-"name":"HollyResinEPC EVA",
+"id":"resinplant_eva",
+"name":"ResinPlantEPC EVA",
 "subtitle":"FTE, schedule status and cost EVA",
 "route":"xml",
-"project_ref":"P151HRBP-L3-EPC-BL \u2014 Holly Resin Blend Plant EPC",
+"project_ref":"P151RBP-L3-EPC-BL \u2014 Resin Blend Plant EPC",
 "pages":[
 "FTE Over Time",
 "Schedule Status Gantt",
@@ -16636,7 +16636,7 @@
 "dim_date",
 "dim_project"
 ],
-"package_file":"HollyResin_EPC_PowerBI.zip",
+"package_file":"ResinPlant_EPC_PowerBI.zip",
 "converter":null,
 "update_script":null,
 "refresh_note":"Same XML_Folder / BlendedRate parameters as the direct-XML dashboard. Contractor Type and Discipline/Contractor slicers filter all three EVA pages. 'Actual'/'Committed' read zero until the P6 export carries statused (progressed) activities \u2014 that is expected on a baseline schedule, not an error."
@@ -16693,23 +16693,23 @@
 ],
 "refresh_log":[
 {
-"family_id":"hollyresin_xer",
+"family_id":"resinplant_xer",
 "status":"Published",
 "last_refreshed":"2026-08-24",
 "period":"2026-08",
-"source_path":"C:\\VissRad\\P6Exports\\HollyResin\\data",
+"source_path":"C:\\VissRad\\P6Exports\\ResinPlant\\data",
 "refreshed_by":"D. Pennington"
 },
 {
-"family_id":"hollyresin_xml",
+"family_id":"resinplant_xml",
 "status":"Published",
 "last_refreshed":"2026-08-24",
 "period":"2026-08",
-"source_path":"C:\\VissRad\\P6Exports\\HollyResin\\P6 XML TEST.xml",
+"source_path":"C:\\VissRad\\P6Exports\\ResinPlant\\P6 XML TEST.xml",
 "refreshed_by":"D. Pennington"
 },
 {
-"family_id":"hollyresin_eva",
+"family_id":"resinplant_eva",
 "status":"Needs refresh",
 "last_refreshed":"2026-07-27",
 "period":"2026-07",
