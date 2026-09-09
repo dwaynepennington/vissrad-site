@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadSCH — Schedule Analysis</title>
+<meta name="description" content="VissRadSCH Schedule Analysis — Primavera P6 .xer schedule health dashboard: S-curve, earned value, critical path, float distribution, milestones, look-ahead, WBS rollup, baseline comparison and DCMA-14-inspired schedule quality checks.">
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<link rel="stylesheet" href="schedule.css">
+</head>
+<body>
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading schedule&hellip;</div>
+</div>
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="app/xerParser.js"></script>
+<script src="app/metrics.js"></script>
+<script src="app/sample.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

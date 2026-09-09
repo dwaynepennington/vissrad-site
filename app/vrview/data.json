@@ -1,0 +1,3161 @@
+{
+ "project": {
+  "project_name": "Demo Data",
+  "project_no": "VR-DEMO-001",
+  "client": "VissRad",
+  "contractor": "Gulf Mechanical",
+  "location": "Gulf Coast, Texas",
+  "currency": "USD",
+  "data_date": "2026-08-26",
+  "rfsu": "2026-12-24",
+  "source": "demo",
+  "aps_urn": "",
+  "translate_status": ""
+ },
+ "backdrops": {
+  "unit": {
+   "label": "Cedar Bayou Unit 4 Revamp",
+   "image_url": "unit-elevation.png",
+   "image_width": 1600,
+   "image_height": 1000,
+   "project_start": "2026-01-05",
+   "regions": [
+    {
+     "key": "FDN",
+     "label": "Unit Foundations & Underground",
+     "group_name": "Civil",
+     "shape": "rect",
+     "points": [
+      [
+       0.01875,
+       0.86
+      ],
+      [
+       0.98125,
+       0.86
+      ],
+      [
+       0.98125,
+       0.966
+      ],
+      [
+       0.01875,
+       0.966
+      ]
+     ],
+     "activity_codes": [
+      "CIV-100",
+      "CIV-110",
+      "CIV-120"
+     ],
+     "sort_order": 0
+    },
+    {
+     "key": "RACK1",
+     "label": "Pipe Rack Bay 1",
+     "group_name": "Pipe Rack",
+     "shape": "rect",
+     "points": [
+      [
+       0.18375,
+       0.464
+      ],
+      [
+       0.29125,
+       0.464
+      ],
+      [
+       0.29125,
+       0.616
+      ],
+      [
+       0.18375,
+       0.616
+      ]
+     ],
+     "activity_codes": [
+      "STL-210",
+      "PIP-310",
+      "EI-510",
+      "INS-410"
+     ],
+     "sort_order": 1
+    },
+    {
+     "key": "RACK2",
+     "label": "Pipe Rack Bay 2",
+     "group_name": "Pipe Rack",
+     "shape": "rect",
+     "points": [
+      [
+       0.29625,
+       0.464
+      ],
+      [
+       0.40375,
+       0.464
+      ],
+      [
+       0.40375,
+       0.616
+      ],
+      [
+       0.29625,
+       0.616
+      ]
+     ],
+     "activity_codes": [
+      "STL-220",
+      "PIP-320",
+      "EI-520",
+      "INS-420"
+     ],
+     "sort_order": 2
+    },
+    {
+     "key": "RACK3",
+     "label": "Pipe Rack Bay 3",
+     "group_name": "Pipe Rack",
+     "shape": "rect",
+     "points": [
+      [
+       0.40875,
+       0.464
+      ],
+      [
+       0.51625,
+       0.464
+      ],
+      [
+       0.51625,
+       0.616
+      ],
+      [
+       0.40875,
+       0.616
+      ]
+     ],
+     "activity_codes": [
+      "STL-230",
+      "PIP-330",
+      "EI-530",
+      "INS-430"
+     ],
+     "sort_order": 3
+    },
+    {
+     "key": "RACK4",
+     "label": "Pipe Rack Bay 4",
+     "group_name": "Pipe Rack",
+     "shape": "rect",
+     "points": [
+      [
+       0.52125,
+       0.464
+      ],
+      [
+       0.62875,
+       0.464
+      ],
+      [
+       0.62875,
+       0.616
+      ],
+      [
+       0.52125,
+       0.616
+      ]
+     ],
+     "activity_codes": [
+      "STL-240",
+      "PIP-340",
+      "EI-540",
+      "INS-440"
+     ],
+     "sort_order": 4
+    },
+    {
+     "key": "ACOOL",
+     "label": "Air Cooler Bank E-501",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.4375,
+       0.386
+      ],
+      [
+       0.625,
+       0.386
+      ],
+      [
+       0.625,
+       0.464
+      ],
+      [
+       0.4375,
+       0.464
+      ]
+     ],
+     "activity_codes": [
+      "MEQ-610",
+      "PIP-615"
+     ],
+     "sort_order": 5
+    },
+    {
+     "key": "T401",
+     "label": "Fractionator T-401",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.66375,
+       0.13
+      ],
+      [
+       0.78,
+       0.13
+      ],
+      [
+       0.78,
+       0.86
+      ],
+      [
+       0.66375,
+       0.86
+      ]
+     ],
+     "activity_codes": [
+      "MEQ-620",
+      "PIP-625",
+      "INS-630",
+      "EI-635"
+     ],
+     "sort_order": 6
+    },
+    {
+     "key": "V101",
+     "label": "Separator V-101",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.3125,
+       0.604
+      ],
+      [
+       0.41,
+       0.604
+      ],
+      [
+       0.41,
+       0.666
+      ],
+      [
+       0.3125,
+       0.666
+      ]
+     ],
+     "activity_codes": [
+      "MEQ-640",
+      "PIP-645"
+     ],
+     "sort_order": 7
+    },
+    {
+     "key": "V102",
+     "label": "Surge Drum V-102",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.3125,
+       0.716
+      ],
+      [
+       0.41,
+       0.716
+      ],
+      [
+       0.41,
+       0.778
+      ],
+      [
+       0.3125,
+       0.778
+      ]
+     ],
+     "activity_codes": [
+      "MEQ-650",
+      "PIP-655"
+     ],
+     "sort_order": 8
+    },
+    {
+     "key": "COMP",
+     "label": "Compressor House K-301",
+     "group_name": "Buildings",
+     "shape": "rect",
+     "points": [
+      [
+       0.18875,
+       0.626
+      ],
+      [
+       0.28625,
+       0.626
+      ],
+      [
+       0.28625,
+       0.858
+      ],
+      [
+       0.18875,
+       0.858
+      ]
+     ],
+     "activity_codes": [
+      "BLD-700",
+      "MEQ-705",
+      "PIP-710",
+      "EI-715"
+     ],
+     "sort_order": 9
+    },
+    {
+     "key": "ELEC",
+     "label": "Substation & Control Room",
+     "group_name": "Buildings",
+     "shape": "rect",
+     "points": [
+      [
+       0.81875,
+       0.556
+      ],
+      [
+       0.95,
+       0.556
+      ],
+      [
+       0.95,
+       0.664
+      ],
+      [
+       0.81875,
+       0.664
+      ]
+     ],
+     "activity_codes": [
+      "BLD-720",
+      "EI-725",
+      "EI-730"
+     ],
+     "sort_order": 10
+    },
+    {
+     "key": "EXCH",
+     "label": "Exchanger Train E-201/202",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.81625,
+       0.698
+      ],
+      [
+       0.9425,
+       0.698
+      ],
+      [
+       0.9425,
+       0.854
+      ],
+      [
+       0.81625,
+       0.854
+      ]
+     ],
+     "activity_codes": [
+      "MEQ-740",
+      "PIP-745",
+      "INS-750"
+     ],
+     "sort_order": 11
+    },
+    {
+     "key": "FLARE",
+     "label": "Flare Stack FL-901",
+     "group_name": "Equipment",
+     "shape": "rect",
+     "points": [
+      [
+       0.04125,
+       0.06
+      ],
+      [
+       0.08875,
+       0.06
+      ],
+      [
+       0.08875,
+       0.86
+      ],
+      [
+       0.04125,
+       0.86
+      ]
+     ],
+     "activity_codes": [
+      "STL-760",
+      "PIP-765",
+      "EI-770"
+     ],
+     "sort_order": 12
+    }
+   ]
+  },
+  "tower": {
+   "label": "Bayou Ridge Tower",
+   "image_url": "tower-elevation.png",
+   "image_width": 1180,
+   "image_height": 1500,
+   "project_start": "2025-09-01",
+   "regions": [
+    {
+     "key": "SITE",
+     "label": "Site Prep & Enabling Works",
+     "group_name": "Site",
+     "shape": "rect",
+     "points": [
+      [
+       0.03729,
+       0.84667
+      ],
+      [
+       0.12203,
+       0.84667
+      ],
+      [
+       0.12203,
+       0.86667
+      ],
+      [
+       0.03729,
+       0.86667
+      ]
+     ],
+     "activity_codes": [
+      "SITE-100"
+     ],
+     "sort_order": 0
+    },
+    {
+     "key": "SITE2",
+     "label": "Site Utilities & Hardstand",
+     "group_name": "Site",
+     "shape": "rect",
+     "points": [
+      [
+       0.81017,
+       0.84667
+      ],
+      [
+       0.96271,
+       0.84667
+      ],
+      [
+       0.96271,
+       0.86667
+      ],
+      [
+       0.81017,
+       0.86667
+      ]
+     ],
+     "activity_codes": [
+      "SITE-110",
+      "SITE-120"
+     ],
+     "sort_order": 1
+    },
+    {
+     "key": "PILE",
+     "label": "Bored Piles & Pile Caps",
+     "group_name": "Substructure",
+     "shape": "rect",
+     "points": [
+      [
+       0.15424,
+       0.89867
+      ],
+      [
+       0.77797,
+       0.89867
+      ],
+      [
+       0.77797,
+       0.93867
+      ],
+      [
+       0.15424,
+       0.93867
+      ]
+     ],
+     "activity_codes": [
+      "SUB-200",
+      "SUB-210"
+     ],
+     "sort_order": 2
+    },
+    {
+     "key": "MAT",
+     "label": "Mat Foundation & Grade Slab",
+     "group_name": "Substructure",
+     "shape": "rect",
+     "points": [
+      [
+       0.15424,
+       0.87467
+      ],
+      [
+       0.77797,
+       0.87467
+      ],
+      [
+       0.77797,
+       0.89733
+      ],
+      [
+       0.15424,
+       0.89733
+      ]
+     ],
+     "activity_codes": [
+      "SUB-220",
+      "SUB-230"
+     ],
+     "sort_order": 3
+    },
+    {
+     "key": "L01",
+     "label": "Level 01",
+     "group_name": "Podium",
+     "shape": "rect",
+     "points": [
+      [
+       0.17119,
+       0.80267
+      ],
+      [
+       0.76102,
+       0.80267
+      ],
+      [
+       0.76102,
+       0.86533
+      ],
+      [
+       0.17119,
+       0.86533
+      ]
+     ],
+     "activity_codes": [
+      "STR-01",
+      "MEP-01",
+      "FAC-01",
+      "FIN-01"
+     ],
+     "sort_order": 4
+    },
+    {
+     "key": "L02",
+     "label": "Level 02",
+     "group_name": "Podium",
+     "shape": "rect",
+     "points": [
+      [
+       0.17119,
+       0.748
+      ],
+      [
+       0.76102,
+       0.748
+      ],
+      [
+       0.76102,
+       0.80133
+      ],
+      [
+       0.17119,
+       0.80133
+      ]
+     ],
+     "activity_codes": [
+      "STR-02",
+      "MEP-02",
+      "FAC-02",
+      "FIN-02"
+     ],
+     "sort_order": 5
+    },
+    {
+     "key": "L03",
+     "label": "Level 03",
+     "group_name": "Podium",
+     "shape": "rect",
+     "points": [
+      [
+       0.17119,
+       0.69333
+      ],
+      [
+       0.76102,
+       0.69333
+      ],
+      [
+       0.76102,
+       0.74667
+      ],
+      [
+       0.17119,
+       0.74667
+      ]
+     ],
+     "activity_codes": [
+      "STR-03",
+      "MEP-03",
+      "FAC-03",
+      "FIN-03"
+     ],
+     "sort_order": 6
+    },
+    {
+     "key": "L04",
+     "label": "Level 04",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.64933
+      ],
+      [
+       0.65085,
+       0.64933
+      ],
+      [
+       0.65085,
+       0.692
+      ],
+      [
+       0.28136,
+       0.692
+      ]
+     ],
+     "activity_codes": [
+      "STR-04",
+      "MEP-04",
+      "FAC-04",
+      "FIN-04"
+     ],
+     "sort_order": 7
+    },
+    {
+     "key": "L05",
+     "label": "Level 05",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.60533
+      ],
+      [
+       0.65085,
+       0.60533
+      ],
+      [
+       0.65085,
+       0.648
+      ],
+      [
+       0.28136,
+       0.648
+      ]
+     ],
+     "activity_codes": [
+      "STR-05",
+      "MEP-05",
+      "FAC-05",
+      "FIN-05"
+     ],
+     "sort_order": 8
+    },
+    {
+     "key": "L06",
+     "label": "Level 06",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.56133
+      ],
+      [
+       0.65085,
+       0.56133
+      ],
+      [
+       0.65085,
+       0.604
+      ],
+      [
+       0.28136,
+       0.604
+      ]
+     ],
+     "activity_codes": [
+      "STR-06",
+      "MEP-06",
+      "FAC-06",
+      "FIN-06"
+     ],
+     "sort_order": 9
+    },
+    {
+     "key": "L07",
+     "label": "Level 07",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.51733
+      ],
+      [
+       0.65085,
+       0.51733
+      ],
+      [
+       0.65085,
+       0.56
+      ],
+      [
+       0.28136,
+       0.56
+      ]
+     ],
+     "activity_codes": [
+      "STR-07",
+      "MEP-07",
+      "FAC-07",
+      "FIN-07"
+     ],
+     "sort_order": 10
+    },
+    {
+     "key": "L08",
+     "label": "Level 08",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.47333
+      ],
+      [
+       0.65085,
+       0.47333
+      ],
+      [
+       0.65085,
+       0.516
+      ],
+      [
+       0.28136,
+       0.516
+      ]
+     ],
+     "activity_codes": [
+      "STR-08",
+      "MEP-08",
+      "FAC-08",
+      "FIN-08"
+     ],
+     "sort_order": 11
+    },
+    {
+     "key": "L09",
+     "label": "Level 09",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.42933
+      ],
+      [
+       0.65085,
+       0.42933
+      ],
+      [
+       0.65085,
+       0.472
+      ],
+      [
+       0.28136,
+       0.472
+      ]
+     ],
+     "activity_codes": [
+      "STR-09",
+      "MEP-09",
+      "FAC-09",
+      "FIN-09"
+     ],
+     "sort_order": 12
+    },
+    {
+     "key": "L10",
+     "label": "Level 10",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.38533
+      ],
+      [
+       0.65085,
+       0.38533
+      ],
+      [
+       0.65085,
+       0.428
+      ],
+      [
+       0.28136,
+       0.428
+      ]
+     ],
+     "activity_codes": [
+      "STR-10",
+      "MEP-10",
+      "FAC-10",
+      "FIN-10"
+     ],
+     "sort_order": 13
+    },
+    {
+     "key": "L11",
+     "label": "Level 11",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.34133
+      ],
+      [
+       0.65085,
+       0.34133
+      ],
+      [
+       0.65085,
+       0.384
+      ],
+      [
+       0.28136,
+       0.384
+      ]
+     ],
+     "activity_codes": [
+      "STR-11",
+      "MEP-11",
+      "FAC-11",
+      "FIN-11"
+     ],
+     "sort_order": 14
+    },
+    {
+     "key": "L12",
+     "label": "Level 12",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.29733
+      ],
+      [
+       0.65085,
+       0.29733
+      ],
+      [
+       0.65085,
+       0.34
+      ],
+      [
+       0.28136,
+       0.34
+      ]
+     ],
+     "activity_codes": [
+      "STR-12",
+      "MEP-12",
+      "FAC-12",
+      "FIN-12"
+     ],
+     "sort_order": 15
+    },
+    {
+     "key": "L13",
+     "label": "Level 13",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.25333
+      ],
+      [
+       0.65085,
+       0.25333
+      ],
+      [
+       0.65085,
+       0.296
+      ],
+      [
+       0.28136,
+       0.296
+      ]
+     ],
+     "activity_codes": [
+      "STR-13",
+      "MEP-13",
+      "FAC-13",
+      "FIN-13"
+     ],
+     "sort_order": 16
+    },
+    {
+     "key": "L14",
+     "label": "Level 14",
+     "group_name": "Tower",
+     "shape": "rect",
+     "points": [
+      [
+       0.28136,
+       0.20933
+      ],
+      [
+       0.65085,
+       0.20933
+      ],
+      [
+       0.65085,
+       0.252
+      ],
+      [
+       0.28136,
+       0.252
+      ]
+     ],
+     "activity_codes": [
+      "STR-14",
+      "MEP-14",
+      "FAC-14",
+      "FIN-14"
+     ],
+     "sort_order": 17
+    },
+    {
+     "key": "ROOF",
+     "label": "Main Roof & Parapet",
+     "group_name": "Roof",
+     "shape": "rect",
+     "points": [
+      [
+       0.27119,
+       0.18667
+      ],
+      [
+       0.66102,
+       0.18667
+      ],
+      [
+       0.66102,
+       0.208
+      ],
+      [
+       0.27119,
+       0.208
+      ]
+     ],
+     "activity_codes": [
+      "ROF-900",
+      "ROF-910"
+     ],
+     "sort_order": 18
+    },
+    {
+     "key": "PENT",
+     "label": "Mechanical Penthouse",
+     "group_name": "Roof",
+     "shape": "rect",
+     "points": [
+      [
+       0.34068,
+       0.12267
+      ],
+      [
+       0.59153,
+       0.12267
+      ],
+      [
+       0.59153,
+       0.18533
+      ],
+      [
+       0.34068,
+       0.18533
+      ]
+     ],
+     "activity_codes": [
+      "MEC-920",
+      "MEC-930"
+     ],
+     "sort_order": 19
+    },
+    {
+     "key": "CT",
+     "label": "Cooling Towers & Plant",
+     "group_name": "Roof",
+     "shape": "rect",
+     "points": [
+      [
+       0.39661,
+       0.09867
+      ],
+      [
+       0.65424,
+       0.09867
+      ],
+      [
+       0.65424,
+       0.12133
+      ],
+      [
+       0.39661,
+       0.12133
+      ]
+     ],
+     "activity_codes": [
+      "MEC-940"
+     ],
+     "sort_order": 20
+    }
+   ]
+  }
+ },
+ "activities": [
+  {
+   "act_code": "CIV-100",
+   "name": "Piling & Equipment Foundations",
+   "wbs": "A10.01 Civil",
+   "discipline": "Civil",
+   "backdrop": "unit",
+   "budget": 2100000,
+   "total_float": 330,
+   "is_critical": false,
+   "sort_order": 0,
+   "planned_start": "2026-01-05",
+   "planned_finish": "2026-03-16",
+   "actual_start": "2026-01-12",
+   "actual_finish": "2026-03-31",
+   "forecast_start": "2026-01-12",
+   "forecast_finish": "2026-03-31",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "CIV-110",
+   "name": "Underground Piping & Earthing Grid",
+   "wbs": "A10.01 Civil",
+   "discipline": "Civil",
+   "backdrop": "unit",
+   "budget": 980000,
+   "total_float": 305,
+   "is_critical": false,
+   "sort_order": 1,
+   "planned_start": "2026-02-14",
+   "planned_finish": "2026-04-10",
+   "actual_start": "2026-02-17",
+   "actual_finish": "2026-04-18",
+   "forecast_start": "2026-02-17",
+   "forecast_finish": "2026-04-18",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "CIV-120",
+   "name": "Paving, Grading & Kerbing",
+   "wbs": "A10.01 Civil",
+   "discipline": "Civil",
+   "backdrop": "unit",
+   "budget": 520000,
+   "total_float": 55,
+   "is_critical": false,
+   "sort_order": 2,
+   "planned_start": "2026-11-01",
+   "planned_finish": "2026-12-16",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-11-13",
+   "forecast_finish": "2027-01-01",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STL-210",
+   "name": "Pipe Rack Bay 1 \u2014 Steel Erection",
+   "wbs": "A20.01 Pipe Rack / Bay 1",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 890000,
+   "total_float": 285,
+   "is_critical": false,
+   "sort_order": 3,
+   "planned_start": "2026-03-21",
+   "planned_finish": "2026-04-30",
+   "actual_start": "2026-03-30",
+   "actual_finish": "2026-05-12",
+   "forecast_start": "2026-03-30",
+   "forecast_finish": "2026-05-12",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-310",
+   "name": "Pipe Rack Bay 1 \u2014 Piping Erection",
+   "wbs": "A20.01 Pipe Rack / Bay 1",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1740000,
+   "total_float": 200,
+   "is_critical": false,
+   "sort_order": 4,
+   "planned_start": "2026-05-15",
+   "planned_finish": "2026-07-24",
+   "actual_start": "2026-06-12",
+   "actual_finish": "2026-08-26",
+   "forecast_start": "2026-06-12",
+   "forecast_finish": "2026-08-26",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "EI-510",
+   "name": "Pipe Rack Bay 1 \u2014 Tray & Cabling",
+   "wbs": "A20.01 Pipe Rack / Bay 1",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 610000,
+   "total_float": 155,
+   "is_critical": false,
+   "sort_order": 5,
+   "planned_start": "2026-07-24",
+   "planned_finish": "2026-09-07",
+   "actual_start": "2026-08-10",
+   "actual_finish": null,
+   "forecast_start": "2026-08-10",
+   "forecast_finish": "2026-10-01",
+   "pct_complete": 0.31
+  },
+  {
+   "act_code": "INS-410",
+   "name": "Pipe Rack Bay 1 \u2014 Insulation & Coatings",
+   "wbs": "A20.01 Pipe Rack / Bay 1",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 480000,
+   "total_float": 145,
+   "is_critical": false,
+   "sort_order": 6,
+   "planned_start": "2026-08-08",
+   "planned_finish": "2026-09-17",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-03",
+   "forecast_finish": "2026-10-16",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STL-220",
+   "name": "Pipe Rack Bay 2 \u2014 Steel Erection",
+   "wbs": "A20.02 Pipe Rack / Bay 2",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 890000,
+   "total_float": 260,
+   "is_critical": false,
+   "sort_order": 7,
+   "planned_start": "2026-04-15",
+   "planned_finish": "2026-05-25",
+   "actual_start": "2026-04-28",
+   "actual_finish": "2026-06-09",
+   "forecast_start": "2026-04-28",
+   "forecast_finish": "2026-06-09",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-320",
+   "name": "Pipe Rack Bay 2 \u2014 Piping Erection",
+   "wbs": "A20.02 Pipe Rack / Bay 2",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1740000,
+   "total_float": 175,
+   "is_critical": false,
+   "sort_order": 8,
+   "planned_start": "2026-06-09",
+   "planned_finish": "2026-08-18",
+   "actual_start": "2026-07-07",
+   "actual_finish": null,
+   "forecast_start": "2026-07-07",
+   "forecast_finish": "2026-09-23",
+   "pct_complete": 0.64
+  },
+  {
+   "act_code": "EI-520",
+   "name": "Pipe Rack Bay 2 \u2014 Tray & Cabling",
+   "wbs": "A20.02 Pipe Rack / Bay 2",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 610000,
+   "total_float": 135,
+   "is_critical": false,
+   "sort_order": 9,
+   "planned_start": "2026-08-13",
+   "planned_finish": "2026-09-27",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-08-29",
+   "forecast_finish": "2026-10-17",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "INS-420",
+   "name": "Pipe Rack Bay 2 \u2014 Insulation & Coatings",
+   "wbs": "A20.02 Pipe Rack / Bay 2",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 480000,
+   "total_float": 125,
+   "is_critical": false,
+   "sort_order": 10,
+   "planned_start": "2026-08-28",
+   "planned_finish": "2026-10-07",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-03",
+   "forecast_finish": "2026-11-17",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STL-230",
+   "name": "Pipe Rack Bay 3 \u2014 Steel Erection",
+   "wbs": "A20.03 Pipe Rack / Bay 3",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 890000,
+   "total_float": 235,
+   "is_critical": false,
+   "sort_order": 11,
+   "planned_start": "2026-05-10",
+   "planned_finish": "2026-06-19",
+   "actual_start": "2026-05-18",
+   "actual_finish": "2026-06-30",
+   "forecast_start": "2026-05-18",
+   "forecast_finish": "2026-06-30",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-330",
+   "name": "Pipe Rack Bay 3 \u2014 Piping Erection",
+   "wbs": "A20.03 Pipe Rack / Bay 3",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1740000,
+   "total_float": 150,
+   "is_critical": false,
+   "sort_order": 12,
+   "planned_start": "2026-07-04",
+   "planned_finish": "2026-09-12",
+   "actual_start": "2026-08-02",
+   "actual_finish": null,
+   "forecast_start": "2026-08-02",
+   "forecast_finish": "2026-10-18",
+   "pct_complete": 0.31
+  },
+  {
+   "act_code": "EI-530",
+   "name": "Pipe Rack Bay 3 \u2014 Tray & Cabling",
+   "wbs": "A20.03 Pipe Rack / Bay 3",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 610000,
+   "total_float": 115,
+   "is_critical": false,
+   "sort_order": 13,
+   "planned_start": "2026-09-02",
+   "planned_finish": "2026-10-17",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-25",
+   "forecast_finish": "2026-11-13",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "INS-430",
+   "name": "Pipe Rack Bay 3 \u2014 Insulation & Coatings",
+   "wbs": "A20.03 Pipe Rack / Bay 3",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 480000,
+   "total_float": 105,
+   "is_critical": false,
+   "sort_order": 14,
+   "planned_start": "2026-09-17",
+   "planned_finish": "2026-10-27",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-15",
+   "forecast_finish": "2026-11-27",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STL-240",
+   "name": "Pipe Rack Bay 4 \u2014 Steel Erection",
+   "wbs": "A20.04 Pipe Rack / Bay 4",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 890000,
+   "total_float": 210,
+   "is_critical": false,
+   "sort_order": 15,
+   "planned_start": "2026-06-04",
+   "planned_finish": "2026-07-14",
+   "actual_start": "2026-06-15",
+   "actual_finish": "2026-07-27",
+   "forecast_start": "2026-06-15",
+   "forecast_finish": "2026-07-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-340",
+   "name": "Pipe Rack Bay 4 \u2014 Piping Erection",
+   "wbs": "A20.04 Pipe Rack / Bay 4",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1740000,
+   "total_float": 125,
+   "is_critical": false,
+   "sort_order": 16,
+   "planned_start": "2026-07-29",
+   "planned_finish": "2026-10-07",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-08-29",
+   "forecast_finish": "2026-11-12",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "EI-540",
+   "name": "Pipe Rack Bay 4 \u2014 Tray & Cabling",
+   "wbs": "A20.04 Pipe Rack / Bay 4",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 610000,
+   "total_float": 95,
+   "is_critical": false,
+   "sort_order": 17,
+   "planned_start": "2026-09-22",
+   "planned_finish": "2026-11-06",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-19",
+   "forecast_finish": "2026-12-06",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "INS-440",
+   "name": "Pipe Rack Bay 4 \u2014 Insulation & Coatings",
+   "wbs": "A20.04 Pipe Rack / Bay 4",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 480000,
+   "total_float": 85,
+   "is_critical": false,
+   "sort_order": 18,
+   "planned_start": "2026-10-07",
+   "planned_finish": "2026-11-16",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-11-05",
+   "forecast_finish": "2026-12-17",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "MEQ-610",
+   "name": "Air Cooler E-501 Set & Align",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 720000,
+   "total_float": 180,
+   "is_critical": false,
+   "sort_order": 19,
+   "planned_start": "2026-07-19",
+   "planned_finish": "2026-08-13",
+   "actual_start": "2026-08-05",
+   "actual_finish": null,
+   "forecast_start": "2026-08-05",
+   "forecast_finish": "2026-09-02",
+   "pct_complete": 0.75
+  },
+  {
+   "act_code": "PIP-615",
+   "name": "E-501 Tie-In Piping",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 540000,
+   "total_float": 145,
+   "is_critical": false,
+   "sort_order": 20,
+   "planned_start": "2026-08-18",
+   "planned_finish": "2026-09-17",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-12",
+   "forecast_finish": "2026-10-17",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "MEQ-620",
+   "name": "Fractionator T-401 Erection",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 2650000,
+   "total_float": 205,
+   "is_critical": false,
+   "sort_order": 21,
+   "planned_start": "2026-06-04",
+   "planned_finish": "2026-07-19",
+   "actual_start": "2026-06-21",
+   "actual_finish": "2026-08-09",
+   "forecast_start": "2026-06-21",
+   "forecast_finish": "2026-08-09",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-625",
+   "name": "T-401 Piping & Internals",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1980000,
+   "total_float": 140,
+   "is_critical": false,
+   "sort_order": 22,
+   "planned_start": "2026-07-24",
+   "planned_finish": "2026-09-22",
+   "actual_start": "2026-08-24",
+   "actual_finish": null,
+   "forecast_start": "2026-08-24",
+   "forecast_finish": "2026-10-28",
+   "pct_complete": 0.04
+  },
+  {
+   "act_code": "INS-630",
+   "name": "T-401 Insulation & Fireproofing",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 760000,
+   "total_float": 90,
+   "is_critical": false,
+   "sort_order": 23,
+   "planned_start": "2026-10-02",
+   "planned_finish": "2026-11-11",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-11-01",
+   "forecast_finish": "2026-12-16",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "EI-635",
+   "name": "T-401 Instrumentation & Tracing",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Instrumentation",
+   "backdrop": "unit",
+   "budget": 690000,
+   "total_float": 95,
+   "is_critical": false,
+   "sort_order": 24,
+   "planned_start": "2026-09-27",
+   "planned_finish": "2026-11-06",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-21",
+   "forecast_finish": "2026-12-06",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "MEQ-640",
+   "name": "Separator V-101 Set & Align",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 610000,
+   "total_float": 215,
+   "is_critical": false,
+   "sort_order": 25,
+   "planned_start": "2026-06-19",
+   "planned_finish": "2026-07-09",
+   "actual_start": "2026-06-30",
+   "actual_finish": "2026-07-22",
+   "forecast_start": "2026-06-30",
+   "forecast_finish": "2026-07-22",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-645",
+   "name": "V-101 Piping & Valving",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 720000,
+   "total_float": 175,
+   "is_critical": false,
+   "sort_order": 26,
+   "planned_start": "2026-07-14",
+   "planned_finish": "2026-08-18",
+   "actual_start": "2026-08-02",
+   "actual_finish": null,
+   "forecast_start": "2026-08-02",
+   "forecast_finish": "2026-09-11",
+   "pct_complete": 0.6
+  },
+  {
+   "act_code": "MEQ-650",
+   "name": "Surge Drum V-102 Set & Align",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 560000,
+   "total_float": 205,
+   "is_critical": false,
+   "sort_order": 27,
+   "planned_start": "2026-06-29",
+   "planned_finish": "2026-07-19",
+   "actual_start": "2026-07-19",
+   "actual_finish": "2026-08-10",
+   "forecast_start": "2026-07-19",
+   "forecast_finish": "2026-08-10",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-655",
+   "name": "V-102 Piping & Valving",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 680000,
+   "total_float": 165,
+   "is_critical": false,
+   "sort_order": 28,
+   "planned_start": "2026-07-24",
+   "planned_finish": "2026-08-28",
+   "actual_start": "2026-08-17",
+   "actual_finish": null,
+   "forecast_start": "2026-08-17",
+   "forecast_finish": "2026-09-24",
+   "pct_complete": 0.24
+  },
+  {
+   "act_code": "BLD-700",
+   "name": "Compressor House Structure & Cladding",
+   "wbs": "A20.06 Buildings",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 1320000,
+   "total_float": 245,
+   "is_critical": false,
+   "sort_order": 29,
+   "planned_start": "2026-04-05",
+   "planned_finish": "2026-06-09",
+   "actual_start": "2026-04-17",
+   "actual_finish": "2026-06-27",
+   "forecast_start": "2026-04-17",
+   "forecast_finish": "2026-06-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEQ-705",
+   "name": "Compressor K-301 Install & Grout",
+   "wbs": "A20.06 Buildings",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 2280000,
+   "total_float": 200,
+   "is_critical": false,
+   "sort_order": 30,
+   "planned_start": "2026-06-14",
+   "planned_finish": "2026-07-24",
+   "actual_start": "2026-06-29",
+   "actual_finish": "2026-08-11",
+   "forecast_start": "2026-06-29",
+   "forecast_finish": "2026-08-11",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-710",
+   "name": "K-301 Suction & Discharge Piping",
+   "wbs": "A20.06 Buildings",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 1140000,
+   "total_float": 150,
+   "is_critical": false,
+   "sort_order": 31,
+   "planned_start": "2026-07-29",
+   "planned_finish": "2026-09-12",
+   "actual_start": "2026-08-25",
+   "actual_finish": null,
+   "forecast_start": "2026-08-25",
+   "forecast_finish": "2026-10-13",
+   "pct_complete": 0.04
+  },
+  {
+   "act_code": "EI-715",
+   "name": "K-301 Power & Control Systems",
+   "wbs": "A20.06 Buildings",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 840000,
+   "total_float": 105,
+   "is_critical": false,
+   "sort_order": 32,
+   "planned_start": "2026-09-17",
+   "planned_finish": "2026-10-27",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-04",
+   "forecast_finish": "2026-11-16",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "BLD-720",
+   "name": "Substation & Control Room Building",
+   "wbs": "A30.01 Utilities",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 1180000,
+   "total_float": 235,
+   "is_critical": false,
+   "sort_order": 33,
+   "planned_start": "2026-04-20",
+   "planned_finish": "2026-06-19",
+   "actual_start": "2026-04-29",
+   "actual_finish": "2026-07-07",
+   "forecast_start": "2026-04-29",
+   "forecast_finish": "2026-07-07",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "EI-725",
+   "name": "MCC & Switchgear Installation",
+   "wbs": "A30.01 Utilities",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 1460000,
+   "total_float": 185,
+   "is_critical": false,
+   "sort_order": 34,
+   "planned_start": "2026-06-24",
+   "planned_finish": "2026-08-08",
+   "actual_start": "2026-07-14",
+   "actual_finish": null,
+   "forecast_start": "2026-07-14",
+   "forecast_finish": "2026-09-03",
+   "pct_complete": 0.84
+  },
+  {
+   "act_code": "EI-730",
+   "name": "Cable Pulling & Termination",
+   "wbs": "A30.01 Utilities",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 1290000,
+   "total_float": 110,
+   "is_critical": false,
+   "sort_order": 35,
+   "planned_start": "2026-08-13",
+   "planned_finish": "2026-10-22",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-02",
+   "forecast_finish": "2026-11-20",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "MEQ-740",
+   "name": "Exchanger Train E-201/202 Set",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Mechanical",
+   "backdrop": "unit",
+   "budget": 940000,
+   "total_float": 190,
+   "is_critical": false,
+   "sort_order": 36,
+   "planned_start": "2026-07-09",
+   "planned_finish": "2026-08-03",
+   "actual_start": "2026-07-30",
+   "actual_finish": null,
+   "forecast_start": "2026-07-30",
+   "forecast_finish": "2026-08-27",
+   "pct_complete": 0.96
+  },
+  {
+   "act_code": "PIP-745",
+   "name": "Exchanger Train Piping",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 860000,
+   "total_float": 145,
+   "is_critical": false,
+   "sort_order": 37,
+   "planned_start": "2026-08-08",
+   "planned_finish": "2026-09-17",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-08",
+   "forecast_finish": "2026-10-20",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "INS-750",
+   "name": "Exchanger Train Insulation",
+   "wbs": "A20.05 Equipment",
+   "discipline": "Insulation",
+   "backdrop": "unit",
+   "budget": 380000,
+   "total_float": 110,
+   "is_critical": false,
+   "sort_order": 38,
+   "planned_start": "2026-09-22",
+   "planned_finish": "2026-10-22",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-28",
+   "forecast_finish": "2026-11-29",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STL-760",
+   "name": "Flare Stack FL-901 Erection",
+   "wbs": "A40.01 Flare",
+   "discipline": "Structural",
+   "backdrop": "unit",
+   "budget": 1560000,
+   "total_float": 220,
+   "is_critical": false,
+   "sort_order": 39,
+   "planned_start": "2026-05-15",
+   "planned_finish": "2026-07-04",
+   "actual_start": "2026-06-01",
+   "actual_finish": "2026-07-27",
+   "forecast_start": "2026-06-01",
+   "forecast_finish": "2026-07-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "PIP-765",
+   "name": "Flare Header & Knockout Piping",
+   "wbs": "A40.01 Flare",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 980000,
+   "total_float": 170,
+   "is_critical": false,
+   "sort_order": 40,
+   "planned_start": "2026-07-09",
+   "planned_finish": "2026-08-23",
+   "actual_start": "2026-08-02",
+   "actual_finish": null,
+   "forecast_start": "2026-08-02",
+   "forecast_finish": "2026-09-21",
+   "pct_complete": 0.48
+  },
+  {
+   "act_code": "EI-770",
+   "name": "Flare Ignition & Pilot System",
+   "wbs": "A40.01 Flare",
+   "discipline": "Electrical",
+   "backdrop": "unit",
+   "budget": 470000,
+   "total_float": 130,
+   "is_critical": false,
+   "sort_order": 41,
+   "planned_start": "2026-09-02",
+   "planned_finish": "2026-10-02",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-03",
+   "forecast_finish": "2026-11-04",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "CMS-800",
+   "name": "Hydrotest & System Reinstatement",
+   "wbs": "A60.01 Commissioning",
+   "discipline": "Piping",
+   "backdrop": "unit",
+   "budget": 780000,
+   "total_float": 55,
+   "is_critical": false,
+   "sort_order": 42,
+   "planned_start": "2026-11-01",
+   "planned_finish": "2026-12-16",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-12-06",
+   "forecast_finish": "2027-01-23",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "CMS-810",
+   "name": "Pre-Commissioning & Loop Checks",
+   "wbs": "A60.01 Commissioning",
+   "discipline": "Instrumentation",
+   "backdrop": "unit",
+   "budget": 690000,
+   "total_float": 20,
+   "is_critical": false,
+   "sort_order": 43,
+   "planned_start": "2026-12-11",
+   "planned_finish": "2027-01-20",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2027-01-12",
+   "forecast_finish": "2027-02-25",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "CMS-820",
+   "name": "Ready for Start-Up Punchlist",
+   "wbs": "A60.01 Commissioning",
+   "discipline": "Painting",
+   "backdrop": "unit",
+   "budget": 340000,
+   "total_float": 0,
+   "is_critical": true,
+   "sort_order": 44,
+   "planned_start": "2027-01-20",
+   "planned_finish": "2027-02-09",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2027-02-21",
+   "forecast_finish": "2027-03-16",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "SITE-100",
+   "name": "Site Establishment & Enabling Works",
+   "wbs": "A10.02 Tower Site",
+   "discipline": "Civil",
+   "backdrop": "tower",
+   "budget": 1032000,
+   "total_float": 387,
+   "is_critical": false,
+   "sort_order": 0,
+   "planned_start": "2025-09-01",
+   "planned_finish": "2025-10-05",
+   "actual_start": "2025-09-01",
+   "actual_finish": "2025-10-08",
+   "forecast_start": "2025-09-01",
+   "forecast_finish": "2025-10-08",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SITE-110",
+   "name": "Temporary Power & Site Utilities",
+   "wbs": "A10.02 Tower Site",
+   "discipline": "Electrical",
+   "backdrop": "tower",
+   "budget": 559000,
+   "total_float": 373,
+   "is_critical": false,
+   "sort_order": 1,
+   "planned_start": "2025-09-19",
+   "planned_finish": "2025-10-19",
+   "actual_start": "2025-09-26",
+   "actual_finish": "2025-10-28",
+   "forecast_start": "2025-09-26",
+   "forecast_finish": "2025-10-28",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SITE-120",
+   "name": "Hardstand, Laydown & Access Roads",
+   "wbs": "A10.02 Tower Site",
+   "discipline": "Civil",
+   "backdrop": "tower",
+   "budget": 666500,
+   "total_float": 365,
+   "is_critical": false,
+   "sort_order": 2,
+   "planned_start": "2025-10-01",
+   "planned_finish": "2025-10-27",
+   "actual_start": "2025-10-04",
+   "actual_finish": "2025-11-03",
+   "forecast_start": "2025-10-04",
+   "forecast_finish": "2025-11-03",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SUB-200",
+   "name": "Bored Piles",
+   "wbs": "A10.03 Tower Substructure",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 3547500,
+   "total_float": 337,
+   "is_critical": false,
+   "sort_order": 3,
+   "planned_start": "2025-10-11",
+   "planned_finish": "2025-11-24",
+   "actual_start": "2025-10-14",
+   "actual_finish": "2025-11-29",
+   "forecast_start": "2025-10-14",
+   "forecast_finish": "2025-11-29",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SUB-210",
+   "name": "Pile Caps & Capping Beams",
+   "wbs": "A10.03 Tower Substructure",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1677000,
+   "total_float": 315,
+   "is_critical": false,
+   "sort_order": 4,
+   "planned_start": "2025-11-18",
+   "planned_finish": "2025-12-16",
+   "actual_start": "2025-11-27",
+   "actual_finish": "2025-12-27",
+   "forecast_start": "2025-11-27",
+   "forecast_finish": "2025-12-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SUB-220",
+   "name": "Mat Foundation Pour",
+   "wbs": "A10.03 Tower Substructure",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 3053000,
+   "total_float": 315,
+   "is_critical": false,
+   "sort_order": 5,
+   "planned_start": "2025-11-22",
+   "planned_finish": "2025-12-16",
+   "actual_start": "2025-12-01",
+   "actual_finish": "2025-12-27",
+   "forecast_start": "2025-12-01",
+   "forecast_finish": "2025-12-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "SUB-230",
+   "name": "Below-Grade Waterproofing",
+   "wbs": "A10.03 Tower Substructure",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 731000,
+   "total_float": 301,
+   "is_critical": false,
+   "sort_order": 6,
+   "planned_start": "2025-12-10",
+   "planned_finish": "2025-12-30",
+   "actual_start": "2025-12-22",
+   "actual_finish": "2026-01-13",
+   "forecast_start": "2025-12-22",
+   "forecast_finish": "2026-01-13",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-01",
+   "name": "Level 01 \u2014 Slab, Columns & Core",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 2537000,
+   "total_float": 301,
+   "is_critical": false,
+   "sort_order": 7,
+   "planned_start": "2025-12-08",
+   "planned_finish": "2025-12-30",
+   "actual_start": "2025-12-14",
+   "actual_finish": "2026-01-07",
+   "forecast_start": "2025-12-14",
+   "forecast_finish": "2026-01-07",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-01",
+   "name": "Level 01 \u2014 MEP Rough-In",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 257,
+   "is_critical": false,
+   "sort_order": 8,
+   "planned_start": "2026-01-23",
+   "planned_finish": "2026-02-12",
+   "actual_start": "2026-02-03",
+   "actual_finish": "2026-02-26",
+   "forecast_start": "2026-02-03",
+   "forecast_finish": "2026-02-26",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-01",
+   "name": "Level 01 \u2014 Facade & Glazing",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 243,
+   "is_critical": false,
+   "sort_order": 9,
+   "planned_start": "2026-02-08",
+   "planned_finish": "2026-02-26",
+   "actual_start": "2026-02-24",
+   "actual_finish": "2026-03-16",
+   "forecast_start": "2026-02-24",
+   "forecast_finish": "2026-03-16",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-01",
+   "name": "Level 01 \u2014 Partitions & Finishes",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 213,
+   "is_critical": false,
+   "sort_order": 10,
+   "planned_start": "2026-02-26",
+   "planned_finish": "2026-03-28",
+   "actual_start": "2026-03-10",
+   "actual_finish": "2026-04-12",
+   "forecast_start": "2026-03-10",
+   "forecast_finish": "2026-04-12",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-02",
+   "name": "Level 02 \u2014 Slab, Columns & Core",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 2537000,
+   "total_float": 288,
+   "is_critical": false,
+   "sort_order": 11,
+   "planned_start": "2025-12-21",
+   "planned_finish": "2026-01-12",
+   "actual_start": "2026-01-02",
+   "actual_finish": "2026-01-26",
+   "forecast_start": "2026-01-02",
+   "forecast_finish": "2026-01-26",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-02",
+   "name": "Level 02 \u2014 MEP Rough-In",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 244,
+   "is_critical": false,
+   "sort_order": 12,
+   "planned_start": "2026-02-05",
+   "planned_finish": "2026-02-25",
+   "actual_start": "2026-02-15",
+   "actual_finish": "2026-03-09",
+   "forecast_start": "2026-02-15",
+   "forecast_finish": "2026-03-09",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-02",
+   "name": "Level 02 \u2014 Facade & Glazing",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 230,
+   "is_critical": false,
+   "sort_order": 13,
+   "planned_start": "2026-02-21",
+   "planned_finish": "2026-03-11",
+   "actual_start": "2026-03-09",
+   "actual_finish": "2026-03-28",
+   "forecast_start": "2026-03-09",
+   "forecast_finish": "2026-03-28",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-02",
+   "name": "Level 02 \u2014 Partitions & Finishes",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 200,
+   "is_critical": false,
+   "sort_order": 14,
+   "planned_start": "2026-03-11",
+   "planned_finish": "2026-04-10",
+   "actual_start": "2026-03-28",
+   "actual_finish": "2026-04-30",
+   "forecast_start": "2026-03-28",
+   "forecast_finish": "2026-04-30",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-03",
+   "name": "Level 03 \u2014 Slab, Columns & Core",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 2537000,
+   "total_float": 275,
+   "is_critical": false,
+   "sort_order": 15,
+   "planned_start": "2026-01-03",
+   "planned_finish": "2026-01-25",
+   "actual_start": "2026-01-07",
+   "actual_finish": "2026-02-01",
+   "forecast_start": "2026-01-07",
+   "forecast_finish": "2026-02-01",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-03",
+   "name": "Level 03 \u2014 MEP Rough-In",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 231,
+   "is_critical": false,
+   "sort_order": 16,
+   "planned_start": "2026-02-18",
+   "planned_finish": "2026-03-10",
+   "actual_start": "2026-02-28",
+   "actual_finish": "2026-03-22",
+   "forecast_start": "2026-02-28",
+   "forecast_finish": "2026-03-22",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-03",
+   "name": "Level 03 \u2014 Facade & Glazing",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 217,
+   "is_critical": false,
+   "sort_order": 17,
+   "planned_start": "2026-03-06",
+   "planned_finish": "2026-03-24",
+   "actual_start": "2026-03-22",
+   "actual_finish": "2026-04-10",
+   "forecast_start": "2026-03-22",
+   "forecast_finish": "2026-04-10",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-03",
+   "name": "Level 03 \u2014 Partitions & Finishes",
+   "wbs": "A20.07 Tower Podium",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 187,
+   "is_critical": false,
+   "sort_order": 18,
+   "planned_start": "2026-03-24",
+   "planned_finish": "2026-04-23",
+   "actual_start": "2026-04-15",
+   "actual_finish": "2026-05-17",
+   "forecast_start": "2026-04-15",
+   "forecast_finish": "2026-05-17",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-04",
+   "name": "Level 04 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 268,
+   "is_critical": false,
+   "sort_order": 19,
+   "planned_start": "2026-01-16",
+   "planned_finish": "2026-02-01",
+   "actual_start": "2026-01-21",
+   "actual_finish": "2026-02-08",
+   "forecast_start": "2026-01-21",
+   "forecast_finish": "2026-02-08",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-04",
+   "name": "Level 04 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 224,
+   "is_critical": false,
+   "sort_order": 20,
+   "planned_start": "2026-02-25",
+   "planned_finish": "2026-03-17",
+   "actual_start": "2026-03-19",
+   "actual_finish": "2026-04-09",
+   "forecast_start": "2026-03-19",
+   "forecast_finish": "2026-04-09",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-04",
+   "name": "Level 04 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 210,
+   "is_critical": false,
+   "sort_order": 21,
+   "planned_start": "2026-03-13",
+   "planned_finish": "2026-03-31",
+   "actual_start": "2026-04-04",
+   "actual_finish": "2026-04-23",
+   "forecast_start": "2026-04-04",
+   "forecast_finish": "2026-04-23",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-04",
+   "name": "Level 04 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 180,
+   "is_critical": false,
+   "sort_order": 22,
+   "planned_start": "2026-03-31",
+   "planned_finish": "2026-04-30",
+   "actual_start": "2026-04-27",
+   "actual_finish": "2026-05-30",
+   "forecast_start": "2026-04-27",
+   "forecast_finish": "2026-05-30",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-05",
+   "name": "Level 05 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 255,
+   "is_critical": false,
+   "sort_order": 23,
+   "planned_start": "2026-01-29",
+   "planned_finish": "2026-02-14",
+   "actual_start": "2026-02-07",
+   "actual_finish": "2026-02-24",
+   "forecast_start": "2026-02-07",
+   "forecast_finish": "2026-02-24",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-05",
+   "name": "Level 05 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 211,
+   "is_critical": false,
+   "sort_order": 24,
+   "planned_start": "2026-03-10",
+   "planned_finish": "2026-03-30",
+   "actual_start": "2026-03-31",
+   "actual_finish": "2026-04-22",
+   "forecast_start": "2026-03-31",
+   "forecast_finish": "2026-04-22",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-05",
+   "name": "Level 05 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 197,
+   "is_critical": false,
+   "sort_order": 25,
+   "planned_start": "2026-03-26",
+   "planned_finish": "2026-04-13",
+   "actual_start": "2026-04-17",
+   "actual_finish": "2026-05-07",
+   "forecast_start": "2026-04-17",
+   "forecast_finish": "2026-05-07",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-05",
+   "name": "Level 05 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 167,
+   "is_critical": false,
+   "sort_order": 26,
+   "planned_start": "2026-04-13",
+   "planned_finish": "2026-05-13",
+   "actual_start": "2026-05-16",
+   "actual_finish": "2026-06-19",
+   "forecast_start": "2026-05-16",
+   "forecast_finish": "2026-06-19",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-06",
+   "name": "Level 06 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 242,
+   "is_critical": false,
+   "sort_order": 27,
+   "planned_start": "2026-02-11",
+   "planned_finish": "2026-02-27",
+   "actual_start": "2026-02-26",
+   "actual_finish": "2026-03-15",
+   "forecast_start": "2026-02-26",
+   "forecast_finish": "2026-03-15",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-06",
+   "name": "Level 06 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 198,
+   "is_critical": false,
+   "sort_order": 28,
+   "planned_start": "2026-03-23",
+   "planned_finish": "2026-04-12",
+   "actual_start": "2026-04-13",
+   "actual_finish": "2026-05-05",
+   "forecast_start": "2026-04-13",
+   "forecast_finish": "2026-05-05",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-06",
+   "name": "Level 06 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 184,
+   "is_critical": false,
+   "sort_order": 29,
+   "planned_start": "2026-04-08",
+   "planned_finish": "2026-04-26",
+   "actual_start": "2026-04-30",
+   "actual_finish": "2026-05-20",
+   "forecast_start": "2026-04-30",
+   "forecast_finish": "2026-05-20",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-06",
+   "name": "Level 06 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 154,
+   "is_critical": false,
+   "sort_order": 30,
+   "planned_start": "2026-04-26",
+   "planned_finish": "2026-05-26",
+   "actual_start": "2026-06-03",
+   "actual_finish": "2026-07-07",
+   "forecast_start": "2026-06-03",
+   "forecast_finish": "2026-07-07",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-07",
+   "name": "Level 07 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 229,
+   "is_critical": false,
+   "sort_order": 31,
+   "planned_start": "2026-02-24",
+   "planned_finish": "2026-03-12",
+   "actual_start": "2026-03-15",
+   "actual_finish": "2026-04-02",
+   "forecast_start": "2026-03-15",
+   "forecast_finish": "2026-04-02",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-07",
+   "name": "Level 07 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 185,
+   "is_critical": false,
+   "sort_order": 32,
+   "planned_start": "2026-04-05",
+   "planned_finish": "2026-04-25",
+   "actual_start": "2026-04-26",
+   "actual_finish": "2026-05-18",
+   "forecast_start": "2026-04-26",
+   "forecast_finish": "2026-05-18",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-07",
+   "name": "Level 07 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 171,
+   "is_critical": false,
+   "sort_order": 33,
+   "planned_start": "2026-04-21",
+   "planned_finish": "2026-05-09",
+   "actual_start": "2026-05-13",
+   "actual_finish": "2026-06-01",
+   "forecast_start": "2026-05-13",
+   "forecast_finish": "2026-06-01",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-07",
+   "name": "Level 07 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 141,
+   "is_critical": false,
+   "sort_order": 34,
+   "planned_start": "2026-05-09",
+   "planned_finish": "2026-06-08",
+   "actual_start": "2026-06-09",
+   "actual_finish": "2026-07-11",
+   "forecast_start": "2026-06-09",
+   "forecast_finish": "2026-07-11",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-08",
+   "name": "Level 08 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 216,
+   "is_critical": false,
+   "sort_order": 35,
+   "planned_start": "2026-03-09",
+   "planned_finish": "2026-03-25",
+   "actual_start": "2026-03-28",
+   "actual_finish": "2026-04-15",
+   "forecast_start": "2026-03-28",
+   "forecast_finish": "2026-04-15",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-08",
+   "name": "Level 08 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 172,
+   "is_critical": false,
+   "sort_order": 36,
+   "planned_start": "2026-04-18",
+   "planned_finish": "2026-05-08",
+   "actual_start": "2026-05-09",
+   "actual_finish": "2026-05-31",
+   "forecast_start": "2026-05-09",
+   "forecast_finish": "2026-05-31",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-08",
+   "name": "Level 08 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 158,
+   "is_critical": false,
+   "sort_order": 37,
+   "planned_start": "2026-05-04",
+   "planned_finish": "2026-05-22",
+   "actual_start": "2026-06-01",
+   "actual_finish": "2026-06-20",
+   "forecast_start": "2026-06-01",
+   "forecast_finish": "2026-06-20",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-08",
+   "name": "Level 08 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 128,
+   "is_critical": false,
+   "sort_order": 38,
+   "planned_start": "2026-05-22",
+   "planned_finish": "2026-06-21",
+   "actual_start": "2026-06-28",
+   "actual_finish": "2026-07-31",
+   "forecast_start": "2026-06-28",
+   "forecast_finish": "2026-07-31",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-09",
+   "name": "Level 09 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 203,
+   "is_critical": false,
+   "sort_order": 39,
+   "planned_start": "2026-03-22",
+   "planned_finish": "2026-04-07",
+   "actual_start": "2026-04-02",
+   "actual_finish": "2026-04-19",
+   "forecast_start": "2026-04-02",
+   "forecast_finish": "2026-04-19",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-09",
+   "name": "Level 09 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 159,
+   "is_critical": false,
+   "sort_order": 40,
+   "planned_start": "2026-05-01",
+   "planned_finish": "2026-05-21",
+   "actual_start": "2026-05-22",
+   "actual_finish": "2026-06-14",
+   "forecast_start": "2026-05-22",
+   "forecast_finish": "2026-06-14",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-09",
+   "name": "Level 09 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 145,
+   "is_critical": false,
+   "sort_order": 41,
+   "planned_start": "2026-05-17",
+   "planned_finish": "2026-06-04",
+   "actual_start": "2026-06-14",
+   "actual_finish": "2026-07-04",
+   "forecast_start": "2026-06-14",
+   "forecast_finish": "2026-07-04",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-09",
+   "name": "Level 09 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 115,
+   "is_critical": false,
+   "sort_order": 42,
+   "planned_start": "2026-06-04",
+   "planned_finish": "2026-07-04",
+   "actual_start": "2026-07-16",
+   "actual_finish": "2026-08-18",
+   "forecast_start": "2026-07-16",
+   "forecast_finish": "2026-08-18",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "STR-10",
+   "name": "Level 10 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 190,
+   "is_critical": false,
+   "sort_order": 43,
+   "planned_start": "2026-04-04",
+   "planned_finish": "2026-04-20",
+   "actual_start": "2026-04-27",
+   "actual_finish": "2026-05-14",
+   "forecast_start": "2026-04-27",
+   "forecast_finish": "2026-05-14",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-10",
+   "name": "Level 10 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 146,
+   "is_critical": false,
+   "sort_order": 44,
+   "planned_start": "2026-05-14",
+   "planned_finish": "2026-06-03",
+   "actual_start": "2026-06-07",
+   "actual_finish": "2026-06-28",
+   "forecast_start": "2026-06-07",
+   "forecast_finish": "2026-06-28",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-10",
+   "name": "Level 10 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 132,
+   "is_critical": false,
+   "sort_order": 45,
+   "planned_start": "2026-05-30",
+   "planned_finish": "2026-06-17",
+   "actual_start": "2026-06-30",
+   "actual_finish": "2026-07-20",
+   "forecast_start": "2026-06-30",
+   "forecast_finish": "2026-07-20",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-10",
+   "name": "Level 10 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 102,
+   "is_critical": false,
+   "sort_order": 46,
+   "planned_start": "2026-06-17",
+   "planned_finish": "2026-07-17",
+   "actual_start": "2026-07-30",
+   "actual_finish": null,
+   "forecast_start": "2026-07-30",
+   "forecast_finish": "2026-09-02",
+   "pct_complete": 0.79
+  },
+  {
+   "act_code": "STR-11",
+   "name": "Level 11 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 177,
+   "is_critical": false,
+   "sort_order": 47,
+   "planned_start": "2026-04-17",
+   "planned_finish": "2026-05-03",
+   "actual_start": "2026-05-09",
+   "actual_finish": "2026-05-27",
+   "forecast_start": "2026-05-09",
+   "forecast_finish": "2026-05-27",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-11",
+   "name": "Level 11 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 133,
+   "is_critical": false,
+   "sort_order": 48,
+   "planned_start": "2026-05-27",
+   "planned_finish": "2026-06-16",
+   "actual_start": "2026-06-24",
+   "actual_finish": "2026-07-15",
+   "forecast_start": "2026-06-24",
+   "forecast_finish": "2026-07-15",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-11",
+   "name": "Level 11 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 119,
+   "is_critical": false,
+   "sort_order": 49,
+   "planned_start": "2026-06-12",
+   "planned_finish": "2026-06-30",
+   "actual_start": "2026-07-18",
+   "actual_finish": "2026-08-07",
+   "forecast_start": "2026-07-18",
+   "forecast_finish": "2026-08-07",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-11",
+   "name": "Level 11 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 89,
+   "is_critical": false,
+   "sort_order": 50,
+   "planned_start": "2026-06-30",
+   "planned_finish": "2026-07-30",
+   "actual_start": "2026-08-13",
+   "actual_finish": null,
+   "forecast_start": "2026-08-13",
+   "forecast_finish": "2026-09-14",
+   "pct_complete": 0.41
+  },
+  {
+   "act_code": "STR-12",
+   "name": "Level 12 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 164,
+   "is_critical": false,
+   "sort_order": 51,
+   "planned_start": "2026-04-30",
+   "planned_finish": "2026-05-16",
+   "actual_start": "2026-05-19",
+   "actual_finish": "2026-06-06",
+   "forecast_start": "2026-05-19",
+   "forecast_finish": "2026-06-06",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-12",
+   "name": "Level 12 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 120,
+   "is_critical": false,
+   "sort_order": 52,
+   "planned_start": "2026-06-09",
+   "planned_finish": "2026-06-29",
+   "actual_start": "2026-07-11",
+   "actual_finish": "2026-08-01",
+   "forecast_start": "2026-07-11",
+   "forecast_finish": "2026-08-01",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-12",
+   "name": "Level 12 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 106,
+   "is_critical": false,
+   "sort_order": 53,
+   "planned_start": "2026-06-25",
+   "planned_finish": "2026-07-13",
+   "actual_start": "2026-08-04",
+   "actual_finish": "2026-08-23",
+   "forecast_start": "2026-08-04",
+   "forecast_finish": "2026-08-23",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FIN-12",
+   "name": "Level 12 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 76,
+   "is_critical": false,
+   "sort_order": 54,
+   "planned_start": "2026-07-13",
+   "planned_finish": "2026-08-12",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-08-27",
+   "forecast_finish": "2026-10-01",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STR-13",
+   "name": "Level 13 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 151,
+   "is_critical": false,
+   "sort_order": 55,
+   "planned_start": "2026-05-13",
+   "planned_finish": "2026-05-29",
+   "actual_start": "2026-05-31",
+   "actual_finish": "2026-06-18",
+   "forecast_start": "2026-05-31",
+   "forecast_finish": "2026-06-18",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-13",
+   "name": "Level 13 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 107,
+   "is_critical": false,
+   "sort_order": 56,
+   "planned_start": "2026-06-22",
+   "planned_finish": "2026-07-12",
+   "actual_start": "2026-07-29",
+   "actual_finish": "2026-08-21",
+   "forecast_start": "2026-07-29",
+   "forecast_finish": "2026-08-21",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "FAC-13",
+   "name": "Level 13 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 93,
+   "is_critical": false,
+   "sort_order": 57,
+   "planned_start": "2026-07-08",
+   "planned_finish": "2026-07-26",
+   "actual_start": "2026-08-10",
+   "actual_finish": null,
+   "forecast_start": "2026-08-10",
+   "forecast_finish": "2026-08-31",
+   "pct_complete": 0.76
+  },
+  {
+   "act_code": "FIN-13",
+   "name": "Level 13 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 63,
+   "is_critical": false,
+   "sort_order": 58,
+   "planned_start": "2026-07-26",
+   "planned_finish": "2026-08-25",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-22",
+   "forecast_finish": "2026-10-23",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "STR-14",
+   "name": "Level 14 \u2014 Slab, Columns & Core",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1849000,
+   "total_float": 138,
+   "is_critical": false,
+   "sort_order": 59,
+   "planned_start": "2026-05-26",
+   "planned_finish": "2026-06-11",
+   "actual_start": "2026-06-15",
+   "actual_finish": "2026-07-03",
+   "forecast_start": "2026-06-15",
+   "forecast_finish": "2026-07-03",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEP-14",
+   "name": "Level 14 \u2014 MEP Rough-In",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 94,
+   "is_critical": false,
+   "sort_order": 60,
+   "planned_start": "2026-07-05",
+   "planned_finish": "2026-07-25",
+   "actual_start": "2026-08-09",
+   "actual_finish": null,
+   "forecast_start": "2026-08-09",
+   "forecast_finish": "2026-09-01",
+   "pct_complete": 0.74
+  },
+  {
+   "act_code": "FAC-14",
+   "name": "Level 14 \u2014 Facade & Glazing",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 80,
+   "is_critical": false,
+   "sort_order": 61,
+   "planned_start": "2026-07-21",
+   "planned_finish": "2026-08-08",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-08-27",
+   "forecast_finish": "2026-09-16",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "FIN-14",
+   "name": "Level 14 \u2014 Partitions & Finishes",
+   "wbs": "A20.08 Tower Levels",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 1505000,
+   "total_float": 50,
+   "is_critical": false,
+   "sort_order": 62,
+   "planned_start": "2026-08-08",
+   "planned_finish": "2026-09-07",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-30",
+   "forecast_finish": "2026-11-04",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "ROF-900",
+   "name": "Roof Structure & Membrane",
+   "wbs": "A20.09 Tower Roof",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1333000,
+   "total_float": 108,
+   "is_critical": false,
+   "sort_order": 63,
+   "planned_start": "2026-06-17",
+   "planned_finish": "2026-07-11",
+   "actual_start": "2026-07-07",
+   "actual_finish": "2026-08-01",
+   "forecast_start": "2026-07-07",
+   "forecast_finish": "2026-08-01",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "ROF-910",
+   "name": "Parapet, Edge Details & Fall Arrest",
+   "wbs": "A20.09 Tower Roof",
+   "discipline": "Painting",
+   "backdrop": "tower",
+   "budget": 516000,
+   "total_float": 90,
+   "is_critical": false,
+   "sort_order": 64,
+   "planned_start": "2026-07-11",
+   "planned_finish": "2026-07-29",
+   "actual_start": "2026-08-09",
+   "actual_finish": null,
+   "forecast_start": "2026-08-09",
+   "forecast_finish": "2026-08-29",
+   "pct_complete": 0.85
+  },
+  {
+   "act_code": "MEC-920",
+   "name": "Mechanical Penthouse Structure",
+   "wbs": "A20.09 Tower Roof",
+   "discipline": "Structural",
+   "backdrop": "tower",
+   "budget": 1161000,
+   "total_float": 94,
+   "is_critical": false,
+   "sort_order": 65,
+   "planned_start": "2026-06-29",
+   "planned_finish": "2026-07-25",
+   "actual_start": "2026-07-20",
+   "actual_finish": "2026-08-17",
+   "forecast_start": "2026-07-20",
+   "forecast_finish": "2026-08-17",
+   "pct_complete": 1.0
+  },
+  {
+   "act_code": "MEC-930",
+   "name": "Penthouse Equipment Set & Connect",
+   "wbs": "A20.09 Tower Roof",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1892000,
+   "total_float": 62,
+   "is_critical": false,
+   "sort_order": 66,
+   "planned_start": "2026-07-29",
+   "planned_finish": "2026-08-26",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-08-30",
+   "forecast_finish": "2026-09-29",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "MEC-940",
+   "name": "Cooling Towers & Roof Plant Install",
+   "wbs": "A20.09 Tower Roof",
+   "discipline": "Mechanical",
+   "backdrop": "tower",
+   "budget": 1419000,
+   "total_float": 40,
+   "is_critical": false,
+   "sort_order": 67,
+   "planned_start": "2026-08-26",
+   "planned_finish": "2026-09-17",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-02",
+   "forecast_finish": "2026-10-27",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "CMS-950",
+   "name": "Vertical Transport Commissioning",
+   "wbs": "A60.02 Tower Commissioning",
+   "discipline": "Instrumentation",
+   "backdrop": "tower",
+   "budget": 903000,
+   "total_float": 38,
+   "is_critical": false,
+   "sort_order": 68,
+   "planned_start": "2026-08-10",
+   "planned_finish": "2026-09-19",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-09-10",
+   "forecast_finish": "2026-10-22",
+   "pct_complete": 0.0
+  },
+  {
+   "act_code": "CMS-960",
+   "name": "Integrated Systems Testing & Handover",
+   "wbs": "A60.02 Tower Commissioning",
+   "discipline": "Piping",
+   "backdrop": "tower",
+   "budget": 817000,
+   "total_float": 0,
+   "is_critical": true,
+   "sort_order": 69,
+   "planned_start": "2026-09-23",
+   "planned_finish": "2026-10-27",
+   "actual_start": null,
+   "actual_finish": null,
+   "forecast_start": "2026-10-25",
+   "forecast_finish": "2026-11-30",
+   "pct_complete": 0.0
+  }
+ ],
+ "audit": [
+  {
+   "ts": "2026-08-26 08:14:02",
+   "entity": "project",
+   "entity_ref": "VR-DEMO-001",
+   "action": "seed_loaded",
+   "old_value": null,
+   "new_value": "demo dataset (unit + tower backdrops)",
+   "user_name": "D. Pennington"
+  },
+  {
+   "ts": "2026-08-26 08:15:40",
+   "entity": "mapping",
+   "entity_ref": "n/a",
+   "action": "note",
+   "old_value": null,
+   "new_value": "5 activities have no elevation region across both backdrops (commissioning is not shown on either plate) \u2014 map them in the mapping studio or accept them as unmapped.",
+   "user_name": "D. Pennington"
+  }
+ ],
+ "meta": {
+  "seed": 20260826,
+  "source_dataset": "server/demo.ts:unitRows + towerRows (Cedar Bayou Unit 4 Revamp, Bayou Ridge Tower)",
+  "geometry_source": "dist/public/demo/geometry.json (unit + tower, unmodified)",
+  "tower_budget_scale": 2.15
+ }
+}

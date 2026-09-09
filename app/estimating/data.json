@@ -1,0 +1,1836 @@
+{
+ "project": {
+  "project_name": "Demo Data",
+  "project_no": "VR-DEMO-001",
+  "client": "VissRad",
+  "contractor": "Gulf Mechanical",
+  "location": "Gulf Coast, Texas",
+  "currency": "USD",
+  "data_date": "2026-08-26",
+  "rfsu": "2026-12-24",
+  "user": "D. Pennington",
+  "estimator": "GEAG Estimating",
+  "estimate_date": "2026-07-29",
+  "estimate_class": "Class 3",
+  "accuracy_low_pct": -15,
+  "accuracy_high_pct": 20,
+  "markup_model": "EPC Full",
+  "contingency_pct": 0.15,
+  "estimate_status": "Working",
+  "target_tic": 148000000
+ },
+ "areas": [
+  {
+   "code": "A10",
+   "name": "Inlet"
+  },
+  {
+   "code": "A20",
+   "name": "Process"
+  },
+  {
+   "code": "A30",
+   "name": "Utilities"
+  },
+  {
+   "code": "A40",
+   "name": "Flare"
+  },
+  {
+   "code": "A50",
+   "name": "Tankage"
+  },
+  {
+   "code": "A60",
+   "name": "Interconnecting"
+  }
+ ],
+ "disciplines": [
+  {
+   "discipline": "Civil",
+   "method": "parametric",
+   "alloc_pct": 0.085,
+   "labor_pct": 0.46,
+   "unit": "CY",
+   "unit_label": "concrete/earthwork",
+   "known_qty": 96447.0,
+   "known_unit": "CY",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 5786800.0,
+   "takeoff_cost": 0.0,
+   "takeoff_mh": 0.0
+  },
+  {
+   "discipline": "Structural",
+   "method": "parametric",
+   "alloc_pct": 0.115,
+   "labor_pct": 0.34,
+   "unit": "TON",
+   "unit_label": "structural steel",
+   "known_qty": 130487.0,
+   "known_unit": "TON",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 7829200.0,
+   "takeoff_cost": 0.0,
+   "takeoff_mh": 0.0
+  },
+  {
+   "discipline": "Mechanical",
+   "method": "parametric",
+   "alloc_pct": 0.155,
+   "labor_pct": 0.3,
+   "unit": "EA",
+   "unit_label": "equipment",
+   "known_qty": 175873.0,
+   "known_unit": "EA",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 10552400.0,
+   "takeoff_cost": 50709.6,
+   "takeoff_mh": 288.0
+  },
+  {
+   "discipline": "Piping",
+   "method": "detailed_takeoff",
+   "alloc_pct": 0.3,
+   "labor_pct": 0.42,
+   "unit": "LF",
+   "unit_label": "pipe",
+   "known_qty": 638250.0,
+   "known_unit": "LF",
+   "known_unit_rate": 32.0,
+   "parametric_cost": 20424000.0,
+   "takeoff_cost": 20537928.95,
+   "takeoff_mh": 361909.5
+  },
+  {
+   "discipline": "Electrical",
+   "method": "parametric",
+   "alloc_pct": 0.135,
+   "labor_pct": 0.36,
+   "unit": "LF",
+   "unit_label": "cable/conduit",
+   "known_qty": 153180.0,
+   "known_unit": "LF",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 9190800.0,
+   "takeoff_cost": 0.0,
+   "takeoff_mh": 0.0
+  },
+  {
+   "discipline": "Instrumentation",
+   "method": "detailed_takeoff",
+   "alloc_pct": 0.09,
+   "labor_pct": 0.4,
+   "unit": "EA",
+   "unit_label": "loops/devices",
+   "known_qty": 102120.0,
+   "known_unit": "EA",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 6127200.0,
+   "takeoff_cost": 5368743.59,
+   "takeoff_mh": 39613.0
+  },
+  {
+   "discipline": "Insulation",
+   "method": "parametric",
+   "alloc_pct": 0.075,
+   "labor_pct": 0.55,
+   "unit": "SF",
+   "unit_label": "insulated surface",
+   "known_qty": 85100.0,
+   "known_unit": "SF",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 5106000.0,
+   "takeoff_cost": 0.0,
+   "takeoff_mh": 0.0
+  },
+  {
+   "discipline": "Painting",
+   "method": "parametric",
+   "alloc_pct": 0.045,
+   "labor_pct": 0.6,
+   "unit": "SF",
+   "unit_label": "coated surface",
+   "known_qty": 51060.0,
+   "known_unit": "SF",
+   "known_unit_rate": 60.0,
+   "parametric_cost": 3063600.0,
+   "takeoff_cost": 0.0,
+   "takeoff_mh": 0.0
+  }
+ ],
+ "crafts": [
+  {
+   "craft": "Pipefitter",
+   "base_rate": 34.75,
+   "burden_pct": 0.269,
+   "all_in_rate": 44.1
+  },
+  {
+   "craft": "Welder",
+   "base_rate": 32.75,
+   "burden_pct": 0.273,
+   "all_in_rate": 41.69
+  },
+  {
+   "craft": "Boilermaker",
+   "base_rate": 39.25,
+   "burden_pct": 0.271,
+   "all_in_rate": 49.89
+  },
+  {
+   "craft": "Millwright/Rigger",
+   "base_rate": 39.5,
+   "burden_pct": 0.271,
+   "all_in_rate": 50.2
+  },
+  {
+   "craft": "Ironworker",
+   "base_rate": 30.75,
+   "burden_pct": 0.288,
+   "all_in_rate": 39.61
+  },
+  {
+   "craft": "Operator",
+   "base_rate": 29.25,
+   "burden_pct": 0.274,
+   "all_in_rate": 37.26
+  },
+  {
+   "craft": "Carpenter",
+   "base_rate": 28.25,
+   "burden_pct": 0.275,
+   "all_in_rate": 36.02
+  },
+  {
+   "craft": "Laborer",
+   "base_rate": 22.75,
+   "burden_pct": 0.274,
+   "all_in_rate": 28.98
+  },
+  {
+   "craft": "Electrician",
+   "base_rate": 33.75,
+   "burden_pct": 0.27,
+   "all_in_rate": 42.86
+  },
+  {
+   "craft": "Instrument Tech",
+   "base_rate": 36.5,
+   "burden_pct": 0.272,
+   "all_in_rate": 46.43
+  },
+  {
+   "craft": "Insulator",
+   "base_rate": 31.25,
+   "burden_pct": 0.268,
+   "all_in_rate": 39.62
+  },
+  {
+   "craft": "Painter",
+   "base_rate": 27.5,
+   "burden_pct": 0.266,
+   "all_in_rate": 34.81
+  },
+  {
+   "craft": "General Foreman",
+   "base_rate": 43.0,
+   "burden_pct": 0.26,
+   "all_in_rate": 54.18
+  }
+ ],
+ "weld_factors": [
+  {
+   "key": "WF-01",
+   "material": "Carbon Steel A106 Gr B",
+   "factor": 1.0,
+   "notes": "Base case - carbon steel, no NDE adder"
+  },
+  {
+   "key": "WF-02",
+   "material": "Carbon Steel A333 (low temp)",
+   "factor": 1.75,
+   "notes": "Alloy group 6, low temperature service"
+  },
+  {
+   "key": "WF-03",
+   "material": "Chrome-Moly P11 (1.25Cr)",
+   "factor": 1.5,
+   "notes": "Alloy group 1, preheat/PWHT adder"
+  },
+  {
+   "key": "WF-04",
+   "material": "Chrome-Moly P22 (2.25Cr)",
+   "factor": 1.75,
+   "notes": "Alloy group 2, preheat/PWHT adder"
+  },
+  {
+   "key": "WF-05",
+   "material": "Chrome-Moly P91 (9Cr)",
+   "factor": 2.25,
+   "notes": "Alloy group 3, tight preheat/PWHT window"
+  },
+  {
+   "key": "WF-06",
+   "material": "Stainless 304/304L",
+   "factor": 1.75,
+   "notes": "Alloy group 4, interpass cleaning"
+  },
+  {
+   "key": "WF-07",
+   "material": "Stainless 316/316L",
+   "factor": 1.75,
+   "notes": "Alloy group 4, interpass cleaning"
+  },
+  {
+   "key": "WF-08",
+   "material": "Stainless 321/347",
+   "factor": 2.25,
+   "notes": "Alloy group 8, stabilised grade"
+  },
+  {
+   "key": "WF-09",
+   "material": "Duplex 2205",
+   "factor": 1.75,
+   "notes": "Alloy group 4, controlled heat input"
+  },
+  {
+   "key": "WF-10",
+   "material": "Inconel 625",
+   "factor": 2.25,
+   "notes": "Alloy group 8, dissimilar-metal transition"
+  }
+ ],
+ "mh_library": [
+  {
+   "key": "CIV-001",
+   "discipline": "Civil",
+   "work_item": "Excavation, common earth",
+   "unit": "CY",
+   "unit_mh": 0.06,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-002",
+   "discipline": "Civil",
+   "work_item": "Backfill & compaction",
+   "unit": "CY",
+   "unit_mh": 0.08,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-003",
+   "discipline": "Civil",
+   "work_item": "Concrete foundations, formed & poured",
+   "unit": "CY",
+   "unit_mh": 1.35,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-004",
+   "discipline": "Civil",
+   "work_item": "Concrete slab on grade",
+   "unit": "CY",
+   "unit_mh": 0.95,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-005",
+   "discipline": "Civil",
+   "work_item": "Rebar placement",
+   "unit": "TON",
+   "unit_mh": 18.5,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-006",
+   "discipline": "Civil",
+   "work_item": "Underground duct bank",
+   "unit": "LF",
+   "unit_mh": 0.42,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "CIV-007",
+   "discipline": "Civil",
+   "work_item": "Equipment foundation, spread footing",
+   "unit": "CY",
+   "unit_mh": 1.6,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-008",
+   "discipline": "Structural",
+   "work_item": "Structural steel, shop-fab & erect",
+   "unit": "TON",
+   "unit_mh": 17.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-009",
+   "discipline": "Structural",
+   "work_item": "Pipe rack steel, erect",
+   "unit": "TON",
+   "unit_mh": 15.5,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-010",
+   "discipline": "Structural",
+   "work_item": "Platforms & grating",
+   "unit": "SF",
+   "unit_mh": 0.16,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-011",
+   "discipline": "Structural",
+   "work_item": "Handrail, install",
+   "unit": "LF",
+   "unit_mh": 0.42,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-012",
+   "discipline": "Structural",
+   "work_item": "Stair treads & stringers",
+   "unit": "LF",
+   "unit_mh": 1.3,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-013",
+   "discipline": "Structural",
+   "work_item": "Ladders & cages",
+   "unit": "LF",
+   "unit_mh": 0.9,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "STR-014",
+   "discipline": "Structural",
+   "work_item": "Equipment supports & skids",
+   "unit": "TON",
+   "unit_mh": 19.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-015",
+   "discipline": "Mechanical",
+   "work_item": "Pump set, rig & align",
+   "unit": "EA",
+   "unit_mh": 24.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-016",
+   "discipline": "Mechanical",
+   "work_item": "Compressor package, set & align",
+   "unit": "EA",
+   "unit_mh": 180.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-017",
+   "discipline": "Mechanical",
+   "work_item": "Vertical vessel, rig & set",
+   "unit": "EA",
+   "unit_mh": 60.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-018",
+   "discipline": "Mechanical",
+   "work_item": "Horizontal vessel, rig & set",
+   "unit": "EA",
+   "unit_mh": 48.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-019",
+   "discipline": "Mechanical",
+   "work_item": "Heat exchanger, set & align",
+   "unit": "EA",
+   "unit_mh": 36.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-020",
+   "discipline": "Mechanical",
+   "work_item": "Package skid, set & tie in",
+   "unit": "EA",
+   "unit_mh": 90.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "MEC-021",
+   "discipline": "Mechanical",
+   "work_item": "Tank, field erect (shell course)",
+   "unit": "EA",
+   "unit_mh": 320.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-022",
+   "discipline": "Piping",
+   "work_item": "Handle & erect pipe, 2-6 in",
+   "unit": "LF",
+   "unit_mh": 0.22,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-023",
+   "discipline": "Piping",
+   "work_item": "Handle & erect pipe, 8-16 in",
+   "unit": "LF",
+   "unit_mh": 0.42,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-024",
+   "discipline": "Piping",
+   "work_item": "Handle & erect pipe, 18-30 in",
+   "unit": "LF",
+   "unit_mh": 0.68,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-025",
+   "discipline": "Piping",
+   "work_item": "Field butt weld, 2-6 in",
+   "unit": "EA",
+   "unit_mh": 3.1,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-026",
+   "discipline": "Piping",
+   "work_item": "Field butt weld, 8-16 in",
+   "unit": "EA",
+   "unit_mh": 6.4,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-027",
+   "discipline": "Piping",
+   "work_item": "Socket weld",
+   "unit": "EA",
+   "unit_mh": 1.2,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-028",
+   "discipline": "Piping",
+   "work_item": "Flange bolt-up",
+   "unit": "EA",
+   "unit_mh": 1.05,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-029",
+   "discipline": "Piping",
+   "work_item": "Manual valve, install",
+   "unit": "EA",
+   "unit_mh": 3.4,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-030",
+   "discipline": "Piping",
+   "work_item": "Control valve, install",
+   "unit": "EA",
+   "unit_mh": 6.8,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PIP-031",
+   "discipline": "Piping",
+   "work_item": "Pipe support, install",
+   "unit": "EA",
+   "unit_mh": 2.1,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-032",
+   "discipline": "Electrical",
+   "work_item": "Cable tray, install",
+   "unit": "LF",
+   "unit_mh": 0.3,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-033",
+   "discipline": "Electrical",
+   "work_item": "Underground conduit, install",
+   "unit": "LF",
+   "unit_mh": 0.2,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-034",
+   "discipline": "Electrical",
+   "work_item": "Wire & cable, pull",
+   "unit": "LF",
+   "unit_mh": 0.085,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-035",
+   "discipline": "Electrical",
+   "work_item": "Cable termination, low voltage",
+   "unit": "EA",
+   "unit_mh": 0.55,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-036",
+   "discipline": "Electrical",
+   "work_item": "Cable termination, medium voltage",
+   "unit": "EA",
+   "unit_mh": 2.4,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-037",
+   "discipline": "Electrical",
+   "work_item": "Motor control center, set & terminate",
+   "unit": "EA",
+   "unit_mh": 32.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-038",
+   "discipline": "Electrical",
+   "work_item": "Lighting fixture, install",
+   "unit": "EA",
+   "unit_mh": 1.6,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "ELE-039",
+   "discipline": "Electrical",
+   "work_item": "Grounding grid, install",
+   "unit": "LF",
+   "unit_mh": 0.14,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-040",
+   "discipline": "Instrumentation",
+   "work_item": "Instrument, set & connect (in-line)",
+   "unit": "EA",
+   "unit_mh": 4.2,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-041",
+   "discipline": "Instrumentation",
+   "work_item": "Instrument, set & connect (impulse line)",
+   "unit": "EA",
+   "unit_mh": 6.5,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-042",
+   "discipline": "Instrumentation",
+   "work_item": "Control valve instrumentation, tie-in",
+   "unit": "EA",
+   "unit_mh": 5.8,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-043",
+   "discipline": "Instrumentation",
+   "work_item": "Instrument tubing, install",
+   "unit": "LF",
+   "unit_mh": 0.28,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-044",
+   "discipline": "Instrumentation",
+   "work_item": "Junction box, set & terminate",
+   "unit": "EA",
+   "unit_mh": 3.1,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-045",
+   "discipline": "Instrumentation",
+   "work_item": "DCS/PLC panel, set & terminate",
+   "unit": "EA",
+   "unit_mh": 48.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-046",
+   "discipline": "Instrumentation",
+   "work_item": "Loop check",
+   "unit": "EA",
+   "unit_mh": 2.0,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-047",
+   "discipline": "Insulation",
+   "work_item": "Piping insulation, cold service",
+   "unit": "SF",
+   "unit_mh": 0.16,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-048",
+   "discipline": "Insulation",
+   "work_item": "Piping insulation, hot service",
+   "unit": "SF",
+   "unit_mh": 0.19,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-049",
+   "discipline": "Insulation",
+   "work_item": "Equipment insulation",
+   "unit": "SF",
+   "unit_mh": 0.22,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-050",
+   "discipline": "Insulation",
+   "work_item": "Personnel protection cladding",
+   "unit": "SF",
+   "unit_mh": 0.12,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "INS-051",
+   "discipline": "Insulation",
+   "work_item": "Weatherproof jacketing",
+   "unit": "SF",
+   "unit_mh": 0.09,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PAI-052",
+   "discipline": "Painting",
+   "work_item": "Surface prep, abrasive blast",
+   "unit": "SF",
+   "unit_mh": 0.05,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PAI-053",
+   "discipline": "Painting",
+   "work_item": "Primer coat, spray",
+   "unit": "SF",
+   "unit_mh": 0.03,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PAI-054",
+   "discipline": "Painting",
+   "work_item": "Finish coat, spray",
+   "unit": "SF",
+   "unit_mh": 0.035,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PAI-055",
+   "discipline": "Painting",
+   "work_item": "Field touch-up & stripe coat",
+   "unit": "SF",
+   "unit_mh": 0.02,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  },
+  {
+   "key": "PAI-056",
+   "discipline": "Painting",
+   "work_item": "Fireproofing, spray applied",
+   "unit": "SF",
+   "unit_mh": 0.11,
+   "source": "Demo value - engineering judgement (not a proprietary manual)"
+  }
+ ],
+ "material_prices": [
+  {
+   "key": "CIV-001",
+   "discipline": "Civil",
+   "unit": "CY",
+   "unit_material_cost": 39.48,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-002",
+   "discipline": "Civil",
+   "unit": "CY",
+   "unit_material_cost": 37.8,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-003",
+   "discipline": "Civil",
+   "unit": "CY",
+   "unit_material_cost": 46.2,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-004",
+   "discipline": "Civil",
+   "unit": "CY",
+   "unit_material_cost": 44.1,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-005",
+   "discipline": "Civil",
+   "unit": "TON",
+   "unit_material_cost": 44.94,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-006",
+   "discipline": "Civil",
+   "unit": "LF",
+   "unit_material_cost": 38.64,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "CIV-007",
+   "discipline": "Civil",
+   "unit": "CY",
+   "unit_material_cost": 39.48,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-008",
+   "discipline": "Structural",
+   "unit": "TON",
+   "unit_material_cost": 2254.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-009",
+   "discipline": "Structural",
+   "unit": "TON",
+   "unit_material_cost": 2695.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-010",
+   "discipline": "Structural",
+   "unit": "SF",
+   "unit_material_cost": 2278.5,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-011",
+   "discipline": "Structural",
+   "unit": "LF",
+   "unit_material_cost": 2401.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-012",
+   "discipline": "Structural",
+   "unit": "LF",
+   "unit_material_cost": 2499.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-013",
+   "discipline": "Structural",
+   "unit": "LF",
+   "unit_material_cost": 2474.5,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "STR-014",
+   "discipline": "Structural",
+   "unit": "TON",
+   "unit_material_cost": 2278.5,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-015",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 3952.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-016",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 3724.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-017",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 4028.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-018",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 4180.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-019",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 3458.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-020",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 3914.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "MEC-021",
+   "discipline": "Mechanical",
+   "unit": "EA",
+   "unit_material_cost": 3610.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-022",
+   "discipline": "Piping",
+   "unit": "LF",
+   "unit_material_cost": 28.56,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-023",
+   "discipline": "Piping",
+   "unit": "LF",
+   "unit_material_cost": 27.44,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-024",
+   "discipline": "Piping",
+   "unit": "LF",
+   "unit_material_cost": 30.8,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-025",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 29.68,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-026",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 28.28,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-027",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 25.48,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-028",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 27.16,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-029",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 29.96,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-030",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 29.12,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PIP-031",
+   "discipline": "Piping",
+   "unit": "EA",
+   "unit_material_cost": 30.8,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-032",
+   "discipline": "Electrical",
+   "unit": "LF",
+   "unit_material_cost": 9.97,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-033",
+   "discipline": "Electrical",
+   "unit": "LF",
+   "unit_material_cost": 10.26,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-034",
+   "discipline": "Electrical",
+   "unit": "LF",
+   "unit_material_cost": 8.55,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-035",
+   "discipline": "Electrical",
+   "unit": "EA",
+   "unit_material_cost": 10.26,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-036",
+   "discipline": "Electrical",
+   "unit": "EA",
+   "unit_material_cost": 9.5,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-037",
+   "discipline": "Electrical",
+   "unit": "EA",
+   "unit_material_cost": 9.69,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-038",
+   "discipline": "Electrical",
+   "unit": "EA",
+   "unit_material_cost": 9.21,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "ELE-039",
+   "discipline": "Electrical",
+   "unit": "LF",
+   "unit_material_cost": 9.69,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-040",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 214.2,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-041",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 201.6,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-042",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 191.1,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-043",
+   "discipline": "Instrumentation",
+   "unit": "LF",
+   "unit_material_cost": 189.0,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-044",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 191.1,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-045",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 212.1,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-046",
+   "discipline": "Instrumentation",
+   "unit": "EA",
+   "unit_material_cost": 195.3,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-047",
+   "discipline": "Insulation",
+   "unit": "SF",
+   "unit_material_cost": 6.26,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-048",
+   "discipline": "Insulation",
+   "unit": "SF",
+   "unit_material_cost": 5.89,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-049",
+   "discipline": "Insulation",
+   "unit": "SF",
+   "unit_material_cost": 6.39,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-050",
+   "discipline": "Insulation",
+   "unit": "SF",
+   "unit_material_cost": 6.51,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "INS-051",
+   "discipline": "Insulation",
+   "unit": "SF",
+   "unit_material_cost": 6.51,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PAI-052",
+   "discipline": "Painting",
+   "unit": "SF",
+   "unit_material_cost": 1.29,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PAI-053",
+   "discipline": "Painting",
+   "unit": "SF",
+   "unit_material_cost": 1.51,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PAI-054",
+   "discipline": "Painting",
+   "unit": "SF",
+   "unit_material_cost": 1.47,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PAI-055",
+   "discipline": "Painting",
+   "unit": "SF",
+   "unit_material_cost": 1.51,
+   "source": "Demo budget-level price - not a live vendor quote"
+  },
+  {
+   "key": "PAI-056",
+   "discipline": "Painting",
+   "unit": "SF",
+   "unit_material_cost": 1.5,
+   "source": "Demo budget-level price - not a live vendor quote"
+  }
+ ],
+ "takeoff_lines": [
+  {
+   "id": "TKL-0001",
+   "discipline": "Piping",
+   "area": "A20",
+   "line_id": "A20-PIP-001",
+   "description": "Handle & erect pipe, 2-6 in",
+   "master_key": "PIP-022",
+   "unit": "LF",
+   "quantity": 34000,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.05,
+   "craft": "Pipefitter",
+   "weld_key": "WF-06"
+  },
+  {
+   "id": "TKL-0002",
+   "discipline": "Piping",
+   "area": "A20",
+   "line_id": "A20-PIP-002",
+   "description": "Handle & erect pipe, 8-16 in",
+   "master_key": "PIP-023",
+   "unit": "LF",
+   "quantity": 25000,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0003",
+   "discipline": "Piping",
+   "area": "A30",
+   "line_id": "A30-PIP-003",
+   "description": "Handle & erect pipe, 18-30 in",
+   "master_key": "PIP-024",
+   "unit": "LF",
+   "quantity": 9200,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0004",
+   "discipline": "Piping",
+   "area": "A20",
+   "line_id": "A20-PIP-004",
+   "description": "Field butt weld, 2-6 in",
+   "master_key": "PIP-025",
+   "unit": "EA",
+   "quantity": 14000,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-06"
+  },
+  {
+   "id": "TKL-0005",
+   "discipline": "Piping",
+   "area": "A40",
+   "line_id": "A40-PIP-005",
+   "description": "Field butt weld, 8-16 in",
+   "master_key": "PIP-026",
+   "unit": "EA",
+   "quantity": 10200,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.05,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0006",
+   "discipline": "Piping",
+   "area": "A50",
+   "line_id": "A50-PIP-006",
+   "description": "Socket weld",
+   "master_key": "PIP-027",
+   "unit": "EA",
+   "quantity": 7000,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0007",
+   "discipline": "Piping",
+   "area": "A20",
+   "line_id": "A20-PIP-007",
+   "description": "Flange bolt-up",
+   "master_key": "PIP-028",
+   "unit": "EA",
+   "quantity": 8600,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-06"
+  },
+  {
+   "id": "TKL-0008",
+   "discipline": "Piping",
+   "area": "A30",
+   "line_id": "A30-PIP-008",
+   "description": "Manual valve, install",
+   "master_key": "PIP-029",
+   "unit": "EA",
+   "quantity": 3900,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0009",
+   "discipline": "Piping",
+   "area": "A40",
+   "line_id": "A40-PIP-009",
+   "description": "Control valve, install",
+   "master_key": "PIP-030",
+   "unit": "EA",
+   "quantity": 1650,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.05,
+   "craft": "Pipefitter",
+   "weld_key": "WF-01"
+  },
+  {
+   "id": "TKL-0010",
+   "discipline": "Piping",
+   "area": "A60",
+   "line_id": "A60-PIP-010",
+   "description": "Pipe support, install",
+   "master_key": "PIP-031",
+   "unit": "EA",
+   "quantity": 2100,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": "WF-06"
+  },
+  {
+   "id": "TKL-0011",
+   "discipline": "Piping",
+   "area": "A10",
+   "line_id": "A10-PIP-011",
+   "description": "Handle & erect pipe, 2-6 in",
+   "master_key": "PIP-022",
+   "unit": "LF",
+   "quantity": 5100,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0012",
+   "discipline": "Piping",
+   "area": "A60",
+   "line_id": "A60-PIP-012",
+   "description": "Handle & erect pipe, 8-16 in",
+   "master_key": "PIP-023",
+   "unit": "LF",
+   "quantity": 3800,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0013",
+   "discipline": "Piping",
+   "area": "A30",
+   "line_id": "A30-PIP-013",
+   "description": "Handle & erect pipe, 18-30 in",
+   "master_key": "PIP-024",
+   "unit": "LF",
+   "quantity": 13700,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0014",
+   "discipline": "Piping",
+   "area": "A50",
+   "line_id": "A50-PIP-014",
+   "description": "Field butt weld, 2-6 in",
+   "master_key": "PIP-025",
+   "unit": "EA",
+   "quantity": 2400,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0015",
+   "discipline": "Piping",
+   "area": "A20",
+   "line_id": "A20-PIP-015",
+   "description": "Field butt weld, 8-16 in",
+   "master_key": "PIP-026",
+   "unit": "EA",
+   "quantity": 16700,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0016",
+   "discipline": "Piping",
+   "area": "A40",
+   "line_id": "A40-PIP-016",
+   "description": "Socket weld",
+   "master_key": "PIP-027",
+   "unit": "EA",
+   "quantity": 3000,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Pipefitter",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0017",
+   "discipline": "Instrumentation",
+   "area": "A20",
+   "line_id": "A20-INS-017",
+   "description": "Instrument, set & connect (in-line)",
+   "master_key": "INS-040",
+   "unit": "EA",
+   "quantity": 2100,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0018",
+   "discipline": "Instrumentation",
+   "area": "A30",
+   "line_id": "A30-INS-018",
+   "description": "Instrument, set & connect (impulse line)",
+   "master_key": "INS-041",
+   "unit": "EA",
+   "quantity": 1650,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0019",
+   "discipline": "Instrumentation",
+   "area": "A20",
+   "line_id": "A20-INS-019",
+   "description": "Control valve instrumentation, tie-in",
+   "master_key": "INS-042",
+   "unit": "EA",
+   "quantity": 720,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0020",
+   "discipline": "Instrumentation",
+   "area": "A20",
+   "line_id": "A20-INS-020",
+   "description": "Instrument tubing, install",
+   "master_key": "INS-043",
+   "unit": "LF",
+   "quantity": 10500,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0021",
+   "discipline": "Instrumentation",
+   "area": "A40",
+   "line_id": "A40-INS-021",
+   "description": "Junction box, set & terminate",
+   "master_key": "INS-044",
+   "unit": "EA",
+   "quantity": 520,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0022",
+   "discipline": "Instrumentation",
+   "area": "A20",
+   "line_id": "A20-INS-022",
+   "description": "DCS/PLC panel, set & terminate",
+   "master_key": "INS-045",
+   "unit": "EA",
+   "quantity": 130,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0023",
+   "discipline": "Instrumentation",
+   "area": "A20",
+   "line_id": "A20-INS-023",
+   "description": "Loop check",
+   "master_key": "INS-046",
+   "unit": "EA",
+   "quantity": 2550,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Instrument Tech",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0024",
+   "discipline": "Mechanical",
+   "area": "A20",
+   "line_id": "A20-MEC-024",
+   "description": "Pump set, rig & align",
+   "master_key": "MEC-015",
+   "unit": "EA",
+   "quantity": 6,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Millwright/Rigger",
+   "weld_key": null
+  },
+  {
+   "id": "TKL-0025",
+   "discipline": "Mechanical",
+   "area": "A30",
+   "line_id": "A30-MEC-025",
+   "description": "Horizontal vessel, rig & set",
+   "master_key": "MEC-018",
+   "unit": "EA",
+   "quantity": 3,
+   "unit_mh_override": null,
+   "discipline_factor": 1.0,
+   "global_factor": 1.0,
+   "item_factor": 1.0,
+   "craft": "Millwright/Rigger",
+   "weld_key": null
+  }
+ ],
+ "engineering": {
+  "engineering_source": "detailed",
+  "feed": {
+   "base_design_mh": 42000,
+   "supervision_pct": 0.1,
+   "pm_pct": 0.1,
+   "discipline_integration_pct": 0.05,
+   "rework_pct": 0.0
+  },
+  "detail": {
+   "base_design_mh": 148000,
+   "supervision_pct": 0.1,
+   "pm_pct": 0.1,
+   "discipline_integration_pct": 0.08,
+   "rework_pct": 0.03
+  },
+  "eng_rate": 118.0,
+  "factored_epcm_engineering_pct": 0.077
+ },
+ "indirects": {
+  "epcm_pct_of_direct": 0.14,
+  "epcm_split": {
+   "engineering_design_pct": 0.55,
+   "procurement_services_pct": 0.12,
+   "construction_mgmt_pct": 0.2,
+   "startup_commissioning_pct": 0.08,
+   "project_controls_pct": 0.05
+  },
+  "field_indirects": {
+   "temp_facilities_pct": 0.045,
+   "construction_equipment_pct": 0.054,
+   "field_supervision_qa_pct": 0.036,
+   "permits_insurance_bonds_pct": 0.027,
+   "scaffolding_cleanup_pct": 0.018
+  },
+  "owner_cost_pct": 0.045,
+  "escalation_pct": 0.035,
+  "contingency_pct": 0.15
+ },
+ "benchmark": [
+  {
+   "id": "BMK-01",
+   "discipline": "Civil",
+   "work_item": "Concrete foundations, formed & poured",
+   "unit": "CY",
+   "benchmark_mh_per_1000usd": 13.5,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-02",
+   "discipline": "Structural",
+   "work_item": "Structural steel, shop-fab & erect",
+   "unit": "TON",
+   "benchmark_mh_per_1000usd": 7.8,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-03",
+   "discipline": "Mechanical",
+   "work_item": "Package skid, set & tie in",
+   "unit": "EA",
+   "benchmark_mh_per_1000usd": 6.3,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-04",
+   "discipline": "Piping",
+   "work_item": "Handle & erect pipe, 8-16 in",
+   "unit": "LF",
+   "benchmark_mh_per_1000usd": 17.7,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-05",
+   "discipline": "Electrical",
+   "work_item": "Wire & cable, pull",
+   "unit": "LF",
+   "benchmark_mh_per_1000usd": 10.0,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-06",
+   "discipline": "Instrumentation",
+   "work_item": "Instrument, set & connect (in-line)",
+   "unit": "EA",
+   "benchmark_mh_per_1000usd": 6.5,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-07",
+   "discipline": "Insulation",
+   "work_item": "Piping insulation, hot service",
+   "unit": "SF",
+   "benchmark_mh_per_1000usd": 16.0,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  },
+  {
+   "id": "BMK-08",
+   "discipline": "Painting",
+   "work_item": "Finish coat, spray",
+   "unit": "SF",
+   "benchmark_mh_per_1000usd": 18.8,
+   "field_factor": 1.0,
+   "note": "AACE RP / industry-average labor intensity, demo benchmark"
+  }
+ ],
+ "proposal": {
+  "proposal_date": "2026-07-29",
+  "validity_days": 30,
+  "estimate_class_proposed": "Class 3",
+  "target_accuracy": "-15% / +20%",
+  "pricing_basis_date": "2026-09-01",
+  "fee_rows": [
+   {
+    "id": "FEE-01",
+    "role": "Estimating lead / manager",
+    "hours": 120,
+    "bill_rate": 220,
+    "fee": 26400
+   },
+   {
+    "id": "FEE-02",
+    "role": "Senior cost estimator",
+    "hours": 300,
+    "bill_rate": 200,
+    "fee": 60000
+   },
+   {
+    "id": "FEE-03",
+    "role": "Discipline estimators (all)",
+    "hours": 520,
+    "bill_rate": 175,
+    "fee": 91000
+   },
+   {
+    "id": "FEE-04",
+    "role": "Quantity takeoff / MTO",
+    "hours": 360,
+    "bill_rate": 140,
+    "fee": 50400
+   },
+   {
+    "id": "FEE-05",
+    "role": "Process / engineering support",
+    "hours": 260,
+    "bill_rate": 195,
+    "fee": 50700
+   },
+   {
+    "id": "FEE-06",
+    "role": "Planning & scheduling",
+    "hours": 110,
+    "bill_rate": 165,
+    "fee": 18150
+   },
+   {
+    "id": "FEE-07",
+    "role": "Procurement & vendor engineering",
+    "hours": 160,
+    "bill_rate": 175,
+    "fee": 28000
+   }
+  ]
+ },
+ "class_roadmap": [
+  {
+   "aace_class": "Class 5",
+   "project_definition_pct": "0-2%",
+   "end_usage": "Concept screening",
+   "methodology": "Capacity-factored, parametric",
+   "published_accuracy": "-20%/-50% +30%/+100%",
+   "typical_contingency_pct": 0.3,
+   "relative_prep_cost": "1x"
+  },
+  {
+   "aace_class": "Class 4",
+   "project_definition_pct": "1-15%",
+   "end_usage": "Study / feasibility",
+   "methodology": "Equipment-factored, parametric",
+   "published_accuracy": "-15%/-30% +20%/+50%",
+   "typical_contingency_pct": 0.2,
+   "relative_prep_cost": "4x"
+  },
+  {
+   "aace_class": "Class 3",
+   "project_definition_pct": "10-40%",
+   "end_usage": "Budget authorisation / control",
+   "methodology": "Semi-detailed unit cost with assembly factors",
+   "published_accuracy": "-10%/-20% +10%/+30%",
+   "typical_contingency_pct": 0.15,
+   "relative_prep_cost": "10x"
+  },
+  {
+   "aace_class": "Class 2",
+   "project_definition_pct": "30-75%",
+   "end_usage": "Control or bid / tender",
+   "methodology": "Detailed unit cost with forced detailed takeoff",
+   "published_accuracy": "-5%/-15% +5%/+20%",
+   "typical_contingency_pct": 0.1,
+   "relative_prep_cost": "20x"
+  },
+  {
+   "aace_class": "Class 1",
+   "project_definition_pct": "65-100%",
+   "end_usage": "Check estimate / bid / tender",
+   "methodology": "Detailed unit cost with forced detailed takeoff",
+   "published_accuracy": "-3%/-10% +3%/+15%",
+   "typical_contingency_pct": 0.05,
+   "relative_prep_cost": "100x"
+  }
+ ],
+ "qa_checks": [
+  {
+   "check": "Every takeoff line has a valid master key",
+   "status": "OK",
+   "count": 0
+  },
+  {
+   "check": "Every takeoff line has quantity and a craft assigned",
+   "status": "OK",
+   "count": 0
+  },
+  {
+   "check": "Craft rates loaded for all crafts in use",
+   "status": "OK",
+   "count": 0
+  },
+  {
+   "check": "Detailed Takeoff selected with zero takeoff lines",
+   "status": "REVIEW",
+   "count": 1,
+   "detail": "Structural is set to a method with lines; verify before Detailed Takeoff is chosen for a discipline with no lines."
+  },
+  {
+   "check": "Engineering double-count guard (FEED+Detail vs factored EPCM)",
+   "status": "OK",
+   "count": 0
+  },
+  {
+   "check": "Benchmark variance beyond +/-20% of built-up MH",
+   "status": "OK",
+   "count": 0
+  },
+  {
+   "check": "Contingency within AACE Class 3 typical range (10-20%)",
+   "status": "OK",
+   "count": 0
+  }
+ ],
+ "audit": [
+  {
+   "ts": "2026-08-26 08:14:02",
+   "entity": "estimate",
+   "entity_ref": "VR-DEMO-001",
+   "action": "seed",
+   "old_value": null,
+   "new_value": "Estimate seeded at Class 3",
+   "user_name": "D. Pennington"
+  },
+  {
+   "ts": "2026-08-26 08:15:41",
+   "entity": "discipline_method",
+   "entity_ref": "Piping",
+   "action": "set_method",
+   "old_value": "Parametric",
+   "new_value": "Detailed Takeoff",
+   "user_name": "D. Pennington"
+  },
+  {
+   "ts": "2026-08-26 08:16:03",
+   "entity": "discipline_method",
+   "entity_ref": "Instrumentation",
+   "action": "set_method",
+   "old_value": "Parametric",
+   "new_value": "Detailed Takeoff",
+   "user_name": "D. Pennington"
+  }
+ ],
+ "seq": {}
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadAWP — Advanced Work Packaging</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<style>
+  /* Contained sub-section header for panels within a card body — deliberately
+     does not use negative margins so it never grows scrollWidth past the
+     card-body's own padding box (see QA harness overflow check). */
+  .subhead {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-dim);
+    margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  /* The compact constraint checklist has 6 columns in a narrow detail panel;
+     table.data's default white-space:nowrap on every column lets the row's
+     minimum content width exceed the panel, causing a small horizontal
+     overflow. table-layout:fixed with explicit widths keeps every column
+     inside the panel and lets the category text wrap instead. */
+  table.data.constraints { table-layout: fixed; }
+  table.data.constraints col.c-category { width: 22%; }
+  table.data.constraints col.c-status { width: 12%; }
+  table.data.constraints col.c-blocking { width: 18%; }
+  table.data.constraints col.c-owner { width: 15%; }
+  table.data.constraints col.c-due { width: 13%; }
+  table.data.constraints col.c-action { width: 20%; }
+  table.data.constraints td, table.data.constraints th { white-space: normal; word-break: break-word; }
+  table.data.constraints td:last-child { overflow: visible; text-overflow: initial; }
+  table.data.constraints td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+</style>
+</head>
+<body>
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading work packages&hellip;</div>
+</div>
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
