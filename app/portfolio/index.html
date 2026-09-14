@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadPortfolio — Portfolio Health</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<style>
+  /* Contained sub-section header for panels within a card body — no negative
+     margins, so it never grows scrollWidth past the card-body padding box. */
+  .subhead {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-dim);
+    margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
+  /* Lifecycle strip — the six delivery phases read left to right across the
+     whole chain. Wraps rather than scrolls on narrow viewports. */
+  .lifecycle { display: flex; gap: 8px; flex-wrap: wrap; }
+  .lifecycle a {
+    flex: 1 1 150px; min-width: 0; text-decoration: none; color: inherit;
+    background: var(--panel-alt); border: 1px solid var(--border);
+    border-left: 3px solid var(--grey); border-radius: 6px; padding: 9px 11px;
+    display: block;
+  }
+  .lifecycle a:hover { border-color: var(--border-hi); background: var(--panel-hi); }
+  .lifecycle .ph-code {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.7px;
+    text-transform: uppercase; color: var(--text-dim);
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  /* 'forecast 2026-10-30' in 11px mono needs ~140px; the shared 130px column
+     ellipsised the year off every gate-ladder forecast date. */
+  #views .steps .st .sa { flex: 0 0 152px; }
+  .lifecycle .ph-name { font-size: 11px; color: var(--text); margin: 1px 0 2px; }
+  .lifecycle .ph-val { font-family: var(--mono); font-size: 19px; font-weight: 700; line-height: 1.25; }
+  .lifecycle .ph-sub { font-size: 11px; color: var(--text-dim); margin-top: 2px; }
+  .lifecycle .ph-rag { display: flex; gap: 4px; margin-top: 6px; }
+  .lifecycle .ph-rag span { height: 5px; border-radius: 3px; min-width: 4px; }
+
+  /* Phase cards in Project Detail — one block per phase the project touched. */
+  .phase-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; }
+  .phase-box {
+    background: var(--panel-alt); border: 1px solid var(--border);
+    border-radius: 6px; padding: 10px 12px; min-width: 0;
+  }
+  .phase-box h4 {
+    margin: 0 0 2px; font-size: 12.5px; font-weight: 700;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  }
+  .phase-box .pb-meta { font-size: 11px; color: var(--text-dim); margin-bottom: 7px; }
+  .phase-box dl.detail-rows { margin: 0; }
+
+  /* Small inline module link used inside table cells. */
+  a.mlink { color: var(--blue); text-decoration: none; white-space: nowrap; }
+  a.mlink:hover { text-decoration: underline; }
+
+  /* Movement-since-last-review arrow. */
+  .mv { font-family: var(--mono); font-size: 11.5px; white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading portfolio health&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

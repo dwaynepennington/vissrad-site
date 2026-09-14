@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VissRad Suite</title>
-<meta name="description" content="VissRad Suite — integrated project controls, completions, finance, payables and advanced work packaging for industrial capital projects.">
+<meta name="description" content="VissRad Suite — a total project delivery platform: FEED, preconstruction, detailed engineering, estimating, schedule, cost, work packaging, completions and finance for industrial capital projects, under one portfolio dashboard.">
 <link rel="icon" href="assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="assets/app_icon_256.png">
@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="shared/shell.css">
 </head>
 <body>
+
 <div id="app">
   <header class="topbar">
     <img class="logo" id="top-logo" data-base="assets/vissrad_lockup"
@@ -25,22 +26,27 @@
     <div class="spacer"></div>
     <button class="ghost" id="btn-theme">Light mode</button>
   </header>
+
   <nav class="modrail" id="modrail"></nav>
+
   <main class="launch-wrap">
     <div class="launch-hero">
       <img class="logo" id="hero-logo" data-base="assets/vissrad_logo"
            src="assets/vissrad_logo_light.png" alt="VissRad — wisdom in decision making">
-      <h1>One dataset, eleven tools</h1>
+      <h1>One dataset, fifteen tools</h1>
       <p>
-        VissRad connects estimating, cost, schedule, work packaging,
-        completions and finance across the capital project lifecycle &mdash;
-        with a document-exchange layer between the modules and a shared
-        analytics model beneath them. Every module below runs against the same
-        seeded demonstration project, so a change in one shows up where it
-        matters in the others.
+        VissRad is a total project delivery platform. It runs the whole
+        lifecycle &mdash; FEED and sanction gates, preconstruction, detailed
+        engineering, estimating, schedule, cost, work packaging, completions
+        and finance &mdash; with a document-exchange layer between the modules,
+        a shared analytics model beneath them and a portfolio dashboard over
+        the top. Every module below runs against the same seeded demonstration
+        portfolio, so a change in one shows up where it matters in the others.
       </p>
     </div>
+
     <div class="launch-grid" id="grid"></div>
+
     <div class="launch-note">
       <b>About this demo.</b> Each module is a browser build of the
       corresponding VissRad tool &mdash; most from the desktop applications,
@@ -51,8 +57,10 @@
       <b>Reset demo</b> inside any module restores the seeded dataset.
     </div>
   </main>
+
   <footer class="statusbar" id="statusbar"></footer>
 </div>
+
 <script src="shared/lib.js"></script>
 <script src="shared/shell.js"></script>
 <script src="launcher.js"></script>

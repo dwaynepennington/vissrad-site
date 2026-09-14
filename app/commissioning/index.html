@@ -14,10 +14,12 @@
 <link rel="stylesheet" href="rail.css">
 </head>
 <body>
+
 <div id="loading">
   <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
   <div class="t">Loading commissioning database&hellip;</div>
 </div>
+
 <div id="app" hidden>
   <header class="topbar">
     <img class="logo" id="top-logo" src="../assets/vissrad_lockup_light.png" alt="VissRad">
@@ -29,6 +31,7 @@
     <button class="ghost" id="btn-reset" title="Discard local changes and reload the seeded demo data">Reset demo</button>
     <button class="ghost" id="btn-theme">Light mode</button>
   </header>
+
   <nav class="modrail">
     <a class="rail-label" href="../index.html" style="text-decoration:none">VissRad Suite</a>
     <a class="modrail-item" href="../controls/index.html" title="VissRadPCS — Project controls"><span class="dot"></span>VissRadPCS</a>
@@ -43,10 +46,13 @@
     <a class="modrail-item" href="../link/index.html" title="VissRad Link — Document exchange"><span class="dot"></span>VissRad Link</a>
     <a class="modrail-item" href="../analytics/index.html" title="VissRadBI — Analytics &amp; exports"><span class="dot"></span>VissRadBI</a>
   </nav>
+
   <nav class="tabs" id="tabs"></nav>
   <main id="views"></main>
+
   <footer class="statusbar" id="statusbar"></footer>
 </div>
+
 <script src="../vendor/three.min.js"></script>
 <script src="app.js"></script>
 </body>

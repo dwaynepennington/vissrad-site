@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VissRad Link — Document Exchange</title>
+<title>VissRadPreCon — Preconstruction Planning</title>
 <link rel="icon" href="../assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="../assets/app_icon_256.png">
@@ -11,12 +11,29 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared/shell.css">
+<style>
+  /* Contained sub-section header for panels within a card body — deliberately
+     does not use negative margins so it never grows scrollWidth past the
+     card-body's own padding box (see QA harness overflow check). */
+  .subhead {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-dim);
+    margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  /* The readiness weighting breakdown renders in a narrow side panel;
+     table.data's default white-space:nowrap can push its minimum content
+     width past the panel. Fixed layout keeps every column inside and lets
+     the component label wrap instead of overflowing. */
+  table.data.mini { table-layout: fixed; }
+  table.data.mini td, table.data.mini th { white-space: normal; word-break: break-word; }
+</style>
 </head>
 <body>
 
 <div id="loading">
   <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
-  <div class="t">Loading document exchange&hellip;</div>
+  <div class="t">Loading preconstruction plan&hellip;</div>
 </div>
 
 <div id="app" hidden>
