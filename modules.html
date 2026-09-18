@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D</title>
-<meta name="description" content="All fifteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
+<meta name="description" content="All sixteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadPlanner, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D">
-<meta property="og:description" content="All fifteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
+<meta property="og:description" content="All sixteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadPlanner, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
 <meta property="og:url" content="https://vissrad.com/modules.html">
 <meta property="og:image" content="https://vissrad.com/assets/img/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="VissRad">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D">
-<meta name="twitter:description" content="All fifteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
+<meta name="twitter:description" content="All sixteen VissRad applications in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadEST, VissRadPlanner, VissRadSCH, VissRadPCS, VissRadSU&C, VissRadCost, VissRadARAP, VissRadERP, VissRadAWP, VissRad4D, VissRadBI and VissRad Computer, plus the Link exchange layer.">
 <meta name="twitter:image" content="https://vissrad.com/assets/img/og-card.png">
 <link rel="canonical" href="https://vissrad.com/modules.html">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -68,7 +68,7 @@
   <section class="pagehead gridbg">
     <div class="wrap">
       <p class="eyebrow">Modules</p>
-      <h1 class="h-1">Fifteen applications that carry the project, and one exchange layer that keeps them agreeing.</h1>
+      <h1 class="h-1">Sixteen applications that carry the project, and one exchange layer that keeps them agreeing.</h1>
       <p class="lede" style="margin-top:var(--space-6)">Each module is installed and run on its own. They agree with one another because they exchange documents through Link, not because they were bolted into one oversized program.</p>
     </div>
   </section>
@@ -282,6 +282,46 @@
         </div>
       </div>
       <p class="field__hint" style="margin-top:var(--space-6)">Benchmark intensities and library man-hours shown in the demonstration were generated for it and are not drawn from any proprietary man-hour manual.</p>
+    </div>
+  </section>
+
+  <section class="section section--rule" id="vissradplanner">
+    <div class="wrap">
+      <div class="split split--copy-first split--top reveal">
+        <div>
+          <p class="eyebrow">Workstep and resource planning</p>
+          <h2 class="h-2">VissRadPlanner</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">The step between an estimate and a schedule. Work packages are broken into worksteps from commodity templates &mdash; quantity times the template&rsquo;s productivity rate gives the budget hours, crew size gives the duration &mdash; and everything the plan names is checked against the target Primavera P6 project as it was exported before a single row is written. What leaves is a plan P6 can take on the first attempt, in whichever form the deployment actually allows.</p>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 deployment modes</span><span class="chip">P6 XLSX, XER, XML</span><span class="chip">Rule of credit</span><span class="chip">Pre-flight gate</span><span class="chip">Field sheets</span></div>
+        </div>
+        <div class="grid grid-2" style="gap:var(--space-6)">
+          <div>
+            <h4 class="h-4">Deployment mode</h4>
+            <p class="small" style="margin-top:var(--space-2)">REST where the database exposes it, a watched folder on a network where the Job Service is installed, or a spreadsheet imported by hand. The mode is chosen on entry and decides which write routes are offered, rather than promising a route the site cannot use.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Worksteps from templates</h4>
+            <p class="small" style="margin-top:var(--space-2)">Ten commodity templates carry the productivity rate, crew mix, rule-of-credit steps, calendar, WBS node and cost account. The planner sets how much work and how many crews, not the method.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Pre-flight gate</h4>
+            <p class="small" style="margin-top:var(--space-2)">Every calendar, resource, cost account, WBS node and activity code value named in the plan is checked against the target project. A spreadsheet import will otherwise succeed quietly with the assignment missing, which is the failure nobody notices until the hours do not appear.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Work already done</h4>
+            <p class="small" style="margin-top:var(--space-2)">Scope that was built before it was planned can be typed in with the plan &mdash; installed quantity and hours to date, with the dates it happened. Credit is derived from quantity or from the rule-of-credit steps, never accepted as a typed percentage.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Field sheets and returns</h4>
+            <p class="small" style="margin-top:var(--space-2)">Sheets are issued by work package and come back as installed quantity and completed steps. The return carries who reported it and when it was captured, so a number can be traced to a sheet.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Writing to P6</h4>
+            <p class="small" style="margin-top:var(--space-2)">XLSX to the published Oracle import field names, XER, P6 XML, CSV, Job Service actions XML, or a REST preview. The activity&rsquo;s percent complete type decides which field carries progress &mdash; physical, units or remaining duration &mdash; because P6 calculates the rest.</p>
+          </div>
+        </div>
+      </div>
+      <p class="field__hint" style="margin-top:var(--space-6)">Two passes, in order: the plan load creates the activities, the progress write statuses them. P6 cannot status an activity that does not exist yet, so the gate holds progress until the plan has been loaded.</p>
     </div>
   </section>
 
@@ -673,7 +713,7 @@
         <div>
           <p class="eyebrow">Exchange layer</p>
           <h2 class="h-2">VissRad Link</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">Link is not a sixteenth application. It is the outbox, inbox, document schema and transports that make the other fifteen behave as one system &mdash; a certified quantity leaving PCS arrives in Cost as the same document, with the same identity, or it fails loudly and waits.</p>
+          <p class="body-muted" style="margin-top:var(--space-5)">Link is not an application at all. It is the outbox, inbox, document schema and transports that make the sixteen behave as one system &mdash; a certified quantity leaving PCS arrives in Cost as the same document, with the same identity, or it fails loudly and waits.</p>
           <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">11 document types</span><span class="chip">Idempotent resend</span><span class="chip">Retry ladder</span><span class="chip">Full replay</span><span class="chip">Hub console</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
