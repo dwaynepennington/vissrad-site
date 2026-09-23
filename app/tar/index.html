@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VissRadPlanner — Workstep &amp; Resource Planning</title>
+<title>VissRadTAR — Turnaround Estimating</title>
 <link rel="icon" href="../assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="../assets/app_icon_256.png">
@@ -11,13 +11,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared/shell.css">
-<link rel="stylesheet" href="planner.css">
+<link rel="stylesheet" href="tar.css">
 </head>
 <body>
 
 <div id="loading">
   <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
-  <div class="t">Loading worksteps and target schedule&hellip;</div>
+  <div class="t">Loading turnaround module library&hellip;</div>
 </div>
 
 <div id="app" hidden>
@@ -28,10 +28,9 @@
 
 <script src="../shared/lib.js"></script>
 <script src="../shared/shell.js"></script>
-<script src="../shared/xerParser.js"></script>
 <script src="../shared/zipWrite.js"></script>
+<script src="app/engine.js"></script>
 <script src="app/writers.js"></script>
-<script src="app/model.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
