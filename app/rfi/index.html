@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VissRadDEng — Detailed Engineering</title>
+<title>VissRadRFI — RFIs, Submittals &amp; Correspondence</title>
 <link rel="icon" href="../assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="../assets/app_icon_256.png">
@@ -30,13 +30,20 @@
   table.data.fit th { white-space: nowrap; overflow: hidden; }
   table.data.fit td:last-child { overflow: visible; text-overflow: initial; }
   table.data.fit td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+  /* Dashboard bar rows */
+  .rfi-bars { display: grid; gap: 8px; }
+  .rfi-bar { display: grid; grid-template-columns: minmax(96px, 38%) 1fr 76px; align-items: center; gap: 10px; font-size: 12.5px; }
+  .rfi-bar-l { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rfi-bar-t { height: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+  .rfi-bar-f { display: block; height: 100%; border-radius: 5px; min-width: 2px; }
+  .rfi-bar-n { text-align: right; }
 </style>
 </head>
 <body>
 
 <div id="loading">
   <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
-  <div class="t">Loading engineering deliverable register&hellip;</div>
+  <div class="t">Loading RFI, submittal and correspondence logs&hellip;</div>
 </div>
 
 <div id="app" hidden>
@@ -50,7 +57,8 @@
 <script src="../shared/shell.js"></script>
 <script src="../shared/records.js"></script>
 <script src="../shared/photos.js"></script>
-<script src="drawings.js"></script>
+<script src="collab.js"></script>
+<script src="corr.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

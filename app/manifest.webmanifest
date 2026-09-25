@@ -1,7 +1,7 @@
 {
   "name": "VissRad Suite",
   "short_name": "VissRad",
-  "description": "Industrial project controls, engineering, construction and completions — seventeen integrated modules.",
+  "description": "Industrial project controls, engineering, construction and completions — eighteen integrated modules.",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
