@@ -1,0 +1,23 @@
+{
+  "meta": {
+    "today": "2026-08-26",
+    "note": "VissRadAI holds no project records of its own. It reads the other modules' records when a question needs them."
+  },
+  "skip_sources": ["schedule", "suite", "ai"],
+  "suggested": [
+    "Which RFIs on VR-2608 are open and past their answer-by date, and who has the ball?",
+    "Summarise the open punch items by category and discipline.",
+    "What is the committed cost against budget by WBS, and which lines are over?",
+    "Which submittals are late to submit for the dates they are needed on site?",
+    "List the long-lead items with a delivery after the required-on-site date.",
+    "Which IWPs are blocked, and by which constraints?",
+    "What changed in the engineering deliverable register this month?",
+    "Give me a short status for the steering meeting: engineering, cost, RFIs and punch."
+  ],
+  "providers": [
+    { "id": "openai", "label": "OpenAI", "endpoint": "https://api.openai.com/v1", "model": "gpt-4.1-mini", "key": true },
+    { "id": "openrouter", "label": "OpenRouter", "endpoint": "https://openrouter.ai/api/v1", "model": "openai/gpt-4.1-mini", "key": true },
+    { "id": "ollama", "label": "Ollama on this computer", "endpoint": "http://localhost:11434/v1", "model": "llama3.1", "key": false },
+    { "id": "custom", "label": "Other OpenAI-compatible service", "endpoint": "", "model": "", "key": true }
+  ]
+}
