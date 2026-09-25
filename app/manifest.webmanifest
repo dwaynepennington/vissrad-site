@@ -1,0 +1,15 @@
+{
+  "name": "VissRad Suite",
+  "short_name": "VissRad",
+  "description": "Industrial project controls, engineering, construction and completions — seventeen integrated modules.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0d1014",
+  "theme_color": "#0d1014",
+  "icons": [
+    { "src": "assets/app_icon_128.png", "sizes": "128x128", "type": "image/png" },
+    { "src": "assets/app_icon_256.png", "sizes": "256x256", "type": "image/png" },
+    { "src": "assets/app_icon_512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" }
+  ]
+}

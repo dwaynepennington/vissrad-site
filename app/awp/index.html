@@ -7,6 +7,8 @@
 <link rel="icon" href="../assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,14 +29,17 @@
      overflow. table-layout:fixed with explicit widths keeps every column
      inside the panel and lets the category text wrap instead. */
   table.data.constraints { table-layout: fixed; }
-  table.data.constraints col.c-category { width: 22%; }
-  table.data.constraints col.c-status { width: 12%; }
-  table.data.constraints col.c-blocking { width: 18%; }
+  table.data.constraints col.c-category { width: 25%; }
+  table.data.constraints col.c-status { width: 18%; }
+  table.data.constraints col.c-blocking { width: 16%; }
   table.data.constraints col.c-owner { width: 15%; }
-  table.data.constraints col.c-due { width: 13%; }
-  table.data.constraints col.c-action { width: 20%; }
+  table.data.constraints col.c-due { width: 14%; }
+  table.data.constraints col.c-action { width: 12%; }
   table.data.constraints td, table.data.constraints th { white-space: normal; word-break: break-word; }
   table.data.constraints td:last-child { overflow: visible; text-overflow: initial; }
+  table.data.constraints td.mono { white-space: nowrap; font-size: 11px; }
+  table.data.constraints td .pill { max-width: 100%; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+  table.data.constraints th, table.data.constraints td { padding-left: 6px; padding-right: 6px; }
   table.data.constraints td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
 </style>
 </head>
@@ -54,6 +59,8 @@
 <script src="../shared/usermode.js"></script>
 <script src="../shared/lib.js"></script>
 <script src="../shared/shell.js"></script>
+<script src="../shared/records.js"></script>
+<script src="meetings.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
