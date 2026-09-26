@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadCMMS — Maintenance Management</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<style>
+  /* Contained sub-section header inside a card body — no negative margins, so
+     it can never grow the card's scrollWidth (see suite QA overflow check). */
+  .subhead {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-dim);
+    margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  /* Compact tables shown inside the narrow master/detail panel: table.data's
+     default nowrap lets the row's min-content width exceed the panel, so these
+     are fixed-layout and allowed to wrap instead. */
+  table.data.fit { table-layout: fixed; }
+  table.data.fit td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  table.data.fit th { white-space: nowrap; overflow: hidden; }
+  table.data.fit td:last-child { overflow: visible; text-overflow: initial; }
+  table.data.fit td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+  /* In-table record links */
+  a.lnk { color: var(--blue); text-decoration: none; cursor: pointer; }
+  a.lnk:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading the maintenance register&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+
+<script src="../shared/usermode.js"></script>
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="../shared/records.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
