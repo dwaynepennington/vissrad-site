@@ -1,0 +1,1 @@
+.cw-legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:11px;color:var(--text-dim);margin-bottom:4px}.cw-legend span{display:inline-flex;align-items:center;gap:5px}.cw-legend i{width:10px;height:10px;border-radius:2px;display:inline-block}.cw-grid td,.cw-grid th{padding-left:4px;padding-right:4px}.cw-grid tbody tr{cursor:pointer}.cw-grid td:first-child{white-space:nowrap}
