@@ -80,7 +80,7 @@
           <p class="eyebrow">Portfolio health</p>
           <h2 class="h-2">VissRadPortfolio</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The overview that sits above every other module. Stage-gate pipeline health, the cost and forecast position, schedule and earned value, and the risk and readiness exceptions that need a decision this week &mdash; across all five delivery phases: FEED, preconstruction, detailed engineering, execution and commissioning.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">5 delivery phases</span><span class="chip">Stage-gate pipeline</span><span class="chip">Cost &amp; forecast</span><span class="chip">Schedule &amp; EV</span><span class="chip">Audit trail</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">5 delivery phases</span><span class="chip">Stage-gate pipeline</span><span class="chip">Cost &amp; forecast</span><span class="chip">Schedule &amp; EV</span><span class="chip">Audit trail</span><span class="chip">Craft workforce</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -114,6 +114,10 @@
           <div>
             <h4 class="h-4">Audit</h4>
             <p class="small" style="margin-top:var(--space-2)">The record of what changed, when, and on whose entry.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Craft workforce</h4>
+            <p class="small" style="margin-top:var(--space-2)">Planned headcount by craft across every project, taken from each schedule&rsquo;s resource loading and set against the craft available.</p>
           </div>
         </div>
       </div>
@@ -166,7 +170,7 @@
           <p class="eyebrow">Preconstruction</p>
           <h2 class="h-2">VissRadPreCon</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Making a sanctioned project buildable. Constructability, contracting, procurement float, craft labour, logistics and permits, ending in a mobilisation readiness case rather than a start date.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Constructability</span><span class="chip">Bid packages</span><span class="chip">Long-lead float</span><span class="chip">Craft labour</span><span class="chip">Permits</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Constructability</span><span class="chip">Bid packages</span><span class="chip">Long-lead float</span><span class="chip">Craft labour</span><span class="chip">Permits</span><span class="chip">Bid levelling</span><span class="chip">Bidder portal</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -192,6 +196,14 @@
           <div>
             <h4 class="h-4">Mobilisation readiness</h4>
             <p class="small" style="margin-top:var(--space-2)">A readiness case that states what is in place and what is not before anyone mobilises.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Bid levelling</h4>
+            <p class="small" style="margin-top:var(--space-2)">Bids side by side, with exclusions priced at plug values, a technical pass mark and a recommendation. Bidders not prequalified in VissRadARAP are flagged and not recommended. The award goes to VissRadCost as a commitment.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Bidder portal</h4>
+            <p class="small" style="margin-top:var(--space-2)">On VissRad Server, each bidder gets a single-use link to the package, its scope items and its documents, and submits a base bid, exclusions and clarifications straight into the levelling sheet. Bidders never see the estimate or the other bids.</p>
           </div>
         </div>
       </div>
@@ -248,6 +260,10 @@
             <h4 class="h-4">EWP handover</h4>
             <p class="small" style="margin-top:var(--space-2)">Engineering work package handover to the field, so packaging inherits issued drawings rather than drafts.</p>
           </div>
+          <div>
+            <h4 class="h-4">Drawing-set split</h4>
+            <p class="small" style="margin-top:var(--space-2)">A multi-sheet PDF is split into the register by reading the drawing number, title and revision from the title block. It reads the PDF text layer; scanned sheets are not read.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -295,7 +311,7 @@
           <p class="eyebrow">Estimating</p>
           <h2 class="h-2">VissRadEST</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Discipline takeoff and cost estimating for industrial piping, equipment, engineering and construction scope &mdash; the workbook discipline this whole suite grew out of. Every discipline carries three possible methods, and only the one you select feeds the rollup, so the basis of the number is never in doubt. The budget is handed forward to PCS and Cost rather than retyped.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 methods per discipline</span><span class="chip">AACE class &amp; accuracy</span><span class="chip">Benchmark cross-check</span><span class="chip">Code of accounts</span><span class="chip">Issue gate</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 methods per discipline</span><span class="chip">AACE class &amp; accuracy</span><span class="chip">Benchmark cross-check</span><span class="chip">Code of accounts</span><span class="chip">Issue gate</span><span class="chip">PDF takeoff</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -329,6 +345,10 @@
           <div>
             <h4 class="h-4">QA gate &amp; audit</h4>
             <p class="small" style="margin-top:var(--space-2)">An estimate cannot be marked Issued while quality checks are open, and every method switch, line edit and status change is written to the audit trail.</p>
+          </div>
+          <div>
+            <h4 class="h-4">PDF takeoff</h4>
+            <p class="small" style="margin-top:var(--space-2)">Count, length and area measured on the drawing itself after setting its scale.</p>
           </div>
         </div>
       </div>
@@ -383,7 +403,7 @@
           <p class="eyebrow">Construction planning and execution</p>
           <h2 class="h-2">VissRadConstruction</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The step between an estimate and a schedule. Work packages are broken into worksteps from commodity templates &mdash; quantity times the template&rsquo;s productivity rate gives the budget hours, crew size gives the duration &mdash; and everything the plan names is checked against the target Primavera P6 project as it was exported before a single row is written. What leaves is a plan P6 can take on the first attempt, in whichever form the deployment actually allows.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 deployment modes</span><span class="chip">P6 XLSX, XER, XML</span><span class="chip">Rule of credit</span><span class="chip">Pre-flight gate</span><span class="chip">Field sheets</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 deployment modes</span><span class="chip">P6 XLSX, XER, XML</span><span class="chip">Rule of credit</span><span class="chip">Pre-flight gate</span><span class="chip">Field sheets</span><span class="chip">Photo albums</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -414,6 +434,10 @@
             <h4 class="h-4">Writing to P6</h4>
             <p class="small" style="margin-top:var(--space-2)">XLSX to the published Oracle import field names, XER, P6 XML, CSV, Job Service actions XML, or a REST preview. The activity&rsquo;s percent complete type decides which field carries progress &mdash; physical, units or remaining duration &mdash; because P6 calculates the rest.</p>
           </div>
+          <div>
+            <h4 class="h-4">Photos</h4>
+            <p class="small" style="margin-top:var(--space-2)">Tagged construction photos grouped into albums by area, date or activity, with the time taken and GPS position where the file carries it.</p>
+          </div>
         </div>
       </div>
       <p class="field__hint" style="margin-top:var(--space-6)">Two passes, in order: the plan load creates the activities, the progress write statuses them. P6 cannot status an activity that does not exist yet, so the gate holds progress until the plan has been loaded.</p>
@@ -427,7 +451,7 @@
           <p class="eyebrow">Schedule analysis</p>
           <h2 class="h-2">VissRadSCH</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Schedule development, analysis and maintenance alongside the Primavera P6 data the rest of the suite consumes, keeping activity structure aligned to the work breakdown structure that progress is measured against. Nine analysis views over one imported schedule, so the schedule conversation happens on evidence rather than opinion.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">S-curve</span><span class="chip">Earned value</span><span class="chip">Critical path</span><span class="chip">Float distribution</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">MS Project XML</span><span class="chip">S-curve</span><span class="chip">Earned value</span><span class="chip">Critical path</span><span class="chip">Float distribution</span><span class="chip">CPM check</span><span class="chip">DCMA 14-point</span><span class="chip">Monte Carlo</span><span class="chip">Resource levelling</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -461,6 +485,26 @@
           <div>
             <h4 class="h-4">WBS summary &amp; quality</h4>
             <p class="small" style="margin-top:var(--space-2)">WBS rollup alongside schedule quality checks &mdash; open ends, negative float, constraints and logic gaps.</p>
+          </div>
+          <div>
+            <h4 class="h-4">CPM check</h4>
+            <p class="small" style="margin-top:var(--space-2)">A forward and backward pass over the file&rsquo;s own logic, compared with the dates P6 reported.</p>
+          </div>
+          <div>
+            <h4 class="h-4">DCMA 14-point</h4>
+            <p class="small" style="margin-top:var(--space-2)">The fourteen schedule-quality checks with thresholds you can set. An assessment, not a certified schedule audit.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Baselines</h4>
+            <p class="small" style="margin-top:var(--space-2)">Baselines kept alongside the current schedule and compared by activity and by finish; the DCMA checks use the active one.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Risk (Monte Carlo)</h4>
+            <p class="small" style="margin-top:var(--space-2)">Triangular duration ranges run through the network to P10, P50 and P80 finish dates, and the cost at completion with them.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Resource levelling</h4>
+            <p class="small" style="margin-top:var(--space-2)">Limits from the file&rsquo;s resource rates or typed in, with before and after histograms and the activities delayed. A serial heuristic: it will not reproduce P6&rsquo;s levelling exactly.</p>
           </div>
         </div>
       </div>
@@ -514,7 +558,7 @@
           <p class="eyebrow">Startup &amp; commissioning</p>
           <h2 class="h-2">VissRadSU&amp;C</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Systemisation through to handover in eight working tabs, driving a gated certificate ladder. Nothing advances a gate on optimism &mdash; the check sheets and punch status decide.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">6 certificate gates</span><span class="chip">ITRs &amp; punch</span><span class="chip">Navisworks COM</span><span class="chip">Search sets</span><span class="chip">Audit export</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">6 certificate gates</span><span class="chip">ITRs &amp; punch</span><span class="chip">Navisworks COM</span><span class="chip">Search sets</span><span class="chip">Audit export</span><span class="chip">Package rules</span><span class="chip">Handover dataset</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -533,6 +577,18 @@
             <h4 class="h-4">Browser viewer</h4>
             <p class="small" style="margin-top:var(--space-2)">A Three.js viewer for reviewing system coloring without a Navisworks seat on every desk.</p>
           </div>
+          <div>
+            <h4 class="h-4">Inspections</h4>
+            <p class="small" style="margin-top:var(--space-2)">General field inspections, with failed items raised straight to punch.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Package rules</h4>
+            <p class="small" style="margin-top:var(--space-2)">Completion packages built by rule from system, subsystem and discipline, each with a readiness survey and a gate check.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Handover dataset</h4>
+            <p class="small" style="margin-top:var(--space-2)">The turnover records exported as one ZIP from the Exports tab.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -544,13 +600,13 @@
         <div>
           <p class="eyebrow">Cost management</p>
           <h2 class="h-2">VissRadCost</h2>
-          <p class="body-muted" style="margin-top:var(--space-5)">A cost breakdown structure with budget control, commitments, actuals, change management and forecasting &mdash; the EcoSys-shaped discipline, sized for a project team rather than an enterprise rollout. It extends the same cost engine PCS reports from.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">CBS</span><span class="chip">Budgets</span><span class="chip">Commitments</span><span class="chip">Change control</span><span class="chip">Cash flow</span></div>
+          <p class="body-muted" style="margin-top:var(--space-5)">A cost breakdown structure with a locked original budget, commitments, actuals, change management, pay applications and forecasting &mdash; the EcoSys-shaped discipline, sized for a project team rather than an enterprise rollout. It extends the same cost engine PCS reports from.</p>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">CBS</span><span class="chip">Budgets</span><span class="chip">Commitments</span><span class="chip">Change control</span><span class="chip">Cash flow</span><span class="chip">Pay applications</span><span class="chip">T&amp;M tickets</span><span class="chip">Multi-currency</span><span class="chip">Cost risk</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
-            <h4 class="h-4">Nine views</h4>
-            <p class="small" style="margin-top:var(--space-2)">Dashboard, Project Structure, Budgets, Commitments, Actuals, Change Management, Forecast, Earned Value and Reports.</p>
+            <h4 class="h-4">Twelve views</h4>
+            <p class="small" style="margin-top:var(--space-2)">Dashboard, Structure, Budgets, Commitments, Actuals, Changes, T&amp;M Tickets, Pay Applications, Forecast, Earned Value, Risk &amp; FX and Reports.</p>
           </div>
           <div>
             <h4 class="h-4">Change control</h4>
@@ -564,6 +620,18 @@
             <h4 class="h-4">Earned value</h4>
             <p class="small" style="margin-top:var(--space-2)">The same CPI, SPI, EAC and VAC definitions used across the suite &mdash; not a second, differently-defined set.</p>
           </div>
+          <div>
+            <h4 class="h-4">Pay applications</h4>
+            <p class="small" style="margin-top:var(--space-2)">Schedule of values and continuation sheet in the G702/G703 layout. On VissRad Server the owner&rsquo;s representative can approve or reject by a single-use link; it is applied only if the figures are unchanged.</p>
+          </div>
+          <div>
+            <h4 class="h-4">T&amp;M tickets</h4>
+            <p class="small" style="margin-top:var(--space-2)">Labour priced from resource rates, materials and equipment, a field signature, and a link to the change and cost account.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Risk &amp; FX</h4>
+            <p class="small" style="margin-top:var(--space-2)">Commitments in any currency with a monthly rate table, FX exposure, forward cover and a reporting-currency view, plus a cost Monte Carlo that can take its delay from the schedule risk run.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -576,7 +644,7 @@
           <p class="eyebrow">Accounts payable &amp; receivable</p>
           <h2 class="h-2">VissRadARAP</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The payables desk, wired to the field. Progress claims are verified against certified quantities from PCS before they reach the approval queue, and retention is withheld and released against real certificates rather than a calendar.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3-way match</span><span class="chip">Retention</span><span class="chip">NACHA</span><span class="chip">ISO 20022</span><span class="chip">Duplicate detection</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3-way match</span><span class="chip">Retention</span><span class="chip">NACHA</span><span class="chip">ISO 20022</span><span class="chip">Duplicate detection</span><span class="chip">Prequalification</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -602,6 +670,10 @@
           <div>
             <h4 class="h-4">Coding</h4>
             <p class="small" style="margin-top:var(--space-2)">GL coding with line-total validation, and duplicate detection on invoice intake.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Prequalification</h4>
+            <p class="small" style="margin-top:var(--space-2)">A questionnaire with scoring, safety statistics (TRIR, EMR), insurance and financial checks, and approval with an expiry date. VissRadPreCon checks it before recommending a bidder.</p>
           </div>
         </div>
       </div>
@@ -682,6 +754,10 @@
             <h4 class="h-4">Progress</h4>
             <p class="small" style="margin-top:var(--space-2)">Package-level progress that reports into the same earned-value picture as PCS.</p>
           </div>
+          <div>
+            <h4 class="h-4">Meetings</h4>
+            <p class="small" style="margin-top:var(--space-2)">Meeting minutes with actions that carry over to the next meeting until they are closed.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -694,7 +770,7 @@
           <p class="eyebrow">4D schedule visualization</p>
           <h2 class="h-2">VissRad4D</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Schedule time painted onto a picture of the job. Give it one P6 schedule and one elevation drawing &mdash; no model required &mdash; and it will show the planned sequence, progress against plan, and the forecast, with the SPI and finish variance to argue from.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">P6 XER / XML / CSV / XLSX</span><span class="chip">No model required</span><span class="chip">SPI</span><span class="chip">S-curve</span><span class="chip">Optional APS 3D</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">P6 XER / XML / CSV / XLSX</span><span class="chip">No model required</span><span class="chip">SPI</span><span class="chip">S-curve</span><span class="chip">Optional APS 3D</span><span class="chip">IFC &amp; BCF</span><span class="chip">Clash detection</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -714,8 +790,12 @@
             <p class="small" style="margin-top:var(--space-2)">Autodesk Platform Services translation of NWD, RVT, IFC and DWG to SVF2 with TimeLiner mapping, when your entitlements allow it.</p>
           </div>
           <div>
-            <h4 class="h-4">VRView</h4>
-            <p class="small" style="margin-top:var(--space-2)">A Node and Express service with a React front end and <span class="mono">better-sqlite3</span> storage.</p>
+            <h4 class="h-4">IFC models and BCF</h4>
+            <p class="small" style="margin-top:var(--space-2)">VRView opens IFC2x3 and IFC4 files in the browser, colours them by IFC class, storey or schedule status, and raises BCF 2.1 issues with viewpoints (import and export).</p>
+          </div>
+          <div>
+            <h4 class="h-4">Clash detection</h4>
+            <p class="small" style="margin-top:var(--space-2)">Several IFC files shown together, each on or off. Clash tests between sets chosen by model and IFC class find hard clashes and clearance breaches, and are tracked to closure as BCF issues. Models are not aligned on load.</p>
           </div>
           <div>
             <h4 class="h-4">Standalone</h4>
