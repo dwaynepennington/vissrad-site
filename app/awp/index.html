@@ -29,8 +29,8 @@
      overflow. table-layout:fixed with explicit widths keeps every column
      inside the panel and lets the category text wrap instead. */
   table.data.constraints { table-layout: fixed; }
-  table.data.constraints col.c-category { width: 25%; }
-  table.data.constraints col.c-status { width: 18%; }
+  table.data.constraints col.c-category { width: 22%; }
+  table.data.constraints col.c-status { width: 21%; }
   table.data.constraints col.c-blocking { width: 16%; }
   table.data.constraints col.c-owner { width: 15%; }
   table.data.constraints col.c-due { width: 14%; }
@@ -38,7 +38,7 @@
   table.data.constraints td, table.data.constraints th { white-space: normal; word-break: break-word; }
   table.data.constraints td:last-child { overflow: visible; text-overflow: initial; }
   table.data.constraints td.mono { white-space: nowrap; font-size: 11px; }
-  table.data.constraints td .pill { max-width: 100%; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
+  table.data.constraints td .pill { max-width: 100%; padding-left: 6px; padding-right: 6px; overflow: hidden; text-overflow: ellipsis; vertical-align: middle; }
   table.data.constraints th, table.data.constraints td { padding-left: 6px; padding-right: 6px; }
   table.data.constraints td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
 </style>
