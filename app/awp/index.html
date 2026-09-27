@@ -45,6 +45,9 @@
   .wf-appr-row{display:flex;gap:8px;align-items:center;padding:3px 0}
   .wf-legend{display:flex;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--text-dim);margin:6px 0}
   .wf-stage{position:relative;aspect-ratio:1000/620;width:100%}
+  .wf3d-stage{position:relative;width:100%;min-height:360px;border:1px solid var(--border);border-radius:var(--radius);overflow:hidden}
+  .wf3d-stage canvas{display:block;touch-action:none;cursor:grab}
+  .wf3d-status{font-size:12px;color:var(--text-dim);margin-top:6px}
   .wf-map{width:100%;height:100%;display:block}
   .wf-map.picking{cursor:crosshair;touch-action:none}
   .wf-area{fill:color-mix(in srgb,var(--text) 4%,transparent);stroke:var(--border)}
@@ -81,6 +84,7 @@
 <script src="../shared/xerParser.js"></script>
 <script src="../shared/markup.js"></script>
 <script src="workface.js"></script>
+<script src="model3d.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
