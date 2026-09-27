@@ -14,7 +14,7 @@
  },
  "backdrops": {
   "unit": {
-   "label": "Cedar Bayou Unit 4 Revamp",
+   "label": "Heron Creek Unit 4 Revamp",
    "image_url": "unit-elevation.png",
    "image_width": 1600,
    "image_height": 1000,
@@ -416,7 +416,7 @@
    ]
   },
   "tower": {
-   "label": "Bayou Ridge Tower",
+   "label": "Magnolia Point Tower",
    "image_url": "tower-elevation.png",
    "image_width": 1180,
    "image_height": 1500,
@@ -3154,7 +3154,7 @@
  ],
  "meta": {
   "seed": 20260826,
-  "source_dataset": "server/demo.ts:unitRows + towerRows (Cedar Bayou Unit 4 Revamp, Bayou Ridge Tower)",
+  "source_dataset": "server/demo.ts:unitRows + towerRows (Heron Creek Unit 4 Revamp, Magnolia Point Tower)",
   "geometry_source": "dist/public/demo/geometry.json (unit + tower, unmodified)",
   "tower_budget_scale": 2.15
  }

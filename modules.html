@@ -524,24 +524,40 @@
           <p class="eyebrow">Advanced work packaging</p>
           <h2 class="h-2">VissRadAWP</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Construction work areas down to installation work packages, with a release gate that actually holds. An IWP is released when its constraints are clear &mdash; materials, drawings, access, permits, labour &mdash; not when the lookahead needs it to be.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">CWA / CWP / EWP / IWP</span><span class="chip">Constraint matrix</span><span class="chip">IWP release gate</span><span class="chip">Lookahead</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">CWA / CWP / EWP / PWP / IWP</span><span class="chip">Rule-linked constraints</span><span class="chip">IWP release gate</span><span class="chip">Area map</span><span class="chip">Scaffold</span><span class="chip">Test &amp; turnover</span><span class="chip">P6 link</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
             <h4 class="h-4">Package hierarchy</h4>
-            <p class="small" style="margin-top:var(--space-2)">CWA to CWP to EWP to IWP, with registers at each level.</p>
+            <p class="small" style="margin-top:var(--space-2)">CWA to CWP to EWP, PWP and IWP, with registers at each level and the path of construction sequence at the top.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Area map and packaging</h4>
+            <p class="small" style="margin-top:var(--space-2)">A plot plan of every component, coloured by IWP status or readiness. Box-select unpackaged components to create an IWP, or use the rule-based packaging assistant to split a CWP by crew-week.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Rule-linked constraints</h4>
+            <p class="small" style="margin-top:var(--space-2)">Constraints are tied to their source: an EWP put under revision raises a change notice and holds the released IWPs; material received at site or a scaffold tagged as inspected clears the matching constraint.</p>
           </div>
           <div>
             <h4 class="h-4">Release gate</h4>
-            <p class="small" style="margin-top:var(--space-2)">An IWP cannot be released with open constraints, and the Constraint Matrix shows exactly what is holding it.</p>
+            <p class="small" style="margin-top:var(--space-2)">An IWP cannot be released with open blocking constraints or outstanding sign-offs from the planner, superintendent, safety and quality.</p>
           </div>
           <div>
-            <h4 class="h-4">Path of construction</h4>
-            <p class="small" style="margin-top:var(--space-2)">Sequence and lookahead views built from the imported P6 schedule.</p>
+            <h4 class="h-4">Scaffold</h4>
+            <p class="small" style="margin-top:var(--space-2)">Scaffold requests linked to IWPs, from request through erection, inspection and tagging to dismantle, with shared scaffolds across disciplines.</p>
           </div>
           <div>
-            <h4 class="h-4">Progress</h4>
-            <p class="small" style="margin-top:var(--space-2)">Package-level progress that reports into the same earned-value picture as PCS.</p>
+            <h4 class="h-4">Test and turnover</h4>
+            <p class="small" style="margin-top:var(--space-2)">Components roll up to systems, test packs and turnover packages, with walkdown and hand-over status.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Field progress</h4>
+            <p class="small" style="margin-top:var(--space-2)">Rules-of-credit progress by component step, planned against earned hours, schedule index and productivity by area.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Foreman view and P6 link</h4>
+            <p class="small" style="margin-top:var(--space-2)">A tablet view of the week's IWPs for each foreman, a printable IWP pack, XER import to update CWP windows, and a progress export for P6.</p>
           </div>
           <div>
             <h4 class="h-4">Meetings</h4>
