@@ -1160,7 +1160,8 @@
    "global_factor": 1.0,
    "item_factor": 1.05,
    "craft": "Pipefitter",
-   "weld_key": "WF-06"
+   "weld_key": "WF-06",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0002",
@@ -1176,7 +1177,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0003",
@@ -1192,7 +1194,21 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "VR-DEMO-001-PRO-PID-0002",
+     "sheet": "2",
+     "rev": "0"
+    },
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0001",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0004",
@@ -1208,7 +1224,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-06"
+   "weld_key": "WF-06",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0005",
@@ -1224,7 +1241,8 @@
    "global_factor": 1.0,
    "item_factor": 1.05,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0006",
@@ -1240,7 +1258,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0007",
@@ -1256,7 +1275,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-06"
+   "weld_key": "WF-06",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0008",
@@ -1272,7 +1292,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "VR-DEMO-001-PRO-PID-0002",
+     "sheet": "1",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0009",
@@ -1288,7 +1316,8 @@
    "global_factor": 1.0,
    "item_factor": 1.05,
    "craft": "Pipefitter",
-   "weld_key": "WF-01"
+   "weld_key": "WF-01",
+   "drawing_refs": []
   },
   {
    "id": "TKL-0010",
@@ -1304,7 +1333,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": "WF-06"
+   "weld_key": "WF-06",
+   "drawing_refs": [
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0004",
+     "sheet": "",
+     "rev": "1"
+    }
+   ]
   },
   {
    "id": "TKL-0011",
@@ -1320,7 +1357,27 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "VR-DEMO-001-PRO-PID-0001",
+     "sheet": "3",
+     "rev": "0"
+    },
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0002",
+     "sheet": "",
+     "rev": "0"
+    },
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0003",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0012",
@@ -1336,7 +1393,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0004",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0013",
@@ -1352,7 +1417,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "ISO",
+     "doc_no": "VR-DEMO-001-PIP-ISO-0001",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0014",
@@ -1368,7 +1441,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0015",
@@ -1384,7 +1458,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0016",
@@ -1400,7 +1475,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Pipefitter",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0017",
@@ -1416,7 +1492,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0018",
@@ -1432,7 +1509,21 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "VR-DEMO-001-PRO-PID-0002",
+     "sheet": "4",
+     "rev": "0"
+    },
+    {
+     "type": "LOD",
+     "doc_no": "VR-DEMO-001-ICS-LOD-0002",
+     "sheet": "",
+     "rev": "1"
+    }
+   ]
   },
   {
    "id": "TKL-0019",
@@ -1448,7 +1539,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0020",
@@ -1464,7 +1556,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "LOD",
+     "doc_no": "VR-DEMO-001-ICS-LOD-0003",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0021",
@@ -1480,7 +1580,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0022",
@@ -1496,7 +1597,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0023",
@@ -1512,7 +1614,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Instrument Tech",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "LOD",
+     "doc_no": "VR-DEMO-001-ICS-LOD-0003",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   },
   {
    "id": "TKL-0024",
@@ -1528,7 +1638,8 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Millwright/Rigger",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": []
   },
   {
    "id": "TKL-0025",
@@ -1544,7 +1655,15 @@
    "global_factor": 1.0,
    "item_factor": 1.0,
    "craft": "Millwright/Rigger",
-   "weld_key": null
+   "weld_key": null,
+   "drawing_refs": [
+    {
+     "type": "GAD",
+     "doc_no": "VR-DEMO-001-CSA-GAD-0001",
+     "sheet": "",
+     "rev": "0"
+    }
+   ]
   }
  ],
  "engineering": {
