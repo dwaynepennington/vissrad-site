@@ -109,12 +109,14 @@
   },
   "commitment": {
    "sources": [
-    "ERP"
+    "ERP",
+    "PROCURE"
    ],
    "targets": [
     "PCS",
     "COST",
-    "AWP"
+    "AWP",
+    "ARAP"
    ]
   },
   "actual_cost": {
@@ -214,6 +216,21 @@
     "api_key": "suc-71ba44f0d3"
    },
    "poll_seconds": 90
+  },
+  {
+   "code": "PROCURE",
+   "name": "VissRadProCure",
+   "module": "procure",
+   "tag": "Procurement",
+   "instance_id": "DEMO-PROCURE-01",
+   "link_since": "2026-06-29",
+   "late_joiner": true,
+   "transport_kind": "http",
+   "transport_config": {
+    "base_url": "https://link.vissrad-demo.example.com",
+    "api_key": "procure-5c1e9a07b2"
+   },
+   "poll_seconds": 60
   }
  ],
  "transport_kinds": [
@@ -16219,6 +16236,1782 @@
    "created_utc": "2026-08-25T10:22:14Z",
    "sent_utc": "2026-08-25T10:22:17Z",
    "acked_utc": "2026-08-25T10:22:31Z"
+  },
+  {
+   "message_id": "a719bda9-faa4-50c3-977d-84146a118995",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "a719bda9-faa4-50c3-977d-84146a118995",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T17:43:00Z",
+   "sent_utc": "2026-06-29T17:43:06Z",
+   "acked_utc": "2026-06-29T17:43:40Z"
+  },
+  {
+   "message_id": "126eb6de-cdab-552f-b976-1533e6e323c2",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "126eb6de-cdab-552f-b976-1533e6e323c2",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T17:43:00Z",
+   "sent_utc": "2026-06-29T17:43:06Z",
+   "acked_utc": "2026-06-29T17:43:40Z"
+  },
+  {
+   "message_id": "56337714-dba3-59ac-82c8-7256e4d6d317",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "56337714-dba3-59ac-82c8-7256e4d6d317",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T17:43:00Z",
+   "sent_utc": "2026-06-29T17:43:06Z",
+   "acked_utc": "2026-06-29T17:43:40Z"
+  },
+  {
+   "message_id": "cfcc3045-df64-5be4-8cfc-06bbbaf35a91",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "cfcc3045-df64-5be4-8cfc-06bbbaf35a91",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "sent",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T17:43:00Z",
+   "sent_utc": "2026-06-29T17:43:06Z",
+   "acked_utc": null
+  },
+  {
+   "message_id": "aa3c1f68-04b9-5f2d-8c03-c6a06fb1f96c",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "aa3c1f68-04b9-5f2d-8c03-c6a06fb1f96c",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T23:27:00Z",
+   "sent_utc": "2026-06-29T23:27:06Z",
+   "acked_utc": "2026-06-29T23:27:40Z"
+  },
+  {
+   "message_id": "3d727a9d-9156-5140-9d6b-a4cd3d411753",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "3d727a9d-9156-5140-9d6b-a4cd3d411753",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T23:27:00Z",
+   "sent_utc": "2026-06-29T23:27:06Z",
+   "acked_utc": "2026-06-29T23:27:40Z"
+  },
+  {
+   "message_id": "2d81f52d-dae6-55c8-bd06-56086ea118b7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "2d81f52d-dae6-55c8-bd06-56086ea118b7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T23:27:00Z",
+   "sent_utc": "2026-06-29T23:27:06Z",
+   "acked_utc": "2026-06-29T23:27:40Z"
+  },
+  {
+   "message_id": "b79a3c12-f674-5fc5-b4bc-66caf50ec0d6",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "b79a3c12-f674-5fc5-b4bc-66caf50ec0d6",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T23:27:00Z",
+   "sent_utc": "2026-06-29T23:27:06Z",
+   "acked_utc": "2026-06-29T23:27:40Z"
+  },
+  {
+   "message_id": "6965c03f-6c71-5b75-a777-c1e53228ddf1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "6965c03f-6c71-5b75-a777-c1e53228ddf1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:09:00Z",
+   "sent_utc": "2026-06-29T19:09:06Z",
+   "acked_utc": "2026-06-29T19:09:40Z"
+  },
+  {
+   "message_id": "9435a92e-7595-5461-bf79-f1e09b395bd7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "9435a92e-7595-5461-bf79-f1e09b395bd7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:09:00Z",
+   "sent_utc": "2026-06-29T19:09:06Z",
+   "acked_utc": "2026-06-29T19:09:40Z"
+  },
+  {
+   "message_id": "2bf59c62-ecfc-5236-8098-6bf22d69af8f",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "2bf59c62-ecfc-5236-8098-6bf22d69af8f",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:09:00Z",
+   "sent_utc": "2026-06-29T19:09:06Z",
+   "acked_utc": "2026-06-29T19:09:40Z"
+  },
+  {
+   "message_id": "ae1d52c1-d64d-585a-abe2-4ef0bacf7357",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "ae1d52c1-d64d-585a-abe2-4ef0bacf7357",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:09:00Z",
+   "sent_utc": "2026-06-29T19:09:06Z",
+   "acked_utc": "2026-06-29T19:09:40Z"
+  },
+  {
+   "message_id": "e6b2a493-d45b-5ba9-95be-7f704908c2e1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "e6b2a493-d45b-5ba9-95be-7f704908c2e1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T16:23:00Z",
+   "sent_utc": "2026-06-29T16:23:06Z",
+   "acked_utc": "2026-06-29T16:23:40Z"
+  },
+  {
+   "message_id": "35f88b3e-c938-5a25-8880-4cfb7aa65192",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "35f88b3e-c938-5a25-8880-4cfb7aa65192",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T16:23:00Z",
+   "sent_utc": "2026-06-29T16:23:06Z",
+   "acked_utc": "2026-06-29T16:23:40Z"
+  },
+  {
+   "message_id": "3f8c31c4-e766-58be-8926-ed80730e695d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "3f8c31c4-e766-58be-8926-ed80730e695d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T16:23:00Z",
+   "sent_utc": "2026-06-29T16:23:06Z",
+   "acked_utc": "2026-06-29T16:23:40Z"
+  },
+  {
+   "message_id": "6ece658f-1bf1-555a-b327-fd447bc3042b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "6ece658f-1bf1-555a-b327-fd447bc3042b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T16:23:00Z",
+   "sent_utc": "2026-06-29T16:23:06Z",
+   "acked_utc": "2026-06-29T16:23:40Z"
+  },
+  {
+   "message_id": "3aaca917-5aaf-54ab-ba74-5d95e7c77518",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "3aaca917-5aaf-54ab-ba74-5d95e7c77518",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:17:00Z",
+   "sent_utc": "2026-06-29T19:17:06Z",
+   "acked_utc": "2026-06-29T19:17:40Z"
+  },
+  {
+   "message_id": "354afe6d-5de8-5796-b0af-eedcd4a66102",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "354afe6d-5de8-5796-b0af-eedcd4a66102",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:17:00Z",
+   "sent_utc": "2026-06-29T19:17:06Z",
+   "acked_utc": "2026-06-29T19:17:40Z"
+  },
+  {
+   "message_id": "d100e581-8b56-54c7-9554-53108970de7d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "d100e581-8b56-54c7-9554-53108970de7d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:17:00Z",
+   "sent_utc": "2026-06-29T19:17:06Z",
+   "acked_utc": "2026-06-29T19:17:40Z"
+  },
+  {
+   "message_id": "09a91fbd-e71b-5566-92e3-40103f03d518",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "09a91fbd-e71b-5566-92e3-40103f03d518",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:17:00Z",
+   "sent_utc": "2026-06-29T19:17:06Z",
+   "acked_utc": "2026-06-29T19:17:40Z"
+  },
+  {
+   "message_id": "c78f4828-0784-5b46-80ff-2a819eb452e8",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "c78f4828-0784-5b46-80ff-2a819eb452e8",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:28:00Z",
+   "sent_utc": "2026-06-29T21:28:06Z",
+   "acked_utc": "2026-06-29T21:28:40Z"
+  },
+  {
+   "message_id": "77c95f07-e25b-55f4-8db4-337ff12ac51e",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "77c95f07-e25b-55f4-8db4-337ff12ac51e",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:28:00Z",
+   "sent_utc": "2026-06-29T21:28:06Z",
+   "acked_utc": "2026-06-29T21:28:40Z"
+  },
+  {
+   "message_id": "778ba668-c57e-531e-8295-43c752a779d4",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "778ba668-c57e-531e-8295-43c752a779d4",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:28:00Z",
+   "sent_utc": "2026-06-29T21:28:06Z",
+   "acked_utc": "2026-06-29T21:28:40Z"
+  },
+  {
+   "message_id": "b9df409e-4275-5496-b9e4-9e4c38df904b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "b9df409e-4275-5496-b9e4-9e4c38df904b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:28:00Z",
+   "sent_utc": "2026-06-29T21:28:06Z",
+   "acked_utc": "2026-06-29T21:28:40Z"
+  },
+  {
+   "message_id": "03c1482a-bce1-5949-840d-0ec5bd1e8782",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "03c1482a-bce1-5949-840d-0ec5bd1e8782",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:52:00Z",
+   "sent_utc": "2026-06-29T21:52:06Z",
+   "acked_utc": "2026-06-29T21:52:40Z"
+  },
+  {
+   "message_id": "a3e98eb2-446c-53c4-b7d6-18c1f173a950",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "a3e98eb2-446c-53c4-b7d6-18c1f173a950",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:52:00Z",
+   "sent_utc": "2026-06-29T21:52:06Z",
+   "acked_utc": "2026-06-29T21:52:40Z"
+  },
+  {
+   "message_id": "18abb29c-9863-5ced-800a-dd95e599b872",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "18abb29c-9863-5ced-800a-dd95e599b872",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:52:00Z",
+   "sent_utc": "2026-06-29T21:52:06Z",
+   "acked_utc": "2026-06-29T21:52:40Z"
+  },
+  {
+   "message_id": "64bc5d5d-62d6-5d8d-88b2-28b8da379860",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "64bc5d5d-62d6-5d8d-88b2-28b8da379860",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T21:52:00Z",
+   "sent_utc": "2026-06-29T21:52:06Z",
+   "acked_utc": "2026-06-29T21:52:40Z"
+  },
+  {
+   "message_id": "a1be91a6-b88e-5799-8cf3-df9c010307a4",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "a1be91a6-b88e-5799-8cf3-df9c010307a4",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:14:00Z",
+   "sent_utc": "2026-06-30T00:14:06Z",
+   "acked_utc": "2026-06-30T00:14:40Z"
+  },
+  {
+   "message_id": "28159333-eb98-5387-b6fc-9f914991c10b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "28159333-eb98-5387-b6fc-9f914991c10b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:14:00Z",
+   "sent_utc": "2026-06-30T00:14:06Z",
+   "acked_utc": "2026-06-30T00:14:40Z"
+  },
+  {
+   "message_id": "f918034b-f074-587a-b952-5de23a0eb467",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "f918034b-f074-587a-b952-5de23a0eb467",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:14:00Z",
+   "sent_utc": "2026-06-30T00:14:06Z",
+   "acked_utc": "2026-06-30T00:14:40Z"
+  },
+  {
+   "message_id": "481d0261-02f9-5fc2-821e-d2a32e083bf1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "481d0261-02f9-5fc2-821e-d2a32e083bf1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:14:00Z",
+   "sent_utc": "2026-06-30T00:14:06Z",
+   "acked_utc": "2026-06-30T00:14:40Z"
+  },
+  {
+   "message_id": "3838a7da-82b2-590c-ab5d-2282c8903f40",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "3838a7da-82b2-590c-ab5d-2282c8903f40",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:53:00Z",
+   "sent_utc": "2026-06-30T00:53:06Z",
+   "acked_utc": "2026-06-30T00:53:40Z"
+  },
+  {
+   "message_id": "970f1bf1-2011-5b26-8091-95fac077c21f",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "970f1bf1-2011-5b26-8091-95fac077c21f",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:53:00Z",
+   "sent_utc": "2026-06-30T00:53:06Z",
+   "acked_utc": "2026-06-30T00:53:40Z"
+  },
+  {
+   "message_id": "5dc05983-86e7-5b64-94fa-2ddd81271423",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "5dc05983-86e7-5b64-94fa-2ddd81271423",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:53:00Z",
+   "sent_utc": "2026-06-30T00:53:06Z",
+   "acked_utc": "2026-06-30T00:53:40Z"
+  },
+  {
+   "message_id": "4b204037-65b0-5055-84ef-2abbd6681a99",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "4b204037-65b0-5055-84ef-2abbd6681a99",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-30T00:53:00Z",
+   "sent_utc": "2026-06-30T00:53:06Z",
+   "acked_utc": "2026-06-30T00:53:40Z"
+  },
+  {
+   "message_id": "019f5368-d8ab-51aa-8745-832945b8c437",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "019f5368-d8ab-51aa-8745-832945b8c437",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:21:00Z",
+   "sent_utc": "2026-06-29T19:21:06Z",
+   "acked_utc": "2026-06-29T19:21:40Z"
+  },
+  {
+   "message_id": "67734ebf-ac84-5cb2-8dd5-e5894a865e24",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "67734ebf-ac84-5cb2-8dd5-e5894a865e24",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:21:00Z",
+   "sent_utc": "2026-06-29T19:21:06Z",
+   "acked_utc": "2026-06-29T19:21:40Z"
+  },
+  {
+   "message_id": "acc9f3bf-7463-5f72-a69b-8e17c429ad7d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "acc9f3bf-7463-5f72-a69b-8e17c429ad7d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:21:00Z",
+   "sent_utc": "2026-06-29T19:21:06Z",
+   "acked_utc": "2026-06-29T19:21:40Z"
+  },
+  {
+   "message_id": "2c4da021-ecb7-530e-b9d2-c73f33e7ab39",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "2c4da021-ecb7-530e-b9d2-c73f33e7ab39",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T19:21:00Z",
+   "sent_utc": "2026-06-29T19:21:06Z",
+   "acked_utc": "2026-06-29T19:21:40Z"
+  },
+  {
+   "message_id": "b429a8bc-9b5d-53e8-8552-6bc5ea921095",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b429a8bc-9b5d-53e8-8552-6bc5ea921095",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:36:00Z",
+   "sent_utc": "2026-06-29T18:36:06Z",
+   "acked_utc": "2026-06-29T18:36:40Z"
+  },
+  {
+   "message_id": "b25cc37c-7951-51dd-b3aa-7fc428601663",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b25cc37c-7951-51dd-b3aa-7fc428601663",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:36:00Z",
+   "sent_utc": "2026-06-29T18:36:06Z",
+   "acked_utc": "2026-06-29T18:36:40Z"
+  },
+  {
+   "message_id": "514b1ae4-f458-5930-88dd-bd46f3fac1d8",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "514b1ae4-f458-5930-88dd-bd46f3fac1d8",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:36:00Z",
+   "sent_utc": "2026-06-29T18:36:06Z",
+   "acked_utc": "2026-06-29T18:36:40Z"
+  },
+  {
+   "message_id": "b0bee1dc-6da9-5f87-a7be-6e06155ada29",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b0bee1dc-6da9-5f87-a7be-6e06155ada29",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:36:00Z",
+   "sent_utc": "2026-06-29T18:36:06Z",
+   "acked_utc": "2026-06-29T18:36:40Z"
+  },
+  {
+   "message_id": "9cf2bfdf-ae26-5841-b59e-edd5e225aa8e",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "9cf2bfdf-ae26-5841-b59e-edd5e225aa8e",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:25:00Z",
+   "sent_utc": "2026-06-29T18:25:06Z",
+   "acked_utc": "2026-06-29T18:25:40Z"
+  },
+  {
+   "message_id": "7af98177-4cd2-5978-b501-cc037ecfe2a7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "7af98177-4cd2-5978-b501-cc037ecfe2a7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:25:00Z",
+   "sent_utc": "2026-06-29T18:25:06Z",
+   "acked_utc": "2026-06-29T18:25:40Z"
+  },
+  {
+   "message_id": "6ec0200e-ec46-5d61-bb81-8effd5287f4d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "6ec0200e-ec46-5d61-bb81-8effd5287f4d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:25:00Z",
+   "sent_utc": "2026-06-29T18:25:06Z",
+   "acked_utc": "2026-06-29T18:25:40Z"
+  },
+  {
+   "message_id": "13b9bccf-1154-57fd-a073-f460082d7599",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "13b9bccf-1154-57fd-a073-f460082d7599",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "acked",
+   "attempts": 0,
+   "next_attempt_utc": null,
+   "last_error": null,
+   "created_utc": "2026-06-29T18:25:00Z",
+   "sent_utc": "2026-06-29T18:25:06Z",
+   "acked_utc": "2026-06-29T18:25:40Z"
   }
  ],
  "inbox": [
@@ -29252,6 +31045,1604 @@
    "status": "processed",
    "received_utc": "2026-08-25T10:22:27Z",
    "processed_utc": "2026-08-25T10:22:58Z",
+   "last_error": null
+  },
+  {
+   "message_id": "a719bda9-faa4-50c3-977d-84146a118995",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "a719bda9-faa4-50c3-977d-84146a118995",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T17:43:14Z",
+   "processed_utc": "2026-06-29T17:43:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "126eb6de-cdab-552f-b976-1533e6e323c2",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "126eb6de-cdab-552f-b976-1533e6e323c2",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T17:43:14Z",
+   "processed_utc": "2026-06-29T17:43:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "56337714-dba3-59ac-82c8-7256e4d6d317",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+   "body": {
+    "envelope": {
+     "message_id": "56337714-dba3-59ac-82c8-7256e4d6d317",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T17:43:00Z",
+     "correlation_id": "b0288fa3-16ac-5f85-aebb-1050abaaeb64",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4013:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4013",
+     "cost_object_id": "MEC-M249",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "954300.00",
+     "source_document": "PO-DEMO-001-4013",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T17:43:14Z",
+   "processed_utc": "2026-06-29T17:43:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "aa3c1f68-04b9-5f2d-8c03-c6a06fb1f96c",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "aa3c1f68-04b9-5f2d-8c03-c6a06fb1f96c",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T23:27:14Z",
+   "processed_utc": "2026-06-29T23:27:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "3d727a9d-9156-5140-9d6b-a4cd3d411753",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "3d727a9d-9156-5140-9d6b-a4cd3d411753",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T23:27:14Z",
+   "processed_utc": "2026-06-29T23:27:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "2d81f52d-dae6-55c8-bd06-56086ea118b7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "2d81f52d-dae6-55c8-bd06-56086ea118b7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T23:27:14Z",
+   "processed_utc": "2026-06-29T23:27:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "b79a3c12-f674-5fc5-b4bc-66caf50ec0d6",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+   "body": {
+    "envelope": {
+     "message_id": "b79a3c12-f674-5fc5-b4bc-66caf50ec0d6",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T23:27:00Z",
+     "correlation_id": "9f3501c0-4d3c-5dd8-9318-d233967daf6c",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4010:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4010",
+     "cost_object_id": "ICS-M445",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "7093396.67",
+     "source_document": "PO-DEMO-001-4010",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T23:27:14Z",
+   "processed_utc": "2026-06-29T23:27:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "6965c03f-6c71-5b75-a777-c1e53228ddf1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "6965c03f-6c71-5b75-a777-c1e53228ddf1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:09:14Z",
+   "processed_utc": "2026-06-29T19:09:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "9435a92e-7595-5461-bf79-f1e09b395bd7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "9435a92e-7595-5461-bf79-f1e09b395bd7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:09:14Z",
+   "processed_utc": "2026-06-29T19:09:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "2bf59c62-ecfc-5236-8098-6bf22d69af8f",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "2bf59c62-ecfc-5236-8098-6bf22d69af8f",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:09:14Z",
+   "processed_utc": "2026-06-29T19:09:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "ae1d52c1-d64d-585a-abe2-4ef0bacf7357",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+   "body": {
+    "envelope": {
+     "message_id": "ae1d52c1-d64d-585a-abe2-4ef0bacf7357",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:09:00Z",
+     "correlation_id": "0ccb973c-792a-571d-8e28-5ba50d2c90ad",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4004:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4004",
+     "cost_object_id": "ICS-M473",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "267459.96",
+     "source_document": "PO-DEMO-001-4004",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:09:14Z",
+   "processed_utc": "2026-06-29T19:09:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "e6b2a493-d45b-5ba9-95be-7f704908c2e1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "e6b2a493-d45b-5ba9-95be-7f704908c2e1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T16:23:14Z",
+   "processed_utc": "2026-06-29T16:23:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "35f88b3e-c938-5a25-8880-4cfb7aa65192",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "35f88b3e-c938-5a25-8880-4cfb7aa65192",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T16:23:14Z",
+   "processed_utc": "2026-06-29T16:23:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "3f8c31c4-e766-58be-8926-ed80730e695d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "3f8c31c4-e766-58be-8926-ed80730e695d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T16:23:14Z",
+   "processed_utc": "2026-06-29T16:23:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "6ece658f-1bf1-555a-b327-fd447bc3042b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+   "body": {
+    "envelope": {
+     "message_id": "6ece658f-1bf1-555a-b327-fd447bc3042b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T16:23:00Z",
+     "correlation_id": "969a3166-f110-52f1-b6c7-a7445a5e94c5",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4002:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4002",
+     "cost_object_id": "PIP-M412",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "596103.22",
+     "source_document": "PO-DEMO-001-4002",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T16:23:14Z",
+   "processed_utc": "2026-06-29T16:23:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "3aaca917-5aaf-54ab-ba74-5d95e7c77518",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "3aaca917-5aaf-54ab-ba74-5d95e7c77518",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:17:14Z",
+   "processed_utc": "2026-06-29T19:17:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "354afe6d-5de8-5796-b0af-eedcd4a66102",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "354afe6d-5de8-5796-b0af-eedcd4a66102",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:17:14Z",
+   "processed_utc": "2026-06-29T19:17:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "d100e581-8b56-54c7-9554-53108970de7d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "d100e581-8b56-54c7-9554-53108970de7d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:17:14Z",
+   "processed_utc": "2026-06-29T19:17:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "09a91fbd-e71b-5566-92e3-40103f03d518",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+   "body": {
+    "envelope": {
+     "message_id": "09a91fbd-e71b-5566-92e3-40103f03d518",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:17:00Z",
+     "correlation_id": "baa505f9-fc11-547d-8456-4caaa05da465",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4005:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4005",
+     "cost_object_id": "MEC-M282",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "2253000.00",
+     "source_document": "PO-DEMO-001-4005",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:17:14Z",
+   "processed_utc": "2026-06-29T19:17:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "c78f4828-0784-5b46-80ff-2a819eb452e8",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "c78f4828-0784-5b46-80ff-2a819eb452e8",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:28:14Z",
+   "processed_utc": "2026-06-29T21:28:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "77c95f07-e25b-55f4-8db4-337ff12ac51e",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "77c95f07-e25b-55f4-8db4-337ff12ac51e",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:28:14Z",
+   "processed_utc": "2026-06-29T21:28:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "778ba668-c57e-531e-8295-43c752a779d4",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "778ba668-c57e-531e-8295-43c752a779d4",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:28:14Z",
+   "processed_utc": "2026-06-29T21:28:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "b9df409e-4275-5496-b9e4-9e4c38df904b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+   "body": {
+    "envelope": {
+     "message_id": "b9df409e-4275-5496-b9e4-9e4c38df904b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T21:28:00Z",
+     "correlation_id": "14a7ca17-affa-5ddd-b721-57a5d91a48f7",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4001:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4001",
+     "cost_object_id": "CSA-E267",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "979496.86",
+     "source_document": "PO-DEMO-001-4001",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:28:14Z",
+   "processed_utc": "2026-06-29T21:28:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "03c1482a-bce1-5949-840d-0ec5bd1e8782",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "03c1482a-bce1-5949-840d-0ec5bd1e8782",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:52:14Z",
+   "processed_utc": "2026-06-29T21:52:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "a3e98eb2-446c-53c4-b7d6-18c1f173a950",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "a3e98eb2-446c-53c4-b7d6-18c1f173a950",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:52:14Z",
+   "processed_utc": "2026-06-29T21:52:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "18abb29c-9863-5ced-800a-dd95e599b872",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "18abb29c-9863-5ced-800a-dd95e599b872",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:52:14Z",
+   "processed_utc": "2026-06-29T21:52:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "64bc5d5d-62d6-5d8d-88b2-28b8da379860",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+   "body": {
+    "envelope": {
+     "message_id": "64bc5d5d-62d6-5d8d-88b2-28b8da379860",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T21:52:00Z",
+     "correlation_id": "9062de03-a3fe-5f3c-a18f-103e8507aabe",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4009:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4009",
+     "cost_object_id": "MEC-M377",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "1401000.00",
+     "source_document": "PO-DEMO-001-4009",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T21:52:14Z",
+   "processed_utc": "2026-06-29T21:52:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "a1be91a6-b88e-5799-8cf3-df9c010307a4",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "a1be91a6-b88e-5799-8cf3-df9c010307a4",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:14:14Z",
+   "processed_utc": "2026-06-30T00:14:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "28159333-eb98-5387-b6fc-9f914991c10b",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "28159333-eb98-5387-b6fc-9f914991c10b",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:14:14Z",
+   "processed_utc": "2026-06-30T00:14:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "f918034b-f074-587a-b952-5de23a0eb467",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "f918034b-f074-587a-b952-5de23a0eb467",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:14:14Z",
+   "processed_utc": "2026-06-30T00:14:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "481d0261-02f9-5fc2-821e-d2a32e083bf1",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+   "body": {
+    "envelope": {
+     "message_id": "481d0261-02f9-5fc2-821e-d2a32e083bf1",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-30T00:14:00Z",
+     "correlation_id": "43199a1e-a20f-52a1-89e6-3d16e86241b6",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4007:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4007",
+     "cost_object_id": "ICS-M310",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1968800.00",
+     "source_document": "PO-DEMO-001-4007",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:14:14Z",
+   "processed_utc": "2026-06-30T00:14:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "3838a7da-82b2-590c-ab5d-2282c8903f40",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "3838a7da-82b2-590c-ab5d-2282c8903f40",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:53:14Z",
+   "processed_utc": "2026-06-30T00:53:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "970f1bf1-2011-5b26-8091-95fac077c21f",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "970f1bf1-2011-5b26-8091-95fac077c21f",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:53:14Z",
+   "processed_utc": "2026-06-30T00:53:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "5dc05983-86e7-5b64-94fa-2ddd81271423",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "5dc05983-86e7-5b64-94fa-2ddd81271423",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:53:14Z",
+   "processed_utc": "2026-06-30T00:53:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "4b204037-65b0-5055-84ef-2abbd6681a99",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+   "body": {
+    "envelope": {
+     "message_id": "4b204037-65b0-5055-84ef-2abbd6681a99",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-30T00:53:00Z",
+     "correlation_id": "e1199239-8a5b-5b2f-b0d8-2a75e79aa54f",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4006:r1:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4006",
+     "cost_object_id": "MEC-E188",
+     "vendor_id": "S-105",
+     "currency": "USD",
+     "amount": "8566460.86",
+     "source_document": "PO-DEMO-001-4006",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-30T00:53:14Z",
+   "processed_utc": "2026-06-30T00:53:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "019f5368-d8ab-51aa-8745-832945b8c437",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "019f5368-d8ab-51aa-8745-832945b8c437",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:21:14Z",
+   "processed_utc": "2026-06-29T19:21:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "67734ebf-ac84-5cb2-8dd5-e5894a865e24",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "67734ebf-ac84-5cb2-8dd5-e5894a865e24",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:21:14Z",
+   "processed_utc": "2026-06-29T19:21:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "acc9f3bf-7463-5f72-a69b-8e17c429ad7d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "acc9f3bf-7463-5f72-a69b-8e17c429ad7d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:21:14Z",
+   "processed_utc": "2026-06-29T19:21:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "2c4da021-ecb7-530e-b9d2-c73f33e7ab39",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+   "body": {
+    "envelope": {
+     "message_id": "2c4da021-ecb7-530e-b9d2-c73f33e7ab39",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T19:21:00Z",
+     "correlation_id": "f23c3e64-6495-5017-9404-2e94889f684a",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4011:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4011",
+     "cost_object_id": "MEC-E230",
+     "vendor_id": "S-121",
+     "currency": "USD",
+     "amount": "1166400.00",
+     "source_document": "PO-DEMO-001-4011",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T19:21:14Z",
+   "processed_utc": "2026-06-29T19:21:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "b429a8bc-9b5d-53e8-8552-6bc5ea921095",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b429a8bc-9b5d-53e8-8552-6bc5ea921095",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:36:14Z",
+   "processed_utc": "2026-06-29T18:36:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "b25cc37c-7951-51dd-b3aa-7fc428601663",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b25cc37c-7951-51dd-b3aa-7fc428601663",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:36:14Z",
+   "processed_utc": "2026-06-29T18:36:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "514b1ae4-f458-5930-88dd-bd46f3fac1d8",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "514b1ae4-f458-5930-88dd-bd46f3fac1d8",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:36:14Z",
+   "processed_utc": "2026-06-29T18:36:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "b0bee1dc-6da9-5f87-a7be-6e06155ada29",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+   "body": {
+    "envelope": {
+     "message_id": "b0bee1dc-6da9-5f87-a7be-6e06155ada29",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T18:36:00Z",
+     "correlation_id": "bd979c7e-20d6-552b-ac0b-a6f0cd972289",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4008:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4008",
+     "cost_object_id": "MEC-M322",
+     "vendor_id": "S-122",
+     "currency": "USD",
+     "amount": "3099500.00",
+     "source_document": "PO-DEMO-001-4008",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:36:14Z",
+   "processed_utc": "2026-06-29T18:36:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "9cf2bfdf-ae26-5841-b59e-edd5e225aa8e",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:PCS",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "PCS",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "9cf2bfdf-ae26-5841-b59e-edd5e225aa8e",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "PCS",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:PCS"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:25:14Z",
+   "processed_utc": "2026-06-29T18:25:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "7af98177-4cd2-5978-b501-cc037ecfe2a7",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:COST",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "COST",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "7af98177-4cd2-5978-b501-cc037ecfe2a7",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "COST",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:COST"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:25:14Z",
+   "processed_utc": "2026-06-29T18:25:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "6ec0200e-ec46-5d61-bb81-8effd5287f4d",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:AWP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "AWP",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "6ec0200e-ec46-5d61-bb81-8effd5287f4d",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "AWP",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:AWP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:25:14Z",
+   "processed_utc": "2026-06-29T18:25:55Z",
+   "last_error": null
+  },
+  {
+   "message_id": "13b9bccf-1154-57fd-a073-f460082d7599",
+   "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:ARAP",
+   "doc_type": "commitment",
+   "source_app": "PROCURE",
+   "target_app": "ARAP",
+   "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+   "body": {
+    "envelope": {
+     "message_id": "13b9bccf-1154-57fd-a073-f460082d7599",
+     "doc_type": "commitment",
+     "schema_version": "1.0",
+     "source_app": "PROCURE",
+     "source_instance": "DEMO-PROCURE-01",
+     "target_app": "ARAP",
+     "created_utc": "2026-06-29T18:25:00Z",
+     "correlation_id": "c88ad3e2-0f89-5e92-9f1c-1d07b8688ad4",
+     "idempotency_key": "PROCURE:commitment:VR-DEMO-001:PO-DEMO-001-4012:r0:ARAP"
+    },
+    "payload": {
+     "commitment_id": "PO-DEMO-001-4012",
+     "cost_object_id": "ICS-M198",
+     "vendor_id": "S-109",
+     "currency": "USD",
+     "amount": "1124400.00",
+     "source_document": "PO-DEMO-001-4012",
+     "status": "open"
+    }
+   },
+   "status": "processed",
+   "received_utc": "2026-06-29T18:25:14Z",
+   "processed_utc": "2026-06-29T18:25:55Z",
    "last_error": null
   }
  ],
