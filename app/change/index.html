@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadChange — Change Management</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<style>
+  .chg-bars { display: grid; gap: 8px; }
+  .chg-bar { display: grid; grid-template-columns: minmax(96px, 38%) 1fr 96px; align-items: center; gap: 10px; font-size: 12.5px; }
+  .chg-bar-l { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .chg-bar-t { height: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+  .chg-bar-f { display: block; height: 100%; border-radius: 5px; min-width: 2px; }
+  .chg-bar-n { text-align: right; }
+  .chg-chain { display: grid; gap: 4px; margin: 6px 0 10px; }
+  .chg-step { display: grid; grid-template-columns: 170px 1fr auto; gap: 8px; align-items: center; font-size: 12.5px; padding: 4px 6px; border: 1px solid var(--border); border-radius: 6px; }
+  .chg-step.next { border-color: var(--amber); }
+  .chg-links { display: flex; gap: 6px; flex-wrap: wrap; margin: 4px 0 8px; }
+  .chg-check { display: grid; grid-template-columns: 22px 1fr 150px; gap: 8px; align-items: center; font-size: 12.5px; padding: 3px 0; border-bottom: 1px solid var(--border); }
+  .chg-check .hint { margin: 0; }
+  table.doa { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.doa th, table.doa td { padding: 6px 8px; border-bottom: 1px solid var(--border); text-align: left; }
+  table.doa td.y { color: var(--green); }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading the change register&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+
+<script src="../shared/usermode.js"></script>
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="../shared/records.js"></script>
+<script src="../shared/photos.js"></script>
+<script src="../shared/drawrefs.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
