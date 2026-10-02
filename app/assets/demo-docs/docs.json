@@ -1,0 +1,77 @@
+{
+ "note": "Synthetic demo reference documents. Not from any real project.",
+ "docs": [
+  {
+   "id": "demo-doc-01",
+   "app": "rfi",
+   "owner": "rfi:RFI-DEMO-001-007",
+   "file": "assets/demo-docs/SK-RFI-007-01_A.pdf",
+   "title": "RFI-007 support sketch",
+   "doc_no": "SK-RFI-007-01",
+   "rev": "A",
+   "category": "Drawing",
+   "status": "For information",
+   "added": "2026-09-15"
+  },
+  {
+   "id": "demo-doc-02",
+   "app": "change",
+   "owner": "chg:TR-001",
+   "file": "assets/demo-docs/QTN-TR-001_0.pdf",
+   "title": "TR-001 contractor quotation",
+   "doc_no": "QTN-TR-001",
+   "rev": "0",
+   "category": "Contract",
+   "status": "For review",
+   "added": "2026-09-15"
+  },
+  {
+   "id": "demo-doc-03",
+   "app": "change",
+   "owner": "moc:MOC-DEMO-001-001",
+   "file": "assets/demo-docs/HAZ-MOC-001_0.pdf",
+   "title": "MOC-001 hazard review record",
+   "doc_no": "HAZ-MOC-001",
+   "rev": "0",
+   "category": "Report",
+   "status": "Approved",
+   "added": "2026-09-15"
+  },
+  {
+   "id": "demo-doc-04",
+   "app": "awp",
+   "owner": "iwp:IWP-0001",
+   "file": "assets/demo-docs/IWP-0001-PACK_1.pdf",
+   "title": "IWP-0001 issued package (signed)",
+   "doc_no": "IWP-0001-PACK",
+   "rev": "1",
+   "category": "Work package",
+   "status": "Issued for construction",
+   "added": "2026-09-15"
+  },
+  {
+   "id": "demo-doc-05",
+   "app": "procure",
+   "owner": "po:PO-DEMO-001-4001",
+   "file": "assets/demo-docs/ACK-4001_0.pdf",
+   "title": "PO-4001 supplier acknowledgement",
+   "doc_no": "ACK-4001",
+   "rev": "0",
+   "category": "Correspondence",
+   "status": "For information",
+   "added": "2026-09-15"
+  },
+  {
+   "id": "demo-doc-06",
+   "app": "commissioning",
+   "owner": "sub:100-01",
+   "file": "assets/demo-docs/TOD-100-01_0.pdf",
+   "title": "Subsystem 100-01 turnover dossier index",
+   "doc_no": "TOD-100-01",
+   "rev": "0",
+   "category": "Report",
+   "status": "For review",
+   "added": "2026-09-15"
+  }
+ ]
+}
