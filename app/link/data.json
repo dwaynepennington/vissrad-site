@@ -3,7 +3,7 @@
   "project_name": "Demo Data",
   "project_no": "VR-DEMO-001",
   "client": "VissRad",
-  "contractor": "Gulf Mechanical",
+  "contractor": "Ostrevan Mechanical",
   "site": "Gulf Coast, Texas",
   "currency": "USD",
   "data_date": "2026-08-26",
@@ -4373,7 +4373,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-6729737",
      "payment_terms": "NET15",
      "currency": "USD",
@@ -9114,7 +9114,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-5632350",
      "payment_terms": "NET15",
      "currency": "USD",
@@ -11573,7 +11573,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-5938347",
      "payment_terms": "NET15",
      "currency": "USD",
@@ -13538,7 +13538,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-9845462",
      "payment_terms": "NET45",
      "currency": "USD",
@@ -21141,7 +21141,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-6729737",
      "payment_terms": "NET15",
      "currency": "USD",
@@ -24944,7 +24944,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-5632350",
      "payment_terms": "NET15",
      "currency": "USD",
@@ -27045,7 +27045,7 @@
     },
     "payload": {
      "vendor_id": "V-1001",
-     "name": "Gulf Mechanical",
+     "name": "Ostrevan Mechanical",
      "tax_id": "74-5938347",
      "payment_terms": "NET15",
      "currency": "USD",
