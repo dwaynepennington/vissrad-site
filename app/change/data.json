@@ -14576,7 +14576,7 @@
    ],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Delta Electrical",
+   "counterparty": "Pellwick Electrical",
    "contract_ref": "SC-881-V1",
    "commercial": {
     "quoted": 21200,
@@ -14685,7 +14685,7 @@
    "activities": [],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Delta Electrical",
+   "counterparty": "Pellwick Electrical",
    "contract_ref": "SC-229-V4",
    "commercial": {
     "quoted": 36900,
@@ -14781,7 +14781,7 @@
    "activities": [],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Coastal Insulation",
+   "counterparty": "Treborne Insulation",
    "contract_ref": "SC-495-V6",
    "commercial": {
     "quoted": 52800,
@@ -14888,7 +14888,7 @@
    ],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Coastal Prairie Steel Erectors",
+   "counterparty": "Thornquay Steel Erectors",
    "contract_ref": "SC-241-V7",
    "commercial": {
     "quoted": 53800
@@ -14986,7 +14986,7 @@
    ],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Coastal Insulation",
+   "counterparty": "Treborne Insulation",
    "contract_ref": "SC-988-V4",
    "commercial": {
     "quoted": 32900,
@@ -15082,7 +15082,7 @@
    "activities": [],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Delta Electrical",
+   "counterparty": "Pellwick Electrical",
    "contract_ref": "SC-255-V6",
    "commercial": {
     "quoted": 35500,
@@ -15185,7 +15185,7 @@
    "activities": [],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Coastal Prairie Steel Erectors",
+   "counterparty": "Thornquay Steel Erectors",
    "contract_ref": "SC-457-V6",
    "commercial": {
     "quoted": 92900,
@@ -15299,7 +15299,7 @@
    ],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Red River Piping",
+   "counterparty": "Tolvenna Piping",
    "contract_ref": "SC-737-V7",
    "commercial": {
     "quoted": 34700
@@ -15397,7 +15397,7 @@
    ],
    "probability": 100.0,
    "cost_code": "",
-   "counterparty": "Coastal Prairie Steel Erectors",
+   "counterparty": "Thornquay Steel Erectors",
    "contract_ref": "SC-731-V4",
    "commercial": {
     "quoted": 33600,
