@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D</title>
-<meta name="description" content="All twenty-two VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
+<meta name="description" content="All twenty-three VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSHE, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:title" content="VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D">
-<meta property="og:description" content="All twenty-two VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
+<meta property="og:description" content="All twenty-three VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSHE, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
 <meta property="og:url" content="https://vissrad.com/modules.html">
 <meta property="og:image" content="https://vissrad.com/assets/img/og-card.png">
 <meta property="og:image:width" content="1200">
@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="VissRad">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="VissRad Modules &mdash; project controls, commissioning, cost, payables, work packaging and 4D">
-<meta name="twitter:description" content="All twenty-two VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
+<meta name="twitter:description" content="All twenty-three VissRad modules in detail: VissRadPortfolio, VissRadFEED, VissRadPreCon, VissRadDEng, VissRadProCure, VissRadRFI, VissRadChange, VissRadPCS, VissRadSU&C, VissRadCMMS, VissRadERP, VissRadARAP, VissRadAWP, VissRadCost, VissRadEST, VissRadTAR, VissRadConstruction, VissRadSHE, VissRadSCH, VissRad4D, VissRadBI and VissRadAI, plus the Link exchange layer.">
 <meta name="twitter:image" content="https://vissrad.com/assets/img/og-card.png">
 <link rel="canonical" href="https://vissrad.com/modules.html">
 <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
@@ -68,7 +68,7 @@
   <section class="pagehead gridbg">
     <div class="wrap">
       <p class="eyebrow">Modules</p>
-      <h1 class="h-1">Twenty-two modules: twenty-one applications that carry the project, and one exchange layer that keeps them agreeing.</h1>
+      <h1 class="h-1">Twenty-three modules: twenty-two applications that carry the project, and one exchange layer that keeps them agreeing.</h1>
       <p class="lede" style="margin-top:var(--space-6)">Each module is installed and run on its own. They agree with one another because they exchange documents through Link, not because they were bolted into one oversized program.</p>
     </div>
   </section>
@@ -766,7 +766,7 @@
           </div>
           <div>
             <h4 class="h-4">Field execution</h4>
-            <p class="small" style="margin-top:var(--space-2)">Daily construction reports with labour, equipment, weather and delays, crew timesheets, the safety log and permits to work with the job safety analysis. An RFI can be raised from a daily report.</p>
+            <p class="small" style="margin-top:var(--space-2)">Daily construction reports with labour, equipment, weather and delays, crew timesheets and permits to work with the job safety analysis. An RFI can be raised from a daily report. The Safety tab shows the VissRadSHE summary and opens an incident or observation there with the area and company filled in.</p>
           </div>
           <div>
             <h4 class="h-4">Worksteps from templates</h4>
@@ -795,6 +795,54 @@
         </div>
       </div>
       <p class="field__hint" style="margin-top:var(--space-6)">Two passes, in order: the plan load creates the activities, the progress write statuses them. P6 cannot status an activity that does not exist yet, so the gate holds progress until the plan has been loaded.</p>
+    </div>
+  </section>
+
+  <section class="section section--rule" id="vissradshe">
+    <div class="wrap">
+      <div class="split split--copy-first split--top reveal">
+        <div>
+          <p class="eyebrow">Safety, health and environment</p>
+          <h2 class="h-2">VissRadSHE</h2>
+          <p class="body-muted" style="margin-top:var(--space-5)">The site safety and environmental record. It took over the VissRadConstruction safety log, keeping each entry&rsquo;s original number, and reads exposure hours, rain and permits from the daily reports, so the rates and the stormwater schedule are worked from the same numbers the field reported.</p>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">29 CFR 1904</span><span class="chip">300 / 300A / 301</span><span class="chip">TRIR, DART, LTIR</span><span class="chip">Training matrix</span><span class="chip">RCRA waste</span><span class="chip">Stormwater</span></div>
+        </div>
+        <div class="grid grid-2" style="gap:var(--space-6)">
+          <div>
+            <h4 class="h-4">Incidents and recordability</h4>
+            <p class="small" style="margin-top:var(--space-2)">Injury cases carry the OSHA questions: work-related, new case, then death, days away, restriction, medical treatment beyond first aid, loss of consciousness or a significant diagnosis. The answers classify the case and place it on the employer&rsquo;s 300 log with a case number; first aid is the published list, anything else is medical treatment.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Severe-injury reporting</h4>
+            <p class="small" style="margin-top:var(--space-2)">A fatality shows an eight-hour report-by time, an in-patient hospitalisation, amputation or loss of an eye a 24-hour one, counted from when the employer learned of it, until the report reference is entered.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Investigation and actions</h4>
+            <p class="small" style="margin-top:var(--space-2)">Five whys, contributing factors and corrective actions with owners and due dates. Actions from incidents, observations, inspections and environmental events sit in one list; an incident cannot close with an action open.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Leading and lagging indicators</h4>
+            <p class="small" style="margin-top:var(--space-2)">TRIR, DART and LTIR on the 200,000-hour base by employer and for the project, next to observations, at-risk topics, inspections on time, actions closed and training current.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Inspections, talks and training</h4>
+            <p class="small" style="margin-top:var(--space-2)">Inspections scheduled from templates, a failed item raising an action. Toolbox talks with a printed sign-in sheet, offered to the daily report. A training matrix by worker and course with expiries.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Environmental</h4>
+            <p class="small" style="margin-top:var(--space-2)">Spills and releases with the reporting test (oil reaching water or leaving a sheen, or a hazardous substance at its reportable quantity), hazardous waste generator category, container accumulation limits and manifests, stormwater inspections after rain, air and noise monitoring against limits, and permit obligations by due date.</p>
+          </div>
+          <div>
+            <h4 class="h-4">OSHA logs</h4>
+            <p class="small" style="margin-top:var(--space-2)">The 300 log and 300A summary equivalents by employer and year, printed or exported, with monthly hours and headcount checked against the daily reports, and the posting and electronic submission dates.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Records and photos</h4>
+            <p class="small" style="margin-top:var(--space-2)">Photos, statements, reports and disposal records attached to the incident, observation, inspection or event they belong to, with an audit trail of every change.</p>
+          </div>
+        </div>
+      </div>
+      <p class="field__hint" style="margin-top:var(--space-6)">The forms are equivalents laid out like the OSHA forms. State-plan states may add their own requirements; check the electronic submission list for your industry and size.</p>
     </div>
   </section>
 

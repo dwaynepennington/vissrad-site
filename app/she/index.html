@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VissRadSHE — Safety, Health &amp; Environment</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<link rel="manifest" href="../manifest.webmanifest">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css">
+<style>
+  /* Segment bar inside a tab (Environmental, Training, Inspections, OSHA logs). */
+  .she-seg { display: flex; flex-wrap: wrap; gap: 4px; margin: 0 0 10px; }
+  .she-seg button { background: var(--panel); border: 1px solid var(--border); color: var(--text-dim); padding: 5px 12px; border-radius: 6px; font-size: 12.5px; cursor: pointer; }
+  .she-seg button.on { color: var(--text); border-color: var(--accent); background: color-mix(in srgb, var(--accent) 14%, transparent); }
+  /* Checkbox groups (OSHA questions, factors, attendance). */
+  .she-chks { display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 4px 0; }
+  .she-chks-sm { gap: 2px 14px; }
+  .she-chks-sm .she-chk { font-size: 12px; min-width: 220px; }
+  .she-chk { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--text); cursor: pointer; }
+  .she-chk input { margin: 0; }
+  /* Training matrix */
+  table.she-matrix th.c, table.she-matrix td.c { text-align: center; width: 54px; font-family: var(--mono); }
+  table.she-matrix th { position: sticky; top: 0; background: var(--panel-alt); z-index: 1; }
+  table.she-matrix td.dim { color: var(--text-dim); font-size: 11.5px; }
+  table.she-matrix td.st-valid { color: var(--green); }
+  table.she-matrix td.st-expiring { color: var(--amber); font-weight: 700; }
+  table.she-matrix td.st-expired, table.she-matrix td.st-missing { color: var(--red); font-weight: 700; }
+  @media (max-width: 700px) { .she-chks-sm .she-chk { min-width: 0; } }
+</style>
+</head>
+<body>
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading the safety and environmental record&hellip;</div>
+</div>
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+
+<script src="../shared/usermode.js"></script>
+<script src="../shared/lib.js"></script>
+<script src="../shared/shell.js"></script>
+<script src="../shared/records.js"></script>
+<script src="../shared/photos.js"></script>
+<script src="../shared/markup.js"></script>
+<script src="field.js"></script>
+<script src="env.js"></script>
+<script src="osha.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
