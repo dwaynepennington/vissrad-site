@@ -28,6 +28,12 @@
   .vm-count { color: var(--text-faint); font-size: 11.5px; white-space: nowrap; }
   .vm-list { max-height: calc(100vh - 250px); }
   @media (max-width: 900px) { .vm-wrap { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) { .vm-wrap { padding: 10px; } .vm-bar { flex-wrap: wrap; } .vm-bar input { flex: 1 1 100%; } .vm-drop { padding: 16px 12px; }
+    .vm-list table.data th:nth-child(2), .vm-list table.data td:nth-child(2), .vm-list table.data th:nth-child(4), .vm-list table.data td:nth-child(4),
+    .vm-list table.data th:nth-child(6), .vm-list table.data td:nth-child(6), .vm-list table.data th:nth-child(7), .vm-list table.data td:nth-child(7) { display: none; }
+    .vm-list table.data th:nth-child(5), .vm-list table.data td:nth-child(5) { display: none; }
+    .vm-list table.data td.clip { white-space: normal; max-width: none; overflow: visible; text-overflow: clip; } }
+  @media (pointer: coarse) { .vm-dropt { display: none; } .vm-drop { border-style: solid; } }
 </style>
 </head>
 <body>
