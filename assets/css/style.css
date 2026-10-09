@@ -467,6 +467,14 @@ a.card:hover { border-color: var(--color-border-strong); transform: translateY(-
 .mod__tags { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: auto; padding-top: var(--space-2); }
 
 /* Compact module row */
+.packhead { margin-bottom: var(--space-6); max-width: 72ch; }
+.packhead .h-3 { margin-top: var(--space-2); }
+.packhead__desc { color: var(--color-text-muted); margin-top: var(--space-2); }
+.packnav a { text-decoration: none; }
+.packnav a:hover { color: var(--color-text); border-color: var(--color-border-strong); }
+.packnav { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-8); }
+.packband { padding-block: clamp(var(--space-10),5vw,var(--space-16)) var(--space-4); border-top: 1px solid var(--color-border); }
+.packband__mods { font-family: var(--font-mono); font-size: var(--text-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-faint); margin-top: var(--space-3); }
 .modrow {
   display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: var(--space-5);
   padding: var(--space-5) 0; border-top: 1px solid var(--color-divider); align-items: start;

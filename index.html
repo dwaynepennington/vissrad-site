@@ -74,11 +74,12 @@
       <img src="assets/img/hero-plant.webp" alt="Industrial process plant at night, piping racks and distillation columns lit by work lights" width="1800" height="1200" fetchpriority="high">
     </div>
     <div class="hero__inner">
-      <p class="eyebrow">Wisdom in decision making</p>
+      <p class="eyebrow">Built by a controls practitioner, not a software company</p>
       <h1 class="h-hero hero__title">Nothing gets paid ahead of the <em>field</em>.</h1>
       <p class="lede hero__lede">VissRad is a Suite of Interactive Smart Tools for Project Delivery — project controls, commissioning, work packaging and finance for industrial capital projects — where progress, cost, certification and payment stay tied to one another instead of drifting apart in eleven spreadsheets.</p>
       <div class="btn-row hero__cta">
         <a class="btn btn--primary" href="platform.html">How the platform works</a>
+        <a class="btn btn--ghost" href="#overview">Watch the 15-minute overview</a>
         <a class="btn btn--ghost" href="/app/" target="_blank" rel="noopener">See the working demo</a>
       </div>
     </div>
@@ -86,7 +87,7 @@
 
   <div class="specstrip">
     <div class="specstrip__inner">
-      <span>23 modules</span>
+      <span>23 modules in 5 packs</span>
       <span>Primavera P6 import</span>
       <span>Earned value &amp; EAC forecasting</span>
       <span>Power BI star-schema exports</span>
@@ -94,6 +95,29 @@
       <span>Desktop, on-prem or cloud</span>
     </div>
   </div>
+
+  <!-- ================= OVERVIEW VIDEO ================= -->
+  <section class="section section--rule" id="overview">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Narrated overview</p>
+        <h2 class="h-1">Fifteen minutes on what the suite does.</h2>
+        <p class="lede">A narrated walk through the applications, the chain from field quantity to certified payment, and how Link keeps the numbers agreeing. Recorded, so you can watch it before deciding whether a live walkthrough is worth your time.</p>
+      </div>
+      <div class="reveal" style="margin-top:var(--space-8)">
+        <video controls preload="metadata" playsinline poster="assets/img/overview-poster.jpg" style="width:100%;border:1px solid var(--color-border);border-radius:var(--radius-md);background:#000">
+          <source src="assets/video/vissrad-overview.mp4" type="video/mp4">
+          Your browser cannot play embedded video. <a class="link" href="assets/video/vissrad-overview.mp4">Download the overview instead</a>.
+        </video>
+        <div class="btn-row" style="margin-top:var(--space-6)">
+          <a class="btn btn--ghost" href="assets/video/vissrad-overview.mp4" download>Download the video</a>
+          <a class="btn btn--ghost" href="/app/" target="_blank" rel="noopener">Open the browser demo</a>
+          <a class="btn btn--ghost" href="demo.html">Book a walkthrough</a>
+        </div>
+        <p class="field__hint" style="margin-top:var(--space-6)">Fifteen minutes, 1080p, with narration. Recorded at twenty-two modules; VissRadSHE, VissRad Markup and the VissRadEST Bid Desk were added afterwards and are in the browser demo. Other platforms in the comparison are shown as Platform A to I.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- ================= THE GAP ================= -->
   <section class="section gridbg">
@@ -225,10 +249,302 @@
     <div class="wrap">
       <div class="sec-head reveal">
         <p class="eyebrow">The suite</p>
-        <h2 class="h-1">Twenty-three modules. One record of the project.</h2>
-        <p class="lede">Each application is installed, licensed and run on its own — a cost engineer never has to open the payables system to do their job. They exchange business documents through Link, so the numbers agree.</p>
+        <h2 class="h-1">Five packs, twenty-three modules. One record of the project.</h2>
+        <p class="lede">Each application is installed, licensed and run on its own — a cost engineer never has to open the payables system to do their job. They exchange business documents through Link, so the numbers agree. The applications are grouped into five packs by the work they cover; start with one pack, or one module, and add the rest when it earns its place.</p>
       </div>
 
+      <div class="packhead reveal" id="pack-plan" style="margin-top:0">
+        <p class="eyebrow eyebrow--plain">Pack 1</p>
+        <h3 class="h-3">Plan and Estimate</h3>
+        <p class="small packhead__desc">From the FEED gate to a priced, scheduled bid. <a class="link" href="modules.html#pack-plan">In detail</a></p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadFEED</h3>
+              <p class="mod__role">FEED tracking</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 21V3"/><path d="M6 4h11l-2.5 4 2.5 4H6"/></svg>
+          </div>
+          <p class="mod__desc">Front-end engineering design through the sanction gates: G0 to G3 gate readiness scoring, FEED deliverables against a 21-milestone skeleton, an optioneering study register, estimate basis by AACE class, a three-method duration benchmark and the pre-FID risk register.</p>
+          <div class="mod__tags">
+            <span class="chip">G0&ndash;G3 readiness</span><span class="chip">AACE class</span><span class="chip">Optioneering</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadEST</h3>
+              <p class="mod__role">Estimating</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h14v18H5z"/><path d="M8 7h8M8 11h8M8 15h4"/></svg>
+          </div>
+          <p class="mod__desc">Discipline takeoff and cost estimating for piping, equipment, engineering and construction scope. Three methods sit side by side per discipline &mdash; parametric, known quantity and detailed takeoff &mdash; and only the selected one feeds the rollup to total installed cost. Quantities can be measured on the PDF drawing. A register keeps working and issued estimates, and the Bid Desk indexes the bid set, counts sizes, tags and symbols, and checks for missing sheets and spec sections.</p>
+          <div class="mod__tags">
+            <span class="chip">3 methods</span><span class="chip">AACE class</span><span class="chip">Bid Desk</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadSCH</h3>
+              <p class="mod__role">Scheduling and analysis</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h7M4 11h11M4 16h6"/><path d="M19 4v16"/></svg>
+          </div>
+          <p class="mod__desc">Native CPM schedule editor with P6 XER and MS Project export, plus analysis over XER, XML, CSV and XLSX sources, feeding activity structure and dates into progress, packaging and 4D sequencing. S-curve, earned value, critical path, float distribution and schedule quality in one place, with a CPM check, DCMA 14-point assessment, baselines, Monte Carlo risk and resource levelling.</p>
+          <div class="mod__tags">
+            <span class="chip">P6 import</span><span class="chip">Earned value</span><span class="chip">Float</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadPreCon</h3>
+              <p class="mod__role">Preconstruction</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M5 20V9l7-4 7 4v11M10 20v-6h4v6"/></svg>
+          </div>
+          <p class="mod__desc">Making a sanctioned project buildable: constructability reviews, contracting strategy and bid packages, long-lead procurement with float to need-by, craft labour and logistics, permits, and a mobilisation readiness case. Bids are levelled side by side and, on VissRad Server, taken in through a bidder portal.</p>
+          <div class="mod__tags">
+            <span class="chip">Bid packages</span><span class="chip">Long-lead float</span><span class="chip">Mobilisation</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadTAR</h3>
+              <p class="mod__role">Turnaround estimating</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
+          </div>
+          <p class="mod__desc">Module-driven turnaround estimating. Answer a short wizard for each scope item and the module returns the tasks, crew hours, equipment, logic and material &mdash; then the worklist rolls into an event fragnet, a manpower histogram and a material take-off, and goes out to Excel, P6 or SAP.</p>
+          <div class="mod__tags">
+            <span class="chip">330 modules</span><span class="chip">Material take-off</span><span class="chip">P6 / SAP export</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="packhead reveal" id="pack-control" style="margin-top:clamp(var(--space-12),6vw,var(--space-16))">
+        <p class="eyebrow eyebrow--plain">Pack 2</p>
+        <h3 class="h-3">Control</h3>
+        <p class="small packhead__desc">Progress, cost, change and payment held to one record. <a class="link" href="modules.html#pack-control">In detail</a></p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadPCS</h3>
+              <p class="mod__role">Project controls</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M6 20V9m5 11V4m5 16v-7"/></svg>
+          </div>
+          <p class="mod__desc">Completions, field progress, earned value, cost control and forecasting for one project per file. Rule-of-credit progress, shift entry, PF and CPI, five EAC methods and a contingency drawdown register.</p>
+          <div class="mod__tags">
+            <span class="chip">Earned value</span><span class="chip">P6 import</span><span class="chip">Cost report</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadCost</h3>
+              <p class="mod__role">Cost management</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 18c3-9 5 3 8-5s5 5 8-3"/><path d="M3 21h18"/></svg>
+          </div>
+          <p class="mod__desc">A cost breakdown structure with a locked original budget, commitments in any currency, an actuals ledger, change management, T&amp;M tickets, pay applications, forecasting, earned value, FX and cost risk, and reports &mdash; twelve views over one cost engine.</p>
+          <div class="mod__tags">
+            <span class="chip">CBS</span><span class="chip">Change control</span><span class="chip">Cash flow</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadChange</h3>
+              <p class="mod__role">Change management</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></svg>
+          </div>
+          <p class="mod__desc">Trends, change notices, change orders and claims with an estimate build-up, approval by delegation of authority and a recorded decision, fed by RFIs and design changes and passed to VissRadPCS for incorporation. Management of change runs alongside.</p>
+          <div class="mod__tags">
+            <span class="chip">Delegation of authority</span><span class="chip">Change orders</span><span class="chip">MOC</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadERP</h3>
+              <p class="mod__role">Finance core — FI + CO</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 10v9h14v-9M9 19v-5h6v5"/></svg>
+          </div>
+          <p class="mod__desc">General ledger, accounts payable and receivable, cost centre accounting and internal orders, driven by a keyboard-first transaction-code command bar with period control, carry-forward and reconciliation.</p>
+          <div class="mod__tags">
+            <span class="chip">GL / AP / AR</span><span class="chip">Controlling</span><span class="chip">Period close</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadARAP</h3>
+              <p class="mod__role">Payables &amp; receivables</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7.5h18v11H3z"/><path d="M3 11h18M7 15.5h4"/></svg>
+          </div>
+          <p class="mod__desc">Invoice intake and coding, three-way PO/receipt/invoice matching, progress-claim verification against field data, a role-based approval queue, retention withheld and released on certificate, payment runs and supplier prequalification.</p>
+          <div class="mod__tags">
+            <span class="chip">Three-way match</span><span class="chip">Retention</span><span class="chip">Aging</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="packhead reveal" id="pack-engineer" style="margin-top:clamp(var(--space-12),6vw,var(--space-16))">
+        <p class="eyebrow eyebrow--plain">Pack 3</p>
+        <h3 class="h-3">Engineer and Procure</h3>
+        <p class="small packhead__desc">Deliverables, documents, questions and materials, with VissRad Markup on every drawing. <a class="link" href="modules.html#pack-engineer">In detail</a></p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadDEng</h3>
+              <p class="mod__role">Detailed engineering</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
+          </div>
+          <p class="mod__desc">Engineering to IFC: a deliverable register by revision and issue code from IFR through IFA, IFD and IFC to AB, man-hour progress by rule of credit, review and transmittal cycles, submittals against specification sections through sequential review, the project correspondence register, MTO quantity growth, changes and TQs, and EWP handover to the field.</p>
+          <div class="mod__tags">
+            <span class="chip">Issue codes</span><span class="chip">Submittals</span><span class="chip">EWP handover</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadProCure</h3>
+              <p class="mod__role">Procurement and material management</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
+          </div>
+          <p class="mod__desc">The supply chain from take-off to the crew: requisitions raised from the VissRadDEng MTO and VissRadPreCon long-lead items, enquiries and weighted bid tabulation, purchase orders approved by delegation of authority, expediting against the required-on-site date, vendor documents, inspection and release, logistics, receiving with OS&amp;D, and site stock reserved and issued to VissRadAWP IWPs with heat-number traceability.</p>
+          <div class="mod__tags">
+            <span class="chip">Bid tabulation</span><span class="chip">Expediting</span><span class="chip">Material control</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadRFI</h3>
+              <p class="mod__role">Requests for information, FEED to handover</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.5 1.9c-.4.1-.5.4-.5.8M12 13.6v.1"/></svg>
+          </div>
+          <p class="mod__desc">RFIs with a ball in court and a due date, raised at every stage from FEED through SU&amp;C and handover from the record the question is about. Each RFI keeps its own letters: notices of impact, reminders and responses under cover letter. An RFI with impact asks VissRadDEng for a design change.</p>
+          <div class="mod__tags">
+            <span class="chip">Ball in court</span><span class="chip">RFI letters</span><span class="chip">Ageing</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="packhead reveal" id="pack-execute" style="margin-top:clamp(var(--space-12),6vw,var(--space-16))">
+        <p class="eyebrow eyebrow--plain">Pack 4</p>
+        <h3 class="h-3">Execute</h3>
+        <p class="small packhead__desc">Work packages, worksteps, safety and sequence in the field. <a class="link" href="modules.html#pack-execute">In detail</a></p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadAWP</h3>
+              <p class="mod__role">Advanced work packaging</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/></svg>
+          </div>
+          <p class="mod__desc">The full CWA → CWP → EWP → IWP hierarchy with a constraint matrix, readiness scoring, an IWP release gate, path of construction, look-ahead, meetings with carried-over actions and field progress.</p>
+          <div class="mod__tags">
+            <span class="chip">IWP gate</span><span class="chip">Constraints</span><span class="chip">Lookahead</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadConstruction</h3>
+              <p class="mod__role">Construction planning &amp; execution</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h6"/><path d="M17 15l2 2 3-4"/></svg>
+          </div>
+          <p class="mod__desc">Work packages broken into worksteps from commodity templates, with budget hours from productivity rates and duration from crew size. Everything the plan names is checked against the target P6 project before anything is written, and the plan and the field progress go out as XLSX, XER, P6 XML or through the Job Service. In the field it keeps daily reports, crew timesheets and permits to work; safety records are kept in VissRadSHE.</p>
+          <div class="mod__tags">
+            <span class="chip">P6 import</span><span class="chip">Pre-flight gate</span><span class="chip">Rule of credit</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadSHE</h3>
+              <p class="mod__role">Safety, health &amp; environment</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+          </div>
+          <p class="mod__desc">Incidents classified by the OSHA recordkeeping questions onto each employer&rsquo;s 300 log, with the 300A summary and severe-injury report-by times. Observations, scheduled inspections, toolbox talks, the training matrix and corrective actions, alongside spills and releases, hazardous waste and manifests, stormwater, monitoring and permit obligations. Hours and rain come from the daily reports.</p>
+          <div class="mod__tags">
+            <span class="chip">OSHA 300 / 300A</span><span class="chip">Leading indicators</span><span class="chip">Environmental</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRad4D</h3>
+              <p class="mod__role">Visual sequencing</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
+          </div>
+          <p class="mod__desc">Pairs one P6, CSV or XLSX schedule with one elevation drawing and paints construction status over time. Planned sequence, progress versus plan and forecast views with SPI, finish variance and an S-curve. No 3D model required; when there is one, VissRad4D opens federated IFC models with clash detection and BCF issues.</p>
+          <div class="mod__tags">
+            <span class="chip">No model needed</span><span class="chip">SPI</span><span class="chip">S-curve</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="packhead reveal" id="pack-turnover" style="margin-top:clamp(var(--space-12),6vw,var(--space-16))">
+        <p class="eyebrow eyebrow--plain">Pack 5</p>
+        <h3 class="h-3">Turnover and Operate</h3>
+        <p class="small packhead__desc">Completions, certification and handover into maintenance. <a class="link" href="modules.html#pack-turnover">In detail</a></p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadSU&amp;C</h3>
+              <p class="mod__role">Startup &amp; commissioning</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M15.5 17.5l2 2 4-4.5"/></svg>
+          </div>
+          <p class="mod__desc">System, subsystem and tag hierarchy with ITR check sheets, punch lists and test packages, driving a gated certificate ladder from RVC through MCC, RFC, SCC and DCC to HOC, with field inspections, rules-based completion packages and a handover dataset.</p>
+          <div class="mod__tags">
+            <span class="chip">ITRs &amp; punch</span><span class="chip">6 gates</span><span class="chip">Navisworks</span>
+          </div>
+        </article>
+        <article class="card mod reveal">
+          <div class="mod__top">
+            <div>
+              <h3 class="mod__name">VissRadCMMS</h3>
+              <p class="mod__role">Maintenance management</p>
+            </div>
+            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.1-.4-.4-2.1z"/></svg>
+          </div>
+          <p class="mod__desc">Maintenance that starts at turnover. The asset register is built from the SU&amp;C tag register, certificates set asset status, and preservation hands over to operations PMs at RFC &mdash; then work requests, work orders with failure codes, preventive maintenance, job plans, backlog, stores and reliability.</p>
+          <div class="mod__tags">
+            <span class="chip">Assets</span><span class="chip">Work orders</span><span class="chip">PM plans</span><span class="chip">Handover</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="packhead reveal" id="pack-across" style="margin-top:clamp(var(--space-12),6vw,var(--space-16))">
+        <p class="eyebrow eyebrow--plain">Across every pack</p>
+        <h3 class="h-3">Portfolio, reporting and exchange</h3>
+        <p class="small packhead__desc">The view above the packs, the reporting out of them, and the layer that keeps them agreeing. <a class="link" href="modules.html#pack-across">In detail</a></p>
+      </div>
       <div class="grid grid-3">
         <article class="card mod reveal">
           <div class="mod__top">
@@ -243,273 +559,6 @@
             <span class="chip">Stage gates</span><span class="chip">5 phases</span><span class="chip">Exceptions</span>
           </div>
         </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadFEED</h3>
-              <p class="mod__role">FEED tracking</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 21V3"/><path d="M6 4h11l-2.5 4 2.5 4H6"/></svg>
-          </div>
-          <p class="mod__desc">Front-end engineering design through the sanction gates: G0 to G3 gate readiness scoring, FEED deliverables against a 21-milestone skeleton, an optioneering study register, estimate basis by AACE class, a three-method duration benchmark and the pre-FID risk register.</p>
-          <div class="mod__tags">
-            <span class="chip">G0&ndash;G3 readiness</span><span class="chip">AACE class</span><span class="chip">Optioneering</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadEST</h3>
-              <p class="mod__role">Estimating</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M5 3h14v18H5z"/><path d="M8 7h8M8 11h8M8 15h4"/></svg>
-          </div>
-          <p class="mod__desc">Discipline takeoff and cost estimating for piping, equipment, engineering and construction scope. Three methods sit side by side per discipline &mdash; parametric, known quantity and detailed takeoff &mdash; and only the selected one feeds the rollup to total installed cost. Quantities can be measured on the PDF drawing.</p>
-          <div class="mod__tags">
-            <span class="chip">3 methods</span><span class="chip">AACE class</span><span class="chip">Benchmark check</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadSCH</h3>
-              <p class="mod__role">Scheduling and analysis</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h7M4 11h11M4 16h6"/><path d="M19 4v16"/></svg>
-          </div>
-          <p class="mod__desc">Native CPM schedule editor with P6 XER and MS Project export, plus analysis over XER, XML, CSV and XLSX sources, feeding activity structure and dates into progress, packaging and 4D sequencing. S-curve, earned value, critical path, float distribution and schedule quality in one place, with a CPM check, DCMA 14-point assessment, baselines, Monte Carlo risk and resource levelling.</p>
-          <div class="mod__tags">
-            <span class="chip">P6 import</span><span class="chip">Earned value</span><span class="chip">Float</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadPreCon</h3>
-              <p class="mod__role">Preconstruction</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M5 20V9l7-4 7 4v11M10 20v-6h4v6"/></svg>
-          </div>
-          <p class="mod__desc">Making a sanctioned project buildable: constructability reviews, contracting strategy and bid packages, long-lead procurement with float to need-by, craft labour and logistics, permits, and a mobilisation readiness case. Bids are levelled side by side and, on VissRad Server, taken in through a bidder portal.</p>
-          <div class="mod__tags">
-            <span class="chip">Bid packages</span><span class="chip">Long-lead float</span><span class="chip">Mobilisation</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadDEng</h3>
-              <p class="mod__role">Detailed engineering</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h4"/></svg>
-          </div>
-          <p class="mod__desc">Engineering to IFC: a deliverable register by revision and issue code from IFR through IFA, IFD and IFC to AB, man-hour progress by rule of credit, review and transmittal cycles, submittals against specification sections through sequential review, the project correspondence register, MTO quantity growth, changes and TQs, and EWP handover to the field.</p>
-          <div class="mod__tags">
-            <span class="chip">Issue codes</span><span class="chip">Submittals</span><span class="chip">EWP handover</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadProCure</h3>
-              <p class="mod__role">Procurement and material management</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg>
-          </div>
-          <p class="mod__desc">The supply chain from take-off to the crew: requisitions raised from the VissRadDEng MTO and VissRadPreCon long-lead items, enquiries and weighted bid tabulation, purchase orders approved by delegation of authority, expediting against the required-on-site date, vendor documents, inspection and release, logistics, receiving with OS&amp;D, and site stock reserved and issued to VissRadAWP IWPs with heat-number traceability.</p>
-          <div class="mod__tags">
-            <span class="chip">Bid tabulation</span><span class="chip">Expediting</span><span class="chip">Material control</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadRFI</h3>
-              <p class="mod__role">Requests for information, FEED to handover</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/><path d="M10 9.5a2 2 0 1 1 2.5 1.9c-.4.1-.5.4-.5.8M12 13.6v.1"/></svg>
-          </div>
-          <p class="mod__desc">RFIs with a ball in court and a due date, raised at every stage from FEED through SU&amp;C and handover from the record the question is about. Each RFI keeps its own letters: notices of impact, reminders and responses under cover letter. An RFI with impact asks VissRadDEng for a design change.</p>
-          <div class="mod__tags">
-            <span class="chip">Ball in court</span><span class="chip">RFI letters</span><span class="chip">Ageing</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadChange</h3>
-              <p class="mod__role">Change management</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 8h13l-3-3"/><path d="M20 16H7l3 3"/></svg>
-          </div>
-          <p class="mod__desc">Trends, change notices, change orders and claims with an estimate build-up, approval by delegation of authority and a recorded decision, fed by RFIs and design changes and passed to VissRadPCS for incorporation. Management of change runs alongside.</p>
-          <div class="mod__tags">
-            <span class="chip">Delegation of authority</span><span class="chip">Change orders</span><span class="chip">MOC</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadPCS</h3>
-              <p class="mod__role">Project controls</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 20h18M6 20V9m5 11V4m5 16v-7"/></svg>
-          </div>
-          <p class="mod__desc">Completions, field progress, earned value, cost control and forecasting for one project per file. Rule-of-credit progress, shift entry, PF and CPI, five EAC methods and a contingency drawdown register.</p>
-          <div class="mod__tags">
-            <span class="chip">Earned value</span><span class="chip">P6 import</span><span class="chip">Cost report</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadCost</h3>
-              <p class="mod__role">Cost management</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 18c3-9 5 3 8-5s5 5 8-3"/><path d="M3 21h18"/></svg>
-          </div>
-          <p class="mod__desc">A cost breakdown structure with a locked original budget, commitments in any currency, an actuals ledger, change management, T&amp;M tickets, pay applications, forecasting, earned value, FX and cost risk, and reports &mdash; twelve views over one cost engine.</p>
-          <div class="mod__tags">
-            <span class="chip">CBS</span><span class="chip">Change control</span><span class="chip">Cash flow</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadERP</h3>
-              <p class="mod__role">Finance core — FI + CO</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 9.5 12 4l9 5.5M5 10v9h14v-9M9 19v-5h6v5"/></svg>
-          </div>
-          <p class="mod__desc">General ledger, accounts payable and receivable, cost centre accounting and internal orders, driven by a keyboard-first transaction-code command bar with period control, carry-forward and reconciliation.</p>
-          <div class="mod__tags">
-            <span class="chip">GL / AP / AR</span><span class="chip">Controlling</span><span class="chip">Period close</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadARAP</h3>
-              <p class="mod__role">Payables &amp; receivables</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 7.5h18v11H3z"/><path d="M3 11h18M7 15.5h4"/></svg>
-          </div>
-          <p class="mod__desc">Invoice intake and coding, three-way PO/receipt/invoice matching, progress-claim verification against field data, a role-based approval queue, retention withheld and released on certificate, payment runs and supplier prequalification.</p>
-          <div class="mod__tags">
-            <span class="chip">Three-way match</span><span class="chip">Retention</span><span class="chip">Aging</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadAWP</h3>
-              <p class="mod__role">Advanced work packaging</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="1"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="1"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="1"/></svg>
-          </div>
-          <p class="mod__desc">The full CWA → CWP → EWP → IWP hierarchy with a constraint matrix, readiness scoring, an IWP release gate, path of construction, look-ahead, meetings with carried-over actions and field progress.</p>
-          <div class="mod__tags">
-            <span class="chip">IWP gate</span><span class="chip">Constraints</span><span class="chip">Lookahead</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadConstruction</h3>
-              <p class="mod__role">Construction planning &amp; execution</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 5h16M4 12h10M4 19h6"/><path d="M17 15l2 2 3-4"/></svg>
-          </div>
-          <p class="mod__desc">Work packages broken into worksteps from commodity templates, with budget hours from productivity rates and duration from crew size. Everything the plan names is checked against the target P6 project before anything is written, and the plan and the field progress go out as XLSX, XER, P6 XML or through the Job Service. In the field it keeps daily reports, crew timesheets and permits to work; safety records are kept in VissRadSHE.</p>
-          <div class="mod__tags">
-            <span class="chip">P6 import</span><span class="chip">Pre-flight gate</span><span class="chip">Rule of credit</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadSHE</h3>
-              <p class="mod__role">Safety, health &amp; environment</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.2-8 9-4.6-.8-8-4.5-8-9V6l8-3z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
-          </div>
-          <p class="mod__desc">Incidents classified by the OSHA recordkeeping questions onto each employer&rsquo;s 300 log, with the 300A summary and severe-injury report-by times. Observations, scheduled inspections, toolbox talks, the training matrix and corrective actions, alongside spills and releases, hazardous waste and manifests, stormwater, monitoring and permit obligations. Hours and rain come from the daily reports.</p>
-          <div class="mod__tags">
-            <span class="chip">OSHA 300 / 300A</span><span class="chip">Leading indicators</span><span class="chip">Environmental</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRad4D</h3>
-              <p class="mod__role">Visual sequencing</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 3 4 7v10l8 4 8-4V7l-8-4z"/><path d="M4 7l8 4 8-4M12 11v10"/></svg>
-          </div>
-          <p class="mod__desc">Pairs one P6, CSV or XLSX schedule with one elevation drawing and paints construction status over time. Planned sequence, progress versus plan and forecast views with SPI, finish variance and an S-curve. No 3D model required; when there is one, VissRad4D opens federated IFC models with clash detection and BCF issues.</p>
-          <div class="mod__tags">
-            <span class="chip">No model needed</span><span class="chip">SPI</span><span class="chip">S-curve</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadSU&amp;C</h3>
-              <p class="mod__role">Startup &amp; commissioning</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 6h16M4 12h10M4 18h7"/><path d="M15.5 17.5l2 2 4-4.5"/></svg>
-          </div>
-          <p class="mod__desc">System, subsystem and tag hierarchy with ITR check sheets, punch lists and test packages, driving a gated certificate ladder from RVC through MCC, RFC, SCC and DCC to HOC, with field inspections, rules-based completion packages and a handover dataset.</p>
-          <div class="mod__tags">
-            <span class="chip">ITRs &amp; punch</span><span class="chip">6 gates</span><span class="chip">Navisworks</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadCMMS</h3>
-              <p class="mod__role">Maintenance management</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.2L3.5 17.3a1.8 1.8 0 0 0 2.5 2.5l5.8-5.8a4 4 0 0 0 5.2-5.4l-2.4 2.4-2.1-.4-.4-2.1z"/></svg>
-          </div>
-          <p class="mod__desc">Maintenance that starts at turnover. The asset register is built from the SU&amp;C tag register, certificates set asset status, and preservation hands over to operations PMs at RFC &mdash; then work requests, work orders with failure codes, preventive maintenance, job plans, backlog, stores and reliability.</p>
-          <div class="mod__tags">
-            <span class="chip">Assets</span><span class="chip">Work orders</span><span class="chip">PM plans</span><span class="chip">Handover</span>
-          </div>
-        </article>
-
-        <article class="card mod reveal">
-          <div class="mod__top">
-            <div>
-              <h3 class="mod__name">VissRadTAR</h3>
-              <p class="mod__role">Turnaround estimating</p>
-            </div>
-            <svg class="mod__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/></svg>
-          </div>
-          <p class="mod__desc">Module-driven turnaround estimating. Answer a short wizard for each scope item and the module returns the tasks, crew hours, equipment, logic and material &mdash; then the worklist rolls into an event fragnet, a manpower histogram and a material take-off, and goes out to Excel, P6 or SAP.</p>
-          <div class="mod__tags">
-            <span class="chip">330 modules</span><span class="chip">Material take-off</span><span class="chip">P6 / SAP export</span>
-          </div>
-        </article>
-
         <article class="card mod reveal">
           <div class="mod__top">
             <div>
@@ -523,7 +572,6 @@
             <span class="chip">Star schema</span><span class="chip">Power BI</span><span class="chip">ODBC</span>
           </div>
         </article>
-
         <article class="card mod reveal">
           <div class="mod__top">
             <div>
