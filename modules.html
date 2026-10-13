@@ -189,7 +189,7 @@
           <p class="eyebrow">Scheduling and schedule analysis</p>
           <h2 class="h-2">VissRadSCH</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Schedule development, analysis and maintenance alongside the Primavera P6 data the rest of the suite consumes, keeping activity structure aligned to the work breakdown structure that progress is measured against. A native schedule editor builds the CPM network in VissRad itself &mdash; activities, WBS, calendars with holidays, FS/SS/FF/SF logic with lags, constraints, progress at a data date and a baseline &mdash; recalculates the critical path on every change and exports to P6 XER or Microsoft Project XML when a client needs one. The same analysis views run over a schedule built here or one imported from P6, so the schedule conversation happens on evidence rather than opinion.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Schedule editor</span><span class="chip">XER and MSP XML export</span><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">MS Project XML</span><span class="chip">S-curve</span><span class="chip">FTE curve</span><span class="chip">Earned value</span><span class="chip">Critical path</span><span class="chip">Float distribution</span><span class="chip">CPM check</span><span class="chip">DCMA 14-point</span><span class="chip">Monte Carlo</span><span class="chip">Resource levelling</span><span class="chip">Resource files</span><span class="chip">Schedule library</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Schedule editor</span><span class="chip">XER and MSP XML export</span><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">MS Project XML</span><span class="chip">S-curve</span><span class="chip">FTE curve</span><span class="chip">Earned value</span><span class="chip">Critical path</span><span class="chip">Float distribution</span><span class="chip">CPM check</span><span class="chip">DCMA 14-point</span><span class="chip">Version comparison</span><span class="chip">Half-step analysis</span><span class="chip">What-if scenarios</span><span class="chip">Monte Carlo</span><span class="chip">Resource levelling</span><span class="chip">Resource files</span><span class="chip">Schedule library</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -230,7 +230,7 @@
           </div>
           <div>
             <h4 class="h-4">CPM check</h4>
-            <p class="small" style="margin-top:var(--space-2)">A forward and backward pass over the file&rsquo;s own logic, compared with the dates P6 reported.</p>
+            <p class="small" style="margin-top:var(--space-2)">A forward and backward pass over the file&rsquo;s own logic, compared with the dates P6 reported. Redundant links &mdash; finish-to-start links already implied by another path &mdash; are listed for review.</p>
           </div>
           <div>
             <h4 class="h-4">DCMA 14-point</h4>
@@ -239,6 +239,14 @@
           <div>
             <h4 class="h-4">Baselines</h4>
             <p class="small" style="margin-top:var(--space-2)">Baselines kept alongside the current schedule and compared by activity and by finish; the DCMA checks use the active one.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Compare versions</h4>
+            <p class="small" style="margin-top:var(--space-2)">Two updates of a schedule compared by Activity ID: activities and relationships added and deleted, durations, calendars and constraints changed, actual dates altered after they were recorded, and the finish movement. A half-step analysis, after AACE RP 29R-03, splits that movement into the part caused by progress and the part caused by revisions to the plan. It splits the movement; it does not assign responsibility.</p>
+          </div>
+          <div>
+            <h4 class="h-4">What-if scenarios</h4>
+            <p class="small" style="margin-top:var(--space-2)">Named copies of the plan saved beside it, edited separately and compared with the plan of record, so an acceleration or a change of method can be tested without touching the schedule of record.</p>
           </div>
           <div>
             <h4 class="h-4">Risk (Monte Carlo)</h4>
@@ -688,7 +696,7 @@
           <p class="eyebrow">Procurement and material management</p>
           <h2 class="h-2">VissRadProCure</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The supply chain for the project, from the engineering take-off to the material issued to the crew. Requisitions come from the VissRadDEng MTO and VissRadPreCon long-lead items rather than being keyed again, and every order is tracked to the date it is needed on site.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Requisitions</span><span class="chip">Bid tabulation</span><span class="chip">Delegation of authority</span><span class="chip">Expediting</span><span class="chip">VDRL</span><span class="chip">Inspection &amp; FAT</span><span class="chip">OS&amp;D</span><span class="chip">Heat numbers</span><span class="chip">IWP material</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Requisitions</span><span class="chip">Bid tabulation</span><span class="chip">Delegation of authority</span><span class="chip">Expediting</span><span class="chip">VDRL</span><span class="chip">Inspection &amp; FAT</span><span class="chip">OS&amp;D</span><span class="chip">Heat numbers</span><span class="chip">IWP material</span><span class="chip">Supplier grades</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -733,7 +741,7 @@
           </div>
           <div>
             <h4 class="h-4">Suppliers</h4>
-            <p class="small" style="margin-top:var(--space-2)">The supplier register with prequalification expiry, and performance calculated from the orders: on-time delivery, vendor documents on time, inspection first-pass rate and win rate.</p>
+            <p class="small" style="margin-top:var(--space-2)">The supplier register with prequalification expiry, and performance calculated from the orders: on-time delivery, vendor documents on time, inspection first-pass rate, clean receipts (no over, short or damaged material) and win rate. A weighted score and an A&ndash;D grade follow from those measures, and the grade is shown against each bidder in the bid tabulation.</p>
           </div>
         </div>
       </div>
@@ -846,7 +854,7 @@
           <p class="eyebrow">Construction planning and execution</p>
           <h2 class="h-2">VissRadConstruction</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The step between an estimate and a schedule. Work packages are broken into worksteps from commodity templates &mdash; quantity times the template&rsquo;s productivity rate gives the budget hours, crew size gives the duration &mdash; and everything the plan names is checked against the target Primavera P6 project as it was exported before a single row is written. What leaves is a plan P6 can take on the first attempt, in whichever form the deployment actually allows.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 deployment modes</span><span class="chip">P6 XLSX, XER, XML</span><span class="chip">Rule of credit</span><span class="chip">Pre-flight gate</span><span class="chip">Target from P6 export</span><span class="chip">Field sheets</span><span class="chip">Photo albums</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">3 deployment modes</span><span class="chip">P6 XLSX, XER, XML</span><span class="chip">Rule of credit</span><span class="chip">Pre-flight gate</span><span class="chip">Target from P6 export</span><span class="chip">Field sheets</span><span class="chip">Weekly plan (PPC)</span><span class="chip">Photo albums</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -856,6 +864,10 @@
           <div>
             <h4 class="h-4">Field execution</h4>
             <p class="small" style="margin-top:var(--space-2)">Daily construction reports with labour, equipment, weather and delays, crew timesheets and permits to work with the job safety analysis. An RFI can be raised from a daily report. The Safety tab shows the VissRadSHE summary and opens an incident or observation there with the area and company filled in.</p>
+          </div>
+          <div>
+            <h4 class="h-4">Weekly work plan</h4>
+            <p class="small" style="margin-top:var(--space-2)">Each foreman&rsquo;s commitments for the week, linked to activities, with a readiness check on prerequisite work, materials, information, permit, crew and equipment. At the end of the week each line is marked done or not done with a reason; percent plan complete is tracked week by week against an 80&nbsp;% target, with the reasons for misses ranked.</p>
           </div>
           <div>
             <h4 class="h-4">Worksteps from templates</h4>
@@ -1041,7 +1053,7 @@
           <p class="eyebrow">Maintenance management</p>
           <h2 class="h-2">VissRadCMMS</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">The maintenance system that starts at turnover. Instead of keying the asset register in after handover, VissRadCMMS builds it from the SU&amp;C tag register, so the owner&rsquo;s maintenance team inherits the same tags, systems and certificates the completions team closed out.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Handover from SU&amp;C</span><span class="chip">Asset hierarchy</span><span class="chip">Work orders</span><span class="chip">Preventive maintenance</span><span class="chip">Job plans</span><span class="chip">Inventory</span><span class="chip">Reliability</span><span class="chip">Audit trail</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Handover from SU&amp;C</span><span class="chip">Asset hierarchy</span><span class="chip">Work orders</span><span class="chip">Preventive maintenance</span><span class="chip">Job plans</span><span class="chip">Inventory</span><span class="chip">Reliability</span><span class="chip">QR asset labels</span><span class="chip">Audit trail</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -1067,6 +1079,10 @@
           <div>
             <h4 class="h-4">Inventory and reliability</h4>
             <p class="small" style="margin-top:var(--space-2)">Stores with min/max reorder and a transaction log; failure Pareto by problem and cause, with mean time between failures and to repair.</p>
+          </div>
+          <div>
+            <h4 class="h-4">QR asset labels</h4>
+            <p class="small" style="margin-top:var(--space-2)">Labels printed at 50&times;25, 70&times;36 or 100&times;50&nbsp;mm with the asset number and a QR code. Scanned with a phone camera, the code opens the asset with its history and open work; Scan asset reads labels with a device camera where the browser supports it, or takes a typed number or a handheld scanner.</p>
           </div>
         </div>
       </div>
