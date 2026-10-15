@@ -1,0 +1,6040 @@
+{
+ "meta": {
+  "module": "plan",
+  "app": "VissRad Planner",
+  "generated": "2026-10-15",
+  "library_note": "34 capital-construction modules authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
+ },
+ "event": {
+  "name": "Unit 300 Expansion (synthetic demo)",
+  "code": "SYN-U300",
+  "site": "Synthetic Gulf Coast site",
+  "owner": "Example Owner (synthetic)",
+  "shutdown": "2027-04-05T07:00",
+  "window_days": 280,
+  "shift_hours": 10,
+  "shifts_per_day": 1,
+  "days_week": 5,
+  "data_date": "2027-04-05",
+  "currency": "USD",
+  "wbs_root": "U300.CON"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 10,
+  "contingency_pct": 8,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "A100",
+   "name": "Main pipe rack",
+   "group": "Process",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A200",
+   "name": "Reactor and separation",
+   "group": "Process",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A300",
+   "name": "Compressor house",
+   "group": "Process",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A400",
+   "name": "Tank farm",
+   "group": "Offsites",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A500",
+   "name": "Utilities and cooling water",
+   "group": "Utilities",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A600",
+   "name": "Substation and MCC building",
+   "group": "Electrical",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A700",
+   "name": "Control room and buildings",
+   "group": "Buildings",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A800",
+   "name": "Interconnects and tie-ins",
+   "group": "Offsites",
+   "sector": "Capital project"
+  },
+  {
+   "code": "A000",
+   "name": "Site-wide and temporary facilities",
+   "group": "General",
+   "sector": "Capital project"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General foreman",
+   "type": "labor",
+   "rate": 105,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PF",
+   "name": "Pipefitter",
+   "type": "labor",
+   "rate": 78.5,
+   "pf": 1.0,
+   "lib": "PIPE-FT"
+  },
+  {
+   "id": "WD",
+   "name": "Welder, carbon steel",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": "WELD-CS"
+  },
+  {
+   "id": "WA",
+   "name": "Welder, alloy",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": "WELD-AL"
+  },
+  {
+   "id": "BM",
+   "name": "Boilermaker",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IW",
+   "name": "Ironworker, structural",
+   "type": "labor",
+   "rate": 79,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 80,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "MW",
+   "name": "Millwright",
+   "type": "labor",
+   "rate": 92,
+   "pf": 1.0,
+   "lib": "MILL-RT"
+  },
+  {
+   "id": "EL",
+   "name": "Electrician",
+   "type": "labor",
+   "rate": 81,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "IT",
+   "name": "Instrument technician",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": "INST-TC"
+  },
+  {
+   "id": "CF",
+   "name": "Carpenter",
+   "type": "labor",
+   "rate": 72,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CM",
+   "name": "Cement mason",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RB",
+   "name": "Rodbuster",
+   "type": "labor",
+   "rate": 74,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LB",
+   "name": "Labourer",
+   "type": "labor",
+   "rate": 58,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OP",
+   "name": "Equipment operator",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PT",
+   "name": "Painter",
+   "type": "labor",
+   "rate": 66,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IN",
+   "name": "Insulator",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SB",
+   "name": "Scaffold builder",
+   "type": "labor",
+   "rate": 64,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "HE",
+   "name": "Helper",
+   "type": "labor",
+   "rate": 52,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "ND",
+   "name": "NDE technician",
+   "type": "labor",
+   "rate": 95,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SV",
+   "name": "Surveyor",
+   "type": "labor",
+   "rate": 85,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "FW",
+   "name": "Fire watch",
+   "type": "labor",
+   "rate": 45,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "C040",
+   "name": "RT crane 40 t",
+   "type": "equip",
+   "rate": 145
+  },
+  {
+   "id": "C090",
+   "name": "Hydraulic crane 90 t",
+   "type": "equip",
+   "rate": 210
+  },
+  {
+   "id": "C250",
+   "name": "Crawler crane 250 t",
+   "type": "equip",
+   "rate": 520
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 65
+  },
+  {
+   "id": "ML",
+   "name": "Manlift 60 ft",
+   "type": "equip",
+   "rate": 38
+  },
+  {
+   "id": "SL",
+   "name": "Scissor lift",
+   "type": "equip",
+   "rate": 22
+  },
+  {
+   "id": "WM",
+   "name": "Welding machine",
+   "type": "equip",
+   "rate": 12
+  },
+  {
+   "id": "EX",
+   "name": "Excavator",
+   "type": "equip",
+   "rate": 110
+  },
+  {
+   "id": "BH",
+   "name": "Backhoe",
+   "type": "equip",
+   "rate": 75
+  },
+  {
+   "id": "CP",
+   "name": "Concrete pump",
+   "type": "equip",
+   "rate": 180
+  },
+  {
+   "id": "DR",
+   "name": "Augercast rig",
+   "type": "equip",
+   "rate": 240
+  },
+  {
+   "id": "RL",
+   "name": "Roller / compactor",
+   "type": "equip",
+   "rate": 60
+  },
+  {
+   "id": "TP",
+   "name": "Test pump",
+   "type": "equip",
+   "rate": 18
+  },
+  {
+   "id": "AC",
+   "name": "Air compressor",
+   "type": "equip",
+   "rate": 25
+  },
+  {
+   "id": "HT",
+   "name": "Heat-treatment rig",
+   "type": "equip",
+   "rate": 45
+  },
+  {
+   "id": "GR",
+   "name": "Grout pump",
+   "type": "equip",
+   "rate": 20
+  },
+  {
+   "id": "TB",
+   "name": "Torque / tension tools",
+   "type": "equip",
+   "rate": 15
+  },
+  {
+   "id": "PW",
+   "name": "Cable puller",
+   "type": "equip",
+   "rate": 30
+  },
+  {
+   "id": "TK",
+   "name": "Flatbed truck",
+   "type": "equip",
+   "rate": 55
+  },
+  {
+   "id": "GN",
+   "name": "Generator",
+   "type": "equip",
+   "rate": 20
+  }
+ ],
+ "materials": [
+  {
+   "id": "CONC-4K",
+   "desc": "Ready-mix concrete, 4,000 psi",
+   "unit": "cy",
+   "price": 185,
+   "cat": "Civil",
+   "waste": 5
+  },
+  {
+   "id": "REBAR",
+   "desc": "Reinforcing steel, fabricated",
+   "unit": "t",
+   "price": 1650,
+   "cat": "Civil",
+   "waste": 3
+  },
+  {
+   "id": "FORM-PLY",
+   "desc": "Formwork plywood and lumber, per SF of contact",
+   "unit": "sf",
+   "price": 3.2,
+   "cat": "Civil",
+   "waste": 10
+  },
+  {
+   "id": "ANCH-BLT",
+   "desc": "Anchor bolt assembly, 1 in",
+   "unit": "ea",
+   "price": 48,
+   "cat": "Civil",
+   "waste": 0
+  },
+  {
+   "id": "GROUT-NS",
+   "desc": "Non-shrink grout, 50 lb bag",
+   "unit": "bag",
+   "price": 32,
+   "cat": "Civil",
+   "waste": 10
+  },
+  {
+   "id": "GROUT-EP",
+   "desc": "Epoxy grout, unit",
+   "unit": "ea",
+   "price": 420,
+   "cat": "Civil",
+   "waste": 5
+  },
+  {
+   "id": "AGG-BASE",
+   "desc": "Aggregate base course",
+   "unit": "t",
+   "price": 38,
+   "cat": "Civil",
+   "waste": 8
+  },
+  {
+   "id": "PILE-GRT",
+   "desc": "Augercast pile grout",
+   "unit": "cy",
+   "price": 165,
+   "cat": "Civil",
+   "waste": 12
+  },
+  {
+   "id": "BOLT-A325",
+   "desc": "Structural bolt set, A325, 3/4 in",
+   "unit": "ea",
+   "price": 3.6,
+   "cat": "Steel",
+   "waste": 5
+  },
+  {
+   "id": "GRATING",
+   "desc": "Galvanised bar grating",
+   "unit": "sf",
+   "price": 28,
+   "cat": "Steel",
+   "waste": 3
+  },
+  {
+   "id": "WELD-ROD",
+   "desc": "Welding consumables, per diameter-inch",
+   "unit": "di",
+   "price": 1.9,
+   "cat": "Piping",
+   "waste": 0
+  },
+  {
+   "id": "GSK-SW",
+   "desc": "Spiral wound gasket, per inch diameter",
+   "unit": "ea",
+   "price": 4.5,
+   "cat": "Piping",
+   "waste": 0
+  },
+  {
+   "id": "STUD-B7",
+   "desc": "Stud bolt set, B7, per inch diameter",
+   "unit": "ea",
+   "price": 6.5,
+   "cat": "Piping",
+   "waste": 0
+  },
+  {
+   "id": "TEST-BLD",
+   "desc": "Test blind and vent set, hire",
+   "unit": "ea",
+   "price": 35,
+   "cat": "Piping",
+   "waste": 0
+  },
+  {
+   "id": "CBL-PWR",
+   "desc": "Power cable, 600 V, average size",
+   "unit": "ft",
+   "price": 4.2,
+   "cat": "Electrical",
+   "waste": 5
+  },
+  {
+   "id": "CBL-CTL",
+   "desc": "Control / instrument cable",
+   "unit": "ft",
+   "price": 1.6,
+   "cat": "Electrical",
+   "waste": 5
+  },
+  {
+   "id": "TRAY-LAD",
+   "desc": "Ladder tray, 24 in, with fittings",
+   "unit": "ft",
+   "price": 38,
+   "cat": "Electrical",
+   "waste": 4
+  },
+  {
+   "id": "COND-RGS",
+   "desc": "Rigid steel conduit, 1 in average, with fittings",
+   "unit": "ft",
+   "price": 9.5,
+   "cat": "Electrical",
+   "waste": 5
+  },
+  {
+   "id": "LUG-KIT",
+   "desc": "Termination kit, per cable",
+   "unit": "ea",
+   "price": 24,
+   "cat": "Electrical",
+   "waste": 3
+  },
+  {
+   "id": "GND-4-0",
+   "desc": "Bare copper ground conductor, 4/0",
+   "unit": "ft",
+   "price": 6.8,
+   "cat": "Electrical",
+   "waste": 5
+  },
+  {
+   "id": "EXO-SHOT",
+   "desc": "Exothermic weld shot and mould use",
+   "unit": "ea",
+   "price": 18,
+   "cat": "Electrical",
+   "waste": 5
+  },
+  {
+   "id": "TUBE-SS",
+   "desc": "Stainless tubing, 1/2 in, with fittings",
+   "unit": "ft",
+   "price": 7.2,
+   "cat": "Instrumentation",
+   "waste": 8
+  },
+  {
+   "id": "PAINT-SYS",
+   "desc": "Touch-up coating system",
+   "unit": "sf",
+   "price": 1.1,
+   "cat": "Coatings",
+   "waste": 10
+  },
+  {
+   "id": "INSUL-MW",
+   "desc": "Mineral wool pipe insulation with jacket",
+   "unit": "ft",
+   "price": 14,
+   "cat": "Insulation",
+   "waste": 8
+  }
+ ],
+ "modules": [
+  {
+   "id": "GEN-MOB",
+   "name": "Mobilisation and site establishment",
+   "rev": 1,
+   "category": "General",
+   "desc": "Contractor mobilisation: site offices, laydown, temporary power and water, tool rooms and the safety set-up before the first work face opens.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TRAILERS",
+     "prompt": "Office and welfare trailers to set",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "LAYDOWN",
+     "prompt": "Laydown yard to prepare",
+     "type": "number",
+     "default": 2,
+     "unit": "acre",
+     "min": 0,
+     "max": 20
+    },
+    {
+     "kind": "scope",
+     "key": "TPOWER",
+     "prompt": "Install temporary power distribution?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Labourer crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 12
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Site orientation, permits and mobilisation plan",
+     "dur": "10",
+     "crew": {
+      "GF": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Mobilise"
+    },
+    {
+     "id": "A020",
+     "desc": "Prepare laydown and stabilise roads ({LAYDOWN} acres)",
+     "dur": "max(4, LAYDOWN*16)",
+     "crew": {
+      "OP": "2",
+      "LB": "CREW"
+     },
+     "equip": {
+      "EX": "1",
+      "RL": "1"
+     },
+     "phase": "Mobilise",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set {TRAILERS} trailers and welfare units",
+     "dur": "max(4, TRAILERS*3)",
+     "crew": {
+      "RG": "1",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1",
+      "TK": "1"
+     },
+     "phase": "Mobilise",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Temporary power and lighting",
+     "dur": "30",
+     "crew": {
+      "EL": "2",
+      "HE": "1"
+     },
+     "equip": {
+      "GN": "1"
+     },
+     "phase": "Mobilise",
+     "when": "TPOWER",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Tool rooms, fuel and gas cages",
+     "dur": "20",
+     "crew": {
+      "LB": "CREW",
+      "FM": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Mobilise",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Site ready for first work face",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Mobilise",
+     "preds": [
+      "A020",
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG-BASE",
+     "qty": "LAYDOWN*600"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A000"
+   ]
+  },
+  {
+   "id": "CIV-FDN",
+   "name": "Equipment foundation (spread footing)",
+   "rev": 1,
+   "category": "Civil",
+   "desc": "Reinforced spread footings and plinths for pumps, exchangers, vessels and pipe-rack bents: layout, excavation, forming, rebar, anchor bolts, inspection, pour, cure, strip and backfill.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Number of foundations",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CY",
+     "prompt": "Concrete per foundation",
+     "type": "number",
+     "default": 12,
+     "unit": "cy",
+     "min": 1,
+     "max": 400
+    },
+    {
+     "kind": "var",
+     "key": "ANCH",
+     "prompt": "Anchor bolts per foundation",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 0,
+     "max": 64
+    },
+    {
+     "kind": "scope",
+     "key": "EXC",
+     "prompt": "Excavation method",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Machine excavation",
+       "value": 1
+      },
+      {
+       "label": "Hand / hydro-excavation near live services",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "REBAR",
+     "prompt": "Reinforced (rebar cages)?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "PUMP",
+     "prompt": "Place with a concrete pump?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CURE",
+     "prompt": "Cure before stripping and loading",
+     "type": "number",
+     "default": 3,
+     "unit": "working days",
+     "min": 1,
+     "max": 14
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Carpenter crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 16
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Survey and layout ({N} foundations)",
+     "dur": "max(2, N*1)",
+     "crew": {
+      "SV": "1",
+      "HE": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Machine excavate",
+     "dur": "max(2, N*CY*0.25)",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EX": "1"
+     },
+     "phase": "Excavate",
+     "when": "EXC==1"
+    },
+    {
+     "id": "A025",
+     "desc": "Hand / hydro-excavate near services",
+     "dur": "max(4, N*CY*1.5/4)",
+     "crew": {
+      "LB": "4",
+      "FM": "1"
+     },
+     "equip": {
+      "AC": "1"
+     },
+     "phase": "Excavate",
+     "when": "EXC==2",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Mud mat and formwork",
+     "dur": "N*CY*3/CREW",
+     "crew": {
+      "CF": "CREW",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Form",
+     "preds": [
+      "A020",
+      "A025"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Place reinforcing steel",
+     "dur": "N*CY*1.6/2",
+     "crew": {
+      "RB": "2"
+     },
+     "equip": {},
+     "phase": "Form",
+     "when": "REBAR",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Set anchor bolts and embeds",
+     "dur": "max(1, N*ANCH*0.5/2)",
+     "crew": {
+      "CF": "2",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Form",
+     "when": "ANCH>0",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Pre-pour inspection",
+     "dur": "2",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Pour",
+     "preds": [
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Place and finish concrete",
+     "dur": "max(2, N*CY/10)",
+     "crew": {
+      "CM": "3",
+      "LB": "3"
+     },
+     "equip": {
+      "CP": "PUMP"
+     },
+     "phase": "Pour"
+    },
+    {
+     "id": "A080",
+     "desc": "Cure ({CURE} working days)",
+     "dur": "CURE*10",
+     "crew": {},
+     "equip": {},
+     "phase": "Pour"
+    },
+    {
+     "id": "A090",
+     "desc": "Strip forms and backfill",
+     "dur": "max(2, N*CY*0.8/4)",
+     "crew": {
+      "CF": "2",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "BH": "1"
+     },
+     "phase": "Close out"
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC-4K",
+     "qty": "N*CY"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "N*CY*0.06",
+     "when": "REBAR"
+    },
+    {
+     "id": "M030",
+     "item": "FORM-PLY",
+     "qty": "N*CY*9"
+    },
+    {
+     "id": "M040",
+     "item": "ANCH-BLT",
+     "qty": "N*ANCH",
+     "when": "ANCH>0"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "CIV-PILE",
+   "name": "Augercast piles",
+   "rev": 1,
+   "category": "Civil",
+   "desc": "Augercast (CFA) piles: rig mobilisation, drill and grout, reinforcing cages, integrity testing and cut-off.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Number of piles",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "LEN",
+     "prompt": "Pile length",
+     "type": "number",
+     "default": 50,
+     "unit": "ft",
+     "min": 10,
+     "max": 120
+    },
+    {
+     "kind": "scope",
+     "key": "CAGE",
+     "prompt": "Full-length reinforcing cages?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "PIT",
+     "prompt": "Pile integrity testing?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Mobilise and assemble augercast rig",
+     "dur": "16",
+     "crew": {
+      "OP": "1",
+      "LB": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "DR": "1",
+      "C040": "1"
+     },
+     "phase": "Mobilise"
+    },
+    {
+     "id": "A020",
+     "desc": "Drill and grout {N} piles",
+     "dur": "N*LEN/40",
+     "crew": {
+      "OP": "1",
+      "LB": "3",
+      "FM": "1"
+     },
+     "equip": {
+      "DR": "1",
+      "GR": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A030",
+     "desc": "Place reinforcing cages",
+     "dur": "N*LEN/60",
+     "crew": {
+      "RB": "2",
+      "LB": "1"
+     },
+     "equip": {
+      "C040": "1"
+     },
+     "phase": "Install",
+     "when": "CAGE",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pile integrity testing",
+     "dur": "N*0.25",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "when": "PIT",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Cut off pile heads",
+     "dur": "N*0.5",
+     "crew": {
+      "LB": "2"
+     },
+     "equip": {
+      "AC": "1"
+     },
+     "phase": "Close out",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Demobilise rig",
+     "dur": "8",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "DR": "1",
+      "C040": "1"
+     },
+     "phase": "Close out",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PILE-GRT",
+     "qty": "N*LEN*0.012"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "CIV-PAVE",
+   "name": "Concrete paving and slab on grade",
+   "rev": 1,
+   "category": "Civil",
+   "desc": "Process area paving, curbs and slabs: subgrade preparation, base, forms, reinforcement, pour, finish, cure and saw-cut joints.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Slab area",
+     "type": "number",
+     "default": 5000,
+     "unit": "sf",
+     "min": 100,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "THK",
+     "prompt": "Thickness",
+     "type": "number",
+     "default": 8,
+     "unit": "in",
+     "min": 4,
+     "max": 24
+    },
+    {
+     "kind": "scope",
+     "key": "MESH",
+     "prompt": "Reinforced (bar or mesh)?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "PUMP",
+     "prompt": "Place with a concrete pump?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Finishing crew (cement masons)",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 12
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Subgrade preparation and base course",
+     "dur": "max(4, SF/800)",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "RL": "1",
+      "BH": "1"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Edge forms and curbs",
+     "dur": "max(2, SF/400)",
+     "crew": {
+      "CF": "4"
+     },
+     "equip": {},
+     "phase": "Form"
+    },
+    {
+     "id": "A030",
+     "desc": "Reinforcement",
+     "dur": "max(2, SF/600)",
+     "crew": {
+      "RB": "2"
+     },
+     "equip": {},
+     "phase": "Form",
+     "when": "MESH",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pour, screed and finish",
+     "dur": "max(4, SF*THK/12/27/12)",
+     "crew": {
+      "CM": "CREW",
+      "LB": "2"
+     },
+     "equip": {
+      "CP": "PUMP"
+     },
+     "phase": "Pour",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Cure",
+     "dur": "30",
+     "crew": {},
+     "equip": {},
+     "phase": "Pour"
+    },
+    {
+     "id": "A060",
+     "desc": "Saw-cut and seal joints",
+     "dur": "max(2, SF/2000)",
+     "crew": {
+      "CM": "1",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Close out"
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC-4K",
+     "qty": "SF*THK/12/27"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "SF*0.0006",
+     "when": "MESH"
+    },
+    {
+     "id": "M030",
+     "item": "AGG-BASE",
+     "qty": "SF*0.03"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "CIV-UG",
+   "name": "Underground piping and duct bank",
+   "rev": 1,
+   "category": "Civil",
+   "desc": "Below-grade process / fire-water piping or electrical duct bank: excavate, bed, lay or form and encase, test, backfill and compact.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "What goes in the trench?",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Underground pipe",
+       "value": 1
+      },
+      {
+       "label": "Concrete-encased duct bank",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Trench length",
+     "type": "number",
+     "default": 400,
+     "unit": "ft",
+     "min": 20,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "DEPTH",
+     "prompt": "Average depth",
+     "type": "number",
+     "default": 5,
+     "unit": "ft",
+     "min": 2,
+     "max": 20
+    },
+    {
+     "kind": "scope",
+     "key": "SHORE",
+     "prompt": "Trench shoring or boxes required?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Locate services and lay out trench",
+     "dur": "max(2, LF/400)",
+     "crew": {
+      "SV": "1",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Excavate trench",
+     "dur": "max(2, LF*DEPTH/60)",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EX": "1"
+     },
+     "phase": "Excavate"
+    },
+    {
+     "id": "A025",
+     "desc": "Install shoring",
+     "dur": "LF/50",
+     "crew": {
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "BH": "1"
+     },
+     "phase": "Excavate",
+     "when": "SHORE",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Bedding",
+     "dur": "max(2, LF/80)",
+     "crew": {
+      "LB": "3"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Lay and joint pipe",
+     "dur": "LF/30",
+     "crew": {
+      "PF": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "BH": "1"
+     },
+     "phase": "Install",
+     "when": "TYPE==1"
+    },
+    {
+     "id": "A045",
+     "desc": "Hydrotest underground line",
+     "dur": "6",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {
+      "TP": "1"
+     },
+     "phase": "Test",
+     "when": "TYPE==1"
+    },
+    {
+     "id": "A050",
+     "desc": "Set conduit and spacers",
+     "dur": "LF/20",
+     "crew": {
+      "EL": "2",
+      "CF": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "when": "TYPE==2",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A055",
+     "desc": "Encase duct bank in concrete",
+     "dur": "max(2, LF/60)",
+     "crew": {
+      "CM": "2",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "when": "TYPE==2"
+    },
+    {
+     "id": "A060",
+     "desc": "Backfill and compact",
+     "dur": "max(2, LF*DEPTH/80)",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "RL": "1",
+      "BH": "1"
+     },
+     "phase": "Close out",
+     "preds": [
+      "A045",
+      "A055"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC-4K",
+     "qty": "LF*0.12",
+     "when": "TYPE==2"
+    },
+    {
+     "id": "M020",
+     "item": "AGG-BASE",
+     "qty": "LF*0.25"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "STL-RACK",
+   "name": "Pipe rack erection",
+   "rev": 1,
+   "category": "Structural steel",
+   "desc": "Shop-fabricated pipe rack: shake-out, columns, beams and struts by level, bracing, plumb and align, bolt-up and torque, grating and handrail, grout base plates.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "BENTS",
+     "prompt": "Number of bents",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "LEV",
+     "prompt": "Pipe levels",
+     "type": "number",
+     "default": 2,
+     "unit": "levels",
+     "min": 1,
+     "max": 5
+    },
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Steel weight",
+     "type": "number",
+     "default": 140,
+     "unit": "t",
+     "min": 5,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "CR",
+     "prompt": "Erection crane",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Hydraulic crane 90 t",
+       "value": 1
+      },
+      {
+       "label": "Crawler crane 250 t",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "GRAT",
+     "prompt": "Walkways, grating and handrail on the rack?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Ironworker crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Shake-out and sort steel",
+     "dur": "max(4, TONS/6)",
+     "crew": {
+      "IW": "2",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Erect columns",
+     "dur": "BENTS*3",
+     "crew": {
+      "IW": "CREW",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "CR==1",
+      "C250": "CR==2"
+     },
+     "phase": "Erect"
+    },
+    {
+     "id": "A030",
+     "desc": "Erect beams and struts",
+     "dur": "BENTS*LEV*2.5",
+     "crew": {
+      "IW": "CREW",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "CR==1",
+      "C250": "CR==2",
+      "ML": "1"
+     },
+     "phase": "Erect",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Install bracing",
+     "dur": "TONS*0.12",
+     "crew": {
+      "IW": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1",
+      "ML": "1"
+     },
+     "phase": "Erect",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Plumb, align and survey",
+     "dur": "max(2, BENTS*1)",
+     "crew": {
+      "IW": "2",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Bolt-up and torque",
+     "dur": "TONS*0.25",
+     "crew": {
+      "IW": "4"
+     },
+     "equip": {
+      "ML": "1",
+      "TB": "1"
+     },
+     "phase": "Align",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Grating, handrail and ladders",
+     "dur": "TONS*0.15",
+     "crew": {
+      "IW": "3"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Finish",
+     "when": "GRAT",
+     "preds": [
+      {
+       "id": "A060",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A080",
+     "desc": "Grout base plates",
+     "dur": "BENTS*2*0.75",
+     "crew": {
+      "CM": "2"
+     },
+     "equip": {
+      "GR": "1"
+     },
+     "phase": "Finish",
+     "preds": [
+      "A050"
+     ]
+    },
+    {
+     "id": "A090",
+     "desc": "Bolt inspection and turnover to piping",
+     "dur": "max(2, BENTS*0.5)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Finish",
+     "preds": [
+      "A060",
+      "A070",
+      "A080"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BOLT-A325",
+     "qty": "TONS*18"
+    },
+    {
+     "id": "M020",
+     "item": "GROUT-NS",
+     "qty": "BENTS*4"
+    },
+    {
+     "id": "M030",
+     "item": "GRATING",
+     "qty": "TONS*12",
+     "when": "GRAT"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A700"
+   ]
+  },
+  {
+   "id": "STL-PLAT",
+   "name": "Platforms, ladders and stairs",
+   "rev": 1,
+   "category": "Structural steel",
+   "desc": "Access steel on equipment and structures: frames, grating, handrail, stair towers and caged ladders.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Steel weight",
+     "type": "number",
+     "default": 25,
+     "unit": "t",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "var",
+     "key": "STAIRS",
+     "prompt": "Stair flights and ladders",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "ELEV",
+     "prompt": "Top platform elevation",
+     "type": "number",
+     "default": 40,
+     "unit": "ft",
+     "min": 6,
+     "max": 300
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Shake-out and pre-assemble",
+     "dur": "max(2, TONS/5)",
+     "crew": {
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Erect platform frames",
+     "dur": "TONS*1.6/2",
+     "crew": {
+      "IW": "4",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1",
+      "ML": "if(ELEV>30,1,0)"
+     },
+     "phase": "Erect"
+    },
+    {
+     "id": "A030",
+     "desc": "Grating and handrail",
+     "dur": "TONS*0.8/2",
+     "crew": {
+      "IW": "3"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Finish",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Stairs and caged ladders",
+     "dur": "STAIRS*6",
+     "crew": {
+      "IW": "2"
+     },
+     "equip": {
+      "C040": "1"
+     },
+     "phase": "Finish",
+     "when": "STAIRS>0",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Inspection",
+     "dur": "max(1, TONS*0.1)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Finish",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BOLT-A325",
+     "qty": "TONS*20"
+    },
+    {
+     "id": "M020",
+     "item": "GRATING",
+     "qty": "TONS*40"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A700"
+   ]
+  },
+  {
+   "id": "STL-BLDG",
+   "name": "Pre-engineered building",
+   "rev": 1,
+   "category": "Structural steel",
+   "desc": "Pre-engineered metal building (compressor house, warehouse, MCC building): frames, girts and purlins, sheeting, doors and close-in.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Floor area",
+     "type": "number",
+     "default": 6000,
+     "unit": "sf",
+     "min": 400,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "DOORS",
+     "prompt": "Doors and roll-up doors",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Check anchor bolts and set base plates",
+     "dur": "max(4, SF/1500)",
+     "crew": {
+      "IW": "2",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Erect primary frames",
+     "dur": "SF/400",
+     "crew": {
+      "IW": "5",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1"
+     },
+     "phase": "Erect"
+    },
+    {
+     "id": "A030",
+     "desc": "Girts, purlins and bracing",
+     "dur": "SF/500",
+     "crew": {
+      "IW": "4"
+     },
+     "equip": {
+      "ML": "2"
+     },
+     "phase": "Erect",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Roof and wall sheeting",
+     "dur": "SF/250",
+     "crew": {
+      "IW": "4"
+     },
+     "equip": {
+      "ML": "2"
+     },
+     "phase": "Close in",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Doors, louvres and trims",
+     "dur": "max(4, DOORS*6)",
+     "crew": {
+      "IW": "2",
+      "CF": "1"
+     },
+     "equip": {
+      "SL": "1"
+     },
+     "phase": "Close in",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Building dried-in",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Close in",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A700"
+   ]
+  },
+  {
+   "id": "EQ-PUMP",
+   "name": "Pump set, grout and align",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "Horizontal pumps on prepared foundations: receive, set, level and shim, grout, rough alignment, final alignment after piping and bump test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Number of pumps",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Driver size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 100 hp",
+       "value": 1
+      },
+      {
+       "label": "100 to 500 hp",
+       "value": 1.6
+      },
+      {
+       "label": "Over 500 hp",
+       "value": 2.5
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "GT",
+     "prompt": "Grout",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Cementitious grout",
+       "value": 1
+      },
+      {
+       "label": "Epoxy grout",
+       "value": 2
+      },
+      {
+       "label": "None (skid on steel)",
+       "value": 0
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "LASER",
+     "prompt": "Laser alignment (else dial indicator)?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Receive, inspect and preserve",
+     "dur": "N*1",
+     "crew": {
+      "MW": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Set pumps on foundations",
+     "dur": "N*3*SIZE",
+     "crew": {
+      "MW": "2",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "if(SIZE<2,1,0)",
+      "C090": "if(SIZE>=2,1,0)"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A030",
+     "desc": "Level and shim",
+     "dur": "N*4*SIZE",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Set"
+    },
+    {
+     "id": "A040",
+     "desc": "Grout base plates",
+     "dur": "N*3",
+     "crew": {
+      "CM": "2",
+      "MW": "1"
+     },
+     "equip": {
+      "GR": "1"
+     },
+     "phase": "Grout",
+     "when": "GT>0"
+    },
+    {
+     "id": "A050",
+     "desc": "Grout cure",
+     "dur": "20",
+     "crew": {},
+     "equip": {},
+     "phase": "Grout",
+     "when": "GT>0"
+    },
+    {
+     "id": "A060",
+     "desc": "Rough alignment",
+     "dur": "N*3*SIZE",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align"
+    },
+    {
+     "id": "A070",
+     "desc": "Pipe connections by the piping scope",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Align"
+    },
+    {
+     "id": "A080",
+     "desc": "Final alignment",
+     "dur": "N*if(LASER,3,5)*SIZE",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align"
+    },
+    {
+     "id": "A090",
+     "desc": "Lubricate, rotate and bump test",
+     "dur": "N*2",
+     "crew": {
+      "MW": "1",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Close out"
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GROUT-NS",
+     "qty": "N*6*SIZE",
+     "when": "GT==1"
+    },
+    {
+     "id": "M020",
+     "item": "GROUT-EP",
+     "qty": "N*SIZE",
+     "when": "GT==2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "EQ-VES",
+   "name": "Vessel or column set",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "Vertical vessels and columns: lift plan, crane assembly, dressing at grade, lift and set with tailing, plumb and level, torque and grout, crane demobilisation.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Number of vessels",
+     "type": "number",
+     "default": 1,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    },
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Heaviest lift",
+     "type": "number",
+     "default": 60,
+     "unit": "t",
+     "min": 2,
+     "max": 1500
+    },
+    {
+     "kind": "var",
+     "key": "HT",
+     "prompt": "Height",
+     "type": "number",
+     "default": 80,
+     "unit": "ft",
+     "min": 10,
+     "max": 300
+    },
+    {
+     "kind": "scope",
+     "key": "DRESS",
+     "prompt": "Dress at grade (platforms, ladders, insulation) before the lift?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "TAIL",
+     "prompt": "Tailing crane required?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Lift plan and rigging study",
+     "dur": "16",
+     "crew": {
+      "GF": "1",
+      "RG": "1"
+     },
+     "equip": {},
+     "phase": "Plan"
+    },
+    {
+     "id": "A020",
+     "desc": "Mobilise and assemble crane",
+     "dur": "if(TONS>40,30,12)",
+     "crew": {
+      "OP": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C250": "if(TONS>40,1,0)",
+      "C090": "if(TONS>40,0,1)"
+     },
+     "phase": "Crane",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Dress vessel at grade",
+     "dur": "HT*0.4*N",
+     "crew": {
+      "IW": "4",
+      "PF": "2"
+     },
+     "equip": {
+      "ML": "1",
+      "C040": "1"
+     },
+     "phase": "Dress",
+     "when": "DRESS",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Lift and set",
+     "dur": "N*8",
+     "crew": {
+      "RG": "3",
+      "IW": "2",
+      "OP": "2"
+     },
+     "equip": {
+      "C250": "if(TONS>40,1,0)",
+      "C090": "if(TONS>40,TAIL,1)"
+     },
+     "phase": "Set",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Plumb and level",
+     "dur": "N*6",
+     "crew": {
+      "IW": "2",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Set"
+    },
+    {
+     "id": "A060",
+     "desc": "Torque anchor bolts",
+     "dur": "N*4",
+     "crew": {
+      "IW": "2"
+     },
+     "equip": {
+      "TB": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A070",
+     "desc": "Grout skirt / base ring",
+     "dur": "N*4",
+     "crew": {
+      "CM": "2"
+     },
+     "equip": {
+      "GR": "1"
+     },
+     "phase": "Grout"
+    },
+    {
+     "id": "A080",
+     "desc": "Demobilise crane",
+     "dur": "if(TONS>40,24,8)",
+     "crew": {
+      "OP": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C250": "if(TONS>40,1,0)",
+      "C090": "if(TONS>40,0,1)"
+     },
+     "phase": "Crane",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GROUT-NS",
+     "qty": "N*10"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "EQ-HX",
+   "name": "Heat exchanger set",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "Shell-and-tube exchangers on foundations or structure: rig and set, level, slide plates, anchor bolts and bundle-pull clearance check.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Number of exchangers",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Weight each",
+     "type": "number",
+     "default": 12,
+     "unit": "t",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "STACK",
+     "prompt": "Stacked exchangers (set one on another)?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Receive and inspect",
+     "dur": "N*1",
+     "crew": {
+      "MW": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Rig and set",
+     "dur": "N*if(TONS>25,8,5)",
+     "crew": {
+      "RG": "2",
+      "IW": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A030",
+     "desc": "Set stacked unit and bolt intermediate supports",
+     "dur": "N*6",
+     "crew": {
+      "RG": "2",
+      "MW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set",
+     "when": "STACK"
+    },
+    {
+     "id": "A040",
+     "desc": "Level, slide plates and anchor bolts",
+     "dur": "N*4",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align"
+    },
+    {
+     "id": "A050",
+     "desc": "Bundle-pull clearance check",
+     "dur": "N*1",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Close out"
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "EQ-ACHE",
+   "name": "Air-cooled exchanger set",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "Fin-fan air coolers on the rack or their own structure: structure, bundles, fans and drives, plenums and louvres, alignment.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "BAYS",
+     "prompt": "Number of bays",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "scope",
+     "key": "STRUCT",
+     "prompt": "Cooler supplied with its own structure?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Erect cooler structure",
+     "dur": "BAYS*8",
+     "crew": {
+      "IW": "4",
+      "RG": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Structure",
+     "when": "STRUCT"
+    },
+    {
+     "id": "A020",
+     "desc": "Set tube bundles",
+     "dur": "BAYS*6",
+     "crew": {
+      "RG": "2",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A030",
+     "desc": "Fans, drives and guards",
+     "dur": "BAYS*10",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Mechanical",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Plenums, louvres and walkways",
+     "dur": "BAYS*6",
+     "crew": {
+      "IW": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Mechanical",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Align fans and set blade pitch",
+     "dur": "BAYS*3",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "EQ-COMP",
+   "name": "Compressor package set",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "Skid-mounted compressor package: set, level, grout, auxiliary consoles, cold alignment and pre-commissioning support.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Skid weight",
+     "type": "number",
+     "default": 45,
+     "unit": "t",
+     "min": 5,
+     "max": 600
+    },
+    {
+     "kind": "scope",
+     "key": "AUX",
+     "prompt": "Separate lube / seal consoles to set?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "GT",
+     "prompt": "Grout",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Epoxy grout",
+       "value": 2
+      },
+      {
+       "label": "Cementitious grout",
+       "value": 1
+      }
+     ],
+     "default": 2
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Lift plan and foundation check",
+     "dur": "12",
+     "crew": {
+      "GF": "1",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Plan"
+    },
+    {
+     "id": "A020",
+     "desc": "Set skid",
+     "dur": "if(TONS>80,16,10)",
+     "crew": {
+      "RG": "3",
+      "MW": "2",
+      "OP": "2"
+     },
+     "equip": {
+      "C250": "if(TONS>80,1,0)",
+      "C090": "if(TONS>80,0,1)"
+     },
+     "phase": "Set",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set consoles",
+     "dur": "12",
+     "crew": {
+      "RG": "2",
+      "MW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1"
+     },
+     "phase": "Set",
+     "when": "AUX",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Level and shim",
+     "dur": "max(12, TONS*0.5)",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Grout",
+     "dur": "16",
+     "crew": {
+      "CM": "2",
+      "MW": "1"
+     },
+     "equip": {
+      "GR": "1"
+     },
+     "phase": "Grout"
+    },
+    {
+     "id": "A060",
+     "desc": "Grout cure",
+     "dur": "30",
+     "crew": {},
+     "equip": {},
+     "phase": "Grout"
+    },
+    {
+     "id": "A070",
+     "desc": "Cold alignment",
+     "dur": "max(16, TONS*0.6)",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align"
+    },
+    {
+     "id": "A080",
+     "desc": "Pre-commissioning support",
+     "dur": "20",
+     "crew": {
+      "MW": "2",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Close out"
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GROUT-EP",
+     "qty": "max(2, TONS/15)",
+     "when": "GT==2"
+    },
+    {
+     "id": "M020",
+     "item": "GROUT-NS",
+     "qty": "max(10, TONS)",
+     "when": "GT==1"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "EQ-TANK",
+   "name": "Field-erected storage tank",
+   "rev": 1,
+   "category": "Mechanical equipment",
+   "desc": "API 650-style field-erected tank: bottom, shell courses, roof, nozzles and manways, NDE, hydrotest and settlement survey.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "DIA",
+     "prompt": "Diameter",
+     "type": "number",
+     "default": 60,
+     "unit": "ft",
+     "min": 15,
+     "max": 300
+    },
+    {
+     "kind": "var",
+     "key": "HT",
+     "prompt": "Shell height",
+     "type": "number",
+     "default": 40,
+     "unit": "ft",
+     "min": 8,
+     "max": 72
+    },
+    {
+     "kind": "scope",
+     "key": "ROOF",
+     "prompt": "Roof",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Cone roof",
+       "value": 1
+      },
+      {
+       "label": "Internal floating roof",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "NOZ",
+     "prompt": "Nozzles and manways",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 2,
+     "max": 80
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Bottom plates: lay out, weld and vacuum test",
+     "dur": "DIA*DIA*0.012",
+     "crew": {
+      "BM": "4",
+      "WD": "2",
+      "HE": "2"
+     },
+     "equip": {
+      "C040": "1",
+      "WM": "2"
+     },
+     "phase": "Bottom"
+    },
+    {
+     "id": "A020",
+     "desc": "Shell course (each)",
+     "dur": "DIA*0.8",
+     "crew": {
+      "BM": "4",
+      "WD": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "ML": "1",
+      "WM": "2"
+     },
+     "phase": "Shell",
+     "repeat": "ceil(HT/8)"
+    },
+    {
+     "id": "A030",
+     "desc": "Roof structure and plates",
+     "dur": "DIA*DIA*0.01*if(ROOF==2,1.6,1)",
+     "crew": {
+      "BM": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "C090": "1",
+      "WM": "2"
+     },
+     "phase": "Roof"
+    },
+    {
+     "id": "A040",
+     "desc": "Nozzles, manways and appurtenances",
+     "dur": "NOZ*4",
+     "crew": {
+      "BM": "2",
+      "WD": "1"
+     },
+     "equip": {
+      "WM": "1"
+     },
+     "phase": "Shell",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "NDE of shell welds",
+     "dur": "ceil(HT/8)*8",
+     "crew": {
+      "ND": "2"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Hydrotest and settlement survey",
+     "dur": "HT*1.5",
+     "crew": {
+      "BM": "1",
+      "SV": "1"
+     },
+     "equip": {
+      "TP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Drain, clean and close up",
+     "dur": "16",
+     "crew": {
+      "BM": "2",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Close out"
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A200",
+    "A300",
+    "A400",
+    "A500"
+   ]
+  },
+  {
+   "id": "PIP-SPL",
+   "name": "Pipe spool erection",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Shop-fabricated spools: receive and stage, rig and set at grade, in the rack or at height, fit-up of field joints and bolted connections.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SPOOLS",
+     "prompt": "Number of spools",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 1,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Typical diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "2 to 6 in",
+       "value": 1
+      },
+      {
+       "label": "8 to 14 in",
+       "value": 1.8
+      },
+      {
+       "label": "16 to 24 in",
+       "value": 3
+      },
+      {
+       "label": "Over 24 in",
+       "value": 4.5
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "LOC",
+     "prompt": "Where they go",
+     "type": "choice",
+     "options": [
+      {
+       "label": "At grade",
+       "value": 1
+      },
+      {
+       "label": "In the pipe rack",
+       "value": 2
+      },
+      {
+       "label": "Elevated in structure",
+       "value": 3
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "FLG",
+     "prompt": "Bolted connections to make up",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pipefitter crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 24
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Receive, sort and stage spools",
+     "dur": "max(2, SPOOLS*0.3/2)",
+     "crew": {
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1",
+      "TK": "1"
+     },
+     "phase": "Stage"
+    },
+    {
+     "id": "A020",
+     "desc": "Rig and set spools",
+     "dur": "SPOOLS*3*DIA*if(LOC==1,1,if(LOC==2,1.2,1.4))/CREW",
+     "crew": {
+      "PF": "CREW",
+      "RG": "1",
+      "OP": "if(LOC>1,1,0)"
+     },
+     "equip": {
+      "FK": "if(LOC==1,1,0)",
+      "C040": "if(LOC>1,1,0)",
+      "ML": "if(LOC==3,1,0)"
+     },
+     "phase": "Erect"
+    },
+    {
+     "id": "A030",
+     "desc": "Fit-up field joints",
+     "dur": "ceil(SPOOLS*1.2)*1.5*DIA/CREW",
+     "crew": {
+      "PF": "CREW"
+     },
+     "equip": {
+      "ML": "if(LOC==3,1,0)"
+     },
+     "phase": "Erect",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Make up bolted connections",
+     "dur": "FLG*0.8*DIA/2",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {
+      "TB": "1"
+     },
+     "phase": "Bolt-up",
+     "when": "FLG>0",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Line check against isometrics",
+     "dur": "max(2, SPOOLS*0.15)",
+     "crew": {
+      "PF": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GSK-SW",
+     "qty": "FLG*DIA*4"
+    },
+    {
+     "id": "M020",
+     "item": "STUD-B7",
+     "qty": "FLG*DIA*4"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "PIP-WELD",
+   "name": "Field welding and NDE",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Field butt welds by diameter-inch: weld-out, visual, radiography, PWHT where the material calls for it and a repair allowance.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "WELDS",
+     "prompt": "Field welds",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "IN",
+     "prompt": "Average diameter",
+     "type": "number",
+     "default": 6,
+     "unit": "in",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "scope",
+     "key": "MAT",
+     "prompt": "Material",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Carbon steel",
+       "value": 1
+      },
+      {
+       "label": "Stainless steel",
+       "value": 1.5
+      },
+      {
+       "label": "Chrome-moly (P11 / P22)",
+       "value": 2.2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "PWHT",
+     "prompt": "Post-weld heat treatment?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "RT",
+     "prompt": "Radiography",
+     "type": "number",
+     "default": 10,
+     "unit": "% of welds",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "REP",
+     "prompt": "Repair allowance",
+     "type": "number",
+     "default": 3,
+     "unit": "% of welds",
+     "min": 0,
+     "max": 20
+    },
+    {
+     "kind": "var",
+     "key": "WELDERS",
+     "prompt": "Welders on the crew",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 1,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Weld out ({WELDS} welds, {IN} in average)",
+     "dur": "WELDS*IN*0.9*MAT/WELDERS",
+     "crew": {
+      "WD": "if(MAT==1,WELDERS,0)",
+      "WA": "if(MAT>1,WELDERS,0)",
+      "HE": "ceil(WELDERS/2)",
+      "FW": "if(MAT>1,1,0)"
+     },
+     "equip": {
+      "WM": "WELDERS"
+     },
+     "phase": "Weld"
+    },
+    {
+     "id": "A020",
+     "desc": "Visual inspection",
+     "dur": "max(1, WELDS*0.1)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Radiography ({RT}%)",
+     "dur": "max(1, ceil(WELDS*RT/100)*0.75)",
+     "crew": {
+      "ND": "2"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "when": "RT>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Post-weld heat treatment",
+     "dur": "WELDS*2",
+     "crew": {
+      "ND": "1",
+      "HE": "1"
+     },
+     "equip": {
+      "HT": "1"
+     },
+     "phase": "PWHT",
+     "when": "PWHT",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Weld repairs and re-shoot",
+     "dur": "max(1, ceil(WELDS*REP/100)*IN*1.5*MAT/2)",
+     "crew": {
+      "WD": "if(MAT==1,2,0)",
+      "WA": "if(MAT>1,2,0)",
+      "ND": "1"
+     },
+     "equip": {
+      "WM": "2"
+     },
+     "phase": "Inspect",
+     "when": "REP>0",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "WELD-ROD",
+     "qty": "WELDS*IN*MAT"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "PIP-SUP",
+   "name": "Pipe supports and hangers",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Shoes, guides, anchors and spring hangers: install, weld where required, set springs and remove travel stops after hydrotest.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Supports",
+     "type": "number",
+     "default": 120,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "Typical support",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Shoes, guides and clamps",
+       "value": 1
+      },
+      {
+       "label": "Spring hangers and trapeze",
+       "value": 2
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install supports",
+     "dur": "N*1.2*TYPE/4",
+     "crew": {
+      "PF": "2",
+      "IW": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Weld attachments",
+     "dur": "N*0.4*TYPE/2",
+     "crew": {
+      "WD": "2"
+     },
+     "equip": {
+      "WM": "2"
+     },
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set springs and remove travel stops",
+     "dur": "N*0.3",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "when": "TYPE==2",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "PIP-VLV",
+   "name": "Valves and specialties",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Manual, control and relief valves and inline specialties: handle, install, bolt up and tag.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Manual valves",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "CV",
+     "prompt": "Control valves",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "PSV",
+     "prompt": "Relief valves",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Typical size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 4 in",
+       "value": 1
+      },
+      {
+       "label": "6 to 12 in",
+       "value": 2
+      },
+      {
+       "label": "Over 12 in",
+       "value": 4
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install manual valves",
+     "dur": "max(1, N*1.5*SIZE/2)",
+     "crew": {
+      "PF": "2",
+      "RG": "if(SIZE>=4,1,0)"
+     },
+     "equip": {
+      "FK": "if(SIZE<4,1,0)",
+      "C040": "if(SIZE>=4,1,0)"
+     },
+     "phase": "Install",
+     "when": "N>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Install control valves",
+     "dur": "CV*3*SIZE/2",
+     "crew": {
+      "PF": "2",
+      "IT": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Install",
+     "when": "CV>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Install relief valves (bench-tested)",
+     "dur": "PSV*3",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Install",
+     "when": "PSV>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Tag and record",
+     "dur": "max(1, (N+CV+PSV)*0.1)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A010",
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "PIP-HYD",
+   "name": "Hydrotest packages",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Test packages from walkdown to reinstatement: punch, blinds and vents, fill, pressure and hold, drain and dry, reinstate and sign off.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "PKGS",
+     "prompt": "Test packages",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 1,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average pipe per package",
+     "type": "number",
+     "default": 1200,
+     "unit": "ft",
+     "min": 50,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "BLINDS",
+     "prompt": "Blinds and vents per package",
+     "type": "number",
+     "default": 10,
+     "unit": "ea",
+     "min": 0,
+     "max": 80
+    },
+    {
+     "kind": "scope",
+     "key": "MED",
+     "prompt": "Test medium",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Water (hydrostatic)",
+       "value": 1
+      },
+      {
+       "label": "Air / nitrogen (pneumatic)",
+       "value": 2
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Package walkdown and A-punch clearance",
+     "dur": "PKGS*6",
+     "crew": {
+      "PF": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Install test blinds and vents",
+     "dur": "max(1, PKGS*BLINDS*0.5/2)",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Prepare",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Fill and vent",
+     "dur": "PKGS*max(2, LF/1000*2)",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {
+      "TP": "MED==1",
+      "AC": "MED==2"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pressurise, hold and inspect",
+     "dur": "PKGS*4",
+     "crew": {
+      "PF": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "TP": "MED==1",
+      "AC": "MED==2"
+     },
+     "phase": "Test"
+    },
+    {
+     "id": "A050",
+     "desc": "Drain and dry",
+     "dur": "PKGS*3",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {
+      "AC": "1"
+     },
+     "phase": "Test",
+     "when": "MED==1"
+    },
+    {
+     "id": "A060",
+     "desc": "Remove blinds and reinstate",
+     "dur": "max(1, PKGS*BLINDS*0.4/2)",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {
+      "TB": "1"
+     },
+     "phase": "Reinstate",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Package sign-off",
+     "dur": "PKGS*1",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Reinstate"
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TEST-BLD",
+     "qty": "PKGS*BLINDS"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "PIP-SB",
+   "name": "Small-bore piping",
+   "rev": 1,
+   "category": "Piping",
+   "desc": "Field-run small-bore piping (2 in and under): run, socket welds or threaded joints, supports.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Pipe length",
+     "type": "number",
+     "default": 800,
+     "unit": "ft",
+     "min": 10,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "SW",
+     "prompt": "Socket welds",
+     "type": "number",
+     "default": 150,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pipefitter crew size",
+     "type": "number",
+     "default": 3,
+     "unit": "heads",
+     "min": 1,
+     "max": 16
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Run and support small bore",
+     "dur": "LF*0.35/CREW",
+     "crew": {
+      "PF": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Socket welds",
+     "dur": "max(1, SW*0.75/2)",
+     "crew": {
+      "WD": "2"
+     },
+     "equip": {
+      "WM": "2"
+     },
+     "phase": "Weld",
+     "when": "SW>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Inspection",
+     "dur": "max(1, SW*0.05)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "WELD-ROD",
+     "qty": "SW*1.5"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400",
+    "A500",
+    "A800"
+   ]
+  },
+  {
+   "id": "ELE-TRAY",
+   "name": "Cable tray",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Ladder and channel tray on the rack and in structures: supports, tray runs, fittings, covers and bonding.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Tray length",
+     "type": "number",
+     "default": 1500,
+     "unit": "ft",
+     "min": 20,
+     "max": 50000
+    },
+    {
+     "kind": "scope",
+     "key": "ELEV",
+     "prompt": "Mostly elevated (rack or structure)?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install tray supports",
+     "dur": "max(2, LF/8*0.7/CREW)",
+     "crew": {
+      "EL": "2",
+      "IW": "2"
+     },
+     "equip": {
+      "ML": "ELEV"
+     },
+     "phase": "Supports"
+    },
+    {
+     "id": "A020",
+     "desc": "Run tray and fittings",
+     "dur": "LF*0.25/CREW",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {
+      "ML": "ELEV"
+     },
+     "phase": "Tray",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Covers and bonding jumpers",
+     "dur": "max(2, LF*0.05/2)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "ML": "ELEV"
+     },
+     "phase": "Close out",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TRAY-LAD",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-COND",
+   "name": "Conduit",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Rigid conduit runs to field devices and motors: supports, bends, fittings, pull strings and seals.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Conduit length",
+     "type": "number",
+     "default": 2000,
+     "unit": "ft",
+     "min": 20,
+     "max": 100000
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Typical size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "1 in and under",
+       "value": 1
+      },
+      {
+       "label": "1-1/4 to 2 in",
+       "value": 1.4
+      },
+      {
+       "label": "Over 2 in",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install conduit and supports",
+     "dur": "LF*0.12*SIZE/CREW",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Seals, drains and pull strings",
+     "dur": "max(2, LF*0.01)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "COND-RGS",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-CBL",
+   "name": "Cable pulling and testing",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Power and control cable: set reels, pull in tray and conduit, tag and test insulation resistance.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CABLES",
+     "prompt": "Cables",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average length",
+     "type": "number",
+     "default": 350,
+     "unit": "ft",
+     "min": 20,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "Cable type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Control / instrument",
+       "value": 0.7
+      },
+      {
+       "label": "Power, small (to #2)",
+       "value": 1.2
+      },
+      {
+       "label": "Power, large (1/0 and up)",
+       "value": 2.5
+      }
+     ],
+     "default": 0.7
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set reels and rig pulls",
+     "dur": "max(4, CABLES*0.3)",
+     "crew": {
+      "EL": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Pull cable ({CABLES} cables)",
+     "dur": "CABLES*LF/100*0.9*TYPE/CREW",
+     "crew": {
+      "EL": "CREW",
+      "HE": "2"
+     },
+     "equip": {
+      "PW": "if(TYPE>=2,1,0)"
+     },
+     "phase": "Pull",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tag and dress",
+     "dur": "max(1, CABLES*0.15)",
+     "crew": {
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Pull",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Insulation resistance test",
+     "dur": "max(1, CABLES*0.4/2)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL-PWR",
+     "qty": "CABLES*LF",
+     "when": "TYPE>1"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-CTL",
+     "qty": "CABLES*LF",
+     "when": "TYPE<1"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-TERM",
+   "name": "Cable terminations",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Glanding, stripping, lugging and landing cables at both ends, with continuity checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CABLES",
+     "prompt": "Cables (both ends)",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "CORES",
+     "prompt": "Average cores",
+     "type": "number",
+     "default": 7,
+     "unit": "ea",
+     "min": 1,
+     "max": 48
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Gland and terminate",
+     "dur": "CABLES*2*(0.75+CORES*0.08)/2",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Terminate"
+    },
+    {
+     "id": "A020",
+     "desc": "Continuity and point-to-point checks",
+     "dur": "max(1, CABLES*0.3)",
+     "crew": {
+      "EL": "1",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "LUG-KIT",
+     "qty": "CABLES*2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-SUB",
+   "name": "Substation and MCC set",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Switchgear and MCC lineups, transformers and bus duct: set, anchor, splice shipping splits, ground, torque and test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SECT",
+     "prompt": "Switchgear / MCC sections",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "TX",
+     "prompt": "Transformers",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 20
+    },
+    {
+     "kind": "scope",
+     "key": "BUS",
+     "prompt": "Bus duct?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and anchor lineups",
+     "dur": "SECT*1.5",
+     "crew": {
+      "EL": "3",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Set transformers",
+     "dur": "TX*8",
+     "crew": {
+      "RG": "2",
+      "EL": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set",
+     "when": "TX>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Splice shipping splits and torque bus",
+     "dur": "SECT*1",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "TB": "1"
+     },
+     "phase": "Assemble",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Install bus duct",
+     "dur": "24",
+     "crew": {
+      "EL": "3"
+     },
+     "equip": {
+      "SL": "1"
+     },
+     "phase": "Assemble",
+     "when": "BUS",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Ground and bond",
+     "dur": "max(4, SECT*0.5)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Assemble",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Inspection and testing",
+     "dur": "SECT*2+TX*6",
+     "crew": {
+      "EL": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-GRND",
+   "name": "Grounding grid",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Below-grade grounding grid and above-grade taps: trench, lay conductor, exothermic connections, ground rods and fall-of-potential test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Ground conductor",
+     "type": "number",
+     "default": 2000,
+     "unit": "ft",
+     "min": 50,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CONN",
+     "prompt": "Exothermic connections",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Trench for grid",
+     "dur": "max(2, LF/150)",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EX": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Lay conductor and drive rods",
+     "dur": "max(2, LF/120)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Exothermic connections",
+     "dur": "max(1, CONN*0.6/2)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "when": "CONN>0",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Backfill",
+     "dur": "max(2, LF/300)",
+     "crew": {
+      "OP": "1",
+      "LB": "1"
+     },
+     "equip": {
+      "BH": "1"
+     },
+     "phase": "Close out",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Ground resistance test",
+     "dur": "6",
+     "crew": {
+      "EL": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GND-4-0",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "EXO-SHOT",
+     "qty": "CONN"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "ELE-LTG",
+   "name": "Area lighting and receptacles",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Area lighting, poles and receptacles: mount fixtures, wire, lamp and test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "FIX",
+     "prompt": "Fixtures and receptacles",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 1,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "POLES",
+     "prompt": "Light poles",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set light poles",
+     "dur": "POLES*3",
+     "crew": {
+      "EL": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C040": "1"
+     },
+     "phase": "Install",
+     "when": "POLES>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Mount and wire fixtures",
+     "dur": "FIX*2/2",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Lamp and test circuits",
+     "dur": "max(2, FIX*0.2)",
+     "crew": {
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500",
+    "A600"
+   ]
+  },
+  {
+   "id": "INS-DEV",
+   "name": "Instrument installation",
+   "rev": 1,
+   "category": "Instrumentation",
+   "desc": "Field instruments: stands and supports, mount and hook up transmitters, switches, analysers and in-line devices.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Instruments",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "MIX",
+     "prompt": "Typical device",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Transmitters and switches",
+       "value": 1
+      },
+      {
+       "label": "Mixed, with in-line flow devices",
+       "value": 1.5
+      },
+      {
+       "label": "Analysers",
+       "value": 6
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Instrument technicians",
+     "type": "number",
+     "default": 2,
+     "unit": "heads",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Instrument stands and supports",
+     "dur": "N*1.5/2",
+     "crew": {
+      "IT": "1",
+      "IW": "1"
+     },
+     "equip": {},
+     "phase": "Supports"
+    },
+    {
+     "id": "A020",
+     "desc": "Mount and hook up instruments",
+     "dur": "N*3*MIX/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tag check and as-built",
+     "dur": "max(1, N*0.1)",
+     "crew": {
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500"
+   ]
+  },
+  {
+   "id": "INS-TUBE",
+   "name": "Instrument tubing",
+   "rev": 1,
+   "category": "Instrumentation",
+   "desc": "Impulse lines and pneumatic tubing: run, support, fit and leak test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Tubing",
+     "type": "number",
+     "default": 1500,
+     "unit": "ft",
+     "min": 10,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Instrument technicians",
+     "type": "number",
+     "default": 2,
+     "unit": "heads",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Run and support tubing",
+     "dur": "LF*0.15/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {},
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Leak test",
+     "dur": "max(2, LF/300)",
+     "crew": {
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TUBE-SS",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500"
+   ]
+  },
+  {
+   "id": "INS-LOOP",
+   "name": "Loop checks and calibration",
+   "rev": 1,
+   "category": "Instrumentation",
+   "desc": "Pre-commissioning loop checks from field device to control system, with bench calibration ahead of the checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LOOPS",
+     "prompt": "Loops",
+     "type": "number",
+     "default": 120,
+     "unit": "ea",
+     "min": 1,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "TEAMS",
+     "prompt": "Two-person loop-check teams",
+     "type": "number",
+     "default": 2,
+     "unit": "teams",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Bench calibration",
+     "dur": "max(2, LOOPS*0.75/2)",
+     "crew": {
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Calibrate"
+    },
+    {
+     "id": "A020",
+     "desc": "Loop checks",
+     "dur": "LOOPS*2.5/TEAMS",
+     "crew": {
+      "IT": "2*TEAMS"
+     },
+     "equip": {},
+     "phase": "Loop check",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Loop folders signed off",
+     "dur": "max(1, LOOPS*0.1)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A500"
+   ]
+  },
+  {
+   "id": "PNT-FLD",
+   "name": "Field painting and touch-up",
+   "rev": 1,
+   "category": "Coatings and insulation",
+   "desc": "Surface preparation and touch-up of shop coating on erected steel and piping, with holiday and DFT checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Area",
+     "type": "number",
+     "default": 3000,
+     "unit": "sf",
+     "min": 50,
+     "max": 500000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Painters",
+     "type": "number",
+     "default": 3,
+     "unit": "heads",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Surface preparation",
+     "dur": "SF/250/CREW*2",
+     "crew": {
+      "PT": "CREW"
+     },
+     "equip": {
+      "AC": "1",
+      "ML": "1"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Apply coating",
+     "dur": "SF/150/CREW*2",
+     "crew": {
+      "PT": "CREW"
+     },
+     "equip": {
+      "AC": "1",
+      "ML": "1"
+     },
+     "phase": "Coat",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "DFT and holiday inspection",
+     "dur": "max(1, SF/2000)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PAINT-SYS",
+     "qty": "SF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A800"
+   ]
+  },
+  {
+   "id": "INS-PIPE",
+   "name": "Pipe insulation",
+   "rev": 1,
+   "category": "Coatings and insulation",
+   "desc": "Hot or personnel-protection insulation with metal jacketing: straight runs, fittings and valves.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Pipe length",
+     "type": "number",
+     "default": 2000,
+     "unit": "ft",
+     "min": 10,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "FIT",
+     "prompt": "Fittings and valves",
+     "type": "number",
+     "default": 200,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Typical size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 4 in",
+       "value": 1
+      },
+      {
+       "label": "6 to 12 in",
+       "value": 1.6
+      },
+      {
+       "label": "Over 12 in",
+       "value": 2.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Insulators",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 1,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Insulate straight runs",
+     "dur": "LF*0.25*SIZE/CREW",
+     "crew": {
+      "IN": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Insulate"
+    },
+    {
+     "id": "A020",
+     "desc": "Insulate fittings and valves",
+     "dur": "FIT*0.75*SIZE/CREW",
+     "crew": {
+      "IN": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Insulate",
+     "when": "FIT>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Inspection",
+     "dur": "max(1, LF/1000)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "INSUL-MW",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A800"
+   ]
+  },
+  {
+   "id": "SCF-ACC",
+   "name": "Scaffold access",
+   "rev": 1,
+   "category": "Access",
+   "desc": "Tube-and-clamp or system scaffold for work at height: erect, inspect and tag, modify, dismantle.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Scaffolds",
+     "type": "number",
+     "default": 10,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "VOL",
+     "prompt": "Average size",
+     "type": "number",
+     "default": 2000,
+     "unit": "cu ft",
+     "min": 100,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Scaffold builders",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    },
+    {
+     "kind": "scope",
+     "key": "MOD",
+     "prompt": "Allow for modifications?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Erect scaffolds",
+     "dur": "N*VOL/250/CREW",
+     "crew": {
+      "SB": "CREW",
+      "HE": "1"
+     },
+     "equip": {
+      "TK": "1"
+     },
+     "phase": "Erect"
+    },
+    {
+     "id": "A020",
+     "desc": "Inspect and tag",
+     "dur": "max(1, N*0.5)",
+     "crew": {
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Erect",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Modifications",
+     "dur": "N*VOL/250/CREW*0.15",
+     "crew": {
+      "SB": "CREW"
+     },
+     "equip": {},
+     "phase": "Modify",
+     "when": "MOD",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Dismantle scaffolds",
+     "dur": "N*VOL/250/CREW*0.6",
+     "crew": {
+      "SB": "CREW",
+      "HE": "1"
+     },
+     "equip": {
+      "TK": "1"
+     },
+     "phase": "Dismantle",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A100",
+    "A200",
+    "A300",
+    "A400"
+   ]
+  },
+  {
+   "id": "MC-SYS",
+   "name": "Mechanical completion by system",
+   "rev": 1,
+   "category": "Completions",
+   "desc": "System-by-system mechanical completion: walkdowns, A-punch clearance, dossiers and the MC certificate ahead of turnover.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SYS",
+     "prompt": "Systems",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 1,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "PUNCH",
+     "prompt": "A-punch items per system",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "System walkdowns",
+     "dur": "SYS*8",
+     "crew": {
+      "QC": "1",
+      "PF": "1",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Walkdown"
+    },
+    {
+     "id": "A020",
+     "desc": "Clear A-punch",
+     "dur": "max(2, SYS*PUNCH*0.5/4)",
+     "crew": {
+      "PF": "2",
+      "EL": "1",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Punch",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Compile turnover dossiers",
+     "dur": "SYS*6",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Dossier",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Mechanical completion certificates",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Dossier",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-15",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "A000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "WP-000-001",
+   "tag": "SITE",
+   "desc": "Contractor mobilisation",
+   "unit": "A000",
+   "module_id": "GEN-MOB",
+   "answers": {
+    "TRAILERS": 8,
+    "LAYDOWN": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "WP-100-002",
+   "tag": "PILES-100",
+   "desc": "Pipe rack piles",
+   "unit": "A100",
+   "module_id": "CIV-PILE",
+   "answers": {
+    "N": 96,
+    "LEN": 55
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GA",
+     "doc_no": "SYN-100-CIV-0101",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI003",
+   "wo": "WP-100-003",
+   "tag": "FDN-100",
+   "desc": "Pipe rack bent foundations",
+   "unit": "A100",
+   "module_id": "CIV-FDN",
+   "answers": {
+    "N": 24,
+    "CY": 14,
+    "ANCH": 4,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GA",
+     "doc_no": "SYN-100-CIV-0102",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI004",
+   "wo": "WP-200-004",
+   "tag": "FDN-200",
+   "desc": "Reactor area equipment foundations",
+   "unit": "A200",
+   "module_id": "CIV-FDN",
+   "answers": {
+    "N": 10,
+    "CY": 22,
+    "ANCH": 8
+   },
+   "status": "Approved",
+   "offset": 50,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GA",
+     "doc_no": "SYN-200-CIV-0201",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI005",
+   "wo": "WP-500-005",
+   "tag": "UG-500",
+   "desc": "Cooling water underground supply and return",
+   "unit": "A500",
+   "module_id": "CIV-UG",
+   "answers": {
+    "TYPE": 1,
+    "LF": 900,
+    "DEPTH": 7,
+    "SHORE": 1
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI006",
+   "wo": "WP-600-006",
+   "tag": "DB-600",
+   "desc": "Duct bank substation to pipe rack",
+   "unit": "A600",
+   "module_id": "CIV-UG",
+   "answers": {
+    "TYPE": 2,
+    "LF": 650,
+    "DEPTH": 4
+   },
+   "status": "Approved",
+   "offset": 150,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI007",
+   "wo": "WP-100-007",
+   "tag": "RACK-100",
+   "desc": "Main pipe rack steel",
+   "unit": "A100",
+   "module_id": "STL-RACK",
+   "answers": {
+    "BENTS": 24,
+    "LEV": 3,
+    "TONS": 310,
+    "CR": 1,
+    "GRAT": 1,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI003"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GA",
+     "doc_no": "SYN-100-STL-0110",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI008",
+   "wo": "WP-200-008",
+   "tag": "V-201",
+   "desc": "Reactor feed separator",
+   "unit": "A200",
+   "module_id": "EQ-VES",
+   "answers": {
+    "N": 1,
+    "TONS": 85,
+    "HT": 70,
+    "TAIL": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GA",
+     "doc_no": "SYN-200-MEC-0210",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI009",
+   "wo": "WP-200-009",
+   "tag": "E-201A/B",
+   "desc": "Feed / effluent exchangers",
+   "unit": "A200",
+   "module_id": "EQ-HX",
+   "answers": {
+    "N": 2,
+    "TONS": 18,
+    "STACK": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI010",
+   "wo": "WP-200-010",
+   "tag": "P-201A/B, P-202A/B",
+   "desc": "Charge and reflux pumps",
+   "unit": "A200",
+   "module_id": "EQ-PUMP",
+   "answers": {
+    "N": 4,
+    "SIZE": 1.6,
+    "GT": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "WP-300-011",
+   "tag": "C-301",
+   "desc": "Recycle gas compressor package",
+   "unit": "A300",
+   "module_id": "EQ-COMP",
+   "answers": {
+    "TONS": 62,
+    "AUX": 1,
+    "GT": 2
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI012",
+   "wo": "WP-100-012",
+   "tag": "SPL-100",
+   "desc": "Rack piping spools",
+   "unit": "A100",
+   "module_id": "PIP-SPL",
+   "answers": {
+    "SPOOLS": 280,
+    "DIA": 1.8,
+    "LOC": 2,
+    "FLG": 90,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI007"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "ISO",
+     "doc_no": "SYN-100-PIP-ISO-1000",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI013",
+   "wo": "WP-100-013",
+   "tag": "WLD-100",
+   "desc": "Rack field welds",
+   "unit": "A100",
+   "module_id": "PIP-WELD",
+   "answers": {
+    "WELDS": 420,
+    "IN": 10,
+    "MAT": 1,
+    "RT": 10,
+    "WELDERS": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI012"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI014",
+   "wo": "WP-200-014",
+   "tag": "SPL-200",
+   "desc": "Reactor area piping",
+   "unit": "A200",
+   "module_id": "PIP-SPL",
+   "answers": {
+    "SPOOLS": 160,
+    "DIA": 1.8,
+    "LOC": 3,
+    "FLG": 120,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI008",
+    "WI009",
+    "WI010"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI015",
+   "wo": "WP-200-015",
+   "tag": "WLD-200",
+   "desc": "Reactor area alloy welds",
+   "unit": "A200",
+   "module_id": "PIP-WELD",
+   "answers": {
+    "WELDS": 220,
+    "IN": 8,
+    "MAT": 2.2,
+    "PWHT": 1,
+    "RT": 100,
+    "WELDERS": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI016",
+   "wo": "WP-100-016",
+   "tag": "HT-100/200",
+   "desc": "Hydrotest packages, rack and reactor area",
+   "unit": "A100",
+   "module_id": "PIP-HYD",
+   "answers": {
+    "PKGS": 18,
+    "LF": 1400,
+    "BLINDS": 12
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI013",
+    "WI015"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI017",
+   "wo": "WP-100-017",
+   "tag": "TRAY-100",
+   "desc": "Rack cable tray",
+   "unit": "A100",
+   "module_id": "ELE-TRAY",
+   "answers": {
+    "LF": 3200,
+    "ELEV": 1,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI007"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "WP-600-018",
+   "tag": "SUB-600",
+   "desc": "Substation lineups and transformers",
+   "unit": "A600",
+   "module_id": "ELE-SUB",
+   "answers": {
+    "SECT": 18,
+    "TX": 2,
+    "BUS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "WP-100-019",
+   "tag": "CBL-100",
+   "desc": "Power and control cable",
+   "unit": "A100",
+   "module_id": "ELE-CBL",
+   "answers": {
+    "CABLES": 340,
+    "LF": 420,
+    "TYPE": 1.2,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI017",
+    "WI018"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI020",
+   "wo": "WP-100-020",
+   "tag": "TRM-100",
+   "desc": "Cable terminations",
+   "unit": "A100",
+   "module_id": "ELE-TERM",
+   "answers": {
+    "CABLES": 340,
+    "CORES": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI019"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI021",
+   "wo": "WP-200-021",
+   "tag": "INS-200",
+   "desc": "Reactor area instruments",
+   "unit": "A200",
+   "module_id": "INS-DEV",
+   "answers": {
+    "N": 140,
+    "MIX": 1.5,
+    "CREW": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI022",
+   "wo": "WP-200-022",
+   "tag": "LOOP-200",
+   "desc": "Loop checks",
+   "unit": "A200",
+   "module_id": "INS-LOOP",
+   "answers": {
+    "LOOPS": 180,
+    "TEAMS": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI020",
+    "WI021"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI023",
+   "wo": "WP-200-023",
+   "tag": "INSUL-200",
+   "desc": "Hot insulation, reactor area",
+   "unit": "A200",
+   "module_id": "INS-PIPE",
+   "answers": {
+    "LF": 2600,
+    "FIT": 300,
+    "SIZE": 1.6,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI024",
+   "wo": "WP-000-024",
+   "tag": "MC-ALL",
+   "desc": "Mechanical completion, first systems",
+   "unit": "A000",
+   "module_id": "MC-SYS",
+   "answers": {
+    "SYS": 12,
+    "PUNCH": 35
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI016",
+    "WI022",
+    "WI023"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}
