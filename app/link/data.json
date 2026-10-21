@@ -132,7 +132,7 @@
  "apps": [
   {
    "code": "PCS",
-   "name": "VissRadPCS",
+   "name": "VRPCS",
    "module": "controls",
    "tag": "Project controls",
    "instance_id": "DEMO-FIELD-01",
@@ -146,7 +146,7 @@
   },
   {
    "code": "ERP",
-   "name": "VissRadERP",
+   "name": "VRERP",
    "module": "erp",
    "tag": "Finance",
    "instance_id": "DEMO-ERP-01",
@@ -160,7 +160,7 @@
   },
   {
    "code": "ARAP",
-   "name": "VissRadARAP",
+   "name": "VRARAP",
    "module": "arap",
    "tag": "Payables & receivables",
    "instance_id": "DEMO-ARAP-01",
@@ -174,7 +174,7 @@
   },
   {
    "code": "AWP",
-   "name": "VissRadAWP",
+   "name": "VRAWP",
    "module": "awp",
    "tag": "Advanced work packaging",
    "instance_id": "DEMO-AWP-01",
@@ -189,7 +189,7 @@
   },
   {
    "code": "COST",
-   "name": "VissRadCost",
+   "name": "VRCost",
    "module": "cost",
    "tag": "Cost management",
    "instance_id": "DEMO-COST-01",
@@ -204,7 +204,7 @@
   },
   {
    "code": "SUC",
-   "name": "VissRadSU&C",
+   "name": "VRSU&C",
    "module": "commissioning",
    "tag": "Startup & commissioning",
    "instance_id": "DEMO-SUC-01",
@@ -219,7 +219,7 @@
   },
   {
    "code": "PROCURE",
-   "name": "VissRadProCure",
+   "name": "VRProCure",
    "module": "procure",
    "tag": "Procurement",
    "instance_id": "DEMO-PROCURE-01",

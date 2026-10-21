@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VissRadEST — Estimating</title>
-<meta name="description" content="VissRadEST Estimating — AACE Class 1-5 EPC estimating: discipline method selection, takeoff, man-hour libraries, indirects build-up, engineering guard, benchmark cross-check and proposal.">
+<title>VREST — Estimating</title>
+<meta name="description" content="VREST Estimating: on-screen drawing takeoff with assemblies, a cost breakdown structure with labour, material, equipment and subcontract, and AACE Class 1-5 EPC estimating with man-hour libraries, Bid Desk, indirects, benchmark and what-if scenarios.">
 <link rel="icon" href="../assets/vissrad.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
 <link rel="apple-touch-icon" href="../assets/app_icon_256.png">
@@ -15,6 +15,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../shared/shell.css?v=27bc91cec7">
 <link rel="stylesheet" href="estimating.css?v=9a2b50e016">
+<link rel="stylesheet" href="vrest.css?v=c938269437">
 </head>
 <body>
 
@@ -29,11 +30,21 @@
   <footer class="statusbar" id="statusbar"></footer>
 </div>
 
-<script src="../shared/usermode.js?v=66df5f6033"></script>
+<script src="../shared/usermode.js?v=e3209be165"></script>
 <script src="../shared/lib.js?v=d5788ff27b"></script>
-<script src="../shared/shell.js?v=6595327270"></script>
-<script src="../shared/drawrefs.js?v=2a538a7e9e"></script>
-<script src="pdftakeoff.js?v=54b2d4ce97"></script>
-<script src="app.js?v=55d2e8b8f0"></script>
+<script src="../shared/shell.js?v=677daed714"></script>
+<script src="../shared/drawrefs.js?v=962301b333"></script>
+<script src="../shared/sheetio.js?v=32e1190cd3"></script>
+<script src="pdftakeoff.js?v=6d6e8a94b5"></script>
+<script src="board.js?v=e53436ddc1"></script>
+<script src="cbs.js?v=21174ff2e7"></script>
+<script src="crews.js?v=e111138336"></script>
+<script src="dxf.js?v=f7943d93e5"></script>
+<script src="samples/cad/cad-demo.js?v=9e3c5568d5"></script>
+<script src="cadtakeoff.js?v=3b4f947d29"></script>
+<script src="vendor/vrtar-writers.js?v=2ee70a9c72"></script>
+<script src="schedule.js?v=a709d736ac"></script>
+<script src="xio.js?v=e7962816ef"></script>
+<script src="app.js?v=7ba17a5ae4"></script>
 </body>
 </html>

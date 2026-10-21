@@ -1,0 +1,4977 @@
+{
+ "meta": {
+  "module": "eiplan",
+  "app": "VissRad E&I Planner",
+  "generated": "2026-10-19",
+  "library_note": "32 electrical and instrumentation installation modules authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
+ },
+ "event": {
+  "name": "Process Unit E&I Installation (synthetic demo)",
+  "code": "SYN-EI1",
+  "site": "Synthetic Gulf Coast plant",
+  "owner": "Example Chemicals Owner (synthetic)",
+  "shutdown": "2027-02-01T07:00",
+  "window_days": 215,
+  "shift_hours": 10,
+  "shifts_per_day": 1,
+  "days_week": 5,
+  "data_date": "2027-02-01",
+  "currency": "USD",
+  "wbs_root": "EI1.CON"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 10,
+  "contingency_pct": 8,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "E100",
+   "name": "Main substation and E-house",
+   "group": "Electrical",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E200",
+   "name": "Process Unit 200, reaction",
+   "group": "Process",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E300",
+   "name": "Process Unit 300, compression",
+   "group": "Process",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E400",
+   "name": "Main pipe rack",
+   "group": "Process",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E500",
+   "name": "Tank farm and loading",
+   "group": "Offsites",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E600",
+   "name": "Utilities and cooling tower",
+   "group": "Utilities",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E700",
+   "name": "Control room and rack room",
+   "group": "Control",
+   "sector": "Industrial E&I"
+  },
+  {
+   "code": "E000",
+   "name": "Site-wide and temporary facilities",
+   "group": "General",
+   "sector": "Industrial E&I"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General foreman, E&I",
+   "type": "labor",
+   "rate": 110,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman, E&I",
+   "type": "labor",
+   "rate": 100,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EL",
+   "name": "Electrician, journeyman",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "EA",
+   "name": "Electrician, apprentice",
+   "type": "labor",
+   "rate": 58,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CS",
+   "name": "Cable splicer, MV",
+   "type": "labor",
+   "rate": 98,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IT",
+   "name": "Instrument technician",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": "INST-TC"
+  },
+  {
+   "id": "IF",
+   "name": "Instrument fitter (tubing)",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IA",
+   "name": "Instrument apprentice",
+   "type": "labor",
+   "rate": 60,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CT",
+   "name": "Control systems technician (DCS / SIS / PLC)",
+   "type": "labor",
+   "rate": 105,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "NT",
+   "name": "Electrical test technician (NETA)",
+   "type": "labor",
+   "rate": 112,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "FO",
+   "name": "Fiber and network technician",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "HT",
+   "name": "Heat trace technician",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IW",
+   "name": "Ironworker (supports)",
+   "type": "labor",
+   "rate": 80,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "WD",
+   "name": "Welder",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": "WELD-CS"
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OP",
+   "name": "Equipment operator",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LB",
+   "name": "Laborer",
+   "type": "labor",
+   "rate": 58,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SC",
+   "name": "Scaffold builder",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector, E&I",
+   "type": "labor",
+   "rate": 94,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CX",
+   "name": "Commissioning engineer",
+   "type": "labor",
+   "rate": 130,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "VR",
+   "name": "Vendor field service representative",
+   "type": "labor",
+   "rate": 165,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EX",
+   "name": "Hazardous-area inspector (Ex)",
+   "type": "labor",
+   "rate": 115,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "C060",
+   "name": "RT crane 60 t",
+   "type": "equip",
+   "rate": 165
+  },
+  {
+   "id": "C110",
+   "name": "Hydraulic crane 110 t",
+   "type": "equip",
+   "rate": 260
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 65
+  },
+  {
+   "id": "ML",
+   "name": "Boom lift 60 ft",
+   "type": "equip",
+   "rate": 40
+  },
+  {
+   "id": "SL",
+   "name": "Scissor lift",
+   "type": "equip",
+   "rate": 22
+  },
+  {
+   "id": "EXC",
+   "name": "Excavator",
+   "type": "equip",
+   "rate": 115
+  },
+  {
+   "id": "TRN",
+   "name": "Trencher",
+   "type": "equip",
+   "rate": 70
+  },
+  {
+   "id": "PW",
+   "name": "Cable puller",
+   "type": "equip",
+   "rate": 32
+  },
+  {
+   "id": "TUG",
+   "name": "Cable tugger and reel trailer",
+   "type": "equip",
+   "rate": 38
+  },
+  {
+   "id": "BND",
+   "name": "Hydraulic conduit bender",
+   "type": "equip",
+   "rate": 12
+  },
+  {
+   "id": "WM",
+   "name": "Welding machine",
+   "type": "equip",
+   "rate": 12
+  },
+  {
+   "id": "MEG",
+   "name": "Insulation resistance tester",
+   "type": "equip",
+   "rate": 6
+  },
+  {
+   "id": "VLF",
+   "name": "VLF / hipot test set",
+   "type": "equip",
+   "rate": 30
+  },
+  {
+   "id": "TS",
+   "name": "Relay and breaker test set (NETA)",
+   "type": "equip",
+   "rate": 32
+  },
+  {
+   "id": "CAL",
+   "name": "Documenting process calibrator (HART)",
+   "type": "equip",
+   "rate": 14
+  },
+  {
+   "id": "OT",
+   "name": "OTDR and fusion splicer",
+   "type": "equip",
+   "rate": 30
+  },
+  {
+   "id": "TK",
+   "name": "Flatbed truck",
+   "type": "equip",
+   "rate": 55
+  },
+  {
+   "id": "GN",
+   "name": "Temporary generator",
+   "type": "equip",
+   "rate": 25
+  }
+ ],
+ "materials": [
+  {
+   "id": "GND-CU",
+   "desc": "Bare copper ground conductor, 4/0",
+   "unit": "ft",
+   "price": 8,
+   "cat": "Grounding",
+   "waste": 5
+  },
+  {
+   "id": "GND-ROD",
+   "desc": "Ground rod, 3/4 in x 10 ft, with test well",
+   "unit": "ea",
+   "price": 95,
+   "cat": "Grounding",
+   "waste": 2
+  },
+  {
+   "id": "CAD",
+   "desc": "Exothermic weld (cadweld) connection",
+   "unit": "ea",
+   "price": 38,
+   "cat": "Grounding",
+   "waste": 3
+  },
+  {
+   "id": "COND-PVC",
+   "desc": "Underground conduit, 4 in PVC-coated",
+   "unit": "ft",
+   "price": 11,
+   "cat": "Raceway",
+   "waste": 5
+  },
+  {
+   "id": "CONC-DB",
+   "desc": "Duct bank concrete, red-dyed",
+   "unit": "cy",
+   "price": 210,
+   "cat": "Raceway",
+   "waste": 5
+  },
+  {
+   "id": "COND-RGS",
+   "desc": "Rigid galvanized conduit, 1 in average, with fittings",
+   "unit": "ft",
+   "price": 14,
+   "cat": "Raceway",
+   "waste": 6
+  },
+  {
+   "id": "TRAY-LAD",
+   "desc": "Ladder cable tray, 24 in aluminum, with fittings",
+   "unit": "ft",
+   "price": 62,
+   "cat": "Raceway",
+   "waste": 4
+  },
+  {
+   "id": "SUPP",
+   "desc": "Strut supports and hardware",
+   "unit": "ea",
+   "price": 48,
+   "cat": "Raceway",
+   "waste": 5
+  },
+  {
+   "id": "CBL-MV",
+   "desc": "MV cable, 15 kV, 3/C 500 kcmil, armored",
+   "unit": "ft",
+   "price": 46,
+   "cat": "Cable",
+   "waste": 3
+  },
+  {
+   "id": "CBL-LV",
+   "desc": "LV power cable, 600 V, 3/C #2 armored",
+   "unit": "ft",
+   "price": 9,
+   "cat": "Cable",
+   "waste": 4
+  },
+  {
+   "id": "CBL-CTL",
+   "desc": "Control cable, 7/C #14 armored",
+   "unit": "ft",
+   "price": 4.5,
+   "cat": "Cable",
+   "waste": 4
+  },
+  {
+   "id": "CBL-INST",
+   "desc": "Instrument cable, single pair shielded, armored",
+   "unit": "ft",
+   "price": 2.8,
+   "cat": "Cable",
+   "waste": 5
+  },
+  {
+   "id": "CBL-MP",
+   "desc": "Multipair instrument home-run cable, 24 pair",
+   "unit": "ft",
+   "price": 14,
+   "cat": "Cable",
+   "waste": 4
+  },
+  {
+   "id": "CBL-FO",
+   "desc": "Fiber optic cable, 24-strand single-mode, armored",
+   "unit": "ft",
+   "price": 5,
+   "cat": "Cable",
+   "waste": 4
+  },
+  {
+   "id": "TERM-MV",
+   "desc": "MV termination kit, 15 kV",
+   "unit": "ea",
+   "price": 420,
+   "cat": "Terminations",
+   "waste": 2
+  },
+  {
+   "id": "GLAND",
+   "desc": "Cable gland, hazardous-area rated",
+   "unit": "ea",
+   "price": 42,
+   "cat": "Terminations",
+   "waste": 3
+  },
+  {
+   "id": "JB",
+   "desc": "Junction box, stainless, with terminals",
+   "unit": "ea",
+   "price": 650,
+   "cat": "Instruments",
+   "waste": 2
+  },
+  {
+   "id": "STAND",
+   "desc": "Instrument stand, 2 in pipe",
+   "unit": "ea",
+   "price": 180,
+   "cat": "Instruments",
+   "waste": 2
+  },
+  {
+   "id": "TUBE-SS",
+   "desc": "Stainless tubing, 1/2 in, with compression fittings",
+   "unit": "ft",
+   "price": 11,
+   "cat": "Instruments",
+   "waste": 6
+  },
+  {
+   "id": "LIGHT",
+   "desc": "LED area light, hazardous-area rated",
+   "unit": "ea",
+   "price": 640,
+   "cat": "Lighting",
+   "waste": 2
+  },
+  {
+   "id": "HT-CBL",
+   "desc": "Self-regulating heat trace cable",
+   "unit": "ft",
+   "price": 16,
+   "cat": "Heat tracing",
+   "waste": 5
+  },
+  {
+   "id": "ANODE",
+   "desc": "Cathodic protection anode, packaged",
+   "unit": "ea",
+   "price": 420,
+   "cat": "Cathodic protection",
+   "waste": 2
+  }
+ ],
+ "modules": [
+  {
+   "id": "EI-MOB",
+   "name": "E&I mobilization and cable yard",
+   "rev": 1,
+   "category": "General",
+   "desc": "E&I mobilization inside an operating or new-build plant: tool and material cribs, the cable reel yard and reel tracking, temporary power and the E&I work-permit and safety orientation.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "REELS",
+     "prompt": "Cable reels to receive and track",
+     "type": "number",
+     "default": 180,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "TPOWER",
+     "prompt": "Temporary construction power for E&I?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "CRIB",
+     "prompt": "Conex tool and material cribs?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Laborer crew size",
+     "type": "number",
+     "default": 3,
+     "unit": "heads",
+     "min": 1,
+     "max": 12
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "E&I execution plan, permits and orientation",
+     "dur": "20",
+     "crew": {
+      "GF": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Mobilize"
+    },
+    {
+     "id": "A020",
+     "desc": "Set tool and material cribs",
+     "dur": "16",
+     "crew": {
+      "RG": "1",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1",
+      "TK": "1"
+     },
+     "phase": "Mobilize",
+     "when": "CRIB",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Cable reel yard, receive and tag {REELS} reels",
+     "dur": "max(8, REELS*0.25/max(1, CREW/2))",
+     "crew": {
+      "LB": "CREW",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Mobilize",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Temporary power distribution",
+     "dur": "40",
+     "crew": {
+      "EL": "2",
+      "EA": "2"
+     },
+     "equip": {
+      "GN": "1"
+     },
+     "phase": "Mobilize",
+     "when": "TPOWER",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "E&I ready for first work face",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Mobilize",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-GND",
+   "name": "Grounding grid and equipment bonding",
+   "rev": 1,
+   "category": "Grounding",
+   "desc": "Below-grade grounding grid and ground rods, exothermic connections, risers, then above-grade bonding of steel, vessels, tanks, motors and equipment, with fall-of-potential testing.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Grid conductor",
+     "type": "number",
+     "default": 6000,
+     "unit": "ft",
+     "min": 100,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "RODS",
+     "prompt": "Ground rods",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "BONDS",
+     "prompt": "Equipment and steel bonds",
+     "type": "number",
+     "default": 300,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "UG",
+     "prompt": "Below-grade grid in this package?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Trench and lay grid conductor ({LF} ft)",
+     "dur": "LF*0.012/max(1, CREW/4)",
+     "crew": {
+      "EL": "CREW",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "TRN": "1"
+     },
+     "phase": "Below grade",
+     "when": "UG"
+    },
+    {
+     "id": "A020",
+     "desc": "Drive {RODS} ground rods and test wells",
+     "dur": "RODS*0.8",
+     "crew": {
+      "EL": "2",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Below grade",
+     "when": "UG",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Exothermic connections and risers",
+     "dur": "max(8, (RODS+LF/60)*0.35)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Below grade",
+     "when": "UG",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Bond steel, vessels and equipment ({BONDS})",
+     "dur": "BONDS*0.6/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Above grade",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Fall-of-potential and continuity test",
+     "dur": "max(6, RODS*0.15+BONDS*0.02)",
+     "crew": {
+      "NT": "1",
+      "EL": "1"
+     },
+     "equip": {
+      "MEG": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GND-CU",
+     "qty": "LF+BONDS*12"
+    },
+    {
+     "id": "M020",
+     "item": "GND-ROD",
+     "qty": "RODS",
+     "when": "UG"
+    },
+    {
+     "id": "M030",
+     "item": "CAD",
+     "qty": "RODS*2+LF/40+BONDS*0.5"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-UG",
+   "name": "Underground duct banks and conduit",
+   "rev": 1,
+   "category": "Raceway",
+   "desc": "Red-concrete duct banks and direct-buried conduit from the substation to the units: trench, lay conduit, encase, manholes and pull boxes, mandrel and pull strings.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Duct bank length",
+     "type": "number",
+     "default": 1800,
+     "unit": "ft",
+     "min": 50,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "WAYS",
+     "prompt": "Conduits per bank",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 1,
+     "max": 48
+    },
+    {
+     "kind": "var",
+     "key": "MH",
+     "prompt": "Manholes and pull boxes",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 0,
+     "max": 300
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Civil and electrical crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 24
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Locate, permit and excavate",
+     "dur": "LF*0.05/max(1, CREW/4)",
+     "crew": {
+      "OP": "1",
+      "LB": "CREW"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Excavate"
+    },
+    {
+     "id": "A020",
+     "desc": "Lay {WAYS}-way conduit bank",
+     "dur": "LF*WAYS*0.012/max(1, CREW/4)",
+     "crew": {
+      "EL": "2",
+      "LB": "CREW"
+     },
+     "equip": {},
+     "phase": "Duct bank",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Encase in red concrete and backfill",
+     "dur": "LF*0.04/max(1, CREW/4)",
+     "crew": {
+      "LB": "CREW",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Duct bank",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Set {MH} manholes and pull boxes",
+     "dur": "max(4, MH*8)",
+     "crew": {
+      "RG": "1",
+      "LB": "3",
+      "OP": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Structures",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Mandrel, pull strings and as-built survey",
+     "dur": "max(4, LF*WAYS*0.0012)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Close out",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "COND-PVC",
+     "qty": "LF*WAYS"
+    },
+    {
+     "id": "M020",
+     "item": "CONC-DB",
+     "qty": "LF*0.09"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-TRAY",
+   "name": "Cable tray and supports",
+   "rev": 1,
+   "category": "Raceway",
+   "desc": "Main cable tray on the pipe rack and in the units: supports and stanchions, ladder tray and fittings, covers where required, bonding jumpers and tray identification.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Cable tray",
+     "type": "number",
+     "default": 3000,
+     "unit": "ft",
+     "min": 20,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "SUPP",
+     "prompt": "Supports and stanchions",
+     "type": "number",
+     "default": 300,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "ELEV",
+     "prompt": "Typical elevation",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Rack, reachable from lift",
+       "value": 1
+      },
+      {
+       "label": "High rack, scaffold needed",
+       "value": 1.35
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Tray crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Scaffold access",
+     "dur": "LF*0.01",
+     "crew": {
+      "SC": "3"
+     },
+     "equip": {},
+     "phase": "Access",
+     "when": "ELEV>1"
+    },
+    {
+     "id": "A020",
+     "desc": "Fabricate and install supports ({SUPP})",
+     "dur": "SUPP*1.1*ELEV/max(1, CREW/2)",
+     "crew": {
+      "IW": "2",
+      "EL": "CREW"
+     },
+     "equip": {
+      "ML": "1",
+      "WM": "1"
+     },
+     "phase": "Supports",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Install ladder tray and fittings ({LF} ft)",
+     "dur": "LF*0.1*ELEV/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "2"
+     },
+     "equip": {
+      "ML": "2",
+      "FK": "1"
+     },
+     "phase": "Tray",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Bond, cover and tag tray",
+     "dur": "max(6, LF*0.01)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Tray",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Tray walkdown and release for cable",
+     "dur": "max(4, LF*0.003)",
+     "crew": {
+      "QC": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Release",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TRAY-LAD",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "SUPP",
+     "qty": "SUPP"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-COND",
+   "name": "Above-ground conduit",
+   "rev": 1,
+   "category": "Raceway",
+   "desc": "Rigid conduit from the tray to motors, instruments, lighting and junction boxes: bending, supports, seals in hazardous areas and pull strings.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Conduit",
+     "type": "number",
+     "default": 8000,
+     "unit": "ft",
+     "min": 20,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "SEALS",
+     "prompt": "Hazardous-area seals",
+     "type": "number",
+     "default": 120,
+     "unit": "ea",
+     "min": 0,
+     "max": 10000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Conduit crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Conduit supports",
+     "dur": "LF*0.02/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {
+      "SL": "1"
+     },
+     "phase": "Supports"
+    },
+    {
+     "id": "A020",
+     "desc": "Bend and install conduit ({LF} ft)",
+     "dur": "LF*0.11/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "2"
+     },
+     "equip": {
+      "BND": "1",
+      "SL": "1"
+     },
+     "phase": "Conduit",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Seals, fittings and pull strings",
+     "dur": "max(6, SEALS*0.5)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Conduit",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Conduit walkdown and release",
+     "dur": "max(4, LF*0.001)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Release",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "COND-RGS",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "SUPP",
+     "qty": "LF/8"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-EHSE",
+   "name": "Substation, E-house and MV switchgear",
+   "rev": 1,
+   "category": "Power equipment",
+   "desc": "Set the prefabricated E-house or substation building on its foundation, set MV switchgear line-ups, bus duct and splice shipping splits, then internal wiring between shipping sections.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SECT",
+     "prompt": "MV switchgear sections",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "EHOUSE",
+     "prompt": "Prefabricated E-house delivered?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "SPLITS",
+     "prompt": "Shipping splits to rejoin",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Receive and inspect E-house and gear",
+     "dur": "16",
+     "crew": {
+      "GF": "1",
+      "QC": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Set E-house on foundation",
+     "dur": "24",
+     "crew": {
+      "RG": "3",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C110": "1"
+     },
+     "phase": "Set",
+     "when": "EHOUSE",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set and level {SECT} switchgear sections",
+     "dur": "SECT*4",
+     "crew": {
+      "EL": "3",
+      "RG": "2"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Splice bus at {SPLITS} shipping splits",
+     "dur": "SPLITS*8",
+     "crew": {
+      "EL": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Internal",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Inter-section wiring and torque check",
+     "dur": "max(10, SECT*2)",
+     "crew": {
+      "EL": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Internal",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E600",
+    "E700"
+   ]
+  },
+  {
+   "id": "EI-XFMR",
+   "name": "Power transformers",
+   "rev": 1,
+   "category": "Power equipment",
+   "desc": "Set substation and unit transformers, dress radiators and bushings, oil fill and processing on liquid-filled units, and the transformer grounding and neutral connections.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Transformers",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Typical size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 2.5 MVA",
+       "value": 1
+      },
+      {
+       "label": "2.5 to 10 MVA",
+       "value": 1.8
+      },
+      {
+       "label": "Over 10 MVA",
+       "value": 3
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "OIL",
+     "prompt": "Liquid-filled, oil processing on site?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and anchor {N} transformers",
+     "dur": "N*6*SIZE",
+     "crew": {
+      "RG": "3",
+      "EL": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C110": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Dress bushings, radiators and accessories",
+     "dur": "N*10*SIZE",
+     "crew": {
+      "EL": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Dress",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Oil fill and process",
+     "dur": "N*16*SIZE",
+     "crew": {
+      "EL": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Dress",
+     "when": "OIL",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Grounding and neutral connections",
+     "dur": "N*3",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Connect",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E600",
+    "E700"
+   ]
+  },
+  {
+   "id": "EI-MCC",
+   "name": "MCCs, LV switchgear and VFDs",
+   "rev": 1,
+   "category": "Power equipment",
+   "desc": "Set low-voltage switchgear, motor control centers and drives, rejoin shipping sections, install the internal bus splices and control wiring between sections.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SECT",
+     "prompt": "MCC and LV switchgear sections",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 1,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "VFD",
+     "prompt": "Variable frequency drives",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 0,
+     "max": 300
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and level {SECT} sections",
+     "dur": "SECT*2.5/max(1, CREW/3)",
+     "crew": {
+      "EL": "CREW",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Set and anchor {VFD} drives",
+     "dur": "VFD*4",
+     "crew": {
+      "EL": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set",
+     "when": "VFD>0"
+    },
+    {
+     "id": "A030",
+     "desc": "Bus splices and inter-section wiring",
+     "dur": "SECT*1.5",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Internal",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Torque check and internal inspection",
+     "dur": "max(6, SECT*0.5+VFD)",
+     "crew": {
+      "QC": "1",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Internal",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E600",
+    "E700"
+   ]
+  },
+  {
+   "id": "EI-UPS",
+   "name": "UPS and DC systems",
+   "rev": 1,
+   "category": "Power equipment",
+   "desc": "Plant UPS for the control system and the DC battery systems for switchgear control: set cabinets and racks, install and connect batteries, initial charge with the vendor.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "UPS",
+     "prompt": "UPS units",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "BATT",
+     "prompt": "Battery racks or strings",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set UPS cabinets and battery racks",
+     "dur": "UPS*8+BATT*4",
+     "crew": {
+      "EL": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Install and connect batteries",
+     "dur": "BATT*10",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Batteries",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Vendor start-up and initial charge",
+     "dur": "max(8, UPS*12+BATT*2)",
+     "crew": {
+      "VR": "1",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Start-up",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E600",
+    "E700"
+   ]
+  },
+  {
+   "id": "EI-MVC",
+   "name": "MV cable pulls",
+   "rev": 1,
+   "category": "Cable",
+   "desc": "Medium-voltage feeders from the substation to unit transformers and large motors: pull planning and tension calculations, reel setups, pulls through duct bank and tray, and cable dressing.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "RUNS",
+     "prompt": "MV cable runs",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average run length",
+     "type": "number",
+     "default": 900,
+     "unit": "ft",
+     "min": 20,
+     "max": 10000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pull crew size",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 4,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pull plans and tension calculations",
+     "dur": "max(8, RUNS*0.5)",
+     "crew": {
+      "FM": "1",
+      "CS": "1"
+     },
+     "equip": {},
+     "phase": "Plan"
+    },
+    {
+     "id": "A020",
+     "desc": "Reel setups and pulls ({RUNS} runs)",
+     "dur": "RUNS*(4+LF*0.012)/max(1, CREW/6)",
+     "crew": {
+      "CS": "2",
+      "EL": "CREW",
+      "OP": "1"
+     },
+     "equip": {
+      "PW": "1",
+      "TUG": "1"
+     },
+     "phase": "Pull",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Dress, tag and secure in tray",
+     "dur": "RUNS*LF*0.002",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Dress",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL-MV",
+     "qty": "RUNS*LF*1.05"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-LVC",
+   "name": "LV power and control cable",
+   "rev": 1,
+   "category": "Cable",
+   "desc": "Low-voltage power to motors, heaters, lighting panels and welding outlets, and control cable for motor control and interlocks: pull, dress and tag.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "POWER",
+     "prompt": "LV power cables",
+     "type": "number",
+     "default": 260,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "CTRL",
+     "prompt": "Control cables",
+     "type": "number",
+     "default": 420,
+     "unit": "ea",
+     "min": 0,
+     "max": 30000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average run length",
+     "type": "number",
+     "default": 380,
+     "unit": "ft",
+     "min": 20,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pull crew size",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 3,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pull LV power cable ({POWER})",
+     "dur": "POWER*(0.8+LF*0.006)/max(1, CREW/4)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "2"
+     },
+     "equip": {
+      "PW": "1"
+     },
+     "phase": "Power"
+    },
+    {
+     "id": "A020",
+     "desc": "Pull control cable ({CTRL})",
+     "dur": "CTRL*(0.5+LF*0.004)/max(1, CREW/4)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "2"
+     },
+     "equip": {},
+     "phase": "Control",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Dress, tag and cable schedule mark-up",
+     "dur": "(POWER+CTRL)*0.15",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Dress",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL-LV",
+     "qty": "POWER*LF*1.05"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-CTL",
+     "qty": "CTRL*LF*1.05"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-ICBL",
+   "name": "Instrument cable and home runs",
+   "rev": 1,
+   "category": "Cable",
+   "desc": "Single-pair instrument cable from each field device to its junction box, and the multipair home runs from junction boxes to the rack room or remote I/O.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "PAIRS",
+     "prompt": "Field instrument cables",
+     "type": "number",
+     "default": 900,
+     "unit": "ea",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average field run",
+     "type": "number",
+     "default": 120,
+     "unit": "ft",
+     "min": 10,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "HOME",
+     "prompt": "Multipair home runs",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 3000
+    },
+    {
+     "kind": "var",
+     "key": "HLF",
+     "prompt": "Average home-run length",
+     "type": "number",
+     "default": 900,
+     "unit": "ft",
+     "min": 50,
+     "max": 8000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pull crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pull field instrument cable ({PAIRS})",
+     "dur": "PAIRS*(0.35+LF*0.004)/max(1, CREW/3)",
+     "crew": {
+      "EL": "CREW",
+      "IA": "2"
+     },
+     "equip": {},
+     "phase": "Field"
+    },
+    {
+     "id": "A020",
+     "desc": "Pull multipair home runs ({HOME})",
+     "dur": "HOME*(2+HLF*0.008)/max(1, CREW/4)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "2"
+     },
+     "equip": {
+      "PW": "1"
+     },
+     "phase": "Home runs",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Dress, tag and secure",
+     "dur": "(PAIRS+HOME*4)*0.06",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Dress",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL-INST",
+     "qty": "PAIRS*LF*1.05"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-MP",
+     "qty": "HOME*HLF*1.05"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-FO",
+   "name": "Fiber optic and plant network",
+   "rev": 1,
+   "category": "Cable",
+   "desc": "Armored fiber between the control room, rack rooms, substations and remote I/O: pull, splice, terminate in patch panels and OTDR test each strand.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "RUNS",
+     "prompt": "Fiber runs",
+     "type": "number",
+     "default": 16,
+     "unit": "ea",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Average run",
+     "type": "number",
+     "default": 1500,
+     "unit": "ft",
+     "min": 50,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "STRANDS",
+     "prompt": "Strands per cable",
+     "type": "number",
+     "default": 24,
+     "unit": "ea",
+     "min": 6,
+     "max": 288
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pull fiber ({RUNS} runs)",
+     "dur": "RUNS*(2+LF*0.006)",
+     "crew": {
+      "FO": "2",
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Pull"
+    },
+    {
+     "id": "A020",
+     "desc": "Splice and terminate",
+     "dur": "RUNS*STRANDS*0.25",
+     "crew": {
+      "FO": "2"
+     },
+     "equip": {
+      "OT": "1"
+     },
+     "phase": "Splice",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "OTDR test and records",
+     "dur": "RUNS*STRANDS*0.08",
+     "crew": {
+      "FO": "1"
+     },
+     "equip": {
+      "OT": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL-FO",
+     "qty": "RUNS*LF*1.05"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-MVT",
+   "name": "MV terminations and splices",
+   "rev": 1,
+   "category": "Terminations",
+   "desc": "Stress-cone terminations at switchgear, transformers and motors, and in-line splices in manholes, by qualified MV splicers, ready for VLF testing.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TERMS",
+     "prompt": "MV terminations (3-phase sets)",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 4000
+    },
+    {
+     "kind": "var",
+     "key": "SPLICES",
+     "prompt": "In-line splices",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Terminate {TERMS} MV sets",
+     "dur": "TERMS*5",
+     "crew": {
+      "CS": "2",
+      "EA": "1"
+     },
+     "equip": {},
+     "phase": "Terminate"
+    },
+    {
+     "id": "A020",
+     "desc": "In-line splices ({SPLICES})",
+     "dur": "SPLICES*7",
+     "crew": {
+      "CS": "2"
+     },
+     "equip": {},
+     "phase": "Splice",
+     "when": "SPLICES>0"
+    },
+    {
+     "id": "A030",
+     "desc": "Phase, tag and torque check",
+     "dur": "max(4, TERMS*0.5)",
+     "crew": {
+      "CS": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TERM-MV",
+     "qty": "TERMS*3+SPLICES*3"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-TERM",
+   "name": "LV and instrument terminations",
+   "rev": 1,
+   "category": "Terminations",
+   "desc": "Glanding and termination of LV power, control and instrument cables at motors, MCC buckets, junction boxes, marshalling and I/O cabinets, with ferrules and wire tags to the connection diagrams.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CABLES",
+     "prompt": "Cable ends to gland and terminate",
+     "type": "number",
+     "default": 2600,
+     "unit": "ea",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CORES",
+     "prompt": "Average cores per cable",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 48
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Termination crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Gland and prepare cable ends ({CABLES})",
+     "dur": "CABLES*0.35/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "IA": "1"
+     },
+     "equip": {},
+     "phase": "Gland"
+    },
+    {
+     "id": "A020",
+     "desc": "Terminate cores to connection diagrams",
+     "dur": "CABLES*CORES*0.08/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Terminate",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Termination QC sampling and records",
+     "dur": "max(8, CABLES*0.02)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 24
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GLAND",
+     "qty": "CABLES"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-MTR",
+   "name": "Motor connections, solo runs and rotation",
+   "rev": 1,
+   "category": "Field systems",
+   "desc": "Connect motors, insulation resistance test the windings, bump for rotation uncoupled, then solo run with the mechanical crew before coupling.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Motors",
+     "type": "number",
+     "default": 120,
+     "unit": "ea",
+     "min": 1,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Typical motor",
+     "type": "choice",
+     "options": [
+      {
+       "label": "LV, under 200 hp",
+       "value": 1
+      },
+      {
+       "label": "MV, 200 hp and up",
+       "value": 2.5
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Connect motors and heaters ({N})",
+     "dur": "N*2*SIZE/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Connect"
+    },
+    {
+     "id": "A020",
+     "desc": "Winding IR and polarization index tests",
+     "dur": "N*0.6*SIZE",
+     "crew": {
+      "NT": "1",
+      "EL": "1"
+     },
+     "equip": {
+      "MEG": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Bump for rotation, uncoupled",
+     "dur": "N*0.5",
+     "crew": {
+      "EL": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Solo run",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Solo run and record currents and vibration",
+     "dur": "N*1.5*SIZE",
+     "crew": {
+      "EL": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Solo run",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-LTG",
+   "name": "Lighting, receptacles and welding outlets",
+   "rev": 1,
+   "category": "Field systems",
+   "desc": "Area and platform lighting, lighting panels and contactors, convenience receptacles and welding outlets, then photometric and circuit checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "FIX",
+     "prompt": "Light fixtures",
+     "type": "number",
+     "default": 400,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "RCPT",
+     "prompt": "Receptacles and welding outlets",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "PNL",
+     "prompt": "Lighting panels",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 300
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set lighting panels and transformers",
+     "dur": "max(4, PNL*8)",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Panels"
+    },
+    {
+     "id": "A020",
+     "desc": "Install fixtures ({FIX})",
+     "dur": "FIX*1.4/max(1, CREW/2)",
+     "crew": {
+      "EL": "CREW",
+      "EA": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Fixtures",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Receptacles and welding outlets ({RCPT})",
+     "dur": "RCPT*1.6",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Outlets",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Circuit checks and light-level survey",
+     "dur": "max(6, FIX*0.05+RCPT*0.1)",
+     "crew": {
+      "EL": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "LIGHT",
+     "qty": "FIX"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-HT",
+   "name": "Electric heat tracing",
+   "rev": 1,
+   "category": "Field systems",
+   "desc": "Self-regulating heat trace on process lines and instrument tubing: pre-insulation IR test, install with power connection kits and end seals, post-insulation IR test and controller set-up.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Heat trace cable",
+     "type": "number",
+     "default": 9000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "CKTS",
+     "prompt": "Heat trace circuits",
+     "type": "number",
+     "default": 90,
+     "unit": "ea",
+     "min": 1,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Heat trace crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pre-installation IR test of reels",
+     "dur": "max(4, LF*0.0008)",
+     "crew": {
+      "HT": "1"
+     },
+     "equip": {
+      "MEG": "1"
+     },
+     "phase": "Test"
+    },
+    {
+     "id": "A020",
+     "desc": "Install heat trace ({LF} ft)",
+     "dur": "LF*0.03/max(1, CREW/2)",
+     "crew": {
+      "HT": "CREW",
+      "EA": "1"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Power kits, end seals and junctions ({CKTS} circuits)",
+     "dur": "CKTS*1.5",
+     "crew": {
+      "HT": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Post-insulation IR test and controller set-up",
+     "dur": "CKTS*0.8",
+     "crew": {
+      "HT": "1",
+      "NT": "1"
+     },
+     "equip": {
+      "MEG": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "HT-CBL",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-CP",
+   "name": "Cathodic protection",
+   "rev": 1,
+   "category": "Field systems",
+   "desc": "Galvanic or impressed-current protection for buried piping and tank bottoms: anodes, rectifier, test stations and the native and polarized potential survey.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ANODES",
+     "prompt": "Anodes",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "TS",
+     "prompt": "Test stations",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    },
+    {
+     "kind": "scope",
+     "key": "RECT",
+     "prompt": "Impressed-current rectifier?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install anodes and header cable",
+     "dur": "ANODES*2",
+     "crew": {
+      "EL": "2",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Test stations ({TS})",
+     "dur": "TS*2",
+     "crew": {
+      "EL": "1",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Install",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set and connect rectifier",
+     "dur": "24",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Install",
+     "when": "RECT",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Potential survey and report",
+     "dur": "max(8, TS*1.5)",
+     "crew": {
+      "NT": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "ANODE",
+     "qty": "ANODES"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-INST",
+   "name": "Field instrument installation",
+   "rev": 1,
+   "category": "Instruments",
+   "desc": "Stands, supports and junction boxes, then mounting of transmitters, switches, gauges, thermowell elements and analyzers as released by piping, protected until commissioning.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Field instruments",
+     "type": "number",
+     "default": 650,
+     "unit": "ea",
+     "min": 1,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "JB",
+     "prompt": "Junction boxes",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 3000
+    },
+    {
+     "kind": "scope",
+     "key": "ANALYZER",
+     "prompt": "Analyzer shelter in scope?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Instrument crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Instrument stands and supports",
+     "dur": "N*0.6/max(1, CREW/2)",
+     "crew": {
+      "IF": "CREW",
+      "WD": "1"
+     },
+     "equip": {
+      "WM": "1"
+     },
+     "phase": "Supports"
+    },
+    {
+     "id": "A020",
+     "desc": "Set junction boxes ({JB})",
+     "dur": "JB*2",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Supports"
+    },
+    {
+     "id": "A030",
+     "desc": "Mount instruments ({N})",
+     "dur": "N*1.2/max(1, CREW/2)",
+     "crew": {
+      "IT": "CREW",
+      "IA": "2"
+     },
+     "equip": {
+      "SL": "1"
+     },
+     "phase": "Mount",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Set and hook up analyzer shelter",
+     "dur": "60",
+     "crew": {
+      "IT": "2",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Analyzers",
+     "when": "ANALYZER"
+    },
+    {
+     "id": "A050",
+     "desc": "Instrument installation inspection",
+     "dur": "max(8, N*0.05)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "STAND",
+     "qty": "N*0.6"
+    },
+    {
+     "id": "M020",
+     "item": "JB",
+     "qty": "JB"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-TUBE",
+   "name": "Impulse tubing and instrument air",
+   "rev": 1,
+   "category": "Instruments",
+   "desc": "Stainless impulse tubing and manifolds from process taps to transmitters, and the instrument air headers and drops to valves, then pressure and leak testing.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Tubing",
+     "type": "number",
+     "default": 7000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "CONN",
+     "prompt": "Hook-ups",
+     "type": "number",
+     "default": 420,
+     "unit": "ea",
+     "min": 0,
+     "max": 30000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Tubing crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Run and support tubing ({LF} ft)",
+     "dur": "LF*0.06/max(1, CREW/2)",
+     "crew": {
+      "IF": "CREW",
+      "IA": "1"
+     },
+     "equip": {},
+     "phase": "Tubing"
+    },
+    {
+     "id": "A020",
+     "desc": "Make up {CONN} hook-ups and manifolds",
+     "dur": "CONN*1.1/max(1, CREW/2)",
+     "crew": {
+      "IF": "CREW"
+     },
+     "equip": {},
+     "phase": "Hook-up",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pressure and leak test",
+     "dur": "max(8, CONN*0.15)",
+     "crew": {
+      "IF": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TUBE-SS",
+     "qty": "LF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-VALV",
+   "name": "Control and on / off valve hook-up",
+   "rev": 1,
+   "category": "Instruments",
+   "desc": "Instrument scope on valves set by piping: positioners, solenoids, limit switches, air sets and tubing, wiring to the junction box, then stroke checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CV",
+     "prompt": "Control valves",
+     "type": "number",
+     "default": 90,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    },
+    {
+     "kind": "var",
+     "key": "XV",
+     "prompt": "On / off valves",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Accessories and air hook-up",
+     "dur": "(CV+XV)*1.5",
+     "crew": {
+      "IF": "2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Hook-up"
+    },
+    {
+     "id": "A020",
+     "desc": "Wire positioners, solenoids and switches",
+     "dur": "(CV+XV)*1.0",
+     "crew": {
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Wire",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Local stroke checks",
+     "dur": "(CV+XV)*0.5",
+     "crew": {
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E200",
+    "E300",
+    "E500",
+    "E600"
+   ]
+  },
+  {
+   "id": "EI-DCS",
+   "name": "DCS, SIS and PLC cabinets",
+   "rev": 1,
+   "category": "Control systems",
+   "desc": "Set system, marshalling and I/O cabinets in the rack room and remote instrument enclosures, power distribution and grounding, network, then power-up with the system vendor.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CAB",
+     "prompt": "Cabinets",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "var",
+     "key": "RIO",
+     "prompt": "Remote I/O enclosures",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 300
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and anchor {CAB} cabinets",
+     "dur": "CAB*3",
+     "crew": {
+      "EL": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Remote I/O enclosures ({RIO})",
+     "dur": "RIO*8",
+     "crew": {
+      "EL": "2",
+      "IT": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Set",
+     "when": "RIO>0"
+    },
+    {
+     "id": "A030",
+     "desc": "Cabinet power, grounding and network",
+     "dur": "CAB*2+RIO*3",
+     "crew": {
+      "EL": "2",
+      "CT": "1"
+     },
+     "equip": {},
+     "phase": "Power",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Vendor power-up and diagnostics",
+     "dur": "max(16, CAB*1.5)",
+     "crew": {
+      "CT": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Power-up",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E700",
+    "E200",
+    "E300"
+   ]
+  },
+  {
+   "id": "EI-MEG",
+   "name": "Cable insulation resistance and continuity",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Insulation resistance (megger) and continuity on every installed cable before termination is released, and VLF withstand on MV cable after terminations.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LV",
+     "prompt": "LV, control and instrument cables",
+     "type": "number",
+     "default": 3200,
+     "unit": "ea",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "MV",
+     "prompt": "MV cables",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 0,
+     "max": 3000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Test crew size",
+     "type": "number",
+     "default": 2,
+     "unit": "heads",
+     "min": 1,
+     "max": 12
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "IR and continuity, LV and instrument ({LV})",
+     "dur": "LV*0.12/CREW",
+     "crew": {
+      "EL": "CREW",
+      "EA": "1"
+     },
+     "equip": {
+      "MEG": "CREW"
+     },
+     "phase": "LV"
+    },
+    {
+     "id": "A020",
+     "desc": "VLF withstand test, MV ({MV})",
+     "dur": "MV*3",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "VLF": "1"
+     },
+     "phase": "MV",
+     "when": "MV>0"
+    },
+    {
+     "id": "A030",
+     "desc": "Test records to the cable schedule",
+     "dur": "max(4, (LV+MV)*0.01)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Records",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-NETA",
+   "name": "Electrical acceptance testing (NETA)",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Acceptance testing of switchgear, breakers, protective relays, transformers and MCCs to ANSI/NETA ATS, with relay settings applied and verified.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "GEAR",
+     "prompt": "Switchgear and MCC sections",
+     "type": "number",
+     "default": 42,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    },
+    {
+     "kind": "var",
+     "key": "RELAYS",
+     "prompt": "Protective relays",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "XFMR",
+     "prompt": "Transformers",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Switchgear and breaker tests",
+     "dur": "GEAR*2",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Gear"
+    },
+    {
+     "id": "A020",
+     "desc": "Relay settings and secondary injection",
+     "dur": "RELAYS*2.5",
+     "crew": {
+      "NT": "1"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Relays"
+    },
+    {
+     "id": "A030",
+     "desc": "Transformer tests",
+     "dur": "XFMR*8",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Transformers",
+     "when": "XFMR>0"
+    },
+    {
+     "id": "A040",
+     "desc": "Test reports and deficiency closure",
+     "dur": "max(8, (GEAR+RELAYS)*0.2)",
+     "crew": {
+      "NT": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Records",
+     "preds": [
+      "A010",
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-CAL",
+   "name": "Instrument calibration",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Bench or in-situ calibration of transmitters and switches to the instrument datasheets, HART configuration, with calibration certificates.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Instruments to calibrate",
+     "type": "number",
+     "default": 500,
+     "unit": "ea",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "scope",
+     "key": "WHERE",
+     "prompt": "Calibration method",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Bench in the shop",
+       "value": 1
+      },
+      {
+       "label": "In situ",
+       "value": 1.3
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Calibration technicians",
+     "type": "number",
+     "default": 3,
+     "unit": "heads",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Calibrate and configure ({N})",
+     "dur": "N*1.0*WHERE/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {
+      "CAL": "CREW"
+     },
+     "phase": "Calibrate"
+    },
+    {
+     "id": "A020",
+     "desc": "Calibration certificates",
+     "dur": "max(4, N*0.05)",
+     "crew": {
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Records",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-P2P",
+   "name": "Point-to-point wiring checks",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Wire-by-wire verification from the field device through junction box and marshalling to the I/O channel, against the loop and connection drawings, before power-up of the loops.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "IO",
+     "prompt": "I/O points",
+     "type": "number",
+     "default": 1800,
+     "unit": "ea",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Check teams (2 people)",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Point-to-point checks ({IO} points)",
+     "dur": "IO*0.25/CREW",
+     "crew": {
+      "IT": "CREW",
+      "IA": "CREW"
+     },
+     "equip": {},
+     "phase": "Check"
+    },
+    {
+     "id": "A020",
+     "desc": "Correct and recheck",
+     "dur": "IO*0.03/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-ENER",
+   "name": "Energization of permanent power",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Energization of the substation and the unit distribution from the utility or plant feed, step by step under a switching plan, with lockout / tagout handed over to operations control.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "STEPS",
+     "prompt": "Switching steps",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 400
+    },
+    {
+     "kind": "scope",
+     "key": "UTIL",
+     "prompt": "Utility witness required?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Energization plan and LOTO procedure",
+     "dur": "24",
+     "crew": {
+      "GF": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Plan"
+    },
+    {
+     "id": "A020",
+     "desc": "Pre-energization walkdown",
+     "dur": "16",
+     "crew": {
+      "QC": "1",
+      "NT": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Plan",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Utility witness and release",
+     "dur": "8",
+     "crew": {
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Energize",
+     "when": "UTIL",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Energize in {STEPS} switching steps",
+     "dur": "STEPS*2",
+     "crew": {
+      "NT": "2",
+      "EL": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Energize",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Permanent power available",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Energize",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-LOOP",
+   "name": "Loop checks",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Live loop checks with the control system: signal injection or stroke from the field, verify range, alarms and engineering units at the operator station, and sign the loop folder.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LOOPS",
+     "prompt": "Loops",
+     "type": "number",
+     "default": 700,
+     "unit": "ea",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "TEAMS",
+     "prompt": "Loop check teams",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Loop folders and schedule",
+     "dur": "max(8, LOOPS*0.02)",
+     "crew": {
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Loop checks ({LOOPS})",
+     "dur": "LOOPS*0.9/TEAMS",
+     "crew": {
+      "IT": "TEAMS",
+      "CT": "1"
+     },
+     "equip": {
+      "CAL": "TEAMS"
+     },
+     "phase": "Check",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Punch and recheck failed loops",
+     "dur": "LOOPS*0.08/TEAMS",
+     "crew": {
+      "IT": "TEAMS"
+     },
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 24
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Loop folders signed",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Check",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-CE",
+   "name": "Cause-and-effect and SIS functional testing",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Functional tests of interlocks and safety instrumented functions to the cause-and-effect charts: trip each initiator and verify every final element and alarm, witnessed by operations.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SIF",
+     "prompt": "Safety instrumented functions",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 3000
+    },
+    {
+     "kind": "var",
+     "key": "ILK",
+     "prompt": "Process interlocks",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 0,
+     "max": 5000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Test procedures from the cause-and-effect charts",
+     "dur": "max(16, (SIF+ILK)*0.3)",
+     "crew": {
+      "CX": "1",
+      "CT": "1"
+     },
+     "equip": {},
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "SIF tests ({SIF})",
+     "dur": "SIF*3",
+     "crew": {
+      "CT": "1",
+      "IT": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "SIS",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Interlock tests ({ILK})",
+     "dur": "ILK*1.2",
+     "crew": {
+      "CT": "1",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Interlocks",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Witnessed sign-off",
+     "dur": "max(8, (SIF+ILK)*0.1)",
+     "crew": {
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Sign-off",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-HAZ",
+   "name": "Hazardous-area inspection",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "Detailed inspection of equipment in classified areas against the hazardous-area classification drawings: equipment ratings, glands, seals, enclosures and bonding.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Items in classified areas",
+     "type": "number",
+     "default": 1200,
+     "unit": "ea",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Inspectors",
+     "type": "number",
+     "default": 2,
+     "unit": "heads",
+     "min": 1,
+     "max": 10
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Inspect ({N} items)",
+     "dur": "N*0.2/CREW",
+     "crew": {
+      "EX": "CREW"
+     },
+     "equip": {},
+     "phase": "Inspect"
+    },
+    {
+     "id": "A020",
+     "desc": "Correct deficiencies",
+     "dur": "N*0.03",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Correct",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 16
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Ex register and dossier",
+     "dur": "max(8, N*0.01)",
+     "crew": {
+      "EX": "1"
+     },
+     "equip": {},
+     "phase": "Records",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  },
+  {
+   "id": "EI-MC",
+   "name": "E&I mechanical completion by system",
+   "rev": 1,
+   "category": "Testing",
+   "desc": "System walkdowns, A and B punch lists, completed check sheets and test records collected into the turnover package, then E&I mechanical completion signed system by system.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SYS",
+     "prompt": "Systems",
+     "type": "number",
+     "default": 24,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "PUNCH",
+     "prompt": "Open punch items",
+     "type": "number",
+     "default": 600,
+     "unit": "ea",
+     "min": 0,
+     "max": 50000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "System walkdowns ({SYS})",
+     "dur": "SYS*4",
+     "crew": {
+      "QC": "1",
+      "FM": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Walkdown"
+    },
+    {
+     "id": "A020",
+     "desc": "Clear A punch items",
+     "dur": "max(8, PUNCH*0.4/4)",
+     "crew": {
+      "EL": "2",
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Punch",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Turnover packages and records",
+     "dur": "SYS*3",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Documents",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "E&I mechanical completion signed",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-19",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "E100",
+    "E200",
+    "E300",
+    "E400",
+    "E500",
+    "E600",
+    "E700",
+    "E000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "WP-000-001",
+   "tag": "MOB",
+   "desc": "E&I mobilization and cable yard",
+   "unit": "E000",
+   "module_id": "EI-MOB",
+   "answers": {
+    "REELS": 220
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "WP-100-002",
+   "tag": "GND-100",
+   "desc": "Substation grounding grid",
+   "unit": "E100",
+   "module_id": "EI-GND",
+   "answers": {
+    "LF": 4200,
+    "RODS": 36,
+    "BONDS": 120
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GAD",
+     "doc_no": "SYN-EI1-ELE-0101",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI003",
+   "wo": "WP-100-003",
+   "tag": "UG-100",
+   "desc": "Duct banks, substation to units",
+   "unit": "E100",
+   "module_id": "EI-UG",
+   "answers": {
+    "LF": 2600,
+    "WAYS": 8,
+    "MH": 10
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-EI1-ELE-0120",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI004",
+   "wo": "WP-100-004",
+   "tag": "EH-100",
+   "desc": "E-house and 13.8 kV switchgear",
+   "unit": "E100",
+   "module_id": "EI-EHSE",
+   "answers": {
+    "SECT": 14,
+    "SPLITS": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "SLD",
+     "doc_no": "SYN-EI1-ELE-0001",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI005",
+   "wo": "WP-100-005",
+   "tag": "XF-100",
+   "desc": "Main and unit transformers",
+   "unit": "E100",
+   "module_id": "EI-XFMR",
+   "answers": {
+    "N": 5,
+    "SIZE": 1.8,
+    "OIL": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI006",
+   "wo": "WP-400-006",
+   "tag": "TR-400",
+   "desc": "Pipe rack cable tray",
+   "unit": "E400",
+   "module_id": "EI-TRAY",
+   "answers": {
+    "LF": 4200,
+    "SUPP": 380,
+    "ELEV": 1.35,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI007",
+   "wo": "WP-200-007",
+   "tag": "GND-200",
+   "desc": "Unit 200 and 300 above-grade bonding",
+   "unit": "E200",
+   "module_id": "EI-GND",
+   "answers": {
+    "UG": 0,
+    "LF": 1500,
+    "RODS": 0,
+    "BONDS": 420
+   },
+   "status": "Approved",
+   "offset": 150,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI008",
+   "wo": "WP-100-008",
+   "tag": "MCC-100",
+   "desc": "MCCs, LV switchgear and drives",
+   "unit": "E100",
+   "module_id": "EI-MCC",
+   "answers": {
+    "SECT": 36,
+    "VFD": 10
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI009",
+   "wo": "WP-700-009",
+   "tag": "UPS-700",
+   "desc": "UPS and DC systems",
+   "unit": "E700",
+   "module_id": "EI-UPS",
+   "answers": {
+    "UPS": 2,
+    "BATT": 4
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI010",
+   "wo": "WP-700-010",
+   "tag": "DCS-700",
+   "desc": "DCS, SIS and remote I/O cabinets",
+   "unit": "E700",
+   "module_id": "EI-DCS",
+   "answers": {
+    "CAB": 34,
+    "RIO": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI009"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "WP-200-011",
+   "tag": "TR-200",
+   "desc": "Unit 200 and 300 tray and conduit",
+   "unit": "E200",
+   "module_id": "EI-COND",
+   "answers": {
+    "LF": 9500,
+    "SEALS": 160,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI012",
+   "wo": "WP-100-012",
+   "tag": "MVC-100",
+   "desc": "MV feeders and large motor cables",
+   "unit": "E100",
+   "module_id": "EI-MVC",
+   "answers": {
+    "RUNS": 34,
+    "LF": 950
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI003",
+    "WI004",
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI013",
+   "wo": "WP-200-013",
+   "tag": "LVC-200",
+   "desc": "LV power and control cable",
+   "unit": "E200",
+   "module_id": "EI-LVC",
+   "answers": {
+    "POWER": 280,
+    "CTRL": 460,
+    "LF": 400,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI008",
+    "WI011"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "CSH",
+     "doc_no": "SYN-EI1-ELE-0300",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI014",
+   "wo": "WP-200-014",
+   "tag": "INS-200",
+   "desc": "Field instrument installation",
+   "unit": "E200",
+   "module_id": "EI-INST",
+   "answers": {
+    "N": 680,
+    "JB": 44,
+    "ANALYZER": 1,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "IIL",
+     "doc_no": "SYN-EI1-INS-0001",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI015",
+   "wo": "WP-200-015",
+   "tag": "TUB-200",
+   "desc": "Impulse tubing and instrument air",
+   "unit": "E200",
+   "module_id": "EI-TUBE",
+   "answers": {
+    "LF": 7600,
+    "CONN": 450
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI016",
+   "wo": "WP-200-016",
+   "tag": "IC-200",
+   "desc": "Instrument cable and home runs",
+   "unit": "E200",
+   "module_id": "EI-ICBL",
+   "answers": {
+    "PAIRS": 940,
+    "HOME": 44,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI010",
+    "WI011",
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "CSH",
+     "doc_no": "SYN-EI1-INS-0300",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI017",
+   "wo": "WP-700-017",
+   "tag": "FO-700",
+   "desc": "Plant fiber backbone",
+   "unit": "E700",
+   "module_id": "EI-FO",
+   "answers": {
+    "RUNS": 18,
+    "LF": 1600
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI006",
+    "WI010"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "WP-100-018",
+   "tag": "MVT-100",
+   "desc": "MV terminations and splices",
+   "unit": "E100",
+   "module_id": "EI-MVT",
+   "answers": {
+    "TERMS": 68,
+    "SPLICES": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI012"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "WP-200-019",
+   "tag": "TRM-200",
+   "desc": "LV and instrument terminations",
+   "unit": "E200",
+   "module_id": "EI-TERM",
+   "answers": {
+    "CABLES": 2900,
+    "CORES": 3,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI013",
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI020",
+   "wo": "WP-200-020",
+   "tag": "MEG-200",
+   "desc": "Cable IR, continuity and VLF tests",
+   "unit": "E200",
+   "module_id": "EI-MEG",
+   "answers": {
+    "LV": 3400,
+    "MV": 34,
+    "CREW": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI013",
+    "WI016",
+    "WI018"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI021",
+   "wo": "WP-100-021",
+   "tag": "NETA-100",
+   "desc": "Switchgear, relay and transformer acceptance tests",
+   "unit": "E100",
+   "module_id": "EI-NETA",
+   "answers": {
+    "GEAR": 50,
+    "RELAYS": 46,
+    "XFMR": 5
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI005",
+    "WI008",
+    "WI018"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI022",
+   "wo": "WP-100-022",
+   "tag": "ENER-100",
+   "desc": "Energize substation and unit distribution",
+   "unit": "E100",
+   "module_id": "EI-ENER",
+   "answers": {
+    "STEPS": 14
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI020",
+    "WI021"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "SLD",
+     "doc_no": "SYN-EI1-ELE-0002",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI023",
+   "wo": "WP-200-023",
+   "tag": "LTG-200",
+   "desc": "Lighting, receptacles and welding outlets",
+   "unit": "E200",
+   "module_id": "EI-LTG",
+   "answers": {
+    "FIX": 460,
+    "RCPT": 90,
+    "PNL": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI011"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI024",
+   "wo": "WP-200-024",
+   "tag": "HT-200",
+   "desc": "Electric heat tracing",
+   "unit": "E200",
+   "module_id": "EI-HT",
+   "answers": {
+    "LF": 9800,
+    "CKTS": 96
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI015"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI025",
+   "wo": "WP-500-025",
+   "tag": "CP-500",
+   "desc": "Tank farm cathodic protection",
+   "unit": "E500",
+   "module_id": "EI-CP",
+   "answers": {
+    "ANODES": 36,
+    "TS": 14
+   },
+   "status": "Approved",
+   "offset": 600,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI026",
+   "wo": "WP-200-026",
+   "tag": "CAL-200",
+   "desc": "Instrument calibration",
+   "unit": "E200",
+   "module_id": "EI-CAL",
+   "answers": {
+    "N": 560,
+    "CREW": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI027",
+   "wo": "WP-700-027",
+   "tag": "P2P-700",
+   "desc": "Point-to-point wiring checks",
+   "unit": "E700",
+   "module_id": "EI-P2P",
+   "answers": {
+    "IO": 1900,
+    "CREW": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI019",
+    "WI010"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI028",
+   "wo": "WP-200-028",
+   "tag": "MTR-200",
+   "desc": "Motor connections, solo runs and rotation",
+   "unit": "E200",
+   "module_id": "EI-MTR",
+   "answers": {
+    "N": 130
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI019",
+    "WI022"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI029",
+   "wo": "WP-700-029",
+   "tag": "LOOP-700",
+   "desc": "Loop checks",
+   "unit": "E700",
+   "module_id": "EI-LOOP",
+   "answers": {
+    "LOOPS": 760,
+    "TEAMS": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI022",
+    "WI026",
+    "WI027"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LOD",
+     "doc_no": "SYN-EI1-INS-0400",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI030",
+   "wo": "WP-700-030",
+   "tag": "CE-700",
+   "desc": "Cause-and-effect and SIS functional tests",
+   "unit": "E700",
+   "module_id": "EI-CE",
+   "answers": {
+    "SIF": 42,
+    "ILK": 90
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI029"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI031",
+   "wo": "WP-200-031",
+   "tag": "HAZ-200",
+   "desc": "Hazardous-area inspection",
+   "unit": "E200",
+   "module_id": "EI-HAZ",
+   "answers": {
+    "N": 1300
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI019",
+    "WI023"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "HAC",
+     "doc_no": "SYN-EI1-ELE-0500",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI032",
+   "wo": "WP-000-032",
+   "tag": "MC-000",
+   "desc": "E&I mechanical completion by system",
+   "unit": "E000",
+   "module_id": "EI-MC",
+   "answers": {
+    "SYS": 26,
+    "PUNCH": 650
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI024",
+    "WI028",
+    "WI030",
+    "WI031"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}

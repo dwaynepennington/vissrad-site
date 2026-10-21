@@ -1,0 +1,3563 @@
+{
+ "meta": {
+  "module": "pwrout",
+  "app": "VissRad Power Outage",
+  "generated": "2026-10-20",
+  "library_note": "24 planned-outage modules for data center power plants, authored by VissRad. Demonstration norms, not OEM or benchmark data: calibrate to your own history and OEM work scopes before a plan is issued."
+ },
+ "event": {
+  "name": "Campus Power Plant spring outage (synthetic demo)",
+  "code": "SYN-PO1",
+  "site": "Synthetic data center campus",
+  "owner": "Example Data Center Developer (synthetic)",
+  "shutdown": "2027-04-05T06:00",
+  "window_days": 45,
+  "shift_hours": 12,
+  "shifts_per_day": 1,
+  "days_week": 7,
+  "data_date": "2027-04-05",
+  "currency": "USD",
+  "wbs_root": "PO1.OUT"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 12,
+  "contingency_pct": 10,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "U100",
+   "name": "Engine hall, reciprocating gensets",
+   "group": "Generation",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U200",
+   "name": "Gas turbine units",
+   "group": "Generation",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U300",
+   "name": "Steam cycle: HRSG, steam turbine, condenser",
+   "group": "Steam",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U400",
+   "name": "Fuel cell and BESS yard",
+   "group": "Storage",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U500",
+   "name": "Switchyard, transformers and protection",
+   "group": "Electrical",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U600",
+   "name": "Balance of plant",
+   "group": "BOP",
+   "sector": "Power generation"
+  },
+  {
+   "code": "U000",
+   "name": "Outage-wide",
+   "group": "General",
+   "sector": "Power generation"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General foreman",
+   "type": "labor",
+   "rate": 115,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman",
+   "type": "labor",
+   "rate": 104,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "MW",
+   "name": "Millwright",
+   "type": "labor",
+   "rate": 92,
+   "pf": 1.0,
+   "lib": "MILL-JW"
+  },
+  {
+   "id": "PF",
+   "name": "Pipefitter",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": "PIPE-JW"
+  },
+  {
+   "id": "WD",
+   "name": "Welder",
+   "type": "labor",
+   "rate": 92,
+   "pf": 1.0,
+   "lib": "WELD-CS"
+  },
+  {
+   "id": "BM",
+   "name": "Boilermaker",
+   "type": "labor",
+   "rate": 95,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EL",
+   "name": "Electrician",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "IT",
+   "name": "Instrument technician",
+   "type": "labor",
+   "rate": 94,
+   "pf": 1.0,
+   "lib": "INST-TC"
+  },
+  {
+   "id": "LB",
+   "name": "Laborer",
+   "type": "labor",
+   "rate": 60,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OP",
+   "name": "Equipment operator",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IN",
+   "name": "Insulator",
+   "type": "labor",
+   "rate": 78,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SC",
+   "name": "Scaffold builder",
+   "type": "labor",
+   "rate": 72,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "NT",
+   "name": "Electrical test technician (NETA)",
+   "type": "labor",
+   "rate": 118,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CT",
+   "name": "Controls technician",
+   "type": "labor",
+   "rate": 110,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "NDE",
+   "name": "NDE technician",
+   "type": "labor",
+   "rate": 105,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector",
+   "type": "labor",
+   "rate": 98,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "VR",
+   "name": "OEM field service representative",
+   "type": "labor",
+   "rate": 185,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "ENG",
+   "name": "Outage engineer",
+   "type": "labor",
+   "rate": 140,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OPR",
+   "name": "Plant operator",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "FW",
+   "name": "Fire watch / hole watch",
+   "type": "labor",
+   "rate": 48,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "C090",
+   "name": "RT crane 90 t",
+   "type": "equip",
+   "rate": 190
+  },
+  {
+   "id": "C250",
+   "name": "Crawler crane 250 t",
+   "type": "equip",
+   "rate": 420
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 65
+  },
+  {
+   "id": "ML",
+   "name": "Boom lift 80 ft",
+   "type": "equip",
+   "rate": 48
+  },
+  {
+   "id": "WM",
+   "name": "Welding machine",
+   "type": "equip",
+   "rate": 12
+  },
+  {
+   "id": "BSC",
+   "name": "Borescope kit",
+   "type": "equip",
+   "rate": 35
+  },
+  {
+   "id": "WW",
+   "name": "Compressor wash skid",
+   "type": "equip",
+   "rate": 30
+  },
+  {
+   "id": "OPU",
+   "name": "Oil processing unit",
+   "type": "equip",
+   "rate": 70
+  },
+  {
+   "id": "TS",
+   "name": "Relay and breaker test set",
+   "type": "equip",
+   "rate": 32
+  },
+  {
+   "id": "HV",
+   "name": "Hydrovac / vacuum truck",
+   "type": "equip",
+   "rate": 140
+  },
+  {
+   "id": "AC",
+   "name": "Air compressor 900 cfm",
+   "type": "equip",
+   "rate": 40
+  },
+  {
+   "id": "LBK",
+   "name": "Load bank, 2 MW",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "CEM",
+   "name": "Stack test trailer",
+   "type": "equip",
+   "rate": 90
+  },
+  {
+   "id": "TT",
+   "name": "Engine transport trailer",
+   "type": "equip",
+   "rate": 160
+  }
+ ],
+ "materials": [
+  {
+   "id": "GT-CI",
+   "desc": "Combustion hardware set (liners, transitions, nozzles), refurbished exchange",
+   "unit": "set",
+   "price": 1600000,
+   "cat": "Gas turbine",
+   "waste": 0
+  },
+  {
+   "id": "GT-HGP",
+   "desc": "Hot gas path parts set, stage 1-2 (exchange)",
+   "unit": "set",
+   "price": 6500000,
+   "cat": "Gas turbine",
+   "waste": 0
+  },
+  {
+   "id": "AERO-LSE",
+   "desc": "Lease engine, aeroderivative, per month",
+   "unit": "mo",
+   "price": 420000,
+   "cat": "Gas turbine",
+   "waste": 0
+  },
+  {
+   "id": "RICE-TOP",
+   "desc": "Engine top-end kit (heads, valves, liners), per cylinder",
+   "unit": "ea",
+   "price": 14000,
+   "cat": "Engines",
+   "waste": 0
+  },
+  {
+   "id": "RICE-MAJ",
+   "desc": "Engine major overhaul kit, per cylinder",
+   "unit": "ea",
+   "price": 36000,
+   "cat": "Engines",
+   "waste": 0
+  },
+  {
+   "id": "TURBO",
+   "desc": "Turbocharger exchange cartridge",
+   "unit": "ea",
+   "price": 95000,
+   "cat": "Engines",
+   "waste": 0
+  },
+  {
+   "id": "FILT",
+   "desc": "Inlet filter element",
+   "unit": "ea",
+   "price": 160,
+   "cat": "Consumables",
+   "waste": 3
+  },
+  {
+   "id": "OIL",
+   "desc": "Lube oil",
+   "unit": "gal",
+   "price": 14,
+   "cat": "Consumables",
+   "waste": 5
+  },
+  {
+   "id": "CAT",
+   "desc": "SCR / CO catalyst module",
+   "unit": "ea",
+   "price": 38000,
+   "cat": "Emissions",
+   "waste": 0
+  },
+  {
+   "id": "TUBE",
+   "desc": "HRSG tube, alloy, per ft",
+   "unit": "ft",
+   "price": 95,
+   "cat": "HRSG",
+   "waste": 10
+  },
+  {
+   "id": "STACK",
+   "desc": "Fuel cell stack exchange",
+   "unit": "ea",
+   "price": 52000,
+   "cat": "Fuel cells",
+   "waste": 0
+  },
+  {
+   "id": "BATT",
+   "desc": "BESS augmentation module",
+   "unit": "ea",
+   "price": 28000,
+   "cat": "Storage",
+   "waste": 0
+  },
+  {
+   "id": "GASKET",
+   "desc": "Gaskets, studs and seals",
+   "unit": "lot",
+   "price": 4500,
+   "cat": "Consumables",
+   "waste": 0
+  },
+  {
+   "id": "VLV-KIT",
+   "desc": "Valve repair kit",
+   "unit": "ea",
+   "price": 1800,
+   "cat": "Valves",
+   "waste": 0
+  },
+  {
+   "id": "SCAF",
+   "desc": "Scaffold rental, per day",
+   "unit": "day",
+   "price": 900,
+   "cat": "Access",
+   "waste": 0
+  },
+  {
+   "id": "INSUL",
+   "desc": "Insulation and jacketing",
+   "unit": "ft",
+   "price": 38,
+   "cat": "Insulation",
+   "waste": 8
+  }
+ ],
+ "modules": [
+  {
+   "id": "PO-PREP",
+   "name": "Outage preparation and mobilization",
+   "rev": 1,
+   "category": "Outage general",
+   "desc": "Pre-outage readiness: scope freeze, OEM parts and lease engines confirmed, contractor mobilization, laydown, tool cribs, outage trailers, and the safety and LOTO plan.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "HEADS",
+     "prompt": "Peak outage headcount",
+     "type": "number",
+     "default": 120,
+     "unit": "heads",
+     "min": 5,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "DAYS",
+     "prompt": "Mobilization inside the outage window",
+     "type": "number",
+     "default": 2,
+     "unit": "days",
+     "min": 0,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Scope freeze, parts and lease-engine confirmation",
+     "dur": "24",
+     "crew": {
+      "ENG": "2"
+     },
+     "equip": {},
+     "phase": "Pre-outage"
+    },
+    {
+     "id": "A020",
+     "desc": "Mobilize contractors, laydown and tool cribs",
+     "dur": "DAYS*12",
+     "crew": {
+      "GF": "1",
+      "LB": "max(2, ceil(HEADS/30))",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Pre-outage"
+    },
+    {
+     "id": "A030",
+     "desc": "Badging, orientation and safety plan",
+     "dur": "max(12, HEADS*0.1)",
+     "crew": {
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Pre-outage",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-SHUT",
+   "name": "Shutdown, cooldown and isolation",
+   "rev": 1,
+   "category": "Outage general",
+   "desc": "Take the units off line with the data center load carried by the remaining units, BESS or grid: shutdown, forced or natural cooldown, gas and electrical isolation, LOTO and permits.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "UNITS",
+     "prompt": "Units coming off line",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "COOL",
+     "prompt": "Cooldown",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Forced cooldown (about 1 shift)",
+       "value": 12
+      },
+      {
+       "label": "Natural cooldown (about 2 days)",
+       "value": 48
+      }
+     ],
+     "default": 12
+    },
+    {
+     "kind": "var",
+     "key": "LOTO",
+     "prompt": "Isolation points",
+     "type": "number",
+     "default": 120,
+     "unit": "ea",
+     "min": 5,
+     "max": 5000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Transfer load and shut down units",
+     "dur": "UNITS*2",
+     "crew": {
+      "OPR": "2",
+      "ENG": "1"
+     },
+     "equip": {},
+     "phase": "Shutdown"
+    },
+    {
+     "id": "A020",
+     "desc": "Cooldown",
+     "dur": "COOL",
+     "crew": {
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Shutdown",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Gas and electrical isolation, LOTO ({LOTO} points)",
+     "dur": "LOTO*0.15",
+     "crew": {
+      "OPR": "2",
+      "EL": "2",
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Isolation",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Purge, gas-free and permits issued",
+     "dur": "6",
+     "crew": {
+      "OPR": "1",
+      "FW": "1"
+     },
+     "equip": {},
+     "phase": "Isolation",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-SCAF",
+   "name": "Scaffolding, access and insulation removal",
+   "rev": 1,
+   "category": "Outage general",
+   "desc": "Scaffold to inspection and repair points, insulation and lagging removal and reinstatement, and the rental days that come with them.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SCAF",
+     "prompt": "Scaffold erections",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "INSUL",
+     "prompt": "Insulation to remove and reinstall",
+     "type": "number",
+     "default": 1200,
+     "unit": "ft",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "DAYS",
+     "prompt": "Scaffold rental days",
+     "type": "number",
+     "default": 21,
+     "unit": "days",
+     "min": 1,
+     "max": 120
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Erect scaffolds ({SCAF})",
+     "dur": "SCAF*6/4",
+     "crew": {
+      "SC": "4"
+     },
+     "equip": {},
+     "phase": "Access"
+    },
+    {
+     "id": "A020",
+     "desc": "Remove insulation",
+     "dur": "INSUL*0.04",
+     "crew": {
+      "IN": "4"
+     },
+     "equip": {},
+     "phase": "Access",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 12
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Reinstall insulation",
+     "dur": "INSUL*0.08",
+     "crew": {
+      "IN": "4"
+     },
+     "equip": {},
+     "phase": "Close-out"
+    },
+    {
+     "id": "A040",
+     "desc": "Dismantle scaffolds",
+     "dur": "SCAF*3/4",
+     "crew": {
+      "SC": "4"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "SCAF",
+     "qty": "DAYS*max(1, SCAF/10)"
+    },
+    {
+     "id": "M020",
+     "item": "INSUL",
+     "qty": "INSUL"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-GTCI",
+   "name": "Gas turbine combustion inspection",
+   "rev": 1,
+   "category": "Gas turbines",
+   "desc": "Combustion inspection on a frame gas turbine (about every 8,000 to 12,000 fired hours): remove and inspect fuel nozzles, liners, crossfire tubes and transition pieces, swap in refurbished hardware, borescope, and close up.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CANS",
+     "prompt": "Combustor cans",
+     "type": "number",
+     "default": 14,
+     "unit": "ea",
+     "min": 1,
+     "max": 30
+    },
+    {
+     "kind": "scope",
+     "key": "EXCH",
+     "prompt": "Exchange hardware set (vs. reinstall after inspection)?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Remove fuel nozzles, liners and transition pieces",
+     "dur": "CANS*3",
+     "crew": {
+      "MW": "6",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Disassembly"
+    },
+    {
+     "id": "A020",
+     "desc": "Inspect combustion hardware",
+     "dur": "CANS*1",
+     "crew": {
+      "VR": "1",
+      "QC": "1",
+      "NDE": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Borescope compressor and turbine",
+     "dur": "10",
+     "crew": {
+      "VR": "1"
+     },
+     "equip": {
+      "BSC": "1"
+     },
+     "phase": "Inspect",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Install combustion hardware",
+     "dur": "CANS*3.5",
+     "crew": {
+      "MW": "6",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Reassembly",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Close up and leak checks",
+     "dur": "12",
+     "crew": {
+      "MW": "4",
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Reassembly",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GT-CI",
+     "qty": "1",
+     "when": "EXCH"
+    },
+    {
+     "id": "M020",
+     "item": "GASKET",
+     "qty": "2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200"
+   ]
+  },
+  {
+   "id": "PO-GTHGP",
+   "name": "Gas turbine hot gas path inspection",
+   "rev": 1,
+   "category": "Gas turbines",
+   "desc": "Hot gas path inspection (about every 24,000 fired hours, typically 3 to 5 weeks): full combustion inspection scope plus removing the turbine casing upper half and inspecting or replacing stage 1-2 nozzles, buckets and shrouds.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Frame size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Small frame, up to 100 MW",
+       "value": 1
+      },
+      {
+       "label": "Medium / F-class",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "REPL",
+     "prompt": "Replace stage 1-2 parts with an exchange set?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Combustion section disassembly",
+     "dur": "SIZE*48",
+     "crew": {
+      "MW": "8",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Disassembly"
+    },
+    {
+     "id": "A020",
+     "desc": "Remove turbine casing upper half",
+     "dur": "SIZE*36",
+     "crew": {
+      "MW": "8",
+      "RG": "4",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Disassembly",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Inspect nozzles, buckets and shrouds",
+     "dur": "SIZE*30",
+     "crew": {
+      "VR": "1",
+      "NDE": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Replace stage 1-2 hardware",
+     "dur": "SIZE*96",
+     "crew": {
+      "MW": "8",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Repair",
+     "when": "REPL",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Reinstall casing and combustion hardware",
+     "dur": "SIZE*84",
+     "crew": {
+      "MW": "8",
+      "RG": "4",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Reassembly",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Alignment checks and close up",
+     "dur": "SIZE*18",
+     "crew": {
+      "MW": "4",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Reassembly",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GT-HGP",
+     "qty": "1",
+     "when": "REPL"
+    },
+    {
+     "id": "M020",
+     "item": "GT-CI",
+     "qty": "1"
+    },
+    {
+     "id": "M030",
+     "item": "GASKET",
+     "qty": "4"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200"
+   ]
+  },
+  {
+   "id": "PO-GTMI",
+   "name": "Gas turbine major inspection",
+   "rev": 1,
+   "category": "Gas turbines",
+   "desc": "Major inspection (about every 48,000 fired hours): flange-to-flange disassembly, rotor out, compressor and turbine stages, bearings and seals, all hot gas path parts, controls and alignment.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Frame size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Small frame, up to 100 MW",
+       "value": 1
+      },
+      {
+       "label": "Medium / F-class",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "ROTOR",
+     "prompt": "Send the rotor to a shop for repair?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Hot gas path and casing disassembly",
+     "dur": "SIZE*96",
+     "crew": {
+      "MW": "10",
+      "RG": "4",
+      "VR": "2"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Disassembly"
+    },
+    {
+     "id": "A020",
+     "desc": "Remove rotor",
+     "dur": "SIZE*24",
+     "crew": {
+      "MW": "6",
+      "RG": "4",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Disassembly",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Inspect compressor, rotor, bearings and seals",
+     "dur": "SIZE*72",
+     "crew": {
+      "VR": "2",
+      "NDE": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Rotor shop repair and return",
+     "dur": "SIZE*360",
+     "crew": {
+      "ENG": "1"
+     },
+     "equip": {},
+     "phase": "Repair",
+     "when": "ROTOR",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Reinstall rotor, casing and hot gas path",
+     "dur": "SIZE*168",
+     "crew": {
+      "MW": "10",
+      "RG": "4",
+      "VR": "2"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Reassembly",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Alignment, controls calibration and close up",
+     "dur": "SIZE*36",
+     "crew": {
+      "MW": "4",
+      "CT": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Reassembly",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "GT-HGP",
+     "qty": "1"
+    },
+    {
+     "id": "M020",
+     "item": "GT-CI",
+     "qty": "1"
+    },
+    {
+     "id": "M030",
+     "item": "GASKET",
+     "qty": "8"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200"
+   ]
+  },
+  {
+   "id": "PO-AERO",
+   "name": "Aeroderivative engine swap",
+   "rev": 1,
+   "category": "Gas turbines",
+   "desc": "Aeroderivative units are kept running by swapping the gas generator or whole engine for a lease or spare engine and sending the removed engine to an OEM depot: disconnect, roll out, roll in, reconnect and test run.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Engine swaps",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "MONTHS",
+     "prompt": "Lease engine months per swap",
+     "type": "number",
+     "default": 2,
+     "unit": "mo",
+     "min": 0,
+     "max": 12
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Disconnect and roll out engine",
+     "dur": "N*14",
+     "crew": {
+      "MW": "4",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "TT": "1",
+      "FK": "1"
+     },
+     "phase": "Swap"
+    },
+    {
+     "id": "A020",
+     "desc": "Roll in lease or spare engine",
+     "dur": "N*14",
+     "crew": {
+      "MW": "4",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "TT": "1",
+      "FK": "1"
+     },
+     "phase": "Swap",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Reconnect, align and leak check",
+     "dur": "N*16",
+     "crew": {
+      "MW": "4",
+      "PF": "2",
+      "EL": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Swap",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Ship removed engine to depot",
+     "dur": "N*4",
+     "crew": {
+      "RG": "2"
+     },
+     "equip": {
+      "TT": "1"
+     },
+     "phase": "Logistics",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AERO-LSE",
+     "qty": "N*MONTHS"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200"
+   ]
+  },
+  {
+   "id": "PO-GTAUX",
+   "name": "Borescope, compressor wash and inlet filters",
+   "rev": 1,
+   "category": "Gas turbines",
+   "desc": "Routine work done in any outage window: borescope inspections, offline compressor water wash, inlet filter change-out, and lube oil sampling and filter changes.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Turbines",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "FILT",
+     "prompt": "Inlet filter elements per turbine",
+     "type": "number",
+     "default": 240,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Borescope inspections",
+     "dur": "N*6",
+     "crew": {
+      "VR": "1",
+      "MW": "1"
+     },
+     "equip": {
+      "BSC": "1"
+     },
+     "phase": "Inspect"
+    },
+    {
+     "id": "A020",
+     "desc": "Offline compressor water wash",
+     "dur": "N*6",
+     "crew": {
+      "MW": "2",
+      "OPR": "1"
+     },
+     "equip": {
+      "WW": "1"
+     },
+     "phase": "Wash",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Change inlet filters",
+     "dur": "N*FILT*0.05",
+     "crew": {
+      "LB": "4",
+      "MW": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Filters",
+     "preds": []
+    },
+    {
+     "id": "A040",
+     "desc": "Lube oil sampling and filters",
+     "dur": "N*3",
+     "crew": {
+      "MW": "1"
+     },
+     "equip": {},
+     "phase": "Lube",
+     "preds": []
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "FILT",
+     "qty": "N*FILT"
+    },
+    {
+     "id": "M020",
+     "item": "OIL",
+     "qty": "N*60"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200"
+   ]
+  },
+  {
+   "id": "PO-GEN",
+   "name": "Generator inspection",
+   "rev": 1,
+   "category": "Generators and steam",
+   "desc": "Generator minor or major inspection: electrical tests (insulation resistance, polarization index), stator wedge and end-winding inspection, rotor-in robotic or rotor-out inspection, exciter and bearings.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Generators",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "scope",
+     "key": "ROTOUT",
+     "prompt": "Rotor-out inspection?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Electrical tests",
+     "dur": "N*8",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Test",
+     "preds": []
+    },
+    {
+     "id": "A020",
+     "desc": "Remove end shields and inspect (rotor in)",
+     "dur": "N*24",
+     "crew": {
+      "MW": "4",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pull rotor, inspect and reinstall",
+     "dur": "N*120",
+     "crew": {
+      "MW": "6",
+      "RG": "4",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Rotor out",
+     "when": "ROTOUT",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Exciter, bearings and close up",
+     "dur": "N*16",
+     "crew": {
+      "MW": "4",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Final electrical tests",
+     "dur": "N*6",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200",
+    "U300",
+    "U100"
+   ]
+  },
+  {
+   "id": "PO-STG",
+   "name": "Steam turbine inspection",
+   "rev": 1,
+   "category": "Generators and steam",
+   "desc": "Combined cycle steam turbine: valve inspections, borescope or casing-open inspection, bearings and seals, and lube oil system service.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "SCOPE",
+     "prompt": "Scope",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Valves and borescope",
+       "value": 1
+      },
+      {
+       "label": "Casing open, major",
+       "value": 4
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Stop, control and bypass valve inspections",
+     "dur": "72",
+     "crew": {
+      "MW": "4",
+      "PF": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Valves"
+    },
+    {
+     "id": "A020",
+     "desc": "Turbine inspection",
+     "dur": "SCOPE*60",
+     "crew": {
+      "MW": "6",
+      "RG": "2",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Turbine",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Bearings, seals and lube oil service",
+     "dur": "SCOPE*24",
+     "crew": {
+      "MW": "4"
+     },
+     "equip": {
+      "OPU": "1"
+     },
+     "phase": "Turbine",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 24
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Close up and alignment",
+     "dur": "SCOPE*18",
+     "crew": {
+      "MW": "4",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "VLV-KIT",
+     "qty": "6"
+    },
+    {
+     "id": "M020",
+     "item": "OIL",
+     "qty": "400"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200",
+    "U300",
+    "U100"
+   ]
+  },
+  {
+   "id": "PO-HRSG",
+   "name": "HRSG inspection and tube repair",
+   "rev": 1,
+   "category": "Generators and steam",
+   "desc": "Heat recovery steam generator: open and ventilate, inspection and NDE of harps, headers and drums, tube leak repairs, flow-accelerated corrosion checks, and hydrotest.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "HRSGs",
+     "type": "number",
+     "default": 1,
+     "unit": "ea",
+     "min": 1,
+     "max": 12
+    },
+    {
+     "kind": "var",
+     "key": "REP",
+     "prompt": "Tube repairs",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    },
+    {
+     "kind": "scope",
+     "key": "HYDRO",
+     "prompt": "Hydrotest after repairs?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Open, ventilate and confined-space setup",
+     "dur": "N*12",
+     "crew": {
+      "BM": "2",
+      "FW": "1"
+     },
+     "equip": {},
+     "phase": "Open"
+    },
+    {
+     "id": "A020",
+     "desc": "Inspection and NDE",
+     "dur": "N*60",
+     "crew": {
+      "NDE": "2",
+      "QC": "1",
+      "BM": "2"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tube repairs ({REP})",
+     "dur": "REP*6",
+     "crew": {
+      "BM": "4",
+      "WD": "2",
+      "FW": "1"
+     },
+     "equip": {
+      "WM": "2"
+     },
+     "phase": "Repair",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Hydrotest",
+     "dur": "N*16",
+     "crew": {
+      "BM": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "when": "HYDRO",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Close up",
+     "dur": "N*12",
+     "crew": {
+      "BM": "2"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TUBE",
+     "qty": "REP*8"
+    },
+    {
+     "id": "M020",
+     "item": "GASKET",
+     "qty": "N*2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200",
+    "U300",
+    "U100"
+   ]
+  },
+  {
+   "id": "PO-COOL",
+   "name": "Cooling tower or air-cooled condenser",
+   "rev": 1,
+   "category": "Generators and steam",
+   "desc": "Heat rejection: fan and gearbox inspections, ACC tube cleaning and leak checks, or cooling tower fill and drift eliminator repairs, plus circulating water pump service.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CELLS",
+     "prompt": "Fan cells",
+     "type": "number",
+     "default": 20,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "Type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Air-cooled condenser",
+       "value": 1
+      },
+      {
+       "label": "Cooling tower",
+       "value": 0
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Fan and gearbox inspections",
+     "dur": "CELLS*3",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Fans"
+    },
+    {
+     "id": "A020",
+     "desc": "ACC tube cleaning and leak check",
+     "dur": "CELLS*6",
+     "crew": {
+      "LB": "4",
+      "BM": "2"
+     },
+     "equip": {},
+     "phase": "ACC",
+     "when": "TYPE==1",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Tower fill and drift eliminator repairs",
+     "dur": "CELLS*5",
+     "crew": {
+      "LB": "4",
+      "MW": "1"
+     },
+     "equip": {},
+     "phase": "Tower",
+     "when": "TYPE==0",
+     "preds": []
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200",
+    "U300",
+    "U100"
+   ]
+  },
+  {
+   "id": "PO-RICE",
+   "name": "Reciprocating engine overhaul",
+   "rev": 1,
+   "category": "Engines, fuel cells and storage",
+   "desc": "Gas engine overhauls by running hours: top-end (cylinder heads, valves, spark plugs or prechambers) or major (liners, pistons, bearings, crankshaft checks), with turbocharger exchange and alignment checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Engines",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CYL",
+     "prompt": "Cylinders per engine",
+     "type": "number",
+     "default": 20,
+     "unit": "ea",
+     "min": 6,
+     "max": 24
+    },
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Overhaul",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Top-end",
+       "value": 1
+      },
+      {
+       "label": "Major",
+       "value": 2.6
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "TURBO",
+     "prompt": "Exchange turbochargers?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "TEAMS",
+     "prompt": "Engine crews working in parallel",
+     "type": "number",
+     "default": 2,
+     "unit": "crews",
+     "min": 1,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Disassemble ({N} engines)",
+     "dur": "N*CYL*1.2*KIND/TEAMS",
+     "crew": {
+      "MW": "TEAMS*4",
+      "VR": "TEAMS"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Disassembly"
+    },
+    {
+     "id": "A020",
+     "desc": "Inspect and measure",
+     "dur": "N*CYL*0.5*KIND/TEAMS",
+     "crew": {
+      "VR": "TEAMS",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 12
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Turbocharger exchange",
+     "dur": "N*16",
+     "crew": {
+      "MW": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Repair",
+     "when": "TURBO",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 12
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Reassemble",
+     "dur": "N*CYL*1.6*KIND/TEAMS",
+     "crew": {
+      "MW": "TEAMS*4",
+      "VR": "TEAMS"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Reassembly",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Alignment, oil change and run-in",
+     "dur": "N*12",
+     "crew": {
+      "MW": "2",
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Run-in",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "RICE-TOP",
+     "qty": "N*CYL",
+     "when": "KIND==1"
+    },
+    {
+     "id": "M020",
+     "item": "RICE-MAJ",
+     "qty": "N*CYL",
+     "when": "KIND>1"
+    },
+    {
+     "id": "M030",
+     "item": "TURBO",
+     "qty": "N*2",
+     "when": "TURBO"
+    },
+    {
+     "id": "M040",
+     "item": "OIL",
+     "qty": "N*700"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U400"
+   ]
+  },
+  {
+   "id": "PO-RAUX",
+   "name": "Engine auxiliaries, radiators and exhaust",
+   "rev": 1,
+   "category": "Engines, fuel cells and storage",
+   "desc": "Radiator cleaning and fan service, charge air coolers, exhaust and silencer inspections, SCR / oxidation catalyst replacement and urea system service.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Engines",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CATMOD",
+     "prompt": "Catalyst modules to replace",
+     "type": "number",
+     "default": 0,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Radiators, fans and charge air coolers",
+     "dur": "N*6",
+     "crew": {
+      "MW": "2",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Cooling",
+     "preds": []
+    },
+    {
+     "id": "A020",
+     "desc": "Exhaust and silencer inspections",
+     "dur": "N*3",
+     "crew": {
+      "BM": "2"
+     },
+     "equip": {},
+     "phase": "Exhaust",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Replace catalyst modules ({CATMOD})",
+     "dur": "CATMOD*1.5",
+     "crew": {
+      "BM": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Emissions",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CAT",
+     "qty": "CATMOD"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U400"
+   ]
+  },
+  {
+   "id": "PO-SCR",
+   "name": "Gas turbine SCR and CO catalyst",
+   "rev": 1,
+   "category": "Emissions",
+   "desc": "Catalyst work behind the turbines or in the HRSG: catalyst sampling, ammonia injection grid tuning prep, module change-out and seal repairs, then emissions verification.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MOD",
+     "prompt": "Catalyst modules to replace",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "scope",
+     "key": "AIG",
+     "prompt": "Ammonia injection grid inspection?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Catalyst sampling and inspection",
+     "dur": "12",
+     "crew": {
+      "BM": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Inspect"
+    },
+    {
+     "id": "A020",
+     "desc": "Change out catalyst modules ({MOD})",
+     "dur": "MOD*1.2",
+     "crew": {
+      "BM": "4",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Replace",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Ammonia injection grid inspection",
+     "dur": "16",
+     "crew": {
+      "PF": "2",
+      "BM": "1"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "when": "AIG",
+     "preds": []
+    },
+    {
+     "id": "A040",
+     "desc": "Seals and close up",
+     "dur": "12",
+     "crew": {
+      "BM": "2"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CAT",
+     "qty": "MOD"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U200",
+    "U300"
+   ]
+  },
+  {
+   "id": "PO-SOFC",
+   "name": "Fuel cell stack replacement",
+   "rev": 1,
+   "category": "Engines, fuel cells and storage",
+   "desc": "Solid-oxide fuel cell blocks are serviced module by module while the rest of the block keeps running: stack exchange, filters and desulfurizer media, and module restart.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "STACKS",
+     "prompt": "Stacks to replace",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 10000
+    },
+    {
+     "kind": "var",
+     "key": "CREWS",
+     "prompt": "Two-person crews",
+     "type": "number",
+     "default": 2,
+     "unit": "crews",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Isolate modules and exchange stacks ({STACKS})",
+     "dur": "STACKS*1.5/CREWS",
+     "crew": {
+      "VR": "CREWS",
+      "EL": "CREWS"
+     },
+     "equip": {},
+     "phase": "Stacks"
+    },
+    {
+     "id": "A020",
+     "desc": "Filters and desulfurizer media",
+     "dur": "STACKS*0.2",
+     "crew": {
+      "PF": "1"
+     },
+     "equip": {},
+     "phase": "Service",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Restart and verify output",
+     "dur": "STACKS*0.3",
+     "crew": {
+      "VR": "1",
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Restart",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "STACK",
+     "qty": "STACKS"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U400"
+   ]
+  },
+  {
+   "id": "PO-BESS",
+   "name": "BESS augmentation and inverter service",
+   "rev": 1,
+   "category": "Engines, fuel cells and storage",
+   "desc": "Battery storage: add augmentation modules to restore capacity, inverter / PCS preventive maintenance, HVAC and fire suppression checks, and a capacity test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "AUG",
+     "prompt": "Augmentation modules",
+     "type": "number",
+     "default": 80,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "PCS",
+     "prompt": "PCS skids to service",
+     "type": "number",
+     "default": 26,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Install augmentation modules ({AUG})",
+     "dur": "AUG*0.6",
+     "crew": {
+      "EL": "4",
+      "RG": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Augment"
+    },
+    {
+     "id": "A020",
+     "desc": "Inverter / PCS preventive maintenance",
+     "dur": "PCS*4",
+     "crew": {
+      "EL": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "PCS",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "HVAC and fire suppression checks",
+     "dur": "max(12, AUG*0.05)",
+     "crew": {
+      "EL": "1",
+      "MW": "1"
+     },
+     "equip": {},
+     "phase": "Systems",
+     "preds": []
+    },
+    {
+     "id": "A040",
+     "desc": "Capacity test",
+     "dur": "24",
+     "crew": {
+      "VR": "1",
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A010",
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BATT",
+     "qty": "AUG"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U400"
+   ]
+  },
+  {
+   "id": "PO-XFMR",
+   "name": "Step-up transformer maintenance",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Generator step-up and auxiliary transformers: oil sampling and dissolved gas analysis, electrical tests, bushing and cooling system inspection, oil processing where needed.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Transformers",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "OIL",
+     "prompt": "Oil processing?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Oil sampling and electrical tests",
+     "dur": "N*8",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Test"
+    },
+    {
+     "id": "A020",
+     "desc": "Bushings, coolers and gauges",
+     "dur": "N*8",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Inspect",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Oil processing",
+     "dur": "N*24",
+     "crew": {
+      "EL": "1"
+     },
+     "equip": {
+      "OPU": "1"
+     },
+     "phase": "Oil",
+     "when": "OIL",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-SWYD",
+   "name": "Switchyard and breaker maintenance",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "HV and MV breakers, disconnects and instrument transformers: timing and contact resistance tests, mechanism service, insulator cleaning, and the MV switchgear feeding the data halls.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "HV",
+     "prompt": "HV breakers",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "MV",
+     "prompt": "MV breakers",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "HV breaker tests and mechanism service",
+     "dur": "HV*8",
+     "crew": {
+      "NT": "2",
+      "EL": "1"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "HV"
+    },
+    {
+     "id": "A020",
+     "desc": "MV breaker tests and racking checks",
+     "dur": "MV*2",
+     "crew": {
+      "NT": "1",
+      "EL": "1"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "MV",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Disconnects and insulator cleaning",
+     "dur": "HV*3",
+     "crew": {
+      "EL": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "HV",
+     "preds": []
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-RELAY",
+   "name": "Protective relay and microgrid controls testing",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Generator, transformer, bus and feeder protection testing, trip checks, and the microgrid controller load-shed, islanding and transfer logic that protects the data center load.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "RELAYS",
+     "prompt": "Relays",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "scope",
+     "key": "MGC",
+     "prompt": "Microgrid controller logic test?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Relay testing",
+     "dur": "RELAYS*2",
+     "crew": {
+      "NT": "2"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Protection",
+     "preds": []
+    },
+    {
+     "id": "A020",
+     "desc": "Trip checks",
+     "dur": "RELAYS*0.5",
+     "crew": {
+      "NT": "1",
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Protection",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Microgrid controller load-shed and islanding tests",
+     "dur": "24",
+     "crew": {
+      "CT": "2",
+      "ENG": "1"
+     },
+     "equip": {},
+     "phase": "Microgrid",
+     "when": "MGC",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-DCS",
+   "name": "Controls, instruments and CEMS",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Instrument calibration, control system patches or upgrade, unit control panels, and CEMS analyzer service and calibration before restart.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "INST",
+     "prompt": "Instruments to calibrate",
+     "type": "number",
+     "default": 300,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "UPG",
+     "prompt": "Control system upgrade?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "scope",
+     "key": "CEMS",
+     "prompt": "CEMS service?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Instrument calibration ({INST})",
+     "dur": "INST*0.6",
+     "crew": {
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Instruments"
+    },
+    {
+     "id": "A020",
+     "desc": "Control system upgrade and testing",
+     "dur": "120",
+     "crew": {
+      "CT": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Controls",
+     "when": "UPG",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "CEMS service and calibration",
+     "dur": "24",
+     "crew": {
+      "IT": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Emissions",
+     "when": "CEMS",
+     "preds": []
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-VALVE",
+   "name": "Valves, pumps and motors",
+   "rev": 1,
+   "category": "Balance of plant",
+   "desc": "Fuel gas, steam and water valves pulled for overhaul or replaced, pump seal and bearing work, and motor tests.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "VALVES",
+     "prompt": "Valves",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "PUMPS",
+     "prompt": "Pumps",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "MOTORS",
+     "prompt": "Motors tested",
+     "type": "number",
+     "default": 20,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Valve overhauls ({VALVES})",
+     "dur": "VALVES*6/2",
+     "crew": {
+      "PF": "4",
+      "RG": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Valves"
+    },
+    {
+     "id": "A020",
+     "desc": "Pump seals and bearings ({PUMPS})",
+     "dur": "PUMPS*12",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Pumps",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Motor tests",
+     "dur": "MOTORS*1.5",
+     "crew": {
+      "EL": "1",
+      "NT": "1"
+     },
+     "equip": {
+      "TS": "1"
+     },
+     "phase": "Motors",
+     "preds": []
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "VLV-KIT",
+     "qty": "VALVES"
+    },
+    {
+     "id": "M020",
+     "item": "GASKET",
+     "qty": "max(1, VALVES/10)"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-RTS",
+   "name": "Return to service",
+   "rev": 1,
+   "category": "Restart",
+   "desc": "Bring units back: remove LOTO, fill and vent, first fire, combustion and emissions tuning, synchronize, load in steps, check vibration and protection, then a reliability run before the data center load is returned.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "UNITS",
+     "prompt": "Units returning",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Unit type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Engines / fuel cells",
+       "value": 1
+      },
+      {
+       "label": "Gas turbines",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "RUN",
+     "prompt": "Reliability run",
+     "type": "number",
+     "default": 24,
+     "unit": "h",
+     "min": 0,
+     "max": 168
+    },
+    {
+     "kind": "var",
+     "key": "TEAMS",
+     "prompt": "Start-up teams working in parallel",
+     "type": "number",
+     "default": 2,
+     "unit": "teams",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Remove LOTO, fill and vent",
+     "dur": "UNITS*4/TEAMS",
+     "crew": {
+      "OPR": "TEAMS*2",
+      "EL": "1",
+      "PF": "1"
+     },
+     "equip": {},
+     "phase": "Restore"
+    },
+    {
+     "id": "A020",
+     "desc": "First fire and tuning",
+     "dur": "UNITS*6*KIND/TEAMS",
+     "crew": {
+      "VR": "TEAMS",
+      "OPR": "TEAMS*2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Restart",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Synchronize and load steps",
+     "dur": "UNITS*3*KIND/TEAMS",
+     "crew": {
+      "OPR": "TEAMS*2",
+      "ENG": "1"
+     },
+     "equip": {},
+     "phase": "Restart",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Reliability run ({RUN} h)",
+     "dur": "RUN",
+     "crew": {
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "Restart",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Units released to dispatch",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Restart",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  },
+  {
+   "id": "PO-DEMOB",
+   "name": "Close-out and demobilization",
+   "rev": 1,
+   "category": "Outage general",
+   "desc": "Housekeeping, final punch, as-found / as-left reports, OEM inspection reports, lessons learned and demobilization.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "HEADS",
+     "prompt": "Peak outage headcount",
+     "type": "number",
+     "default": 120,
+     "unit": "heads",
+     "min": 5,
+     "max": 2000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Housekeeping and final punch",
+     "dur": "max(12, HEADS*0.2)",
+     "crew": {
+      "LB": "4",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Close-out"
+    },
+    {
+     "id": "A020",
+     "desc": "Reports and lessons learned",
+     "dur": "24",
+     "crew": {
+      "ENG": "1"
+     },
+     "equip": {},
+     "phase": "Close-out",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Demobilize",
+     "dur": "max(12, HEADS*0.1)",
+     "crew": {
+      "LB": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Close-out",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-20",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "OT-000-001",
+   "tag": "PREP",
+   "desc": "Outage preparation and mobilization",
+   "unit": "U000",
+   "module_id": "PO-PREP",
+   "answers": {
+    "HEADS": 140,
+    "DAYS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "OT-000-002",
+   "tag": "SHUT",
+   "desc": "Shut down GT-3, two aero units and four engines; isolate",
+   "unit": "U000",
+   "module_id": "PO-SHUT",
+   "answers": {
+    "UNITS": 7,
+    "COOL": 12,
+    "LOTO": 180
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI003",
+   "wo": "OT-000-003",
+   "tag": "SCAF",
+   "desc": "Scaffolding and insulation removal",
+   "unit": "U000",
+   "module_id": "PO-SCAF",
+   "answers": {
+    "SCAF": 46,
+    "INSUL": 1400,
+    "DAYS": 24
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI004",
+   "wo": "OT-200-004",
+   "tag": "GT3-HGP",
+   "desc": "GT-3 hot gas path inspection (frame unit)",
+   "unit": "U200",
+   "module_id": "PO-GTHGP",
+   "answers": {
+    "SIZE": 1,
+    "REPL": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GAD",
+     "doc_no": "SYN-PO1-GT3-0101",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI005",
+   "wo": "OT-200-005",
+   "tag": "GT3-GEN",
+   "desc": "GT-3 generator minor inspection",
+   "unit": "U200",
+   "module_id": "PO-GEN",
+   "answers": {
+    "N": 1,
+    "ROTOUT": 0
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI006",
+   "wo": "OT-200-006",
+   "tag": "GT3-SCR",
+   "desc": "GT-3 SCR and CO catalyst change-out",
+   "unit": "U200",
+   "module_id": "PO-SCR",
+   "answers": {
+    "MOD": 48,
+    "AIG": 1
+   },
+   "status": "Approved",
+   "offset": 36,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI007",
+   "wo": "OT-200-007",
+   "tag": "AERO",
+   "desc": "Aeroderivative units A1 and A2: engine swaps",
+   "unit": "U200",
+   "module_id": "PO-AERO",
+   "answers": {
+    "N": 2,
+    "MONTHS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI008",
+   "wo": "OT-200-008",
+   "tag": "GTAUX",
+   "desc": "Borescopes, compressor washes and inlet filters, all turbines",
+   "unit": "U200",
+   "module_id": "PO-GTAUX",
+   "answers": {
+    "N": 5,
+    "FILT": 240
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI009",
+   "wo": "OT-100-009",
+   "tag": "RICE",
+   "desc": "Engines E5 to E8: major overhauls",
+   "unit": "U100",
+   "module_id": "PO-RICE",
+   "answers": {
+    "N": 4,
+    "CYL": 20,
+    "KIND": 2.6,
+    "TURBO": 1,
+    "TEAMS": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GAD",
+     "doc_no": "SYN-PO1-ENG-0101",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI010",
+   "wo": "OT-100-010",
+   "tag": "RAUX",
+   "desc": "Engine radiators, exhaust and catalyst",
+   "unit": "U100",
+   "module_id": "PO-RAUX",
+   "answers": {
+    "N": 12,
+    "CATMOD": 24
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "OT-300-011",
+   "tag": "HRSG",
+   "desc": "HRSG-3 inspection and tube repairs",
+   "unit": "U300",
+   "module_id": "PO-HRSG",
+   "answers": {
+    "N": 1,
+    "REP": 10,
+    "HYDRO": 1
+   },
+   "status": "Approved",
+   "offset": 36,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI012",
+   "wo": "OT-300-012",
+   "tag": "STG",
+   "desc": "Steam turbine valve and borescope inspection",
+   "unit": "U300",
+   "module_id": "PO-STG",
+   "answers": {
+    "SCOPE": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI013",
+   "wo": "OT-400-013",
+   "tag": "SOFC",
+   "desc": "Fuel cell stack replacements, block FC-2",
+   "unit": "U400",
+   "module_id": "PO-SOFC",
+   "answers": {
+    "STACKS": 64,
+    "CREWS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI014",
+   "wo": "OT-400-014",
+   "tag": "BESS",
+   "desc": "BESS augmentation and PCS service",
+   "unit": "U400",
+   "module_id": "PO-BESS",
+   "answers": {
+    "AUG": 90,
+    "PCS": 26
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI015",
+   "wo": "OT-500-015",
+   "tag": "XFMR",
+   "desc": "GSU-3 and auxiliary transformer maintenance",
+   "unit": "U500",
+   "module_id": "PO-XFMR",
+   "answers": {
+    "N": 3,
+    "OIL": 0
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI016",
+   "wo": "OT-500-016",
+   "tag": "SWYD",
+   "desc": "Switchyard and MV breaker maintenance",
+   "unit": "U500",
+   "module_id": "PO-SWYD",
+   "answers": {
+    "HV": 4,
+    "MV": 18
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "SLD",
+     "doc_no": "SYN-PO1-ELE-0001",
+     "sheet": "",
+     "rev": "D"
+    }
+   ]
+  },
+  {
+   "id": "WI017",
+   "wo": "OT-500-017",
+   "tag": "RELAY",
+   "desc": "Protection and microgrid controller testing",
+   "unit": "U500",
+   "module_id": "PO-RELAY",
+   "answers": {
+    "RELAYS": 48,
+    "MGC": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI015",
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "OT-600-018",
+   "tag": "DCS",
+   "desc": "Instrument calibration and CEMS service",
+   "unit": "U600",
+   "module_id": "PO-DCS",
+   "answers": {
+    "INST": 260,
+    "UPG": 0,
+    "CEMS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "OT-600-019",
+   "tag": "VALVE",
+   "desc": "Valves, pumps and motors",
+   "unit": "U600",
+   "module_id": "PO-VALVE",
+   "answers": {
+    "VALVES": 28,
+    "PUMPS": 6,
+    "MOTORS": 18
+   },
+   "status": "Approved",
+   "offset": 36,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI020",
+   "wo": "OT-000-020",
+   "tag": "RTS",
+   "desc": "Return to service and reliability run",
+   "unit": "U000",
+   "module_id": "PO-RTS",
+   "answers": {
+    "UNITS": 7,
+    "KIND": 1.5,
+    "RUN": 24,
+    "TEAMS": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004",
+    "WI005",
+    "WI006",
+    "WI007",
+    "WI008",
+    "WI009",
+    "WI010",
+    "WI011",
+    "WI012",
+    "WI013",
+    "WI014",
+    "WI017",
+    "WI018",
+    "WI019"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI021",
+   "wo": "OT-000-021",
+   "tag": "DEMOB",
+   "desc": "Close-out and demobilization",
+   "unit": "U000",
+   "module_id": "PO-DEMOB",
+   "answers": {
+    "HEADS": 140
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI020",
+    "WI003"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}

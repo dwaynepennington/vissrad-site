@@ -1,7 +1,7 @@
 {
  "meta": {
   "module": "plan",
-  "app": "VissRad Planner",
+  "app": "VRPlanner",
   "generated": "2026-10-15",
   "library_note": "34 capital-construction modules authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
  },

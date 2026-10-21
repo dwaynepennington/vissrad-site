@@ -1,7 +1,7 @@
 {
   "meta": {
     "today": "2026-08-26",
-    "note": "VissRadAI holds no project records of its own. It reads the other modules' records when a question needs them."
+    "note": "VRAI holds no project records of its own. It reads the other modules' records when a question needs them."
   },
   "skip_sources": ["schedule", "suite", "ai"],
   "suggested": [

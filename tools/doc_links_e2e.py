@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """End-to-end document-link check: click through from every linked module into
-VissRadDEng Documents and back, in the demo.
+VRDEng Documents and back, in the demo.
 
     pip install playwright && python -m playwright install chromium
     python tools/doc_links_e2e.py                                   # the live public demo
