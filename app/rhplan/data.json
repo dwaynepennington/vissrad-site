@@ -1,0 +1,6054 @@
+{
+ "meta": {
+  "module": "rhplan",
+  "app": "VissRad Rail and Highway Planner",
+  "generated": "2026-10-27",
+  "library_note": "30 rail and heavy highway construction modules (traffic control, railroad protection, earthwork, drainage, walls, paving, bridges, track, turnouts, grade crossings, signals, catenary, platforms, lighting and ITS, roadside safety, closeout), authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
+ },
+ "event": {
+  "name": "State Route Widening, Interchange, Two Bridges and Rail Siding (synthetic demo)",
+  "code": "SYN-RH1",
+  "site": "Synthetic transportation corridor",
+  "owner": "Example State DOT and Example Railroad (synthetic)",
+  "shutdown": "2027-03-01T07:00",
+  "window_days": 540,
+  "shift_hours": 10,
+  "shifts_per_day": 1,
+  "days_week": 5,
+  "data_date": "2027-03-01",
+  "currency": "USD",
+  "wbs_root": "RH1.CON"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 10,
+  "contingency_pct": 10,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "R100",
+   "name": "Mainline segment A, Sta. 100+00 to 250+00",
+   "group": "Highway",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R200",
+   "name": "Interchange and ramps",
+   "group": "Highway",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R300",
+   "name": "Bridge 1: river crossing",
+   "group": "Structures",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R400",
+   "name": "Bridge 2: railroad overpass",
+   "group": "Structures",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R500",
+   "name": "Rail siding and connection track",
+   "group": "Rail",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R600",
+   "name": "Grade crossings and signals",
+   "group": "Rail",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R700",
+   "name": "Lighting, signals and ITS",
+   "group": "Systems",
+   "sector": "Rail and heavy highway"
+  },
+  {
+   "code": "R000",
+   "name": "Project-wide and traffic control",
+   "group": "General",
+   "sector": "Rail and heavy highway"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General superintendent",
+   "type": "labor",
+   "rate": 120,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman",
+   "type": "labor",
+   "rate": 100,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OP",
+   "name": "Heavy equipment operator",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TM",
+   "name": "Teamster / truck driver",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LB",
+   "name": "Laborer",
+   "type": "labor",
+   "rate": 56,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CP",
+   "name": "Carpenter (forms and falsework)",
+   "type": "labor",
+   "rate": 76,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CF",
+   "name": "Concrete finisher",
+   "type": "labor",
+   "rate": 72,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RB",
+   "name": "Ironworker, reinforcing",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "IW",
+   "name": "Ironworker, structural",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "PD",
+   "name": "Pile driver",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PL",
+   "name": "Pipe layer (storm and utility)",
+   "type": "labor",
+   "rate": 68,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PV",
+   "name": "Paving crew member (screed, rakers)",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SV",
+   "name": "Survey crew member",
+   "type": "labor",
+   "rate": 80,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector and materials tester",
+   "type": "labor",
+   "rate": 94,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EI",
+   "name": "Environmental inspector",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TC",
+   "name": "Traffic control technician",
+   "type": "labor",
+   "rate": 58,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "FL",
+   "name": "Highway flagger",
+   "type": "labor",
+   "rate": 50,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TK",
+   "name": "Trackman",
+   "type": "labor",
+   "rate": 74,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TFM",
+   "name": "Track foreman",
+   "type": "labor",
+   "rate": 98,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TW",
+   "name": "Thermite / rail welder",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RWIC",
+   "name": "Railroad flagman (RWIC)",
+   "type": "labor",
+   "rate": 105,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SG",
+   "name": "Signal maintainer / technician",
+   "type": "labor",
+   "rate": 104,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LN",
+   "name": "Lineman (catenary and lighting)",
+   "type": "labor",
+   "rate": 102,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EL",
+   "name": "Electrician",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "PM",
+   "name": "Pavement marking technician",
+   "type": "labor",
+   "rate": 66,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "GR",
+   "name": "Guardrail and sign installer",
+   "type": "labor",
+   "rate": 64,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EXC",
+   "name": "Excavator",
+   "type": "equip",
+   "rate": 115
+  },
+  {
+   "id": "DZ",
+   "name": "Dozer",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "MG",
+   "name": "Motor grader",
+   "type": "equip",
+   "rate": 110
+  },
+  {
+   "id": "SCR",
+   "name": "Scraper",
+   "type": "equip",
+   "rate": 210
+  },
+  {
+   "id": "LDR",
+   "name": "Wheel loader",
+   "type": "equip",
+   "rate": 95
+  },
+  {
+   "id": "ART",
+   "name": "Articulated haul truck",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "RLR",
+   "name": "Vibratory roller",
+   "type": "equip",
+   "rate": 70
+  },
+  {
+   "id": "PRL",
+   "name": "Pneumatic roller",
+   "type": "equip",
+   "rate": 60
+  },
+  {
+   "id": "WTR",
+   "name": "Water truck",
+   "type": "equip",
+   "rate": 55
+  },
+  {
+   "id": "MIL",
+   "name": "Cold planer (milling machine)",
+   "type": "equip",
+   "rate": 380
+  },
+  {
+   "id": "PAV",
+   "name": "Asphalt paver",
+   "type": "equip",
+   "rate": 240
+  },
+  {
+   "id": "MTV",
+   "name": "Material transfer vehicle",
+   "type": "equip",
+   "rate": 260
+  },
+  {
+   "id": "SLP",
+   "name": "Slipform paver with placer-spreader",
+   "type": "equip",
+   "rate": 520
+  },
+  {
+   "id": "SAW",
+   "name": "Joint saw",
+   "type": "equip",
+   "rate": 25
+  },
+  {
+   "id": "CPM",
+   "name": "Concrete pump",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "C090",
+   "name": "RT crane 90 t",
+   "type": "equip",
+   "rate": 190
+  },
+  {
+   "id": "C250",
+   "name": "Crawler crane 250 t",
+   "type": "equip",
+   "rate": 420
+  },
+  {
+   "id": "PIL",
+   "name": "Pile rig with hammer",
+   "type": "equip",
+   "rate": 300
+  },
+  {
+   "id": "DRL",
+   "name": "Drilled shaft rig",
+   "type": "equip",
+   "rate": 520
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 65
+  },
+  {
+   "id": "ML",
+   "name": "Boom lift 60 ft",
+   "type": "equip",
+   "rate": 44
+  },
+  {
+   "id": "ATT",
+   "name": "Truck-mounted attenuator",
+   "type": "equip",
+   "rate": 45
+  },
+  {
+   "id": "ARB",
+   "name": "Arrow board and message signs",
+   "type": "equip",
+   "rate": 12
+  },
+  {
+   "id": "HRL",
+   "name": "Hi-rail truck",
+   "type": "equip",
+   "rate": 70
+  },
+  {
+   "id": "TMP",
+   "name": "Production tamper",
+   "type": "equip",
+   "rate": 260
+  },
+  {
+   "id": "REG",
+   "name": "Ballast regulator",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "TGG",
+   "name": "Tie gang equipment set",
+   "type": "equip",
+   "rate": 420
+  },
+  {
+   "id": "BCAR",
+   "name": "Ballast train (cars and power)",
+   "type": "equip",
+   "rate": 380
+  },
+  {
+   "id": "RTH",
+   "name": "Rail threader and handlers",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "STRP",
+   "name": "Striping truck",
+   "type": "equip",
+   "rate": 140
+  },
+  {
+   "id": "AUG",
+   "name": "Auger / post driver truck",
+   "type": "equip",
+   "rate": 85
+  }
+ ],
+ "materials": [
+  {
+   "id": "HMA",
+   "desc": "Hot-mix asphalt, delivered",
+   "unit": "ton",
+   "price": 86,
+   "cat": "Paving",
+   "waste": 2
+  },
+  {
+   "id": "TACK",
+   "desc": "Tack coat",
+   "unit": "gal",
+   "price": 4.2,
+   "cat": "Paving",
+   "waste": 5
+  },
+  {
+   "id": "PCC",
+   "desc": "Paving concrete, delivered",
+   "unit": "cy",
+   "price": 165,
+   "cat": "Paving",
+   "waste": 3
+  },
+  {
+   "id": "DOWEL",
+   "desc": "Dowel basket assemblies",
+   "unit": "ea",
+   "price": 95,
+   "cat": "Paving",
+   "waste": 2
+  },
+  {
+   "id": "ABC",
+   "desc": "Aggregate base course",
+   "unit": "ton",
+   "price": 32,
+   "cat": "Earthwork",
+   "waste": 6
+  },
+  {
+   "id": "LIME",
+   "desc": "Lime or cement for stabilization",
+   "unit": "ton",
+   "price": 175,
+   "cat": "Earthwork",
+   "waste": 4
+  },
+  {
+   "id": "BORROW",
+   "desc": "Borrow fill, delivered",
+   "unit": "cy",
+   "price": 14,
+   "cat": "Earthwork",
+   "waste": 8
+  },
+  {
+   "id": "SILT",
+   "desc": "Silt fence, inlet protection and controls",
+   "unit": "ft",
+   "price": 3.4,
+   "cat": "Environmental",
+   "waste": 8
+  },
+  {
+   "id": "SEED",
+   "desc": "Permanent seeding, mulch and blanket",
+   "unit": "acre",
+   "price": 2600,
+   "cat": "Environmental",
+   "waste": 5
+  },
+  {
+   "id": "RCP",
+   "desc": "Reinforced concrete pipe, 30 in average",
+   "unit": "ft",
+   "price": 92,
+   "cat": "Drainage",
+   "waste": 3
+  },
+  {
+   "id": "INLET",
+   "desc": "Inlets and manholes, precast",
+   "unit": "ea",
+   "price": 3400,
+   "cat": "Drainage",
+   "waste": 1
+  },
+  {
+   "id": "PBOX",
+   "desc": "Precast box culvert sections",
+   "unit": "ft",
+   "price": 1250,
+   "cat": "Drainage",
+   "waste": 1
+  },
+  {
+   "id": "MSE",
+   "desc": "MSE wall panels, straps and select fill",
+   "unit": "sf",
+   "price": 38,
+   "cat": "Walls",
+   "waste": 3
+  },
+  {
+   "id": "CONC",
+   "desc": "Structural concrete, Class S",
+   "unit": "cy",
+   "price": 225,
+   "cat": "Structures",
+   "waste": 4
+  },
+  {
+   "id": "REBAR",
+   "desc": "Reinforcing steel, epoxy coated",
+   "unit": "ton",
+   "price": 1900,
+   "cat": "Structures",
+   "waste": 4
+  },
+  {
+   "id": "PILE",
+   "desc": "Steel H-piles, HP14",
+   "unit": "ft",
+   "price": 62,
+   "cat": "Structures",
+   "waste": 3
+  },
+  {
+   "id": "BRG",
+   "desc": "Elastomeric bearing assemblies",
+   "unit": "ea",
+   "price": 1400,
+   "cat": "Structures",
+   "waste": 1
+  },
+  {
+   "id": "JNT",
+   "desc": "Deck expansion joints",
+   "unit": "ft",
+   "price": 420,
+   "cat": "Structures",
+   "waste": 2
+  },
+  {
+   "id": "OVL",
+   "desc": "Deck overlay material (latex or polymer)",
+   "unit": "sy",
+   "price": 48,
+   "cat": "Structures",
+   "waste": 5
+  },
+  {
+   "id": "SBAL",
+   "desc": "Subballast",
+   "unit": "ton",
+   "price": 24,
+   "cat": "Track",
+   "waste": 6
+  },
+  {
+   "id": "BAL",
+   "desc": "Mainline ballast",
+   "unit": "ton",
+   "price": 38,
+   "cat": "Track",
+   "waste": 6
+  },
+  {
+   "id": "OTM",
+   "desc": "Other track material (plates, clips, anchors)",
+   "unit": "tf",
+   "price": 22,
+   "cat": "Track",
+   "waste": 2
+  },
+  {
+   "id": "WELDK",
+   "desc": "Thermite weld kits",
+   "unit": "ea",
+   "price": 340,
+   "cat": "Track",
+   "waste": 3
+  },
+  {
+   "id": "XPNL",
+   "desc": "Concrete crossing panels",
+   "unit": "tf",
+   "price": 520,
+   "cat": "Track",
+   "waste": 1
+  },
+  {
+   "id": "CBL",
+   "desc": "Signal and power cable",
+   "unit": "ft",
+   "price": 6.5,
+   "cat": "Systems",
+   "waste": 4
+  },
+  {
+   "id": "CND",
+   "desc": "Conduit and pull boxes",
+   "unit": "ft",
+   "price": 18,
+   "cat": "Systems",
+   "waste": 4
+  },
+  {
+   "id": "POLE",
+   "desc": "Light or catenary pole with foundation",
+   "unit": "ea",
+   "price": 4800,
+   "cat": "Systems",
+   "waste": 1
+  },
+  {
+   "id": "GRAIL",
+   "desc": "W-beam guardrail with posts",
+   "unit": "ft",
+   "price": 34,
+   "cat": "Safety",
+   "waste": 3
+  },
+  {
+   "id": "SIGN",
+   "desc": "Signs and supports, average",
+   "unit": "ea",
+   "price": 650,
+   "cat": "Safety",
+   "waste": 2
+  },
+  {
+   "id": "PMRK",
+   "desc": "Thermoplastic pavement marking",
+   "unit": "ft",
+   "price": 1.6,
+   "cat": "Safety",
+   "waste": 5
+  },
+  {
+   "id": "BARR",
+   "desc": "Temporary concrete barrier, rental and moves",
+   "unit": "ft",
+   "price": 14,
+   "cat": "Traffic",
+   "waste": 2
+  }
+ ],
+ "modules": [
+  {
+   "id": "RH-MOB",
+   "name": "Mobilization, field office and plant",
+   "rev": 1,
+   "category": "General",
+   "desc": "Mobilize the project: construction schedule and plans approved, field office and laydown, haul roads, survey control, and an on-site asphalt or concrete batch plant where the job sets one up.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "PLANT",
+     "prompt": "On-site asphalt or concrete batch plant?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "YARDS",
+     "prompt": "Laydown and staging yards",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Plans, permits and baseline schedule approved",
+     "dur": "80",
+     "crew": {
+      "GF": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Mobilize"
+    },
+    {
+     "id": "A020",
+     "desc": "Field office, laydown and staging yards ({YARDS})",
+     "dur": "YARDS*50",
+     "crew": {
+      "LB": "4",
+      "OP": "2",
+      "CP": "2"
+     },
+     "equip": {
+      "DZ": "1",
+      "FK": "1"
+     },
+     "phase": "Mobilize",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Survey control and construction staking",
+     "dur": "60",
+     "crew": {
+      "SV": "3"
+     },
+     "equip": {},
+     "phase": "Survey",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Set up and certify the batch plant",
+     "dur": "240",
+     "crew": {
+      "OP": "3",
+      "LB": "4",
+      "EL": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "LDR": "1"
+     },
+     "phase": "Plant",
+     "when": "PLANT",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Equipment move-in and project ready",
+     "dur": "30",
+     "crew": {
+      "TM": "4",
+      "OP": "2"
+     },
+     "equip": {},
+     "phase": "Mobilize",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400",
+    "R500",
+    "R600",
+    "R700",
+    "R000"
+   ]
+  },
+  {
+   "id": "RH-MOT",
+   "name": "Maintenance of traffic, by phase",
+   "rev": 1,
+   "category": "General",
+   "desc": "Set and maintain the traffic control for each construction phase: signs and portable message boards, temporary barrier and attenuators, lane shifts and crossovers, temporary striping, and the switch between phases.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "PH",
+     "prompt": "Traffic phases",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    },
+    {
+     "kind": "var",
+     "key": "BARR",
+     "prompt": "Temporary barrier per phase",
+     "type": "number",
+     "default": 3000,
+     "unit": "ft",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "scope",
+     "key": "XOVR",
+     "prompt": "Temporary crossovers or detour pavement?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "WIN",
+     "prompt": "Work window",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Daytime, full access",
+       "value": 1
+      },
+      {
+       "label": "Night or weekend closures",
+       "value": 1.3
+      },
+      {
+       "label": "Short closures or track-time windows",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Traffic control plans and approvals",
+     "dur": "60",
+     "crew": {
+      "GF": "1",
+      "TC": "1"
+     },
+     "equip": {},
+     "phase": "Plan"
+    },
+    {
+     "id": "A020",
+     "desc": "Advance signing and message boards",
+     "dur": "PH*10",
+     "crew": {
+      "TC": "3"
+     },
+     "equip": {
+      "ARB": "2",
+      "ATT": "1"
+     },
+     "phase": "Signing",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Build temporary crossovers and detour pavement",
+     "dur": "PH*40",
+     "crew": {
+      "OP": "3",
+      "LB": "4",
+      "PV": "4"
+     },
+     "equip": {
+      "MG": "1",
+      "PAV": "1",
+      "RLR": "1"
+     },
+     "phase": "Crossovers",
+     "when": "XOVR",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Set and move temporary barrier, attenuators and temporary striping",
+     "dur": "PH*BARR*0.004*WIN",
+     "crew": {
+      "TC": "4",
+      "OP": "2",
+      "PM": "2"
+     },
+     "equip": {
+      "C090": "1",
+      "ATT": "1",
+      "STRP": "1"
+     },
+     "phase": "Phase switch",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Final traffic switch and remove temporary traffic control",
+     "dur": "PH*8+20",
+     "crew": {
+      "TC": "4",
+      "PM": "2"
+     },
+     "equip": {
+      "ATT": "1",
+      "STRP": "1"
+     },
+     "phase": "Final switch",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BARR",
+     "qty": "PH*BARR"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400",
+    "R500",
+    "R600",
+    "R700",
+    "R000"
+   ]
+  },
+  {
+   "id": "RH-RRP",
+   "name": "Railroad protection and track-time windows",
+   "rev": 1,
+   "category": "General",
+   "desc": "Work on or near an operating railroad: the railroad\u2019s right-of-entry and insurance, roadway worker protection training, flagging protection (RWIC) for every shift near the track, and track-time windows booked with the dispatcher.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SHIFTS",
+     "prompt": "Shifts that need flagging protection",
+     "type": "number",
+     "default": 120,
+     "unit": "shifts",
+     "min": 1,
+     "max": 3000
+    },
+    {
+     "kind": "var",
+     "key": "WIND",
+     "prompt": "Track-time windows booked",
+     "type": "number",
+     "default": 20,
+     "unit": "ea",
+     "min": 0,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "LEAD",
+     "prompt": "Railroad review and right-of-entry lead time",
+     "type": "number",
+     "default": 400,
+     "unit": "h",
+     "min": 0,
+     "max": 4000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Right-of-entry, insurance and railroad plan review",
+     "dur": "LEAD",
+     "crew": {
+      "GF": "1"
+     },
+     "equip": {},
+     "phase": "Agreements"
+    },
+    {
+     "id": "A020",
+     "desc": "Roadway worker protection training and on-track safety plan",
+     "dur": "24",
+     "crew": {
+      "FM": "2",
+      "TFM": "1"
+     },
+     "equip": {},
+     "phase": "Training",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Book track-time windows with the dispatcher ({WIND})",
+     "dur": "max(20, WIND*2)",
+     "crew": {
+      "TFM": "1"
+     },
+     "equip": {},
+     "phase": "Windows",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Flagging protection ({SHIFTS} shifts)",
+     "dur": "SHIFTS*10/2",
+     "crew": {
+      "RWIC": "2"
+     },
+     "equip": {},
+     "phase": "Protection",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400",
+    "R500",
+    "R600",
+    "R700",
+    "R000"
+   ]
+  },
+  {
+   "id": "RH-ESC",
+   "name": "Erosion control and stormwater (SWPPP)",
+   "rev": 1,
+   "category": "General",
+   "desc": "The stormwater pollution prevention plan in the field: perimeter controls, inlet protection, sediment basins and construction entrances, weekly and rain-event inspections, and removal when the site is stabilized.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Disturbed area",
+     "type": "number",
+     "default": 60,
+     "unit": "acre",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "BASIN",
+     "prompt": "Sediment basins",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Perimeter controls, inlet protection and entrances",
+     "dur": "ACRES*1.2",
+     "crew": {
+      "LB": "4",
+      "OP": "1",
+      "EI": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Install"
+    },
+    {
+     "id": "A020",
+     "desc": "Sediment basins ({BASIN})",
+     "dur": "BASIN*40",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1",
+      "DZ": "1"
+     },
+     "phase": "Install",
+     "when": "BASIN>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Inspections and maintenance through construction",
+     "dur": "ACRES*2",
+     "crew": {
+      "EI": "1",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Maintain",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Remove temporary controls after stabilization",
+     "dur": "ACRES*0.5",
+     "crew": {
+      "LB": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Remove",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "SILT",
+     "qty": "ACRES*220"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400",
+    "R500",
+    "R600",
+    "R700",
+    "R000"
+   ]
+  },
+  {
+   "id": "RH-CLR",
+   "name": "Clearing, grubbing and removals",
+   "rev": 1,
+   "category": "Earthwork",
+   "desc": "Clear and grub the right-of-way, remove existing pavement, curb, structures and fencing, and haul the debris off site.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Area to clear and grub",
+     "type": "number",
+     "default": 40,
+     "unit": "acre",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "PAVE",
+     "prompt": "Existing pavement to remove",
+     "type": "number",
+     "default": 20000,
+     "unit": "sy",
+     "min": 0,
+     "max": 2000000
+    },
+    {
+     "kind": "scope",
+     "key": "STRUCT",
+     "prompt": "Existing structures or culverts to demolish?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Clear and grub ({ACRES} acres)",
+     "dur": "ACRES*6",
+     "crew": {
+      "OP": "3",
+      "LB": "3"
+     },
+     "equip": {
+      "DZ": "1",
+      "EXC": "1",
+      "LDR": "1"
+     },
+     "phase": "Clear"
+    },
+    {
+     "id": "A020",
+     "desc": "Remove pavement, curb and sidewalk",
+     "dur": "PAVE*0.004",
+     "crew": {
+      "OP": "3",
+      "LB": "3",
+      "TM": "4"
+     },
+     "equip": {
+      "EXC": "1",
+      "LDR": "1",
+      "ART": "2"
+     },
+     "phase": "Remove",
+     "when": "PAVE>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Demolish existing structures and culverts",
+     "dur": "160",
+     "crew": {
+      "OP": "3",
+      "LB": "4",
+      "RG": "2"
+     },
+     "equip": {
+      "EXC": "2",
+      "C090": "1"
+     },
+     "phase": "Demolish",
+     "when": "STRUCT",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-EXC",
+   "name": "Roadway excavation and embankment",
+   "rev": 1,
+   "category": "Earthwork",
+   "desc": "Mass earthwork: cut, haul, place and compact embankment in lifts with density tests, borrow where cut and fill do not balance, and fine grading to subgrade.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CUT",
+     "prompt": "Roadway excavation",
+     "type": "number",
+     "default": 120000,
+     "unit": "cy",
+     "min": 0,
+     "max": 10000000
+    },
+    {
+     "kind": "var",
+     "key": "FILL",
+     "prompt": "Embankment",
+     "type": "number",
+     "default": 150000,
+     "unit": "cy",
+     "min": 0,
+     "max": 10000000
+    },
+    {
+     "kind": "scope",
+     "key": "SOIL",
+     "prompt": "Ground",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Common earth",
+       "value": 1
+      },
+      {
+       "label": "Wet or clay soils",
+       "value": 1.3
+      },
+      {
+       "label": "Rock excavation",
+       "value": 2.0
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "HAUL",
+     "prompt": "Haul method",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Scrapers, short haul",
+       "value": 1
+      },
+      {
+       "label": "Excavators and articulated trucks",
+       "value": 1.2
+      },
+      {
+       "label": "Highway trucks, long haul",
+       "value": 1.6
+      }
+     ],
+     "default": 1.2
+    },
+    {
+     "kind": "var",
+     "key": "FLEET",
+     "prompt": "Earthmoving spreads",
+     "type": "number",
+     "default": 2,
+     "unit": "spreads",
+     "min": 1,
+     "max": 10
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Roadway excavation ({CUT} cy)",
+     "dur": "CUT*0.004*SOIL*HAUL/FLEET",
+     "crew": {
+      "OP": "FLEET*4",
+      "LB": "2",
+      "TM": "FLEET*3"
+     },
+     "equip": {
+      "EXC": "FLEET",
+      "ART": "FLEET*3",
+      "DZ": "FLEET"
+     },
+     "phase": "Cut",
+     "when": "CUT>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Borrow for the imbalance",
+     "dur": "(FILL-CUT)*0.003*HAUL/FLEET",
+     "crew": {
+      "OP": "FLEET*2",
+      "TM": "FLEET*4"
+     },
+     "equip": {
+      "LDR": "FLEET",
+      "ART": "FLEET*3"
+     },
+     "phase": "Borrow",
+     "when": "FILL>CUT",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Place and compact embankment ({FILL} cy)",
+     "dur": "FILL*0.0032/FLEET",
+     "crew": {
+      "OP": "FLEET*3",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "DZ": "FLEET",
+      "RLR": "FLEET",
+      "WTR": "1"
+     },
+     "phase": "Fill",
+     "when": "FILL>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Fine grade to subgrade",
+     "dur": "(CUT+FILL)*0.0004",
+     "crew": {
+      "OP": "2",
+      "SV": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "MG": "1",
+      "RLR": "1"
+     },
+     "phase": "Fine grade",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BORROW",
+     "qty": "max(0, FILL-CUT)",
+     "when": "FILL>CUT"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-BASE",
+   "name": "Subgrade stabilization and aggregate base",
+   "rev": 1,
+   "category": "Earthwork",
+   "desc": "Prepare the pavement foundation: lime or cement treated subgrade, aggregate base course in lifts, and proof rolling and density acceptance before paving.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SY",
+     "prompt": "Pavement area",
+     "type": "number",
+     "default": 60000,
+     "unit": "sy",
+     "min": 0,
+     "max": 5000000
+    },
+    {
+     "kind": "scope",
+     "key": "TREAT",
+     "prompt": "Lime or cement treated subgrade?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "DEPTH",
+     "prompt": "Aggregate base depth",
+     "type": "number",
+     "default": 10,
+     "unit": "in",
+     "min": 0,
+     "max": 24
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Treat and mix subgrade",
+     "dur": "SY*0.0012",
+     "crew": {
+      "OP": "4",
+      "LB": "3",
+      "QC": "1"
+     },
+     "equip": {
+      "MG": "1",
+      "RLR": "1",
+      "WTR": "1"
+     },
+     "phase": "Stabilize",
+     "when": "TREAT"
+    },
+    {
+     "id": "A020",
+     "desc": "Aggregate base course ({DEPTH} in)",
+     "dur": "SY*DEPTH*0.00012",
+     "crew": {
+      "OP": "4",
+      "TM": "4",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "MG": "1",
+      "RLR": "1",
+      "WTR": "1"
+     },
+     "phase": "Base",
+     "when": "DEPTH>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Proof roll and density acceptance",
+     "dur": "max(10, SY*0.0002)",
+     "crew": {
+      "QC": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "PRL": "1"
+     },
+     "phase": "Acceptance",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "LIME",
+     "qty": "SY*0.012",
+     "when": "TREAT"
+    },
+    {
+     "id": "M020",
+     "item": "ABC",
+     "qty": "SY*DEPTH*0.057"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-DRN",
+   "name": "Storm drainage: pipe, inlets and manholes",
+   "rev": 1,
+   "category": "Drainage",
+   "desc": "Storm sewer and cross drains: trench and shore, bed and lay pipe, inlets, manholes and headwalls, backfill in lifts with density tests, and the mandrel and camera inspection.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Storm pipe",
+     "type": "number",
+     "default": 6000,
+     "unit": "ft",
+     "min": 0,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "STR",
+     "prompt": "Inlets, manholes and headwalls",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "DEEP",
+     "prompt": "Average depth",
+     "type": "number",
+     "default": 8,
+     "unit": "ft",
+     "min": 3,
+     "max": 30
+    },
+    {
+     "kind": "var",
+     "key": "CREWS",
+     "prompt": "Pipe crews",
+     "type": "number",
+     "default": 2,
+     "unit": "crews",
+     "min": 1,
+     "max": 10
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Trench, shore and lay pipe ({LF} ft)",
+     "dur": "LF*0.06*max(1, DEEP/8)/CREWS",
+     "crew": {
+      "PL": "CREWS*2",
+      "OP": "CREWS*2",
+      "LB": "CREWS*2"
+     },
+     "equip": {
+      "EXC": "CREWS",
+      "LDR": "CREWS"
+     },
+     "phase": "Pipe"
+    },
+    {
+     "id": "A020",
+     "desc": "Set inlets, manholes and headwalls ({STR})",
+     "dur": "STR*6/CREWS",
+     "crew": {
+      "PL": "CREWS",
+      "OP": "CREWS",
+      "LB": "CREWS*2",
+      "CF": "1"
+     },
+     "equip": {
+      "EXC": "CREWS"
+     },
+     "phase": "Structures",
+     "when": "STR>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Backfill and density tests",
+     "dur": "LF*0.02/CREWS",
+     "crew": {
+      "OP": "CREWS",
+      "LB": "CREWS*2",
+      "QC": "1"
+     },
+     "equip": {
+      "LDR": "CREWS",
+      "RLR": "CREWS"
+     },
+     "phase": "Backfill",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Mandrel and camera inspection",
+     "dur": "max(10, LF*0.002)",
+     "crew": {
+      "QC": "1",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Inspect",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "RCP",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "INLET",
+     "qty": "STR"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-BOX",
+   "name": "Box culverts",
+   "rev": 1,
+   "category": "Drainage",
+   "desc": "Precast or cast-in-place box culverts under the roadway or track: diversion and dewatering, excavation and bedding, set or form and pour the barrels, wingwalls and headwalls, and backfill.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Culverts",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 50
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Barrel length per culvert",
+     "type": "number",
+     "default": 120,
+     "unit": "ft",
+     "min": 20,
+     "max": 600
+    },
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "Construction",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Precast sections",
+       "value": 1
+      },
+      {
+       "label": "Cast-in-place",
+       "value": 2.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "DIV",
+     "prompt": "Stream diversion and dewatering?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Stream diversion and dewatering",
+     "dur": "N*40",
+     "crew": {
+      "OP": "2",
+      "LB": "3",
+      "EI": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Diversion",
+     "when": "DIV"
+    },
+    {
+     "id": "A020",
+     "desc": "Excavate and bedding",
+     "dur": "N*LF*0.25",
+     "crew": {
+      "OP": "2",
+      "LB": "3"
+     },
+     "equip": {
+      "EXC": "1",
+      "LDR": "1"
+     },
+     "phase": "Excavate",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set or form and pour barrels",
+     "dur": "N*LF*0.4*TYPE",
+     "crew": {
+      "CP": "4",
+      "RB": "2",
+      "CF": "2",
+      "RG": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Barrels",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Wingwalls and headwalls",
+     "dur": "N*60",
+     "crew": {
+      "CP": "4",
+      "RB": "2",
+      "CF": "2"
+     },
+     "equip": {
+      "CPM": "1"
+     },
+     "phase": "Walls",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Backfill and restore the channel",
+     "dur": "N*30",
+     "crew": {
+      "OP": "2",
+      "LB": "3",
+      "EI": "1"
+     },
+     "equip": {
+      "EXC": "1",
+      "RLR": "1"
+     },
+     "phase": "Backfill",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PBOX",
+     "qty": "N*LF",
+     "when": "TYPE<2"
+    },
+    {
+     "id": "M020",
+     "item": "CONC",
+     "qty": "N*LF*1.4",
+     "when": "TYPE>=2"
+    },
+    {
+     "id": "M030",
+     "item": "REBAR",
+     "qty": "N*LF*0.14",
+     "when": "TYPE>=2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-WALL",
+   "name": "Retaining walls (MSE or cast-in-place)",
+   "rev": 1,
+   "category": "Drainage",
+   "desc": "Retaining walls at ramps and bridge approaches: leveling pad, panels with soil reinforcement and select fill in lifts (MSE), or footing and stem walls (cast-in-place), with coping and drainage.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Wall face area",
+     "type": "number",
+     "default": 12000,
+     "unit": "sf",
+     "min": 0,
+     "max": 500000
+    },
+    {
+     "kind": "scope",
+     "key": "TYPE",
+     "prompt": "Wall type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "MSE panels",
+       "value": 1
+      },
+      {
+       "label": "Cast-in-place cantilever",
+       "value": 2.2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREWS",
+     "prompt": "Wall crews",
+     "type": "number",
+     "default": 1,
+     "unit": "crews",
+     "min": 1,
+     "max": 6
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Excavate and leveling pad",
+     "dur": "SF*0.004",
+     "crew": {
+      "OP": "2",
+      "LB": "2",
+      "CF": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Foundation"
+    },
+    {
+     "id": "A020",
+     "desc": "Erect panels or form and pour stems",
+     "dur": "SF*0.012*TYPE/CREWS",
+     "crew": {
+      "CP": "CREWS*2",
+      "RB": "CREWS",
+      "LB": "CREWS*3",
+      "RG": "CREWS"
+     },
+     "equip": {
+      "C090": "CREWS"
+     },
+     "phase": "Wall",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Select backfill and straps in lifts",
+     "dur": "SF*0.008/CREWS",
+     "crew": {
+      "OP": "CREWS*2",
+      "LB": "CREWS*2",
+      "QC": "1"
+     },
+     "equip": {
+      "LDR": "CREWS",
+      "RLR": "CREWS"
+     },
+     "phase": "Backfill",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Coping, drainage and wall finish",
+     "dur": "SF*0.002",
+     "crew": {
+      "CP": "2",
+      "CF": "2"
+     },
+     "equip": {},
+     "phase": "Finish",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "MSE",
+     "qty": "SF",
+     "when": "TYPE<2"
+    },
+    {
+     "id": "M020",
+     "item": "CONC",
+     "qty": "SF*0.05",
+     "when": "TYPE>=2"
+    },
+    {
+     "id": "M030",
+     "item": "REBAR",
+     "qty": "SF*0.004",
+     "when": "TYPE>=2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-UTIL",
+   "name": "Utility relocations and adjustments",
+   "rev": 1,
+   "category": "Drainage",
+   "desc": "Water, sewer, gas, power and telecom conflicts: coordinate the owners\u2019 own crews, relocate the lines in the contract, adjust valves and manholes to grade, and keep the relocations off the critical path.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Water and sewer relocated by the contractor",
+     "type": "number",
+     "default": 2500,
+     "unit": "ft",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "OWN",
+     "prompt": "Relocations by utility owners",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "WAIT",
+     "prompt": "Owner relocation duration (each)",
+     "type": "number",
+     "default": 120,
+     "unit": "h",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "ADJ",
+     "prompt": "Valves and manholes adjusted to grade",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 2000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Utility coordination and locates",
+     "dur": "40",
+     "crew": {
+      "GF": "1",
+      "SV": "2"
+     },
+     "equip": {},
+     "phase": "Coordinate"
+    },
+    {
+     "id": "A020",
+     "desc": "Relocations by the utility owners ({OWN})",
+     "dur": "OWN*WAIT/2",
+     "crew": {},
+     "equip": {},
+     "phase": "By others",
+     "when": "OWN>0",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Relocate water and sewer ({LF} ft)",
+     "dur": "LF*0.08",
+     "crew": {
+      "PL": "2",
+      "OP": "2",
+      "LB": "3",
+      "QC": "1"
+     },
+     "equip": {
+      "EXC": "1",
+      "LDR": "1"
+     },
+     "phase": "Relocate",
+     "when": "LF>0",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Adjust valves and manholes to grade",
+     "dur": "ADJ*2",
+     "crew": {
+      "CF": "1",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Adjust",
+     "when": "ADJ>0",
+     "preds": []
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "RCP",
+     "qty": "LF*0.4",
+     "when": "LF>0"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R500"
+   ]
+  },
+  {
+   "id": "RH-HMA",
+   "name": "Asphalt paving (mill and overlay or full depth)",
+   "rev": 1,
+   "category": "Paving",
+   "desc": "Hot-mix asphalt by course: mill and patch, tack, base, intermediate and surface courses with a material transfer vehicle, joint density and ride acceptance, and the shoulders.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TON",
+     "prompt": "Asphalt quantity",
+     "type": "number",
+     "default": 30000,
+     "unit": "ton",
+     "min": 0,
+     "max": 2000000
+    },
+    {
+     "kind": "scope",
+     "key": "MILL",
+     "prompt": "Mill existing pavement first?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "MILLSY",
+     "prompt": "Milling area",
+     "type": "number",
+     "default": 50000,
+     "unit": "sy",
+     "min": 0,
+     "max": 5000000,
+     "show_if": "MILL"
+    },
+    {
+     "kind": "var",
+     "key": "RATE",
+     "prompt": "Paver production",
+     "type": "number",
+     "default": 1800,
+     "unit": "ton per shift",
+     "min": 300,
+     "max": 5000
+    },
+    {
+     "kind": "scope",
+     "key": "WIN",
+     "prompt": "Work window",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Daytime, full access",
+       "value": 1
+      },
+      {
+       "label": "Night or weekend closures",
+       "value": 1.3
+      },
+      {
+       "label": "Short closures or track-time windows",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Mill and patch ({MILLSY} sy)",
+     "dur": "MILLSY*0.0016*WIN",
+     "crew": {
+      "OP": "2",
+      "TM": "6",
+      "LB": "3",
+      "TC": "2"
+     },
+     "equip": {
+      "MIL": "1",
+      "LDR": "1",
+      "ATT": "1"
+     },
+     "phase": "Mill",
+     "when": "MILL"
+    },
+    {
+     "id": "A020",
+     "desc": "Tack and base course",
+     "dur": "TON*0.45/RATE*10*WIN",
+     "crew": {
+      "PV": "6",
+      "OP": "4",
+      "TM": "8",
+      "QC": "1",
+      "TC": "2"
+     },
+     "equip": {
+      "PAV": "1",
+      "MTV": "1",
+      "RLR": "2",
+      "PRL": "1"
+     },
+     "phase": "Base course",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Intermediate course",
+     "dur": "TON*0.3/RATE*10*WIN",
+     "crew": {
+      "PV": "6",
+      "OP": "4",
+      "TM": "8",
+      "QC": "1",
+      "TC": "2"
+     },
+     "equip": {
+      "PAV": "1",
+      "MTV": "1",
+      "RLR": "2",
+      "PRL": "1"
+     },
+     "phase": "Intermediate course",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Surface course",
+     "dur": "TON*0.25/RATE*10*WIN",
+     "crew": {
+      "PV": "6",
+      "OP": "4",
+      "TM": "8",
+      "QC": "1",
+      "TC": "2"
+     },
+     "equip": {
+      "PAV": "1",
+      "MTV": "1",
+      "RLR": "2",
+      "PRL": "1"
+     },
+     "phase": "Surface course",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Shoulders, joint density and ride acceptance",
+     "dur": "max(20, TON*0.0015)",
+     "crew": {
+      "PV": "3",
+      "OP": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "PAV": "1",
+      "RLR": "1"
+     },
+     "phase": "Acceptance",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "HMA",
+     "qty": "TON"
+    },
+    {
+     "id": "M020",
+     "item": "TACK",
+     "qty": "TON*1.6"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-PCC",
+   "name": "Concrete paving (slipform)",
+   "rev": 1,
+   "category": "Paving",
+   "desc": "Jointed plain or continuously reinforced concrete pavement: trim the base, set dowel baskets and tie bars, slipform pave, texture and cure, saw and seal the joints, and thickness and smoothness acceptance.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SY",
+     "prompt": "Concrete pavement",
+     "type": "number",
+     "default": 40000,
+     "unit": "sy",
+     "min": 0,
+     "max": 3000000
+    },
+    {
+     "kind": "var",
+     "key": "IN",
+     "prompt": "Thickness",
+     "type": "number",
+     "default": 11,
+     "unit": "in",
+     "min": 6,
+     "max": 16
+    },
+    {
+     "kind": "var",
+     "key": "RATE",
+     "prompt": "Paver production",
+     "type": "number",
+     "default": 3000,
+     "unit": "sy per shift",
+     "min": 500,
+     "max": 8000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Trim base and set string line",
+     "dur": "SY*0.0006",
+     "crew": {
+      "OP": "2",
+      "SV": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "MG": "1"
+     },
+     "phase": "Base"
+    },
+    {
+     "id": "A020",
+     "desc": "Dowel baskets and tie bars",
+     "dur": "SY*0.0008",
+     "crew": {
+      "LB": "4",
+      "RB": "2"
+     },
+     "equip": {},
+     "phase": "Dowels",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Slipform pave",
+     "dur": "SY/RATE*10*IN/11",
+     "crew": {
+      "PV": "8",
+      "CF": "4",
+      "OP": "3",
+      "TM": "10",
+      "QC": "1"
+     },
+     "equip": {
+      "SLP": "1",
+      "LDR": "1"
+     },
+     "phase": "Pave",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Texture and cure",
+     "dur": "SY/RATE*10*IN/11",
+     "crew": {
+      "CF": "2",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Cure",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 2
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Saw and seal joints",
+     "dur": "SY*0.0007",
+     "crew": {
+      "LB": "3",
+      "CF": "1"
+     },
+     "equip": {
+      "SAW": "2"
+     },
+     "phase": "Joints",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 24
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Thickness cores and smoothness acceptance",
+     "dur": "max(10, SY*0.0002)",
+     "crew": {
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Acceptance",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PCC",
+     "qty": "SY*IN/36/27*9"
+    },
+    {
+     "id": "M020",
+     "item": "DOWEL",
+     "qty": "SY/15"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-CURB",
+   "name": "Curb, gutter, sidewalk and median barrier",
+   "rev": 1,
+   "category": "Paving",
+   "desc": "Machine-placed curb and gutter, sidewalks and ramps, and slipformed or cast-in-place concrete median barrier.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "CG",
+     "prompt": "Curb and gutter",
+     "type": "number",
+     "default": 8000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "SW",
+     "prompt": "Sidewalk and ramps",
+     "type": "number",
+     "default": 3000,
+     "unit": "sy",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "BARR",
+     "prompt": "Concrete median barrier",
+     "type": "number",
+     "default": 5000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Curb and gutter ({CG} ft)",
+     "dur": "CG*0.012",
+     "crew": {
+      "CF": "3",
+      "LB": "3",
+      "OP": "1"
+     },
+     "equip": {
+      "SLP": "1"
+     },
+     "phase": "Curb",
+     "when": "CG>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Sidewalk and ramps",
+     "dur": "SW*0.03",
+     "crew": {
+      "CF": "3",
+      "CP": "2",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Sidewalk",
+     "when": "SW>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Slipform median barrier",
+     "dur": "BARR*0.01",
+     "crew": {
+      "CF": "3",
+      "RB": "2",
+      "LB": "3",
+      "OP": "1"
+     },
+     "equip": {
+      "SLP": "1"
+     },
+     "phase": "Barrier",
+     "when": "BARR>0",
+     "preds": []
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC",
+     "qty": "CG*0.06+SW*0.11+BARR*0.2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-FDN",
+   "name": "Bridge foundations: piles and drilled shafts",
+   "rev": 1,
+   "category": "Structures",
+   "desc": "Deep foundations for abutments and bents: driven steel or concrete piles with test piles and dynamic monitoring, or drilled shafts with casing, reinforcing cages, tremie concrete and integrity testing.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Foundation type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Driven piles",
+       "value": 1
+      },
+      {
+       "label": "Drilled shafts",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Piles or shafts",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 1,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "LEN",
+     "prompt": "Average length",
+     "type": "number",
+     "default": 70,
+     "unit": "ft",
+     "min": 10,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "WATER",
+     "prompt": "In water or on a work trestle?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Work trestle or cofferdam access",
+     "dur": "160",
+     "crew": {
+      "PD": "4",
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "C250": "1",
+      "PIL": "1"
+     },
+     "phase": "Access",
+     "when": "WATER"
+    },
+    {
+     "id": "A020",
+     "desc": "Test piles and dynamic monitoring",
+     "dur": "40",
+     "crew": {
+      "PD": "4",
+      "OP": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "PIL": "1"
+     },
+     "phase": "Test piles",
+     "when": "KIND<2",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Drive production piles ({N})",
+     "dur": "N*LEN*0.03",
+     "crew": {
+      "PD": "4",
+      "OP": "1",
+      "LB": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "PIL": "1"
+     },
+     "phase": "Drive",
+     "when": "KIND<2",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Drill, cage and pour shafts ({N})",
+     "dur": "N*LEN*0.12",
+     "crew": {
+      "OP": "2",
+      "RB": "3",
+      "LB": "3",
+      "CF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "DRL": "1",
+      "C090": "1",
+      "CPM": "1"
+     },
+     "phase": "Drill",
+     "when": "KIND>=2",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Integrity testing and pile cut-off",
+     "dur": "N*1.5",
+     "crew": {
+      "QC": "1",
+      "PD": "2"
+     },
+     "equip": {},
+     "phase": "Accept",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PILE",
+     "qty": "N*LEN",
+     "when": "KIND<2"
+    },
+    {
+     "id": "M020",
+     "item": "CONC",
+     "qty": "N*LEN*0.35",
+     "when": "KIND>=2"
+    },
+    {
+     "id": "M030",
+     "item": "REBAR",
+     "qty": "N*LEN*0.012",
+     "when": "KIND>=2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-SUBS",
+   "name": "Bridge substructure: footings, columns, caps and abutments",
+   "rev": 1,
+   "category": "Structures",
+   "desc": "Footings and pile caps, columns, bent caps and abutments with backwalls: forms, reinforcing, embeds and bearing seats, concrete, cure and strip.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "BENTS",
+     "prompt": "Bents and abutments",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 2,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CY",
+     "prompt": "Substructure concrete",
+     "type": "number",
+     "default": 1800,
+     "unit": "cy",
+     "min": 50,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREWS",
+     "prompt": "Form crews",
+     "type": "number",
+     "default": 2,
+     "unit": "crews",
+     "min": 1,
+     "max": 10
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Footings and pile caps",
+     "dur": "CY*0.35*0.6/CREWS",
+     "crew": {
+      "CP": "CREWS*3",
+      "RB": "CREWS*2",
+      "CF": "2",
+      "LB": "CREWS*2"
+     },
+     "equip": {
+      "C090": "1",
+      "CPM": "1"
+     },
+     "phase": "Footings"
+    },
+    {
+     "id": "A020",
+     "desc": "Columns",
+     "dur": "CY*0.25*1.1/CREWS",
+     "crew": {
+      "CP": "CREWS*3",
+      "RB": "CREWS*2",
+      "CF": "2",
+      "LB": "CREWS"
+     },
+     "equip": {
+      "C090": "1",
+      "CPM": "1"
+     },
+     "phase": "Columns",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Bent caps and abutments with backwalls",
+     "dur": "CY*0.4*1.2/CREWS",
+     "crew": {
+      "CP": "CREWS*4",
+      "RB": "CREWS*2",
+      "CF": "2",
+      "LB": "CREWS*2"
+     },
+     "equip": {
+      "C090": "1",
+      "CPM": "1"
+     },
+     "phase": "Caps",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Bearing seats, survey and release for girders",
+     "dur": "BENTS*6",
+     "crew": {
+      "SV": "2",
+      "CF": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Release",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC",
+     "qty": "CY"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "CY*0.085"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-GIRD",
+   "name": "Girder erection",
+   "rev": 1,
+   "category": "Structures",
+   "desc": "Set precast concrete or steel girders: bearings, erection under lane or track closures with the crane picks and temporary bracing, diaphragms and cross frames, bolting, and the release to deck work.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Girders",
+     "type": "number",
+     "default": 40,
+     "unit": "ea",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Girder type",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Precast concrete",
+       "value": 1
+      },
+      {
+       "label": "Steel plate girders",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "NIGHTS",
+     "prompt": "Closures for the picks",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "WIN",
+     "prompt": "Work window",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Daytime, full access",
+       "value": 1
+      },
+      {
+       "label": "Night or weekend closures",
+       "value": 1.3
+      },
+      {
+       "label": "Short closures or track-time windows",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Bearings and anchor bolts",
+     "dur": "N*1.5",
+     "crew": {
+      "IW": "2",
+      "SV": "1"
+     },
+     "equip": {},
+     "phase": "Bearings"
+    },
+    {
+     "id": "A020",
+     "desc": "Crane set-up and closures ({NIGHTS})",
+     "dur": "max(10, NIGHTS*3)",
+     "crew": {
+      "RG": "2",
+      "OP": "2",
+      "TC": "4"
+     },
+     "equip": {
+      "C250": "1",
+      "ATT": "1"
+     },
+     "phase": "Set-up",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Erect girders ({N})",
+     "dur": "N*3*KIND*WIN",
+     "crew": {
+      "IW": "4",
+      "RG": "3",
+      "OP": "2",
+      "TC": "4"
+     },
+     "equip": {
+      "C250": "1",
+      "C090": "1",
+      "ATT": "1"
+     },
+     "phase": "Erect",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Diaphragms, cross frames and bolting",
+     "dur": "N*4*KIND",
+     "crew": {
+      "IW": "4"
+     },
+     "equip": {
+      "ML": "2"
+     },
+     "phase": "Bracing",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Survey and release to deck",
+     "dur": "max(10, N*0.3)",
+     "crew": {
+      "SV": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Release",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BRG",
+     "qty": "N*2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-DECK",
+   "name": "Bridge deck and barrier",
+   "rev": 1,
+   "category": "Structures",
+   "desc": "Deck forms and overhangs, reinforcing, the deck pour with the finishing machine and curing, then barrier rail, expansion joints, approach slabs and grooving.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Deck area",
+     "type": "number",
+     "default": 24000,
+     "unit": "sf",
+     "min": 500,
+     "max": 2000000
+    },
+    {
+     "kind": "var",
+     "key": "POURS",
+     "prompt": "Deck pours",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "BR",
+     "prompt": "Barrier rail",
+     "type": "number",
+     "default": 1400,
+     "unit": "ft",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "CREWS",
+     "prompt": "Deck crews",
+     "type": "number",
+     "default": 2,
+     "unit": "crews",
+     "min": 1,
+     "max": 8
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Overhangs and deck forms",
+     "dur": "SF*0.012/CREWS",
+     "crew": {
+      "CP": "CREWS*4",
+      "LB": "CREWS*2"
+     },
+     "equip": {
+      "C090": "1",
+      "ML": "1"
+     },
+     "phase": "Forms"
+    },
+    {
+     "id": "A020",
+     "desc": "Deck reinforcing",
+     "dur": "SF*0.008/CREWS",
+     "crew": {
+      "RB": "CREWS*4"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Rebar",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Deck pours ({POURS}) and finish",
+     "dur": "POURS*14",
+     "crew": {
+      "CF": "6",
+      "LB": "6",
+      "CP": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "CPM": "1"
+     },
+     "phase": "Pour",
+     "preds": [
+      "A010",
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Wet cure and strip forms",
+     "dur": "POURS*24+SF*0.002",
+     "crew": {
+      "LB": "3",
+      "CP": "2"
+     },
+     "equip": {},
+     "phase": "Cure",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Barrier rail, joints and approach slabs",
+     "dur": "BR*0.06+60",
+     "crew": {
+      "CP": "3",
+      "RB": "2",
+      "CF": "3",
+      "LB": "2"
+     },
+     "equip": {
+      "CPM": "1"
+     },
+     "phase": "Barrier",
+     "when": "BR>0",
+     "preds": [
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Grooving, ride and deck acceptance",
+     "dur": "max(10, SF*0.0006)",
+     "crew": {
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Accept",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC",
+     "qty": "SF*0.03+BR*0.12"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "SF*0.0035"
+    },
+    {
+     "id": "M030",
+     "item": "JNT",
+     "qty": "SF/1000*8"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-BRREH",
+   "name": "Bridge rehabilitation and deck overlay",
+   "rev": 1,
+   "category": "Structures",
+   "desc": "Repair an existing bridge under traffic: hydrodemolition or scarifying, partial and full-depth deck repairs, joint replacement, latex or polymer overlay, bearing and substructure repairs, by stage.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SY",
+     "prompt": "Deck overlay area",
+     "type": "number",
+     "default": 3000,
+     "unit": "sy",
+     "min": 0,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "REP",
+     "prompt": "Deck repair area",
+     "type": "number",
+     "default": 10,
+     "unit": "%",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "JNT",
+     "prompt": "Expansion joints replaced",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "STAGES",
+     "prompt": "Traffic stages",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 8
+    },
+    {
+     "kind": "scope",
+     "key": "WIN",
+     "prompt": "Work window",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Daytime, full access",
+       "value": 1
+      },
+      {
+       "label": "Night or weekend closures",
+       "value": 1.3
+      },
+      {
+       "label": "Short closures or track-time windows",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Scarify or hydrodemolish",
+     "dur": "SY*0.012*WIN",
+     "crew": {
+      "OP": "2",
+      "LB": "3",
+      "TC": "2"
+     },
+     "equip": {
+      "MIL": "1",
+      "ATT": "1"
+     },
+     "phase": "Remove"
+    },
+    {
+     "id": "A020",
+     "desc": "Partial and full-depth repairs",
+     "dur": "SY*REP/100*0.25*WIN",
+     "crew": {
+      "CF": "3",
+      "RB": "1",
+      "LB": "3"
+     },
+     "equip": {},
+     "phase": "Repair",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Replace expansion joints ({JNT})",
+     "dur": "JNT*30*WIN",
+     "crew": {
+      "IW": "2",
+      "CF": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Joints",
+     "when": "JNT>0",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Overlay placement and cure",
+     "dur": "STAGES*20+SY*0.006",
+     "crew": {
+      "CF": "4",
+      "LB": "4",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Overlay",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Stage switch and reopen to traffic",
+     "dur": "STAGES*10",
+     "crew": {
+      "TC": "4",
+      "PM": "2"
+     },
+     "equip": {
+      "ATT": "1",
+      "STRP": "1"
+     },
+     "phase": "Reopen",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "OVL",
+     "qty": "SY"
+    },
+    {
+     "id": "M020",
+     "item": "JNT",
+     "qty": "JNT*40",
+     "when": "JNT>0"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R300",
+    "R400"
+   ]
+  },
+  {
+   "id": "RH-TBED",
+   "name": "Track bed and subballast",
+   "rev": 1,
+   "category": "Rail",
+   "desc": "Prepare the track bed for new or realigned track: roadbed grading to the template, ditches and under-track drainage, geotextile, subballast in lifts with density tests, and bottom ballast.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TF",
+     "prompt": "Track length",
+     "type": "number",
+     "default": 12000,
+     "unit": "track-ft",
+     "min": 0,
+     "max": 500000
+    },
+    {
+     "kind": "scope",
+     "key": "SOIL",
+     "prompt": "Ground",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Common earth",
+       "value": 1
+      },
+      {
+       "label": "Wet or clay soils",
+       "value": 1.3
+      },
+      {
+       "label": "Rock excavation",
+       "value": 2.0
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "UTD",
+     "prompt": "Under-track drains or culvert extensions?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Grade roadbed to the template and cut ditches",
+     "dur": "TF*0.012*SOIL",
+     "crew": {
+      "OP": "3",
+      "LB": "2",
+      "SV": "1"
+     },
+     "equip": {
+      "DZ": "1",
+      "EXC": "1",
+      "MG": "1"
+     },
+     "phase": "Roadbed"
+    },
+    {
+     "id": "A020",
+     "desc": "Under-track drains and culvert extensions",
+     "dur": "TF*0.003",
+     "crew": {
+      "PL": "2",
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Drainage",
+     "when": "UTD",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Geotextile and subballast in lifts",
+     "dur": "TF*0.008",
+     "crew": {
+      "OP": "3",
+      "TM": "4",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "MG": "1",
+      "RLR": "1",
+      "WTR": "1"
+     },
+     "phase": "Subballast",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Bottom ballast",
+     "dur": "TF*0.004",
+     "crew": {
+      "OP": "2",
+      "TM": "3",
+      "TK": "2"
+     },
+     "equip": {
+      "LDR": "1",
+      "RLR": "1"
+     },
+     "phase": "Ballast",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "SBAL",
+     "qty": "TF*1.1"
+    },
+    {
+     "id": "M020",
+     "item": "BAL",
+     "qty": "TF*0.6"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600"
+   ]
+  },
+  {
+   "id": "RH-TRACK",
+   "name": "New track construction",
+   "rev": 1,
+   "category": "Rail",
+   "desc": "Build new track on a prepared bed: distribute and space ties, thread and fasten rail, field welds, unload ballast from the ballast train, surface, line and tamp in lifts, regulate, then destress and the final track inspection.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TF",
+     "prompt": "Track length",
+     "type": "number",
+     "default": 12000,
+     "unit": "track-ft",
+     "min": 0,
+     "max": 500000
+    },
+    {
+     "kind": "scope",
+     "key": "TIE",
+     "prompt": "Ties",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Timber",
+       "value": 1
+      },
+      {
+       "label": "Concrete",
+       "value": 1.15
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "RAIL",
+     "prompt": "Rail",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Continuous welded rail (CWR)",
+       "value": 1
+      },
+      {
+       "label": "Jointed rail",
+       "value": 1.2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "GANGS",
+     "prompt": "Track gangs",
+     "type": "number",
+     "default": 1,
+     "unit": "gangs",
+     "min": 1,
+     "max": 6
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Distribute and space ties",
+     "dur": "TF*0.004*TIE/GANGS",
+     "crew": {
+      "TK": "GANGS*6",
+      "OP": "GANGS*2",
+      "TFM": "GANGS"
+     },
+     "equip": {
+      "TGG": "GANGS",
+      "HRL": "GANGS"
+     },
+     "phase": "Ties"
+    },
+    {
+     "id": "A020",
+     "desc": "Thread, lay and fasten rail",
+     "dur": "TF*0.005*RAIL/GANGS",
+     "crew": {
+      "TK": "GANGS*8",
+      "OP": "GANGS*2",
+      "TFM": "GANGS"
+     },
+     "equip": {
+      "RTH": "GANGS",
+      "HRL": "GANGS"
+     },
+     "phase": "Rail",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Field welds",
+     "dur": "TF/1440*8/GANGS",
+     "crew": {
+      "TW": "GANGS*2",
+      "TK": "GANGS*2"
+     },
+     "equip": {
+      "HRL": "GANGS"
+     },
+     "phase": "Welds",
+     "when": "RAIL<1.1",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Unload ballast from the ballast train",
+     "dur": "TF*0.0015",
+     "crew": {
+      "TK": "4",
+      "TFM": "1",
+      "OP": "1"
+     },
+     "equip": {
+      "BCAR": "1"
+     },
+     "phase": "Ballast",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Surface, line and tamp (lifts)",
+     "dur": "TF*0.003",
+     "crew": {
+      "OP": "3",
+      "TK": "3",
+      "TFM": "1"
+     },
+     "equip": {
+      "TMP": "1",
+      "REG": "1"
+     },
+     "phase": "Surface",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Destress, final inspection and released for service",
+     "dur": "max(16, TF*0.0008)",
+     "crew": {
+      "TFM": "1",
+      "TW": "2",
+      "TK": "4",
+      "QC": "1"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "Release",
+     "preds": [
+      "A030",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "OTM",
+     "qty": "TF"
+    },
+    {
+     "id": "M020",
+     "item": "BAL",
+     "qty": "TF*1.4"
+    },
+    {
+     "id": "M030",
+     "item": "WELDK",
+     "qty": "TF/1440",
+     "when": "RAIL<1.1"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600"
+   ]
+  },
+  {
+   "id": "RH-TO",
+   "name": "Turnouts",
+   "rev": 1,
+   "category": "Rail",
+   "desc": "Build and install turnouts: assemble the switch, frog and closure panels beside the track, set them in a track-time window, connect, ballast and surface, then adjust and inspect the switch with the signal forces.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Turnouts",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Turnout size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "No. 10 or smaller (yard)",
+       "value": 0.8
+      },
+      {
+       "label": "No. 15 to 20 (mainline)",
+       "value": 1.2
+      },
+      {
+       "label": "No. 24 or larger (high speed)",
+       "value": 1.6
+      }
+     ],
+     "default": 1.2
+    },
+    {
+     "kind": "scope",
+     "key": "POWER",
+     "prompt": "Powered switches?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Assemble switch, frog and closure panels",
+     "dur": "N*40*SIZE",
+     "crew": {
+      "TK": "6",
+      "TFM": "1",
+      "TW": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "HRL": "1"
+     },
+     "phase": "Panels"
+    },
+    {
+     "id": "A020",
+     "desc": "Set and connect in the track window",
+     "dur": "N*12*SIZE",
+     "crew": {
+      "TK": "8",
+      "TFM": "1",
+      "OP": "2",
+      "RWIC": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "HRL": "1"
+     },
+     "phase": "Set",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Ballast and surface",
+     "dur": "N*8",
+     "crew": {
+      "OP": "2",
+      "TK": "3"
+     },
+     "equip": {
+      "TMP": "1",
+      "REG": "1"
+     },
+     "phase": "Surface",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Switch machines, adjust and inspect",
+     "dur": "N*10",
+     "crew": {
+      "SG": "2",
+      "TFM": "1"
+     },
+     "equip": {},
+     "phase": "Adjust",
+     "when": "POWER",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Turnover to the railroad",
+     "dur": "N*2",
+     "crew": {
+      "TFM": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600"
+   ]
+  },
+  {
+   "id": "RH-XING",
+   "name": "Grade crossings",
+   "rev": 1,
+   "category": "Rail",
+   "desc": "Rebuild or build highway-rail grade crossings: detour and remove the old crossing, rebuild the track section with new ties and ballast, set concrete crossing panels, approach paving, and test the warning devices with the signal forces.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Crossings",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "LANES",
+     "prompt": "Average lanes crossed",
+     "type": "number",
+     "default": 3,
+     "unit": "lanes",
+     "min": 1,
+     "max": 10
+    },
+    {
+     "kind": "scope",
+     "key": "SIG",
+     "prompt": "New or modified warning devices?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Detour, traffic control and remove the old crossing",
+     "dur": "N*10",
+     "crew": {
+      "TC": "4",
+      "OP": "2",
+      "TK": "4",
+      "RWIC": "1"
+     },
+     "equip": {
+      "EXC": "1",
+      "ARB": "1"
+     },
+     "phase": "Detour"
+    },
+    {
+     "id": "A020",
+     "desc": "Rebuild the track section",
+     "dur": "N*LANES*4",
+     "crew": {
+      "TK": "6",
+      "TFM": "1",
+      "TW": "1",
+      "OP": "2"
+     },
+     "equip": {
+      "EXC": "1",
+      "TMP": "1"
+     },
+     "phase": "Track",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set crossing panels",
+     "dur": "N*LANES*1.5",
+     "crew": {
+      "TK": "4",
+      "OP": "1",
+      "RG": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Panels",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Approach paving",
+     "dur": "N*8",
+     "crew": {
+      "PV": "4",
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "PAV": "1",
+      "RLR": "1"
+     },
+     "phase": "Paving",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Warning devices installed and tested",
+     "dur": "N*24",
+     "crew": {
+      "SG": "3",
+      "EL": "1"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "Signals",
+     "when": "SIG",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "XPNL",
+     "qty": "N*LANES*12+N*8"
+    },
+    {
+     "id": "M020",
+     "item": "HMA",
+     "qty": "N*40"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600"
+   ]
+  },
+  {
+   "id": "RH-TSP",
+   "name": "Tie and surfacing program (track-time windows)",
+   "rev": 1,
+   "category": "Rail",
+   "desc": "Maintenance-of-way on an operating line: the tie gang replaces ties in work windows between trains, the surfacing gang follows with ballast, tamping and regulating, then slow orders are lifted.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Track miles",
+     "type": "number",
+     "default": 20,
+     "unit": "mi",
+     "min": 1,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "TPM",
+     "prompt": "Ties replaced per mile",
+     "type": "number",
+     "default": 600,
+     "unit": "ties",
+     "min": 50,
+     "max": 3200
+    },
+    {
+     "kind": "var",
+     "key": "WINH",
+     "prompt": "Work window per day",
+     "type": "number",
+     "default": 8,
+     "unit": "h",
+     "min": 2,
+     "max": 12
+    },
+    {
+     "kind": "var",
+     "key": "GANGS",
+     "prompt": "Tie gangs",
+     "type": "number",
+     "default": 1,
+     "unit": "gangs",
+     "min": 1,
+     "max": 4
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pre-plate, distribute ties and slow orders",
+     "dur": "MI*4",
+     "crew": {
+      "TK": "4",
+      "TFM": "1"
+     },
+     "equip": {
+      "HRL": "2"
+     },
+     "phase": "Prepare"
+    },
+    {
+     "id": "A020",
+     "desc": "Tie replacement ({TPM} per mile)",
+     "dur": "MI*TPM/(110*WINH/10)/GANGS",
+     "crew": {
+      "TK": "GANGS*12",
+      "OP": "GANGS*6",
+      "TFM": "GANGS",
+      "RWIC": "GANGS"
+     },
+     "equip": {
+      "TGG": "GANGS",
+      "HRL": "GANGS"
+     },
+     "phase": "Ties",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Unload ballast",
+     "dur": "MI*3",
+     "crew": {
+      "TK": "4",
+      "OP": "1",
+      "RWIC": "1"
+     },
+     "equip": {
+      "BCAR": "1"
+     },
+     "phase": "Ballast",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Surface, line and regulate",
+     "dur": "MI*8*10/WINH",
+     "crew": {
+      "OP": "3",
+      "TK": "2",
+      "TFM": "1",
+      "RWIC": "1"
+     },
+     "equip": {
+      "TMP": "1",
+      "REG": "1"
+     },
+     "phase": "Surface",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      },
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 4
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Lift slow orders and final inspection",
+     "dur": "MI*1",
+     "crew": {
+      "TFM": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "Release",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "BAL",
+     "qty": "MI*600"
+    },
+    {
+     "id": "M020",
+     "item": "OTM",
+     "qty": "MI*TPM*0.02"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600"
+   ]
+  },
+  {
+   "id": "RH-SIG",
+   "name": "Railroad signals, PTC and communications",
+   "rev": 1,
+   "category": "Rail systems",
+   "desc": "Wayside signals and train control: signal houses and cases, track circuits and insulated joints, signals and switch machines, positive train control (PTC) radios and wayside interface units, the cable plant, and the cut-over tests.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LOC",
+     "prompt": "Signal locations (houses and cases)",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 500
+    },
+    {
+     "kind": "var",
+     "key": "CBL",
+     "prompt": "Signal cable",
+     "type": "number",
+     "default": 40000,
+     "unit": "ft",
+     "min": 0,
+     "max": 2000000
+    },
+    {
+     "kind": "scope",
+     "key": "PTC",
+     "prompt": "PTC wayside equipment?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CUT",
+     "prompt": "Cut-overs",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 50
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Signal houses and cases on foundations ({LOC})",
+     "dur": "LOC*16",
+     "crew": {
+      "SG": "2",
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "C090": "1",
+      "HRL": "1"
+     },
+     "phase": "Houses"
+    },
+    {
+     "id": "A020",
+     "desc": "Cable plant, trenching and conduit",
+     "dur": "CBL*0.004",
+     "crew": {
+      "SG": "2",
+      "EL": "2",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Cable",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Signals, track circuits and insulated joints",
+     "dur": "LOC*30",
+     "crew": {
+      "SG": "3",
+      "TK": "2"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "Wayside",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "PTC radios and wayside interface units",
+     "dur": "LOC*12",
+     "crew": {
+      "SG": "2"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "PTC",
+     "when": "PTC",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Cut-overs and in-service tests ({CUT})",
+     "dur": "CUT*30",
+     "crew": {
+      "SG": "4",
+      "RWIC": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Cut-over",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CBL",
+     "qty": "CBL"
+    },
+    {
+     "id": "M020",
+     "item": "CND",
+     "qty": "CBL*0.3"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600",
+    "R700"
+   ]
+  },
+  {
+   "id": "RH-OCS",
+   "name": "Overhead catenary system (transit electrification)",
+   "rev": 1,
+   "category": "Rail systems",
+   "desc": "Light-rail or commuter-rail electrification: pole foundations, poles and cantilevers, contact and messenger wire, registration and tensioning, the traction power substations, and energization tests.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Route length",
+     "type": "number",
+     "default": 6,
+     "unit": "mi",
+     "min": 0.5,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "TPSS",
+     "prompt": "Traction power substations",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 0,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "SPAN",
+     "prompt": "Pole spacing",
+     "type": "number",
+     "default": 200,
+     "unit": "ft",
+     "min": 120,
+     "max": 300
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Pole foundations",
+     "dur": "MI*5280/SPAN*2",
+     "crew": {
+      "OP": "2",
+      "LB": "2",
+      "CF": "1"
+     },
+     "equip": {
+      "DRL": "1",
+      "CPM": "1"
+     },
+     "phase": "Foundations"
+    },
+    {
+     "id": "A020",
+     "desc": "Poles, cantilevers and hardware",
+     "dur": "MI*5280/SPAN*1.5",
+     "crew": {
+      "LN": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "HRL": "1"
+     },
+     "phase": "Poles",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "String contact and messenger wire",
+     "dur": "MI*40",
+     "crew": {
+      "LN": "6",
+      "OP": "1"
+     },
+     "equip": {
+      "HRL": "2"
+     },
+     "phase": "Wire",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Registration, tensioning and inspection",
+     "dur": "MI*16",
+     "crew": {
+      "LN": "4",
+      "QC": "1"
+     },
+     "equip": {
+      "HRL": "1"
+     },
+     "phase": "Register",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Traction power substations ({TPSS})",
+     "dur": "TPSS*120",
+     "crew": {
+      "EL": "4",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "TPSS",
+     "when": "TPSS>0",
+     "preds": []
+    },
+    {
+     "id": "A060",
+     "desc": "Energization and clearance tests",
+     "dur": "max(40, MI*6)",
+     "crew": {
+      "LN": "2",
+      "EL": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Energize",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "POLE",
+     "qty": "MI*5280/SPAN"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600",
+    "R700"
+   ]
+  },
+  {
+   "id": "RH-PLAT",
+   "name": "Station platforms",
+   "rev": 1,
+   "category": "Rail systems",
+   "desc": "Transit or commuter station platforms: foundations and edge beams, platform slabs with tactile edge, canopies and shelters, lighting and communications, and the platform-train interface checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Platforms",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Platform length",
+     "type": "number",
+     "default": 400,
+     "unit": "ft",
+     "min": 100,
+     "max": 1200
+    },
+    {
+     "kind": "scope",
+     "key": "CANOPY",
+     "prompt": "Canopies or shelters?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Foundations and edge beams",
+     "dur": "N*LF*0.25",
+     "crew": {
+      "CP": "4",
+      "RB": "2",
+      "CF": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1",
+      "CPM": "1"
+     },
+     "phase": "Foundations"
+    },
+    {
+     "id": "A020",
+     "desc": "Platform slabs and tactile edge",
+     "dur": "N*LF*0.18",
+     "crew": {
+      "CF": "4",
+      "CP": "2",
+      "LB": "3"
+     },
+     "equip": {
+      "CPM": "1"
+     },
+     "phase": "Slabs",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Canopies and shelters",
+     "dur": "N*LF*0.15",
+     "crew": {
+      "IW": "4",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Canopy",
+     "when": "CANOPY",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Lighting and communications",
+     "dur": "N*80",
+     "crew": {
+      "EL": "3"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Systems",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Platform-train interface and clearance checks",
+     "dur": "N*8",
+     "crew": {
+      "QC": "1",
+      "SV": "2"
+     },
+     "equip": {},
+     "phase": "Checks",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC",
+     "qty": "N*LF*0.9"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "N*LF*0.06"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R500",
+    "R600",
+    "R700"
+   ]
+  },
+  {
+   "id": "RH-ITS",
+   "name": "Lighting, traffic signals and ITS",
+   "rev": 1,
+   "category": "Highway systems",
+   "desc": "Roadway lighting, traffic signals and intelligent transportation systems: conduit and pull boxes, pole foundations, poles and mast arms, cable, signal heads and controllers, cameras, detection and message signs, fiber, and the burn-in and acceptance tests.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "POLES",
+     "prompt": "Light and signal poles",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 3000
+    },
+    {
+     "kind": "var",
+     "key": "CND",
+     "prompt": "Conduit",
+     "type": "number",
+     "default": 15000,
+     "unit": "ft",
+     "min": 0,
+     "max": 1000000
+    },
+    {
+     "kind": "var",
+     "key": "INT",
+     "prompt": "Signalized intersections",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    },
+    {
+     "kind": "scope",
+     "key": "ITS",
+     "prompt": "Cameras, message signs and fiber?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Conduit, pull boxes and bores",
+     "dur": "CND*0.012",
+     "crew": {
+      "EL": "2",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Conduit"
+    },
+    {
+     "id": "A020",
+     "desc": "Pole foundations",
+     "dur": "POLES*4",
+     "crew": {
+      "OP": "1",
+      "LB": "2",
+      "CF": "1"
+     },
+     "equip": {
+      "DRL": "1"
+     },
+     "phase": "Foundations",
+     "when": "POLES>0",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Poles, mast arms and luminaires",
+     "dur": "POLES*3",
+     "crew": {
+      "LN": "2",
+      "EL": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "ML": "1"
+     },
+     "phase": "Poles",
+     "when": "POLES>0",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Signal heads, controllers and detection ({INT})",
+     "dur": "INT*40",
+     "crew": {
+      "EL": "3",
+      "LN": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Signals",
+     "when": "INT>0",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Cameras, message signs and fiber",
+     "dur": "max(40, CND*0.004)",
+     "crew": {
+      "EL": "2",
+      "LN": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "ITS",
+     "when": "ITS",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Burn-in and acceptance tests",
+     "dur": "max(40, INT*16)",
+     "crew": {
+      "EL": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Accept",
+     "preds": [
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CND",
+     "qty": "CND"
+    },
+    {
+     "id": "M020",
+     "item": "CBL",
+     "qty": "CND*2.2"
+    },
+    {
+     "id": "M030",
+     "item": "POLE",
+     "qty": "POLES"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R700",
+    "R100",
+    "R200"
+   ]
+  },
+  {
+   "id": "RH-SAFE",
+   "name": "Signing, pavement marking and guardrail",
+   "rev": 1,
+   "category": "Highway systems",
+   "desc": "The permanent roadside: ground-mounted and overhead signs, thermoplastic markings and raised pavement markers, guardrail and end treatments, and crash cushions.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SIGNS",
+     "prompt": "Signs",
+     "type": "number",
+     "default": 150,
+     "unit": "ea",
+     "min": 0,
+     "max": 10000
+    },
+    {
+     "kind": "var",
+     "key": "MARK",
+     "prompt": "Pavement marking",
+     "type": "number",
+     "default": 80000,
+     "unit": "ft",
+     "min": 0,
+     "max": 5000000
+    },
+    {
+     "kind": "var",
+     "key": "GR",
+     "prompt": "Guardrail",
+     "type": "number",
+     "default": 6000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "scope",
+     "key": "OH",
+     "prompt": "Overhead sign structures?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Ground-mounted signs ({SIGNS})",
+     "dur": "SIGNS*0.8",
+     "crew": {
+      "GR": "2",
+      "LB": "1"
+     },
+     "equip": {
+      "AUG": "1"
+     },
+     "phase": "Signs",
+     "when": "SIGNS>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Overhead sign structures",
+     "dur": "120",
+     "crew": {
+      "IW": "3",
+      "RG": "2",
+      "OP": "1",
+      "TC": "4"
+     },
+     "equip": {
+      "C090": "1",
+      "ATT": "1"
+     },
+     "phase": "Overhead",
+     "when": "OH",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Guardrail and end treatments",
+     "dur": "GR*0.012",
+     "crew": {
+      "GR": "4",
+      "LB": "1"
+     },
+     "equip": {
+      "AUG": "1"
+     },
+     "phase": "Guardrail",
+     "when": "GR>0",
+     "preds": []
+    },
+    {
+     "id": "A040",
+     "desc": "Permanent pavement marking and markers",
+     "dur": "MARK*0.0006",
+     "crew": {
+      "PM": "3",
+      "TC": "2"
+     },
+     "equip": {
+      "STRP": "1",
+      "ATT": "1"
+     },
+     "phase": "Marking",
+     "when": "MARK>0",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "SIGN",
+     "qty": "SIGNS"
+    },
+    {
+     "id": "M020",
+     "item": "PMRK",
+     "qty": "MARK"
+    },
+    {
+     "id": "M030",
+     "item": "GRAIL",
+     "qty": "GR"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R700",
+    "R100",
+    "R200"
+   ]
+  },
+  {
+   "id": "RH-CLOSE",
+   "name": "Permanent seeding, final inspection and acceptance",
+   "rev": 1,
+   "category": "Closeout",
+   "desc": "Close the job: permanent seeding and landscaping, final clean-up, the owner\u2019s final inspection and punch list, as-built plans and closeout documents, and final acceptance.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Area to seed",
+     "type": "number",
+     "default": 30,
+     "unit": "acre",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "PUNCH",
+     "prompt": "Punch items",
+     "type": "number",
+     "default": 200,
+     "unit": "ea",
+     "min": 0,
+     "max": 10000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Permanent seeding and landscaping",
+     "dur": "ACRES*2",
+     "crew": {
+      "LB": "3",
+      "OP": "1"
+     },
+     "equip": {
+      "WTR": "1"
+     },
+     "phase": "Seed",
+     "when": "ACRES>0"
+    },
+    {
+     "id": "A020",
+     "desc": "Final clean-up",
+     "dur": "40",
+     "crew": {
+      "LB": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "LDR": "1"
+     },
+     "phase": "Clean-up",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Final inspection and punch list ({PUNCH})",
+     "dur": "PUNCH*0.4",
+     "crew": {
+      "FM": "1",
+      "LB": "3",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Punch",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "As-builts and closeout documents",
+     "dur": "60",
+     "crew": {
+      "SV": "1",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Closeout",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Final acceptance",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Acceptance",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "SEED",
+     "qty": "ACRES"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "R100",
+    "R200",
+    "R300",
+    "R400",
+    "R500",
+    "R600",
+    "R700",
+    "R000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "WP-000-001",
+   "tag": "MOB",
+   "desc": "Mobilization, field office, survey control and asphalt plant",
+   "unit": "R000",
+   "module_id": "RH-MOB",
+   "answers": {
+    "PLANT": 1,
+    "YARDS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "WP-000-002",
+   "tag": "MOT",
+   "desc": "Maintenance of traffic, four phases",
+   "unit": "R000",
+   "module_id": "RH-MOT",
+   "answers": {
+    "PH": 4,
+    "BARR": 3500,
+    "XOVR": 1,
+    "WIN": 1.3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI003",
+   "wo": "WP-000-003",
+   "tag": "RRP",
+   "desc": "Railroad right-of-entry, flagging and track windows",
+   "unit": "R000",
+   "module_id": "RH-RRP",
+   "answers": {
+    "SHIFTS": 140,
+    "WIND": 24,
+    "LEAD": 400
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI004",
+   "wo": "WP-000-004",
+   "tag": "ESC",
+   "desc": "SWPPP: erosion control and sediment basins",
+   "unit": "R000",
+   "module_id": "RH-ESC",
+   "answers": {
+    "ACRES": 85,
+    "BASIN": 3
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI005",
+   "wo": "WP-100-005",
+   "tag": "CLR",
+   "desc": "Clearing, grubbing and pavement removal",
+   "unit": "R100",
+   "module_id": "RH-CLR",
+   "answers": {
+    "ACRES": 42,
+    "PAVE": 28000,
+    "STRUCT": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI006",
+   "wo": "WP-100-006",
+   "tag": "EXC-A",
+   "desc": "Mainline excavation and embankment, segment A",
+   "unit": "R100",
+   "module_id": "RH-EXC",
+   "answers": {
+    "CUT": 140000,
+    "FILL": 165000,
+    "SOIL": 1,
+    "HAUL": 1.2,
+    "FLEET": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI005"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "XSC",
+     "doc_no": "SYN-RH1-RDY-0101",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI007",
+   "wo": "WP-200-007",
+   "tag": "EXC-I",
+   "desc": "Interchange ramps earthwork",
+   "unit": "R200",
+   "module_id": "RH-EXC",
+   "answers": {
+    "CUT": 60000,
+    "FILL": 95000,
+    "SOIL": 1.3,
+    "HAUL": 1.2,
+    "FLEET": 1
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI005"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI008",
+   "wo": "WP-100-008",
+   "tag": "DRN",
+   "desc": "Storm sewer, cross drains and inlets",
+   "unit": "R100",
+   "module_id": "RH-DRN",
+   "answers": {
+    "LF": 7400,
+    "STR": 52,
+    "DEEP": 9,
+    "CREWS": 2
+   },
+   "status": "Approved",
+   "offset": 150,
+   "note": "",
+   "after": [
+    "WI005"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "DRN",
+     "doc_no": "SYN-RH1-DRN-0201",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI009",
+   "wo": "WP-100-009",
+   "tag": "BOX",
+   "desc": "Twin box culvert at the creek",
+   "unit": "R100",
+   "module_id": "RH-BOX",
+   "answers": {
+    "N": 1,
+    "LF": 160,
+    "TYPE": 1,
+    "DIV": 1
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI010",
+   "wo": "WP-200-010",
+   "tag": "WALL",
+   "desc": "MSE walls at the ramp and bridge approaches",
+   "unit": "R200",
+   "module_id": "RH-WALL",
+   "answers": {
+    "SF": 16000,
+    "TYPE": 1,
+    "CREWS": 1
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI007"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "WP-100-011",
+   "tag": "UTIL",
+   "desc": "Water main relocation and utility owner moves",
+   "unit": "R100",
+   "module_id": "RH-UTIL",
+   "answers": {
+    "LF": 2600,
+    "OWN": 5,
+    "WAIT": 160,
+    "ADJ": 70
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI012",
+   "wo": "WP-100-012",
+   "tag": "BASE",
+   "desc": "Lime-treated subgrade and aggregate base",
+   "unit": "R100",
+   "module_id": "RH-BASE",
+   "answers": {
+    "SY": 92000,
+    "TREAT": 1,
+    "DEPTH": 10
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI006",
+    "WI008"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI013",
+   "wo": "WP-100-013",
+   "tag": "HMA",
+   "desc": "Asphalt paving, mainline and ramps",
+   "unit": "R100",
+   "module_id": "RH-HMA",
+   "answers": {
+    "TON": 52000,
+    "MILL": 1,
+    "MILLSY": 30000,
+    "RATE": 2000,
+    "WIN": 1.3
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI012"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PAV",
+     "doc_no": "SYN-RH1-PAV-0301",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI014",
+   "wo": "WP-200-014",
+   "tag": "CURB",
+   "desc": "Curb, sidewalk and median barrier",
+   "unit": "R200",
+   "module_id": "RH-CURB",
+   "answers": {
+    "CG": 9000,
+    "SW": 2800,
+    "BARR": 6200
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI012"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI015",
+   "wo": "WP-300-015",
+   "tag": "FDN1",
+   "desc": "Bridge 1 drilled shafts",
+   "unit": "R300",
+   "module_id": "RH-FDN",
+   "answers": {
+    "KIND": 2,
+    "N": 24,
+    "LEN": 85,
+    "WATER": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI003",
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "BRG",
+     "doc_no": "SYN-RH1-BR1-0001",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI016",
+   "wo": "WP-300-016",
+   "tag": "SUB1",
+   "desc": "Bridge 1 substructure",
+   "unit": "R300",
+   "module_id": "RH-SUBS",
+   "answers": {
+    "BENTS": 5,
+    "CY": 1650,
+    "CREWS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI015"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI017",
+   "wo": "WP-300-017",
+   "tag": "GIR1",
+   "desc": "Bridge 1 girder erection, 30 precast beams",
+   "unit": "R300",
+   "module_id": "RH-GIRD",
+   "answers": {
+    "N": 30,
+    "KIND": 1,
+    "NIGHTS": 0,
+    "WIN": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "WP-300-018",
+   "tag": "DECK1",
+   "desc": "Bridge 1 deck and barrier",
+   "unit": "R300",
+   "module_id": "RH-DECK",
+   "answers": {
+    "SF": 21000,
+    "POURS": 3,
+    "BR": 1300,
+    "CREWS": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI017"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "WP-400-019",
+   "tag": "FDN2",
+   "desc": "Bridge 2 driven piles over the railroad",
+   "unit": "R400",
+   "module_id": "RH-FDN",
+   "answers": {
+    "KIND": 1,
+    "N": 48,
+    "LEN": 60,
+    "WATER": 0
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI003"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI020",
+   "wo": "WP-400-020",
+   "tag": "SUB2",
+   "desc": "Bridge 2 substructure",
+   "unit": "R400",
+   "module_id": "RH-SUBS",
+   "answers": {
+    "BENTS": 4,
+    "CY": 980,
+    "CREWS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI019"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI021",
+   "wo": "WP-400-021",
+   "tag": "GIR2",
+   "desc": "Bridge 2 steel girders in track windows",
+   "unit": "R400",
+   "module_id": "RH-GIRD",
+   "answers": {
+    "N": 18,
+    "KIND": 1.4,
+    "NIGHTS": 6,
+    "WIN": 1.6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI020"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI022",
+   "wo": "WP-400-022",
+   "tag": "DECK2",
+   "desc": "Bridge 2 deck and barrier",
+   "unit": "R400",
+   "module_id": "RH-DECK",
+   "answers": {
+    "SF": 12500,
+    "POURS": 2,
+    "BR": 700,
+    "CREWS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI021"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI023",
+   "wo": "WP-500-023",
+   "tag": "TBED",
+   "desc": "Siding track bed and subballast, 9,800 track-ft",
+   "unit": "R500",
+   "module_id": "RH-TBED",
+   "answers": {
+    "TFM": 9800,
+    "SOIL": 1,
+    "UTD": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI003",
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "TRK",
+     "doc_no": "SYN-RH1-TRK-0501",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI024",
+   "wo": "WP-500-024",
+   "tag": "TRACK",
+   "desc": "Siding and connection track, CWR on concrete ties",
+   "unit": "R500",
+   "module_id": "RH-TRACK",
+   "answers": {
+    "TFM": 9800,
+    "TIE": 1.15,
+    "RAIL": 1,
+    "GANGS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI023"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI025",
+   "wo": "WP-500-025",
+   "tag": "TO",
+   "desc": "Mainline turnouts, No. 20 powered",
+   "unit": "R500",
+   "module_id": "RH-TO",
+   "answers": {
+    "N": 2,
+    "SIZE": 1.2,
+    "POWER": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI023"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI026",
+   "wo": "WP-600-026",
+   "tag": "XING",
+   "desc": "Rebuild three grade crossings",
+   "unit": "R600",
+   "module_id": "RH-XING",
+   "answers": {
+    "N": 3,
+    "LANES": 3,
+    "SIG": 1
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI003"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI027",
+   "wo": "WP-600-027",
+   "tag": "SIG",
+   "desc": "Siding signals, PTC and cut-over",
+   "unit": "R600",
+   "module_id": "RH-SIG",
+   "answers": {
+    "LOC": 6,
+    "CBL": 22000,
+    "PTC": 1,
+    "CUT": 2
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI024",
+    "WI025"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI028",
+   "wo": "WP-700-028",
+   "tag": "ITS",
+   "desc": "Interchange lighting, signals and ITS",
+   "unit": "R700",
+   "module_id": "RH-ITS",
+   "answers": {
+    "POLES": 72,
+    "CND": 18000,
+    "INT": 3,
+    "ITS": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI012"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI029",
+   "wo": "WP-100-029",
+   "tag": "SAFE",
+   "desc": "Signing, marking and guardrail",
+   "unit": "R100",
+   "module_id": "RH-SAFE",
+   "answers": {
+    "SIGNS": 160,
+    "MARK": 95000,
+    "GR": 7200,
+    "OH": 1
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI013",
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI030",
+   "wo": "WP-000-030",
+   "tag": "CLOSE",
+   "desc": "Permanent seeding, final inspection and acceptance",
+   "unit": "R000",
+   "module_id": "RH-CLOSE",
+   "answers": {
+    "ACRES": 36,
+    "PUNCH": 240
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002",
+    "WI009",
+    "WI010",
+    "WI011",
+    "WI018",
+    "WI022",
+    "WI026",
+    "WI027",
+    "WI028",
+    "WI029"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}
