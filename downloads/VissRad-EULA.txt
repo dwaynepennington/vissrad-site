@@ -1,0 +1,137 @@
+# VissRad End User Licence Agreement
+
+Version 1.0 · effective 28 September 2026
+
+This agreement is between Pennington Group LLC, dba Pennington Group
+Associates, of Houston, Texas ("Pennington Group", "we"), and the person or
+organisation installing or using the VissRad Suite ("you"). By installing,
+copying or using the Software you accept this agreement. If you do not accept
+it, do not install or use the Software.
+
+If you and Pennington Group have signed a separate licence or services
+agreement covering VissRad, that signed agreement governs where it conflicts
+with this one.
+
+## 1. Definitions
+
+"Software" means the VissRad Suite — its applications, VRLink, VissRad
+Server, installers, scripts, templates, workbooks, sample data, documentation
+and any updates we supply.
+
+"Your Data" means project, cost, schedule, quantity, document and other
+information you enter into or import into the Software.
+
+## 2. Licence
+
+Subject to this agreement and payment of any applicable fees, we grant you a
+non-exclusive, non-transferable, non-sublicensable, revocable licence to
+install and use the Software for your internal business purposes, for the term
+and number of users or installations stated in your order, quotation or licence
+key. Where no order exists, the licence is an evaluation licence for 30 days,
+for non-production use only.
+
+## 3. Restrictions
+
+You must not, and must not allow anyone else to:
+
+1. copy the Software except as needed to install it and keep a reasonable
+   backup;
+2. sell, rent, lease, lend, sublicense, host for third parties or otherwise
+   make the Software available to anyone outside your organisation;
+3. reverse engineer, decompile, disassemble or attempt to derive the source
+   code, data models or calculation methods of the Software, except to the
+   extent applicable law expressly permits it despite this restriction;
+4. modify the Software or create derivative works of it;
+5. remove, obscure or alter any copyright, trademark or other proprietary
+   notice;
+6. use the Software, its outputs or its documentation to design, build or
+   benchmark a competing product; or
+7. circumvent any licence key, user limit or technical protection.
+
+## 4. Ownership
+
+The Software is licensed, not sold. Pennington Group and its licensors own all
+rights, title and interest in the Software, including all copyrights, trade
+secrets, trademarks and patent rights, and all copies, updates and
+derivatives. VissRad and the VissRad application names are trademarks of
+Pennington Group LLC. No rights are granted except as stated here.
+
+## 5. Your Data
+
+You own Your Data. The standalone Software stores Your Data on your own
+computer or network and does not send it to us. Where you use VissRad Server
+or a hosted service we operate, we process Your Data only to provide that
+service to you and as set out in the applicable order. You are responsible for
+backing up Your Data and for the accuracy of what you enter.
+
+## 6. Feedback
+
+If you give us suggestions or feedback about the Software, we may use them
+without restriction or obligation to you.
+
+## 7. Confidentiality
+
+The Software, its documentation, pricing and any non-public information we
+share with you are our confidential information. You will protect it with at
+least reasonable care and use it only to exercise your rights under this
+agreement.
+
+## 8. Third-party components
+
+The Software includes open-source components listed in
+THIRD-PARTY-NOTICES.md. Those components are licensed to you under their own
+licences, and nothing in this agreement limits rights those licences grant.
+
+## 9. Professional judgement
+
+The Software is a tool for estimating, planning, cost control, progress
+measurement, completions and reporting. Its outputs depend on the data and
+assumptions you supply. It does not replace the professional judgement of
+qualified engineers, estimators, schedulers, accountants or other
+professionals, and you remain responsible for decisions made using it.
+
+## 10. Warranty disclaimer
+
+To the maximum extent permitted by law, the Software is provided "as is" and
+"as available", without warranty of any kind, express or implied, including
+warranties of merchantability, fitness for a particular purpose, accuracy,
+non-infringement and uninterrupted or error-free operation.
+
+## 11. Limitation of liability
+
+To the maximum extent permitted by law: (a) neither party is liable for any
+indirect, incidental, special, consequential or punitive damages, or for lost
+profits, revenue, data or business opportunity; and (b) our total liability
+arising out of or relating to this agreement or the Software is limited to the
+fees you paid us for the Software in the twelve months before the claim arose,
+or US$100 if you paid nothing. These limits do not apply to your breach of
+sections 3, 4 or 7.
+
+## 12. Term and termination
+
+This agreement lasts until terminated or, for a term licence, until the term
+ends. We may terminate it by written notice if you breach it and do not cure
+the breach within 15 days of notice. On termination you must stop using the
+Software and delete all copies, except that you may keep exports of Your Data.
+Sections 3 to 7, 10, 11, 13 and 14 survive termination.
+
+## 13. Export and government use
+
+You will comply with applicable export control and sanctions laws. If the
+Software is acquired by or for the US Government, it is commercial computer
+software and documentation provided with only the rights set out in this
+agreement (FAR 12.212; DFARS 227.7202).
+
+## 14. General
+
+This agreement is governed by the laws of the State of Texas, USA, without
+regard to conflict-of-law rules. The state and federal courts located in Harris
+County, Texas have exclusive jurisdiction, and each party consents to them. You
+may not assign this agreement without our written consent. If any provision is
+unenforceable, the rest remains in effect. Failure to enforce a provision is
+not a waiver. This agreement, with any order or signed agreement referred to in
+section 2, is the entire agreement about the Software.
+
+Contact: Pennington Group LLC, Houston, Texas · dpennington@penningtongrp.com
+
+Copyright (c) 2026 Pennington Group LLC. All rights reserved.
