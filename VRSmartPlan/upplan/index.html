@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="VRUpstreamPlanner by VissRad: step out onshore field development (lease roads and well pads, cellars and conductors, wellhead hook-up and artificial lift, steel and HDPE flowlines, separation and treating, tank battery with VRU and LACT, compression and dehydration, produced water and SWD, flare, field power, automation and SCADA, through start-up, turn-in-line and first oil) into work steps, crews, equipment and materials, and load it into the VRScheduler Schedule Editor, Primavera P6 (XER) or Microsoft Project (MPX). Runs in the browser; the demonstration project is synthetic.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRUpstreamPlanner — upstream oil and gas field development planning for the schedule · VRSmartPlan</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css?v=68496a1e4e">
+<link rel="stylesheet" href="plan.css?v=0479fbfac0">
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading upstream module library&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+
+<script>window.PLANNER_FLAVOR = { id: "upplan", key: "vissrad.upplan", name: "VRUpstreamPlanner", title: "VRUpstreamPlanner · Upstream Field Development Planning", lib: "VissRadUpstreamPlanner", sector: "Upstream oil and gas", group: "Wellsite", drawTypes: ["PID", "PFD", "LAY", "GAD", "SLD"], drawSub: "The P&IDs, process flow diagrams, pad and facility layouts, arrangements and single-lines the work package is built from." };</script>
+<script>window.VR_STANDALONE = { title: "VRUpstreamPlanner", home: "https://vissrad.com/", homeLabel: "VissRad \u2197", up: "../", toolBar: true, tools: [{ label: "VRScheduler", href: "../index.html", title: "VRScheduler — CPM schedule editor and P6 schedule analysis", group: "Schedule and estimate" }, { label: "VREstimator", href: "../estimator/index.html", title: "VREstimator — drawing takeoff, assemblies and EPC estimating, sent to the schedule", group: "Schedule and estimate" }, { label: "VRPlanner", href: "../planner/index.html", title: "VRPlanner — capital work planning: work steps, crews, equipment, loaded into the schedule", group: "Planners" }, { label: "VRDCPlanner", href: "../dcplan/index.html", title: "VRDCPlanner — data center construction planning: power, cooling, white space and commissioning L1 to L5", group: "Planners" }, { label: "VRE&IPlanner", href: "../eiplan/index.html", title: "VRE&IPlanner — electrical and instrumentation planning: raceway, cable, terminations, testing and loop checks", group: "Planners" }, { label: "VRPowerPlanner", href: "../pwrplan/index.html", title: "VRPowerPlanner — power plant construction planning for data center campuses: engines, gas turbines, fuel cells, BESS and switchyard", group: "Planners" }, { label: "VRPowerOutage", href: "../pwrout/index.html", title: "VRPowerOutage — power plant outage planning: gas turbine inspections, engine overhauls, HRSG, transformers and return to service", group: "Planners" }, { label: "VRUpstreamPlanner", href: "../upplan/index.html", title: "VRUpstreamPlanner — upstream field development planning: well pads, hook-up, flowlines, central facility and first oil", group: "Planners", active: true }, { label: "VRMidstreamPlanner", href: "../midplan/index.html", title: "VRMidstreamPlanner — midstream planning: pipeline spreads, HDD and bores, compressor, pump and meter stations, terminals", group: "Planners" }, { label: "VRRailHighwayPlanner", href: "../rhplan/index.html", title: "VRRailHighwayPlanner — rail and heavy highway planning: traffic phases, earthwork, paving, bridges, track, turnouts, crossings and signals", group: "Planners" }, { label: "VRTAR", href: "../tar/index.html", title: "VRTAR — turnaround estimating", group: "Turnaround and maintenance" }, { label: "VRCMMS", href: "../cmms/index.html", title: "VRCMMS — maintenance management: assets, work orders, preventive maintenance and backlog", group: "Turnaround and maintenance" }, { label: "VRControls", href: "../controls/index.html", title: "VRControls — project controls and cost tracking: budget, earned and actual hours, SPI and CPI, progress from P6 / MS Project updates, completions and punch", group: "Project controls" }], file: true, schedule: "../index.html#editor", controls: "../controls/index.html#/schedule", brand: "VRSmartPlan" };</script>
+<script src="../shared/lib.js?v=d5788ff27b"></script>
+<script src="../shared/shell.js?v=bf36fc7e4b"></script>
+<script src="../shared/standalone.js?v=df6241ee6f"></script>
+<script src="../shared/drawrefs.js?v=2928983970"></script>
+<script src="../shared/zipWrite.js?v=bf99443f50"></script>
+<script src="../tar/app/engine.js?v=dbfdaf1710"></script>
+<script src="app/writers.js?v=0f0ecb18ae"></script>
+<script src="data.js?v=4ed57d192d"></script>
+<script src="app.js?v=0a25d0da71"></script>
+</body>
+</html>

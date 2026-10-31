@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRScheduler — CPM schedule editor and P6 schedule analysis · VRSmartPlan</title>
+<meta name="description" content="VRScheduler by VissRad: a CPM schedule editor and Primavera P6 / Microsoft Project schedule analysis tool that runs in the browser — critical path, S-curve and FTE curve, earned value, float, look-ahead, WBS roll-up, baselines, DCMA 14-point checks and Monte Carlo risk. Files are read in the browser only.">
+<link rel="icon" href="assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="assets/app_icon_256.png">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/shell.css?v=68496a1e4e">
+<link rel="stylesheet" href="schedule.css?v=183b15ba87">
+</head>
+<body>
+
+<div id="loading">
+  <img src="assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading VRScheduler&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+<script>window.VR_STANDALONE = { title: "VRScheduler", home: "https://vissrad.com/", homeLabel: "VissRad \u2197", up: "", toolBar: true, tools: [{ label: "VRScheduler", href: "index.html", title: "VRScheduler — CPM schedule editor and P6 schedule analysis", group: "Schedule and estimate", active: true }, { label: "VREstimator", href: "estimator/index.html", title: "VREstimator — drawing takeoff, assemblies and EPC estimating, sent to the schedule", group: "Schedule and estimate" }, { label: "VRPlanner", href: "planner/index.html", title: "VRPlanner — capital work planning: work steps, crews, equipment, loaded into the schedule", group: "Planners" }, { label: "VRDCPlanner", href: "dcplan/index.html", title: "VRDCPlanner — data center construction planning: power, cooling, white space and commissioning L1 to L5", group: "Planners" }, { label: "VRE&IPlanner", href: "eiplan/index.html", title: "VRE&IPlanner — electrical and instrumentation planning: raceway, cable, terminations, testing and loop checks", group: "Planners" }, { label: "VRPowerPlanner", href: "pwrplan/index.html", title: "VRPowerPlanner — power plant construction planning for data center campuses: engines, gas turbines, fuel cells, BESS and switchyard", group: "Planners" }, { label: "VRPowerOutage", href: "pwrout/index.html", title: "VRPowerOutage — power plant outage planning: gas turbine inspections, engine overhauls, HRSG, transformers and return to service", group: "Planners" }, { label: "VRUpstreamPlanner", href: "upplan/index.html", title: "VRUpstreamPlanner — upstream field development planning: well pads, hook-up, flowlines, central facility and first oil", group: "Planners" }, { label: "VRMidstreamPlanner", href: "midplan/index.html", title: "VRMidstreamPlanner — midstream planning: pipeline spreads, HDD and bores, compressor, pump and meter stations, terminals", group: "Planners" }, { label: "VRRailHighwayPlanner", href: "rhplan/index.html", title: "VRRailHighwayPlanner — rail and heavy highway planning: traffic phases, earthwork, paving, bridges, track, turnouts, crossings and signals", group: "Planners" }, { label: "VRTAR", href: "tar/index.html", title: "VRTAR — turnaround estimating", group: "Turnaround and maintenance" }, { label: "VRCMMS", href: "cmms/index.html", title: "VRCMMS — maintenance management: assets, work orders, preventive maintenance and backlog", group: "Turnaround and maintenance" }, { label: "VRControls", href: "controls/index.html", title: "VRControls — project controls and cost tracking: budget, earned and actual hours, SPI and CPI, progress from P6 / MS Project updates, completions and punch", group: "Project controls" }], controls: "controls/index.html#/schedule", brand: "VRSmartPlan" };</script>
+<script src="shared/lib.js?v=d5788ff27b"></script>
+<script src="shared/shell.js?v=bf36fc7e4b"></script>
+<script src="shared/standalone.js?v=df6241ee6f"></script>
+<script src="shared/xerParser.js?v=8958ff8be5"></script>
+<script src="app/metrics.js?v=67a4606bbc"></script>
+<script src="app/sample.js?v=529bb6605a"></script>
+<script src="app/cpm.js?v=7803b8d935"></script>
+<script src="app/editor.js?v=8644195b59"></script>
+<script src="app.js?v=fa5aa43348"></script>
+</body>
+</html>

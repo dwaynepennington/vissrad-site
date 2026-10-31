@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="VRCMMS by VissRad: maintenance management in the browser — asset register, work requests and work orders, preventive maintenance plans, job plans, spares, reliability and QR asset labels; the open backlog loads into the VRScheduler Schedule Editor or a VRTAR turnaround event. The demonstration site is synthetic.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRCMMS — maintenance management · VRSmartPlan</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css?v=68496a1e4e">
+<style>
+  /* Contained sub-section header inside a card body — no negative margins, so
+     it can never grow the card's scrollWidth (see suite QA overflow check). */
+  .subhead {
+    font-size: 10.5px; font-weight: 700; letter-spacing: 0.8px;
+    text-transform: uppercase; color: var(--text-dim);
+    margin: 14px 0 8px; padding-top: 10px; border-top: 1px solid var(--border);
+  }
+  .subhead:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+  /* Compact tables shown inside the narrow master/detail panel: table.data's
+     default nowrap lets the row's min-content width exceed the panel, so these
+     are fixed-layout and allowed to wrap instead. */
+  table.data.fit { table-layout: fixed; }
+  table.data.fit td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  table.data.fit th { white-space: nowrap; overflow: hidden; }
+  table.data.fit td:last-child { overflow: visible; text-overflow: initial; }
+  table.data.fit td .ghost { padding: 4px 8px; font-size: 11px; white-space: nowrap; }
+  /* In-table record links */
+  a.lnk { color: var(--blue); text-decoration: none; cursor: pointer; }
+  a.lnk:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading the maintenance register&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+<script>window.VR_STANDALONE = { title: "VRCMMS", home: "https://vissrad.com/", homeLabel: "VissRad \u2197", up: "../", toolBar: true, tools: [{ label: "VRScheduler", href: "../index.html", title: "VRScheduler — CPM schedule editor and P6 schedule analysis", group: "Schedule and estimate" }, { label: "VREstimator", href: "../estimator/index.html", title: "VREstimator — drawing takeoff, assemblies and EPC estimating, sent to the schedule", group: "Schedule and estimate" }, { label: "VRPlanner", href: "../planner/index.html", title: "VRPlanner — capital work planning: work steps, crews, equipment, loaded into the schedule", group: "Planners" }, { label: "VRDCPlanner", href: "../dcplan/index.html", title: "VRDCPlanner — data center construction planning: power, cooling, white space and commissioning L1 to L5", group: "Planners" }, { label: "VRE&IPlanner", href: "../eiplan/index.html", title: "VRE&IPlanner — electrical and instrumentation planning: raceway, cable, terminations, testing and loop checks", group: "Planners" }, { label: "VRPowerPlanner", href: "../pwrplan/index.html", title: "VRPowerPlanner — power plant construction planning for data center campuses: engines, gas turbines, fuel cells, BESS and switchyard", group: "Planners" }, { label: "VRPowerOutage", href: "../pwrout/index.html", title: "VRPowerOutage — power plant outage planning: gas turbine inspections, engine overhauls, HRSG, transformers and return to service", group: "Planners" }, { label: "VRUpstreamPlanner", href: "../upplan/index.html", title: "VRUpstreamPlanner — upstream field development planning: well pads, hook-up, flowlines, central facility and first oil", group: "Planners" }, { label: "VRMidstreamPlanner", href: "../midplan/index.html", title: "VRMidstreamPlanner — midstream planning: pipeline spreads, HDD and bores, compressor, pump and meter stations, terminals", group: "Planners" }, { label: "VRRailHighwayPlanner", href: "../rhplan/index.html", title: "VRRailHighwayPlanner — rail and heavy highway planning: traffic phases, earthwork, paving, bridges, track, turnouts, crossings and signals", group: "Planners" }, { label: "VRTAR", href: "../tar/index.html", title: "VRTAR — turnaround estimating", group: "Turnaround and maintenance" }, { label: "VRCMMS", href: "../cmms/index.html", title: "VRCMMS — maintenance management: assets, work orders, preventive maintenance and backlog", group: "Turnaround and maintenance", active: true }, { label: "VRControls", href: "../controls/index.html", title: "VRControls — project controls and cost tracking: budget, earned and actual hours, SPI and CPI, progress from P6 / MS Project updates, completions and punch", group: "Project controls" }], file: true, schedule: "../index.html#editor", controls: "../controls/index.html#/schedule", brand: "VRSmartPlan" };</script>
+<script src="../shared/lib.js?v=d5788ff27b"></script>
+<script src="../shared/shell.js?v=bf36fc7e4b"></script>
+<script src="../shared/standalone.js?v=df6241ee6f"></script>
+<script src="../shared/records.js?v=4f9cf773bd"></script>
+<script src="../shared/drawrefs.js?v=2928983970"></script>
+<script src="data.js?v=84ac1da562"></script>
+<script src="app.js?v=fb55470ae7"></script>
+</body>
+</html>

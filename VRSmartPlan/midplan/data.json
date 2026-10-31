@@ -1,0 +1,4415 @@
+{
+ "meta": {
+  "module": "midplan",
+  "app": "VissRad Midstream Planner",
+  "generated": "2026-10-27",
+  "library_note": "21 midstream construction modules (pipeline spreads, crossings, valve sites, stations, terminals, processing, controls, line fill and in-service), authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
+ },
+ "event": {
+  "name": "52-Mile Gas Transmission Lateral and Compressor Station (synthetic demo)",
+  "code": "SYN-MS1",
+  "site": "Synthetic pipeline corridor",
+  "owner": "Example Midstream Operator (synthetic)",
+  "shutdown": "2027-03-01T07:00",
+  "window_days": 330,
+  "shift_hours": 10,
+  "shifts_per_day": 1,
+  "days_week": 6,
+  "data_date": "2027-03-01",
+  "currency": "USD",
+  "wbs_root": "MS1.CON"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 10,
+  "contingency_pct": 10,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "M100",
+   "name": "Spread 1, MP 0 to MP 24",
+   "group": "Pipeline",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M200",
+   "name": "Spread 2, MP 24 to MP 52",
+   "group": "Pipeline",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M300",
+   "name": "Crossings: HDDs, bores and water",
+   "group": "Crossings",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M400",
+   "name": "Mainline valve sites and pig traps",
+   "group": "Pipeline",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M500",
+   "name": "Compressor station 1",
+   "group": "Station",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M600",
+   "name": "Delivery meter station",
+   "group": "Station",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M700",
+   "name": "SCADA and pipeline control",
+   "group": "Controls",
+   "sector": "Midstream oil and gas"
+  },
+  {
+   "code": "M000",
+   "name": "Spread-wide and temporary facilities",
+   "group": "General",
+   "sector": "Midstream oil and gas"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General foreman / spread superintendent",
+   "type": "labor",
+   "rate": 118,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman",
+   "type": "labor",
+   "rate": 102,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "WD",
+   "name": "Pipeline welder (with rig)",
+   "type": "labor",
+   "rate": 104,
+   "pf": 1.0,
+   "lib": "WELD-CS"
+  },
+  {
+   "id": "WH",
+   "name": "Welder helper",
+   "type": "labor",
+   "rate": 58,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PF",
+   "name": "Pipefitter",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": "PIPE-JW"
+  },
+  {
+   "id": "OP",
+   "name": "Pipeline equipment operator",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "TM",
+   "name": "Teamster / truck driver",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LB",
+   "name": "Laborer",
+   "type": "labor",
+   "rate": 56,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "BO",
+   "name": "Bending machine operator",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CT",
+   "name": "Coating applicator",
+   "type": "labor",
+   "rate": 66,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "NDT",
+   "name": "NDE technician (AUT / RT)",
+   "type": "labor",
+   "rate": 112,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SV",
+   "name": "Survey crew member",
+   "type": "labor",
+   "rate": 78,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EI",
+   "name": "Environmental and craft inspector",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "HD",
+   "name": "HDD driller and crew",
+   "type": "labor",
+   "rate": 110,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "MW",
+   "name": "Millwright",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": "MILL-JW"
+  },
+  {
+   "id": "IW",
+   "name": "Ironworker",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CP",
+   "name": "Carpenter",
+   "type": "labor",
+   "rate": 74,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CF",
+   "name": "Concrete finisher",
+   "type": "labor",
+   "rate": 70,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EL",
+   "name": "Electrician",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "IT",
+   "name": "Instrument technician",
+   "type": "labor",
+   "rate": 92,
+   "pf": 1.0,
+   "lib": "INST-TC"
+  },
+  {
+   "id": "AT",
+   "name": "Controls / SCADA technician",
+   "type": "labor",
+   "rate": 106,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CPT",
+   "name": "Corrosion (CP) technician",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IN",
+   "name": "Insulator",
+   "type": "labor",
+   "rate": 74,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector",
+   "type": "labor",
+   "rate": 96,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CX",
+   "name": "Commissioning engineer",
+   "type": "labor",
+   "rate": 135,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "VR",
+   "name": "Vendor field service representative",
+   "type": "labor",
+   "rate": 170,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OPR",
+   "name": "Station / control room operator",
+   "type": "labor",
+   "rate": 80,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "SB",
+   "name": "Side boom",
+   "type": "equip",
+   "rate": 150
+  },
+  {
+   "id": "EXC",
+   "name": "Excavator",
+   "type": "equip",
+   "rate": 115
+  },
+  {
+   "id": "DZ",
+   "name": "Dozer",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "WD2",
+   "name": "Wheel ditcher / rock trencher",
+   "type": "equip",
+   "rate": 260
+  },
+  {
+   "id": "BND",
+   "name": "Pipe bending machine",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "WRT",
+   "name": "Pipeline welding rig",
+   "type": "equip",
+   "rate": 32
+  },
+  {
+   "id": "AUT",
+   "name": "AUT / radiography unit",
+   "type": "equip",
+   "rate": 140
+  },
+  {
+   "id": "STT",
+   "name": "Stringing truck",
+   "type": "equip",
+   "rate": 80
+  },
+  {
+   "id": "PAD",
+   "name": "Padding machine",
+   "type": "equip",
+   "rate": 190
+  },
+  {
+   "id": "MUL",
+   "name": "Mulcher",
+   "type": "equip",
+   "rate": 140
+  },
+  {
+   "id": "HDD",
+   "name": "HDD rig with mud system",
+   "type": "equip",
+   "rate": 1400
+  },
+  {
+   "id": "BOR",
+   "name": "Auger bore machine",
+   "type": "equip",
+   "rate": 220
+  },
+  {
+   "id": "FP",
+   "name": "Hydrotest fill pump",
+   "type": "equip",
+   "rate": 60
+  },
+  {
+   "id": "AD",
+   "name": "Air compressor and dryer spread",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "N2",
+   "name": "Nitrogen unit",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "C090",
+   "name": "RT crane 90 t",
+   "type": "equip",
+   "rate": 190
+  },
+  {
+   "id": "C250",
+   "name": "Crawler crane 250 t",
+   "type": "equip",
+   "rate": 420
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 65
+  },
+  {
+   "id": "ML",
+   "name": "Boom lift 60 ft",
+   "type": "equip",
+   "rate": 44
+  },
+  {
+   "id": "PMP",
+   "name": "Concrete pump",
+   "type": "equip",
+   "rate": 160
+  }
+ ],
+ "materials": [
+  {
+   "id": "FJC",
+   "desc": "Field joint coating kit (two-part epoxy or shrink sleeve)",
+   "unit": "ea",
+   "price": 140,
+   "cat": "Pipeline",
+   "waste": 3
+  },
+  {
+   "id": "PAD-M",
+   "desc": "Select padding and rock shield",
+   "unit": "ft",
+   "price": 3.5,
+   "cat": "Pipeline",
+   "waste": 5
+  },
+  {
+   "id": "MAT-SL",
+   "desc": "Swamp and access mats",
+   "unit": "ea",
+   "price": 320,
+   "cat": "Pipeline",
+   "waste": 2
+  },
+  {
+   "id": "SILT",
+   "desc": "Silt fence and erosion controls",
+   "unit": "ft",
+   "price": 3.2,
+   "cat": "Environmental",
+   "waste": 8
+  },
+  {
+   "id": "SEED",
+   "desc": "Seed, mulch and restoration",
+   "unit": "acre",
+   "price": 1400,
+   "cat": "Environmental",
+   "waste": 5
+  },
+  {
+   "id": "MUD",
+   "desc": "HDD drilling fluid and additives",
+   "unit": "ft",
+   "price": 18,
+   "cat": "Crossings",
+   "waste": 10
+  },
+  {
+   "id": "CASE",
+   "desc": "Bore casing pipe",
+   "unit": "ft",
+   "price": 140,
+   "cat": "Crossings",
+   "waste": 3
+  },
+  {
+   "id": "ANODE",
+   "desc": "CP anode bed and rectifier materials",
+   "unit": "ea",
+   "price": 18000,
+   "cat": "Corrosion",
+   "waste": 2
+  },
+  {
+   "id": "TEST",
+   "desc": "CP test stations",
+   "unit": "ea",
+   "price": 650,
+   "cat": "Corrosion",
+   "waste": 2
+  },
+  {
+   "id": "CONC",
+   "desc": "Structural concrete, 4,000 psi",
+   "unit": "cy",
+   "price": 215,
+   "cat": "Civil",
+   "waste": 4
+  },
+  {
+   "id": "REBAR",
+   "desc": "Reinforcing steel",
+   "unit": "ton",
+   "price": 1650,
+   "cat": "Civil",
+   "waste": 4
+  },
+  {
+   "id": "AGG",
+   "desc": "Crushed aggregate base",
+   "unit": "ton",
+   "price": 36,
+   "cat": "Civil",
+   "waste": 6
+  },
+  {
+   "id": "STL",
+   "desc": "Structural steel, fabricated",
+   "unit": "ton",
+   "price": 4100,
+   "cat": "Steel",
+   "waste": 2
+  },
+  {
+   "id": "PEB",
+   "desc": "Pre-engineered building shell",
+   "unit": "sf",
+   "price": 46,
+   "cat": "Buildings",
+   "waste": 2
+  },
+  {
+   "id": "PIPE-ST",
+   "desc": "Station piping, 12 in average, with fittings",
+   "unit": "ft",
+   "price": 210,
+   "cat": "Piping",
+   "waste": 5
+  },
+  {
+   "id": "VALVE",
+   "desc": "Valves, average",
+   "unit": "ea",
+   "price": 4200,
+   "cat": "Piping",
+   "waste": 2
+  },
+  {
+   "id": "CBL-LV",
+   "desc": "LV power and control cable",
+   "unit": "ft",
+   "price": 7,
+   "cat": "Electrical",
+   "waste": 4
+  },
+  {
+   "id": "TRAY",
+   "desc": "Cable tray, 24 in, with supports",
+   "unit": "ft",
+   "price": 85,
+   "cat": "Electrical",
+   "waste": 4
+  },
+  {
+   "id": "INSUL",
+   "desc": "Pipe insulation and jacketing",
+   "unit": "ft",
+   "price": 36,
+   "cat": "Insulation",
+   "waste": 6
+  }
+ ],
+ "modules": [
+  {
+   "id": "MS-MOB",
+   "name": "Spread mobilization and pipe yards",
+   "rev": 1,
+   "category": "General",
+   "desc": "Mobilize the spread: execution plan and permits, spread office, pipe and contractor yards, pipe receiving and stockpiling, equipment move-in and the right-of-way access plan.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "YARDS",
+     "prompt": "Pipe and contractor yards",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    },
+    {
+     "kind": "var",
+     "key": "JOINTS",
+     "prompt": "Line pipe joints received",
+     "type": "number",
+     "default": 3000,
+     "unit": "joints",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Yard crew size",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Execution plan, permits and spread safety plan",
+     "dur": "60",
+     "crew": {
+      "GF": "1",
+      "FM": "1",
+      "EI": "1"
+     },
+     "equip": {},
+     "phase": "Mobilize"
+    },
+    {
+     "id": "A020",
+     "desc": "Spread office and yards ({YARDS})",
+     "dur": "YARDS*60",
+     "crew": {
+      "LB": "4",
+      "OP": "2",
+      "CP": "2"
+     },
+     "equip": {
+      "DZ": "1",
+      "FK": "1"
+     },
+     "phase": "Mobilize",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Receive and stockpile line pipe ({JOINTS} joints)",
+     "dur": "JOINTS*0.12/max(1, CREW/8)",
+     "crew": {
+      "OP": "2",
+      "LB": "CREW",
+      "TM": "2"
+     },
+     "equip": {
+      "SB": "1",
+      "FK": "1"
+     },
+     "phase": "Pipe yard",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Equipment move-in and spread ready",
+     "dur": "40",
+     "crew": {
+      "TM": "4",
+      "OP": "2"
+     },
+     "equip": {},
+     "phase": "Mobilize",
+     "preds": [
+      "A020"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M000"
+   ]
+  },
+  {
+   "id": "MS-SPREAD",
+   "name": "Pipeline spread, mainline section",
+   "rev": 1,
+   "category": "Pipeline",
+   "desc": "One section of cross-country mainline, built by the crews that follow each other down the right-of-way: survey and environmental controls, clear and grade, haul and string, bend, weld, NDE, coat, ditch, lower in, pad and backfill, tie-ins, hydrotest, clean-up and restoration.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Section length",
+     "type": "number",
+     "default": 20,
+     "unit": "mi",
+     "min": 0.5,
+     "max": 300
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "TERR",
+     "prompt": "Terrain",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Flat, open country",
+       "value": 1
+      },
+      {
+       "label": "Rolling or wooded",
+       "value": 1.35
+      },
+      {
+       "label": "Steep, wet or congested",
+       "value": 1.8
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "ROCK",
+     "prompt": "Ditch in rock",
+     "type": "number",
+     "default": 10,
+     "unit": "%",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "WELD",
+     "prompt": "Mainline welders on the firing line",
+     "type": "number",
+     "default": 8,
+     "unit": "welders",
+     "min": 2,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Laborers per crew",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Survey, stake and environmental controls ({MI} mi)",
+     "dur": "MI*3",
+     "crew": {
+      "SV": "3",
+      "LB": "2",
+      "EI": "1"
+     },
+     "equip": {},
+     "phase": "Survey"
+    },
+    {
+     "id": "A020",
+     "desc": "Clear and grade right-of-way",
+     "dur": "MI*14*TERR",
+     "crew": {
+      "OP": "4",
+      "LB": "CREW"
+     },
+     "equip": {
+      "DZ": "2",
+      "MUL": "1",
+      "EXC": "1"
+     },
+     "phase": "Clear and grade",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Haul and string pipe",
+     "dur": "MI*8*DIA",
+     "crew": {
+      "TM": "4",
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "STT": "4",
+      "SB": "1"
+     },
+     "phase": "String",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Field bending",
+     "dur": "MI*5*TERR",
+     "crew": {
+      "BO": "1",
+      "OP": "2",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "BND": "1",
+      "SB": "2"
+     },
+     "phase": "Bend",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Mainline welding (firing line)",
+     "dur": "MI*12*DIA/max(1, WELD/8)",
+     "crew": {
+      "WD": "WELD",
+      "WH": "WELD",
+      "OP": "3",
+      "LB": "4"
+     },
+     "equip": {
+      "WRT": "WELD",
+      "SB": "3"
+     },
+     "phase": "Weld",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "NDE of mainline welds (AUT or radiography)",
+     "dur": "MI*12*DIA/max(1, WELD/8)",
+     "crew": {
+      "NDT": "3",
+      "QC": "1"
+     },
+     "equip": {
+      "AUT": "1"
+     },
+     "phase": "NDE",
+     "preds": [
+      {
+       "id": "A050",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Field joint coating and holiday test",
+     "dur": "MI*11*DIA/max(1, WELD/8)",
+     "crew": {
+      "CT": "4",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Coat",
+     "preds": [
+      {
+       "id": "A060",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A080",
+     "desc": "Ditch",
+     "dur": "MI*12*TERR",
+     "crew": {
+      "OP": "3",
+      "LB": "2"
+     },
+     "equip": {
+      "WD2": "1",
+      "EXC": "2"
+     },
+     "phase": "Ditch",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A085",
+     "desc": "Rock ditching ({ROCK} % of the section)",
+     "dur": "MI*ROCK/100*45",
+     "crew": {
+      "OP": "3",
+      "LB": "2"
+     },
+     "equip": {
+      "WD2": "1",
+      "EXC": "1"
+     },
+     "phase": "Ditch",
+     "when": "ROCK>0",
+     "preds": [
+      {
+       "id": "A080",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A090",
+     "desc": "Lower in",
+     "dur": "MI*10*DIA",
+     "crew": {
+      "OP": "4",
+      "LB": "4",
+      "EI": "1"
+     },
+     "equip": {
+      "SB": "4"
+     },
+     "phase": "Lower in",
+     "preds": [
+      {
+       "id": "A070",
+       "type": "SS",
+       "lag": 20
+      },
+      {
+       "id": "A080",
+       "type": "SS",
+       "lag": 20
+      },
+      {
+       "id": "A085",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A100",
+     "desc": "Pad and backfill",
+     "dur": "MI*10*TERR",
+     "crew": {
+      "OP": "3",
+      "LB": "CREW"
+     },
+     "equip": {
+      "PAD": "1",
+      "DZ": "1",
+      "EXC": "1"
+     },
+     "phase": "Backfill",
+     "preds": [
+      {
+       "id": "A090",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A110",
+     "desc": "Tie-ins",
+     "dur": "MI*4*DIA",
+     "crew": {
+      "WD": "2",
+      "WH": "2",
+      "PF": "2",
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "WRT": "2",
+      "SB": "2",
+      "EXC": "1"
+     },
+     "phase": "Tie-in",
+     "preds": [
+      {
+       "id": "A100",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A120",
+     "desc": "Hydrotest, dewater and dry",
+     "dur": "max(60, MI*6)",
+     "crew": {
+      "PF": "2",
+      "LB": "4",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1",
+      "AD": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A110"
+     ]
+    },
+    {
+     "id": "A130",
+     "desc": "Clean-up and restoration",
+     "dur": "MI*12*TERR",
+     "crew": {
+      "OP": "3",
+      "LB": "CREW",
+      "EI": "1"
+     },
+     "equip": {
+      "DZ": "1",
+      "EXC": "1"
+     },
+     "phase": "Clean-up",
+     "preds": [
+      {
+       "id": "A100",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A140",
+     "desc": "Section mechanically complete",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Complete",
+     "preds": [
+      "A120",
+      "A130"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "FJC",
+     "qty": "MI*5280/40"
+    },
+    {
+     "id": "M020",
+     "item": "PAD-M",
+     "qty": "MI*5280*ROCK/100"
+    },
+    {
+     "id": "M030",
+     "item": "SILT",
+     "qty": "MI*5280*0.6"
+    },
+    {
+     "id": "M040",
+     "item": "SEED",
+     "qty": "MI*12"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400"
+   ]
+  },
+  {
+   "id": "MS-HDD",
+   "name": "Horizontal directional drill crossing",
+   "rev": 1,
+   "category": "Crossings",
+   "desc": "Rivers, highways, wetlands and other no-touch crossings: rig up with entry and exit pits and mud recycling, pilot hole, ream and swab, fabricate and test the pull section, pull back, then rig down and restore.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LEN",
+     "prompt": "Crossing length",
+     "type": "number",
+     "default": 2500,
+     "unit": "ft",
+     "min": 200,
+     "max": 12000
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "SOIL",
+     "prompt": "Ground",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Clays and sands",
+       "value": 1
+      },
+      {
+       "label": "Gravel or mixed",
+       "value": 1.4
+      },
+      {
+       "label": "Rock",
+       "value": 2.2
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Rig up, entry and exit pits and mud system",
+     "dur": "60",
+     "crew": {
+      "HD": "4",
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "HDD": "1",
+      "EXC": "1"
+     },
+     "phase": "Rig up"
+    },
+    {
+     "id": "A020",
+     "desc": "Pilot hole ({LEN} ft)",
+     "dur": "LEN*0.02*SOIL",
+     "crew": {
+      "HD": "5"
+     },
+     "equip": {
+      "HDD": "1"
+     },
+     "phase": "Pilot",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Ream and swab",
+     "dur": "LEN*0.03*SOIL*DIA",
+     "crew": {
+      "HD": "5",
+      "LB": "2"
+     },
+     "equip": {
+      "HDD": "1"
+     },
+     "phase": "Ream",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Fabricate and test the pull section",
+     "dur": "LEN*0.012*DIA",
+     "crew": {
+      "WD": "2",
+      "WH": "2",
+      "NDT": "1",
+      "CT": "1",
+      "OP": "2"
+     },
+     "equip": {
+      "WRT": "2",
+      "SB": "2",
+      "FP": "1"
+     },
+     "phase": "Pull section",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Pull back",
+     "dur": "max(16, LEN*0.008)",
+     "crew": {
+      "HD": "5",
+      "OP": "4",
+      "LB": "2"
+     },
+     "equip": {
+      "HDD": "1",
+      "SB": "3"
+     },
+     "phase": "Pull back",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Rig down and restore the work areas",
+     "dur": "40",
+     "crew": {
+      "HD": "2",
+      "OP": "2",
+      "LB": "4"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Restore",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "MUD",
+     "qty": "LEN*SOIL"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M300",
+    "M100",
+    "M200"
+   ]
+  },
+  {
+   "id": "MS-BORE",
+   "name": "Road and rail bores",
+   "rev": 1,
+   "category": "Crossings",
+   "desc": "Conventional auger bores under roads and railroads, cased or uncased: bore pits, bore and case, push the carrier pipe, end seals and test leads, and pit backfill.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Bores",
+     "type": "number",
+     "default": 10,
+     "unit": "ea",
+     "min": 1,
+     "max": 400
+    },
+    {
+     "kind": "var",
+     "key": "LEN",
+     "prompt": "Average bore length",
+     "type": "number",
+     "default": 120,
+     "unit": "ft",
+     "min": 20,
+     "max": 400
+    },
+    {
+     "kind": "scope",
+     "key": "CASED",
+     "prompt": "Cased crossings?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Dig bore and receiving pits ({N})",
+     "dur": "N*8",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Pits"
+    },
+    {
+     "id": "A020",
+     "desc": "Bore and set casing",
+     "dur": "N*LEN*0.08",
+     "crew": {
+      "OP": "2",
+      "LB": "3",
+      "WD": "1"
+     },
+     "equip": {
+      "BOR": "1",
+      "SB": "1"
+     },
+     "phase": "Bore",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Push carrier pipe, end seals and test leads",
+     "dur": "N*6",
+     "crew": {
+      "PF": "1",
+      "LB": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "SB": "1"
+     },
+     "phase": "Carrier",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Backfill bore pits",
+     "dur": "N*4",
+     "crew": {
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Backfill",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CASE",
+     "qty": "N*LEN",
+     "when": "CASED"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M300",
+    "M100",
+    "M200"
+   ]
+  },
+  {
+   "id": "MS-XNG",
+   "name": "Open-cut water and wetland crossings",
+   "rev": 1,
+   "category": "Crossings",
+   "desc": "Streams and wetlands crossed by open cut, dam-and-pump or flume: access mats, isolation, ditch, set the pre-built crossing section with weights, backfill and restore the banks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Crossings",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 1,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "MATS",
+     "prompt": "Mats per crossing",
+     "type": "number",
+     "default": 60,
+     "unit": "ea",
+     "min": 0,
+     "max": 1000
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Mats, isolation and erosion controls ({N})",
+     "dur": "N*10",
+     "crew": {
+      "LB": "4",
+      "OP": "2",
+      "EI": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Isolation"
+    },
+    {
+     "id": "A020",
+     "desc": "Fabricate the crossing sections",
+     "dur": "N*14*DIA",
+     "crew": {
+      "WD": "2",
+      "WH": "2",
+      "NDT": "1",
+      "CT": "1"
+     },
+     "equip": {
+      "WRT": "2",
+      "SB": "1"
+     },
+     "phase": "Fabricate",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 0
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Ditch the crossing",
+     "dur": "N*10",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "2"
+     },
+     "phase": "Ditch",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Lower in the section with weights",
+     "dur": "N*8*DIA",
+     "crew": {
+      "OP": "3",
+      "LB": "4"
+     },
+     "equip": {
+      "SB": "3"
+     },
+     "phase": "Lower in",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Backfill and restore the banks",
+     "dur": "N*10",
+     "crew": {
+      "OP": "2",
+      "LB": "4",
+      "EI": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Restore",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "MAT-SL",
+     "qty": "N*MATS"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M300",
+    "M100",
+    "M200"
+   ]
+  },
+  {
+   "id": "MS-MLV",
+   "name": "Mainline valve sites and tie-ins",
+   "rev": 1,
+   "category": "Pipeline",
+   "desc": "Block valve sites along the line: site work and fence, set the mainline valve and its bypass and blowdown, actuators and gas-over-oil operators, tie-ins to the mainline, test and RTU at the site.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Valve sites",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "RTU",
+     "prompt": "Remote-operated (RTU and power at the site)?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Valve site grading, aggregate and fence",
+     "dur": "N*30",
+     "crew": {
+      "OP": "2",
+      "LB": "3"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Site"
+    },
+    {
+     "id": "A020",
+     "desc": "Set mainline valve, bypass and blowdown",
+     "dur": "N*40*DIA",
+     "crew": {
+      "PF": "3",
+      "WD": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1",
+      "WRT": "2"
+     },
+     "phase": "Valve",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tie-ins to the mainline",
+     "dur": "N*20*DIA",
+     "crew": {
+      "WD": "2",
+      "WH": "2",
+      "PF": "2",
+      "OP": "2"
+     },
+     "equip": {
+      "WRT": "2",
+      "SB": "2"
+     },
+     "phase": "Tie-in",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Actuator, RTU and solar power",
+     "dur": "N*24",
+     "crew": {
+      "IT": "1",
+      "AT": "1",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Controls",
+     "when": "RTU",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Test and coat the valve site piping",
+     "dur": "N*12",
+     "crew": {
+      "PF": "2",
+      "CT": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG",
+     "qty": "N*400"
+    },
+    {
+     "id": "M020",
+     "item": "PIPE-ST",
+     "qty": "N*120*DIA"
+    },
+    {
+     "id": "M030",
+     "item": "VALVE",
+     "qty": "N*4"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400"
+   ]
+  },
+  {
+   "id": "MS-PIG",
+   "name": "Pig launchers and receivers",
+   "rev": 1,
+   "category": "Pipeline",
+   "desc": "Launcher and receiver barrels at the ends of each pigging section: set the traps, kicker and bypass piping, closures and pig signalers, then test.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Launchers and receivers",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set launcher or receiver barrels ({N})",
+     "dur": "N*12*DIA",
+     "crew": {
+      "RG": "2",
+      "PF": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Kicker, bypass and drain piping",
+     "dur": "N*40*DIA",
+     "crew": {
+      "PF": "3",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Closures, signalers and instruments",
+     "dur": "N*8",
+     "crew": {
+      "IT": "1",
+      "PF": "1"
+     },
+     "equip": {},
+     "phase": "Trim",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Hydrotest the trap piping",
+     "dur": "N*10",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-ST",
+     "qty": "N*80*DIA"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "N*6"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400"
+   ]
+  },
+  {
+   "id": "MS-CP",
+   "name": "Cathodic protection and AC mitigation",
+   "rev": 1,
+   "category": "Pipeline",
+   "desc": "Corrosion protection for the line: deep or shallow anode beds and rectifiers, test stations, insulating joints, AC mitigation where the line parallels power lines, and the close-interval survey.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Line length",
+     "type": "number",
+     "default": 40,
+     "unit": "mi",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "var",
+     "key": "BEDS",
+     "prompt": "Anode beds and rectifiers",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "ACM",
+     "prompt": "AC mitigation along power corridors?",
+     "type": "yesno",
+     "default": 0
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Anode beds and rectifiers ({BEDS})",
+     "dur": "BEDS*40",
+     "crew": {
+      "CPT": "1",
+      "EL": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Anode beds"
+    },
+    {
+     "id": "A020",
+     "desc": "Test stations and bonds",
+     "dur": "MI*3",
+     "crew": {
+      "CPT": "1",
+      "LB": "1"
+     },
+     "equip": {},
+     "phase": "Test stations"
+    },
+    {
+     "id": "A030",
+     "desc": "AC mitigation wire and grounding",
+     "dur": "MI*6",
+     "crew": {
+      "EL": "2",
+      "OP": "1",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "AC mitigation",
+     "when": "ACM"
+    },
+    {
+     "id": "A040",
+     "desc": "Energize, commission and close-interval survey",
+     "dur": "max(40, MI*2)",
+     "crew": {
+      "CPT": "2"
+     },
+     "equip": {},
+     "phase": "Survey",
+     "preds": [
+      "A010",
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "ANODE",
+     "qty": "BEDS"
+    },
+    {
+     "id": "M020",
+     "item": "TEST",
+     "qty": "MI"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400"
+   ]
+  },
+  {
+   "id": "MS-SITE",
+   "name": "Station site, foundations and yard",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Site work for compressor, pump, meter or terminal stations: clear and grade, stormwater and access road, compressor and equipment foundations, pipe supports, aggregate yard and fence.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Station site area",
+     "type": "number",
+     "default": 15,
+     "unit": "acres",
+     "min": 1,
+     "max": 300
+    },
+    {
+     "kind": "var",
+     "key": "CY",
+     "prompt": "Foundation concrete",
+     "type": "number",
+     "default": 2500,
+     "unit": "cy",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Concrete crew size",
+     "type": "number",
+     "default": 16,
+     "unit": "heads",
+     "min": 4,
+     "max": 80
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Clear, grade and stormwater",
+     "dur": "ACRES*16",
+     "crew": {
+      "OP": "3",
+      "LB": "3"
+     },
+     "equip": {
+      "DZ": "2",
+      "EXC": "1"
+     },
+     "phase": "Site"
+    },
+    {
+     "id": "A020",
+     "desc": "Form, rebar and embeds",
+     "dur": "CY*0.4/max(1, CREW/8)",
+     "crew": {
+      "CP": "CREW",
+      "IW": "3",
+      "LB": "2"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Foundations",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Place concrete ({CY} cy)",
+     "dur": "CY*0.12/max(1, CREW/8)",
+     "crew": {
+      "CF": "4",
+      "LB": "CREW"
+     },
+     "equip": {
+      "PMP": "1"
+     },
+     "phase": "Foundations",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Aggregate yard, roads and fence",
+     "dur": "ACRES*10",
+     "crew": {
+      "OP": "2",
+      "LB": "4"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Site",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "CONC",
+     "qty": "CY"
+    },
+    {
+     "id": "M020",
+     "item": "REBAR",
+     "qty": "CY*0.08"
+    },
+    {
+     "id": "M030",
+     "item": "AGG",
+     "qty": "ACRES*1200"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-CU",
+   "name": "Compressor units",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Gas turbine or reciprocating compressor units at a mainline or booster station: set the packages, bush and shim, assemble, pre-align and final align, with lube oil and the OEM checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Compressor units",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    },
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Driver",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Reciprocating, engine or electric",
+       "value": 1
+      },
+      {
+       "label": "Gas turbine centrifugal",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Expedite, receive and stage compressor packages",
+     "dur": "N*8",
+     "crew": {
+      "RG": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Bush, shim and level baseplates",
+     "dur": "N*24*KIND",
+     "crew": {
+      "MW": "3"
+     },
+     "equip": {},
+     "phase": "Set",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set compressor and driver ({N})",
+     "dur": "N*20*KIND",
+     "crew": {
+      "RG": "4",
+      "MW": "2",
+      "OP": "2"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Set",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Assemble coolers, scrubbers and auxiliaries",
+     "dur": "N*60*KIND",
+     "crew": {
+      "MW": "3",
+      "PF": "3",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Assemble",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Pre-align driver and compressor",
+     "dur": "N*24*KIND",
+     "crew": {
+      "MW": "3",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Final align after piping",
+     "dur": "N*16*KIND",
+     "crew": {
+      "MW": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Mechanical turnover with the OEM",
+     "dur": "N*4",
+     "crew": {
+      "QC": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A060"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-SPIP",
+   "name": "Station piping, headers and gas cooling",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Station yard piping: suction and discharge headers, unit piping, gas coolers, filter separators and scrubbers, station bypass and blowdown, with supports, hydrotest, painting or insulation.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Station piping",
+     "type": "number",
+     "default": 4000,
+     "unit": "ft",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "COOL",
+     "prompt": "Gas cooler bays",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Piping crew size",
+     "type": "number",
+     "default": 16,
+     "unit": "heads",
+     "min": 4,
+     "max": 80
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set gas coolers and filter separators",
+     "dur": "COOL*24",
+     "crew": {
+      "RG": "3",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Equipment"
+    },
+    {
+     "id": "A020",
+     "desc": "Lift spools into place ({LF} ft)",
+     "dur": "LF*0.4/CREW",
+     "crew": {
+      "PF": "CREW",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A023",
+     "desc": "Fit-up and tack",
+     "dur": "LF*0.6/CREW",
+     "crew": {
+      "PF": "CREW"
+     },
+     "equip": {},
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A026",
+     "desc": "Weld out and NDE",
+     "dur": "LF*1.2/CREW",
+     "crew": {
+      "PF": "ceil(CREW/2)",
+      "WD": "max(2, ceil(CREW/3))",
+      "QC": "1"
+     },
+     "equip": {
+      "WRT": "max(2, ceil(CREW/3))"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A023",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pipe supports",
+     "dur": "LF*0.03",
+     "crew": {
+      "PF": "2",
+      "WD": "1"
+     },
+     "equip": {},
+     "phase": "Supports",
+     "preds": [
+      {
+       "id": "A026",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pre-test punch list walkdown",
+     "dur": "max(16, LF*0.004)",
+     "crew": {
+      "QC": "1",
+      "PF": "1"
+     },
+     "equip": {},
+     "phase": "Punch",
+     "preds": [
+      "A026",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Hydrotest station piping",
+     "dur": "max(40, LF*0.01)",
+     "crew": {
+      "PF": "4",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Post-test restoration and blinds out",
+     "dur": "max(16, LF*0.004)",
+     "crew": {
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Restore",
+     "preds": [
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Paint and insulate",
+     "dur": "LF*0.06",
+     "crew": {
+      "IN": "2",
+      "CT": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Coatings",
+     "preds": [
+      "A060"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-ST",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "LF/40"
+    },
+    {
+     "id": "M030",
+     "item": "INSUL",
+     "qty": "LF*0.2"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-BLDG",
+   "name": "Station buildings",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Compressor or pump building with its overhead crane, control and electrical building, auxiliary and warehouse buildings: steel and shell, crane, building systems and fire and gas detection.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SF",
+     "prompt": "Building area",
+     "type": "number",
+     "default": 20000,
+     "unit": "sf",
+     "min": 0,
+     "max": 500000
+    },
+    {
+     "kind": "scope",
+     "key": "CRANE",
+     "prompt": "Overhead crane in the compressor building?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Erect building steel and shell",
+     "dur": "SF*0.014",
+     "crew": {
+      "IW": "6",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1",
+      "ML": "2"
+     },
+     "phase": "Buildings"
+    },
+    {
+     "id": "A020",
+     "desc": "Overhead crane and runway",
+     "dur": "80",
+     "crew": {
+      "IW": "4",
+      "MW": "2",
+      "EL": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Buildings",
+     "when": "CRANE",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Building HVAC, lighting and fire and gas detection",
+     "dur": "SF*0.006",
+     "crew": {
+      "EL": "3",
+      "PF": "2",
+      "IT": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Systems",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PEB",
+     "qty": "SF"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-MTR",
+   "name": "Meter and regulator station",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Custody transfer or interconnect meter station: filter separator, ultrasonic or orifice meter runs, flow computers, gas chromatograph, pressure regulation and overpressure protection, and the station building.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "RUNS",
+     "prompt": "Meter runs",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 20
+    },
+    {
+     "kind": "scope",
+     "key": "REG",
+     "prompt": "Pressure regulation?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "DIA",
+     "prompt": "Pipe diameter",
+     "type": "choice",
+     "options": [
+      {
+       "label": "12 to 16 in",
+       "value": 0.6
+      },
+      {
+       "label": "20 to 30 in",
+       "value": 1
+      },
+      {
+       "label": "36 to 42 in",
+       "value": 1.4
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set filter separator, meter skid and building",
+     "dur": "max(40, RUNS*16)",
+     "crew": {
+      "RG": "2",
+      "PF": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Meter runs and header piping ({RUNS})",
+     "dur": "RUNS*50*DIA",
+     "crew": {
+      "PF": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Regulators and overpressure protection",
+     "dur": "RUNS*20",
+     "crew": {
+      "PF": "2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Regulation",
+     "when": "REG",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Flow computers, chromatograph and RTU",
+     "dur": "60",
+     "crew": {
+      "IT": "2",
+      "AT": "1"
+     },
+     "equip": {},
+     "phase": "Measurement",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Hydrotest and meter calibration witness",
+     "dur": "max(24, RUNS*8)",
+     "crew": {
+      "PF": "2",
+      "IT": "1",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-ST",
+     "qty": "RUNS*90*DIA"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "RUNS*6"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-PUMP",
+   "name": "Liquids pump station",
+   "rev": 1,
+   "category": "Stations",
+   "desc": "Crude, products or NGL pump station: mainline pumps and motors, booster pumps, strainers and the pressure control valve, the relief system and sump: bush and shim, set, pre-align, connect piping and final align.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Mainline and booster pumps",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 30
+    },
+    {
+     "kind": "scope",
+     "key": "SIZE",
+     "prompt": "Pump size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 1,500 hp",
+       "value": 1
+      },
+      {
+       "label": "1,500 to 6,000 hp",
+       "value": 1.7
+      }
+     ],
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Expedite, receive and stage pumps and motors",
+     "dur": "N*4",
+     "crew": {
+      "RG": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Bush, shim and level pump bases",
+     "dur": "N*12*SIZE",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Set",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Set pumps and motors ({N})",
+     "dur": "N*10*SIZE",
+     "crew": {
+      "RG": "3",
+      "MW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Set",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pre-align pump and motor",
+     "dur": "N*12*SIZE",
+     "crew": {
+      "MW": "2"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Final align after piping",
+     "dur": "N*10*SIZE",
+     "crew": {
+      "MW": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Turnover with the pump vendor",
+     "dur": "N*3",
+     "crew": {
+      "QC": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-TANK",
+   "name": "Terminal storage tanks",
+   "rev": 1,
+   "category": "Terminals",
+   "desc": "Field-erected floating-roof or fixed-roof tanks at a crude or products terminal: bottom, shell courses fit and tack, weld, roof, nozzles and manways, attachments and stairs, hydrotest and close-up.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Tanks",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 60
+    },
+    {
+     "kind": "var",
+     "key": "BBL",
+     "prompt": "Tank size",
+     "type": "number",
+     "default": 250000,
+     "unit": "bbl",
+     "min": 10000,
+     "max": 1500000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Expedite and stage tank plate",
+     "dur": "N*16",
+     "crew": {
+      "RG": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Receive"
+    },
+    {
+     "id": "A020",
+     "desc": "Fit and tack bottom and shell courses",
+     "dur": "N*BBL*0.004",
+     "crew": {
+      "IW": "6",
+      "WD": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Erect",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Weld bottom, shell and roof",
+     "dur": "N*BBL*0.005",
+     "crew": {
+      "WD": "6",
+      "WH": "4"
+     },
+     "equip": {
+      "WRT": "6"
+     },
+     "phase": "Weld",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Steel attachments, stairs and platforms",
+     "dur": "N*80",
+     "crew": {
+      "IW": "4"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Attachments",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Nozzles, manways and floating roof seals",
+     "dur": "N*120",
+     "crew": {
+      "WD": "2",
+      "PF": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Nozzles",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Hydrotest (water fill test)",
+     "dur": "N*80",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030",
+      "A040",
+      "A050"
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Close up and accept",
+     "dur": "N*16",
+     "crew": {
+      "QC": "1",
+      "IW": "2"
+     },
+     "equip": {},
+     "phase": "Accept",
+     "preds": [
+      "A060"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-LOAD",
+   "name": "Terminal loading and manifolds",
+   "rev": 1,
+   "category": "Terminals",
+   "desc": "Truck or rail loading racks, the marine dock manifold where there is one, tank manifolds, transfer pumps, vapor combustion and the custody meters at the racks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "BAYS",
+     "prompt": "Loading bays or spots",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 1,
+     "max": 80
+    },
+    {
+     "kind": "scope",
+     "key": "DOCK",
+     "prompt": "Marine dock manifold?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Terminal piping",
+     "type": "number",
+     "default": 5000,
+     "unit": "ft",
+     "min": 0,
+     "max": 100000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Loading rack structures and canopies ({BAYS})",
+     "dur": "BAYS*30",
+     "crew": {
+      "IW": "4",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Racks"
+    },
+    {
+     "id": "A020",
+     "desc": "Loading arms, meters and vapor recovery",
+     "dur": "BAYS*24",
+     "crew": {
+      "PF": "3",
+      "IT": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Racks",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tank manifolds and terminal piping ({LF} ft)",
+     "dur": "LF*0.5",
+     "crew": {
+      "PF": "6",
+      "WD": "3"
+     },
+     "equip": {
+      "WRT": "3"
+     },
+     "phase": "Piping",
+     "preds": []
+    },
+    {
+     "id": "A040",
+     "desc": "Marine dock manifold and hoses",
+     "dur": "240",
+     "crew": {
+      "PF": "4",
+      "WD": "2",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Dock",
+     "when": "DOCK",
+     "preds": []
+    },
+    {
+     "id": "A050",
+     "desc": "Hydrotest terminal piping",
+     "dur": "max(40, LF*0.01)",
+     "crew": {
+      "PF": "3",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-ST",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "LF/50+BAYS*4"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500",
+    "M600"
+   ]
+  },
+  {
+   "id": "MS-GPP",
+   "name": "Modular gas processing plant",
+   "rev": 1,
+   "category": "Processing",
+   "desc": "A modular cryogenic gas processing plant or NGL fractionation train: inlet and amine treating, mole sieve dehydration, cold box and turbo-expander, residue compression and the product pumps, set as shop-built modules and interconnected in the field.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MMSCFD",
+     "prompt": "Plant capacity",
+     "type": "number",
+     "default": 200,
+     "unit": "MMscfd",
+     "min": 20,
+     "max": 1500
+    },
+    {
+     "kind": "var",
+     "key": "MODS",
+     "prompt": "Process modules",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 4,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Field interconnect piping",
+     "type": "number",
+     "default": 15000,
+     "unit": "ft",
+     "min": 0,
+     "max": 300000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Piping crew size",
+     "type": "number",
+     "default": 24,
+     "unit": "heads",
+     "min": 6,
+     "max": 150
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set process modules ({MODS})",
+     "dur": "MODS*16",
+     "crew": {
+      "RG": "4",
+      "IW": "2",
+      "OP": "2"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Modules"
+    },
+    {
+     "id": "A020",
+     "desc": "Cold box and turbo-expander",
+     "dur": "max(160, MMSCFD*0.8)",
+     "crew": {
+      "RG": "4",
+      "MW": "3",
+      "VR": "1"
+     },
+     "equip": {
+      "C250": "1"
+     },
+     "phase": "Cryogenic",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Interconnect piping ({LF} ft)",
+     "dur": "LF*1.8/CREW",
+     "crew": {
+      "PF": "CREW",
+      "WD": "max(2, ceil(CREW/3))"
+     },
+     "equip": {
+      "WRT": "6",
+      "C090": "1"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Hydrotest and pneumatic tests",
+     "dur": "max(80, LF*0.01)",
+     "crew": {
+      "PF": "4",
+      "QC": "1"
+     },
+     "equip": {
+      "FP": "1",
+      "N2": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 200
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Cold insulation and painting",
+     "dur": "LF*0.1",
+     "crew": {
+      "IN": "6",
+      "CT": "2"
+     },
+     "equip": {
+      "ML": "2"
+     },
+     "phase": "Insulation",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-ST",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "LF/40"
+    },
+    {
+     "id": "M030",
+     "item": "INSUL",
+     "qty": "LF*0.5"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M500"
+   ]
+  },
+  {
+   "id": "MS-ELEC",
+   "name": "Station electrical",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Utility service or on-site generation, the station substation and MCC / power distribution center, cable tray, power and control cable to motors and drivers, grounding and lighting.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "SUB",
+     "prompt": "Station substation (electric-driven units or large pumps)?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "TRAY",
+     "prompt": "Cable tray and conduit",
+     "type": "number",
+     "default": 4000,
+     "unit": "ft",
+     "min": 0,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "CABLE",
+     "prompt": "Power and control cable",
+     "type": "number",
+     "default": 90000,
+     "unit": "ft",
+     "min": 0,
+     "max": 3000000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 10,
+     "unit": "heads",
+     "min": 2,
+     "max": 80
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Substation and power distribution center",
+     "dur": "240",
+     "crew": {
+      "EL": "6",
+      "RG": "2"
+     },
+     "equip": {
+      "C090": "1"
+     },
+     "phase": "Substation",
+     "when": "SUB"
+    },
+    {
+     "id": "A020",
+     "desc": "Cable tray and conduit",
+     "dur": "TRAY*0.15/max(1, CREW/8)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Raceway",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Pull power and control cable",
+     "dur": "CABLE*0.006/max(1, CREW/8)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Cable",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Terminations and motor connections",
+     "dur": "CABLE*0.003/max(1, CREW/8)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Terminate",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Grounding and lighting",
+     "dur": "max(40, TRAY*0.02)",
+     "crew": {
+      "EL": "3"
+     },
+     "equip": {},
+     "phase": "Lighting",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TRAY",
+     "qty": "TRAY"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-LV",
+     "qty": "CABLE"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400",
+    "M500",
+    "M600",
+    "M700",
+    "M000"
+   ]
+  },
+  {
+   "id": "MS-SCADA",
+   "name": "Station controls, SCADA and leak detection",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Station PLC and unit control panels, field instruments, emergency shutdown and fire and gas, the communications to the pipeline control center, SCADA points and the leak detection system, with loop checks and point-to-point tests.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "IO",
+     "prompt": "I/O points",
+     "type": "number",
+     "default": 2500,
+     "unit": "ea",
+     "min": 100,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "INST",
+     "prompt": "Field instruments",
+     "type": "number",
+     "default": 500,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "scope",
+     "key": "LDS",
+     "prompt": "Leak detection system (liquids lines)?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Instrument crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Control panels, network and communications",
+     "dur": "max(80, IO*0.02)",
+     "crew": {
+      "AT": "2",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Controls"
+    },
+    {
+     "id": "A020",
+     "desc": "Instrument installation and tubing",
+     "dur": "INST*2.4/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {},
+     "phase": "Instruments",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Point-to-point and loop checks",
+     "dur": "IO*0.35/max(2, ceil(CREW/2))",
+     "crew": {
+      "IT": "max(2, ceil(CREW/2))",
+      "AT": "1"
+     },
+     "equip": {},
+     "phase": "Checks",
+     "preds": [
+      "A010",
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 60
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "SCADA point-to-point with the control center",
+     "dur": "max(40, IO*0.03)",
+     "crew": {
+      "AT": "2",
+      "OPR": "1"
+     },
+     "equip": {},
+     "phase": "SCADA",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Leak detection tuning and tests",
+     "dur": "120",
+     "crew": {
+      "AT": "1",
+      "CX": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Leak detection",
+     "when": "LDS",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400",
+    "M500",
+    "M600",
+    "M700",
+    "M000"
+   ]
+  },
+  {
+   "id": "MS-PCX",
+   "name": "Pre-commissioning and station turnover",
+   "rev": 1,
+   "category": "Commissioning",
+   "desc": "Station systems from construction to operations: walkdowns and punch lists, flushing and drying, nitrogen purge and leak test, ESD and fire and gas function tests, and system turnover packages.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SYS",
+     "prompt": "Systems",
+     "type": "number",
+     "default": 30,
+     "unit": "ea",
+     "min": 1,
+     "max": 800
+    },
+    {
+     "kind": "var",
+     "key": "PUNCH",
+     "prompt": "Punch items",
+     "type": "number",
+     "default": 900,
+     "unit": "ea",
+     "min": 0,
+     "max": 30000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "System walkdowns",
+     "dur": "SYS*4",
+     "crew": {
+      "QC": "1",
+      "CX": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Walkdown"
+    },
+    {
+     "id": "A020",
+     "desc": "Flush, dry and nitrogen purge",
+     "dur": "SYS*5",
+     "crew": {
+      "PF": "3",
+      "CX": "1",
+      "OPR": "1"
+     },
+     "equip": {
+      "N2": "1",
+      "AD": "1"
+     },
+     "phase": "Purge",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "ESD and fire and gas function tests",
+     "dur": "max(40, SYS*2)",
+     "crew": {
+      "IT": "2",
+      "AT": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "ESD",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Clear punch and turn over systems",
+     "dur": "PUNCH*0.5/4",
+     "crew": {
+      "PF": "2",
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400",
+    "M500",
+    "M600",
+    "M700",
+    "M000"
+   ]
+  },
+  {
+   "id": "MS-INSV",
+   "name": "Line fill, start-up and in-service",
+   "rev": 1,
+   "category": "Commissioning",
+   "desc": "Put the line and stations in service: caliper and geometry pig runs, gas-up with purge or liquid line fill, station unit start-ups with the OEM, the baseline in-line inspection run where required, and the stable-flow period before handover.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Line length",
+     "type": "number",
+     "default": 40,
+     "unit": "mi",
+     "min": 1,
+     "max": 1000
+    },
+    {
+     "kind": "scope",
+     "key": "SVC",
+     "prompt": "Service",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Natural gas: purge and pack",
+       "value": 1
+      },
+      {
+       "label": "Liquids: line fill",
+       "value": 1.6
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "UNITS",
+     "prompt": "Station units started",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "RUN",
+     "prompt": "Stable-flow period",
+     "type": "number",
+     "default": 72,
+     "unit": "h",
+     "min": 12,
+     "max": 720
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Caliper and geometry pig runs",
+     "dur": "max(24, MI*0.4)",
+     "crew": {
+      "CX": "1",
+      "OPR": "2",
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Pigging"
+    },
+    {
+     "id": "A020",
+     "desc": "Gas-up or line fill ({MI} mi)",
+     "dur": "max(24, MI*0.8*SVC)",
+     "crew": {
+      "CX": "1",
+      "OPR": "2",
+      "PF": "2"
+     },
+     "equip": {},
+     "phase": "Line fill",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Station unit start-ups with the OEM ({UNITS})",
+     "dur": "UNITS*24",
+     "crew": {
+      "CX": "1",
+      "VR": "1",
+      "MW": "1",
+      "OPR": "2"
+     },
+     "equip": {},
+     "phase": "Start-up",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Stable-flow period ({RUN} h)",
+     "dur": "RUN",
+     "crew": {
+      "OPR": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "In-service",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "In service and handover to pipeline operations",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Handover",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "M100",
+    "M200",
+    "M300",
+    "M400",
+    "M500",
+    "M600",
+    "M700",
+    "M000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "WP-000-001",
+   "tag": "MOB",
+   "desc": "Spread mobilization, pipe yards and line pipe receiving",
+   "unit": "M000",
+   "module_id": "MS-MOB",
+   "answers": {
+    "YARDS": 2,
+    "JOINTS": 6900,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "WP-100-002",
+   "tag": "SPR1",
+   "desc": "Spread 1 mainline, 24 mi of 30 in, MP 0 to MP 24",
+   "unit": "M100",
+   "module_id": "MS-SPREAD",
+   "answers": {
+    "MI": 24,
+    "DIA": 1,
+    "TERR": 1,
+    "ROCK": 5,
+    "WELD": 10,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "ALN",
+     "doc_no": "SYN-MS1-ALN-0001",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI003",
+   "wo": "WP-200-003",
+   "tag": "SPR2",
+   "desc": "Spread 2 mainline, 28 mi of 30 in, MP 24 to MP 52",
+   "unit": "M200",
+   "module_id": "MS-SPREAD",
+   "answers": {
+    "MI": 28,
+    "DIA": 1,
+    "TERR": 1.35,
+    "ROCK": 20,
+    "WELD": 10,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "ALN",
+     "doc_no": "SYN-MS1-ALN-0025",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI004",
+   "wo": "WP-300-004",
+   "tag": "HDD1",
+   "desc": "HDD river crossing, 3,200 ft",
+   "unit": "M300",
+   "module_id": "MS-HDD",
+   "answers": {
+    "LEN": 3200,
+    "DIA": 1,
+    "SOIL": 1
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "XNG",
+     "doc_no": "SYN-MS1-XNG-0101",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI005",
+   "wo": "WP-300-005",
+   "tag": "HDD2",
+   "desc": "HDD highway and wetland crossing, 1,800 ft",
+   "unit": "M300",
+   "module_id": "MS-HDD",
+   "answers": {
+    "LEN": 1800,
+    "DIA": 1,
+    "SOIL": 1.4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI004"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "XNG",
+     "doc_no": "SYN-MS1-XNG-0102",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI006",
+   "wo": "WP-300-006",
+   "tag": "BORE",
+   "desc": "Road and rail bores",
+   "unit": "M300",
+   "module_id": "MS-BORE",
+   "answers": {
+    "N": 18,
+    "LEN": 120,
+    "CASED": 1
+   },
+   "status": "Approved",
+   "offset": 250,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI007",
+   "wo": "WP-300-007",
+   "tag": "XNG",
+   "desc": "Open-cut stream and wetland crossings",
+   "unit": "M300",
+   "module_id": "MS-XNG",
+   "answers": {
+    "N": 9,
+    "MATS": 60,
+    "DIA": 1
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI008",
+   "wo": "WP-400-008",
+   "tag": "MLV",
+   "desc": "Four mainline valve sites",
+   "unit": "M400",
+   "module_id": "MS-MLV",
+   "answers": {
+    "N": 4,
+    "DIA": 1,
+    "RTU": 1
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI009",
+   "wo": "WP-400-009",
+   "tag": "PIG",
+   "desc": "Pig launcher and receiver",
+   "unit": "M400",
+   "module_id": "MS-PIG",
+   "answers": {
+    "N": 2,
+    "DIA": 1
+   },
+   "status": "Approved",
+   "offset": 600,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI010",
+   "wo": "WP-400-010",
+   "tag": "CP",
+   "desc": "Cathodic protection and AC mitigation, 52 mi",
+   "unit": "M400",
+   "module_id": "MS-CP",
+   "answers": {
+    "MI": 52,
+    "BEDS": 3,
+    "ACM": 1
+   },
+   "status": "Approved",
+   "offset": 600,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "WP-500-011",
+   "tag": "CS-SITE",
+   "desc": "Compressor station site and foundations",
+   "unit": "M500",
+   "module_id": "MS-SITE",
+   "answers": {
+    "ACRES": 18,
+    "CY": 3200,
+    "CREW": 18
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-MS1-CIV-0501",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI012",
+   "wo": "WP-500-012",
+   "tag": "CS-UNITS",
+   "desc": "Three gas turbine compressor units",
+   "unit": "M500",
+   "module_id": "MS-CU",
+   "answers": {
+    "N": 3,
+    "KIND": 1.6
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI011"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "GAD",
+     "doc_no": "SYN-MS1-MEC-0501",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI013",
+   "wo": "WP-500-013",
+   "tag": "CS-PIPE",
+   "desc": "Station headers, unit piping and gas coolers",
+   "unit": "M500",
+   "module_id": "MS-SPIP",
+   "answers": {
+    "LF": 5200,
+    "COOL": 3,
+    "CREW": 18
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI011"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "SYN-MS1-PRC-0501",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI014",
+   "wo": "WP-500-014",
+   "tag": "CS-BLDG",
+   "desc": "Compressor building and control building",
+   "unit": "M500",
+   "module_id": "MS-BLDG",
+   "answers": {
+    "SF": 24000,
+    "CRANE": 1
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI011"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI015",
+   "wo": "WP-600-015",
+   "tag": "MTR",
+   "desc": "Delivery meter and regulator station",
+   "unit": "M600",
+   "module_id": "MS-MTR",
+   "answers": {
+    "RUNS": 3,
+    "REG": 1,
+    "DIA": 1
+   },
+   "status": "Approved",
+   "offset": 500,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "SYN-MS1-PRC-0601",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI016",
+   "wo": "WP-500-016",
+   "tag": "CS-ELEC",
+   "desc": "Compressor station electrical",
+   "unit": "M500",
+   "module_id": "MS-ELEC",
+   "answers": {
+    "SUB": 0,
+    "TRAY": 4200,
+    "CABLE": 95000,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI014"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "SLD",
+     "doc_no": "SYN-MS1-ELE-0501",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI017",
+   "wo": "WP-700-017",
+   "tag": "SCADA",
+   "desc": "Station controls, valve-site RTUs and SCADA",
+   "unit": "M700",
+   "module_id": "MS-SCADA",
+   "answers": {
+    "IO": 2800,
+    "INST": 560,
+    "LDS": 0,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "WP-500-018",
+   "tag": "PCX",
+   "desc": "Pre-commissioning and station turnover",
+   "unit": "M500",
+   "module_id": "MS-PCX",
+   "answers": {
+    "SYS": 34,
+    "PUNCH": 1000
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI012",
+    "WI013",
+    "WI015",
+    "WI017"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "WP-000-019",
+   "tag": "INSV",
+   "desc": "Caliper runs, gas-up, unit start-ups and in-service",
+   "unit": "M000",
+   "module_id": "MS-INSV",
+   "answers": {
+    "MI": 52,
+    "SVC": 1,
+    "UNITS": 3,
+    "RUN": 72
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002",
+    "WI003",
+    "WI005",
+    "WI006",
+    "WI007",
+    "WI008",
+    "WI009",
+    "WI010",
+    "WI018"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}

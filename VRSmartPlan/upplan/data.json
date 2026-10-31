@@ -1,0 +1,4162 @@
+{
+ "meta": {
+  "module": "upplan",
+  "app": "VissRad Upstream Planner",
+  "generated": "2026-10-27",
+  "library_note": "19 onshore upstream construction modules (pads, wellsite hook-up, flowlines, central facility, power, automation, start-up), authored by VissRad. Demonstration norms, not market or benchmark data: calibrate to your own history before a plan is issued."
+ },
+ "event": {
+  "name": "Three-Pad Field Development and Central Facility (synthetic demo)",
+  "code": "SYN-UP1",
+  "site": "Synthetic onshore basin field",
+  "owner": "Example Independent Operator (synthetic)",
+  "shutdown": "2027-02-01T07:00",
+  "window_days": 300,
+  "shift_hours": 10,
+  "shifts_per_day": 1,
+  "days_week": 6,
+  "data_date": "2027-02-01",
+  "currency": "USD",
+  "wbs_root": "UP1.CON"
+ },
+ "settings": {
+  "site_pf": 1.0,
+  "round_up": "half",
+  "shift_hours": 10,
+  "contingency_pct": 10,
+  "mat_markup_pct": 8.25
+ },
+ "units": [
+  {
+   "code": "U100",
+   "name": "Pad A, six wells",
+   "group": "Wellsite",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U200",
+   "name": "Pad B, eight wells",
+   "group": "Wellsite",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U300",
+   "name": "Pad C, six wells",
+   "group": "Wellsite",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U400",
+   "name": "Flowlines and gathering corridor",
+   "group": "Gathering",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U500",
+   "name": "Central processing facility",
+   "group": "Facility",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U600",
+   "name": "Produced water and SWD",
+   "group": "Facility",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U700",
+   "name": "Field power and automation",
+   "group": "Electrical",
+   "sector": "Upstream oil and gas"
+  },
+  {
+   "code": "U000",
+   "name": "Field-wide and temporary facilities",
+   "group": "General",
+   "sector": "Upstream oil and gas"
+  }
+ ],
+ "resources": [
+  {
+   "id": "GF",
+   "name": "General foreman",
+   "type": "labor",
+   "rate": 110,
+   "pf": 1.0,
+   "lib": "SUPV-GF"
+  },
+  {
+   "id": "FM",
+   "name": "Foreman",
+   "type": "labor",
+   "rate": 100,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PF",
+   "name": "Pipefitter",
+   "type": "labor",
+   "rate": 86,
+   "pf": 1.0,
+   "lib": "PIPE-JW"
+  },
+  {
+   "id": "WD",
+   "name": "Welder (with rig)",
+   "type": "labor",
+   "rate": 98,
+   "pf": 1.0,
+   "lib": "WELD-CS"
+  },
+  {
+   "id": "HF",
+   "name": "HDPE fusion technician",
+   "type": "labor",
+   "rate": 72,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "RA",
+   "name": "Roustabout",
+   "type": "labor",
+   "rate": 52,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "LB",
+   "name": "Laborer",
+   "type": "labor",
+   "rate": 54,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "OP",
+   "name": "Equipment operator",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "MW",
+   "name": "Millwright",
+   "type": "labor",
+   "rate": 88,
+   "pf": 1.0,
+   "lib": "MILL-JW"
+  },
+  {
+   "id": "IW",
+   "name": "Ironworker",
+   "type": "labor",
+   "rate": 82,
+   "pf": 1.0,
+   "lib": "IRON-ST"
+  },
+  {
+   "id": "RG",
+   "name": "Rigger",
+   "type": "labor",
+   "rate": 80,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CP",
+   "name": "Carpenter",
+   "type": "labor",
+   "rate": 72,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CF",
+   "name": "Concrete finisher",
+   "type": "labor",
+   "rate": 68,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "EL",
+   "name": "Electrician",
+   "type": "labor",
+   "rate": 84,
+   "pf": 1.0,
+   "lib": "ELEC-JW"
+  },
+  {
+   "id": "LN",
+   "name": "Lineman",
+   "type": "labor",
+   "rate": 92,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "IT",
+   "name": "Instrument technician",
+   "type": "labor",
+   "rate": 90,
+   "pf": 1.0,
+   "lib": "INST-TC"
+  },
+  {
+   "id": "AT",
+   "name": "Automation technician (PLC / SCADA)",
+   "type": "labor",
+   "rate": 104,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PT",
+   "name": "Painter / coater",
+   "type": "labor",
+   "rate": 64,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "QC",
+   "name": "QC inspector",
+   "type": "labor",
+   "rate": 94,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "CX",
+   "name": "Commissioning engineer",
+   "type": "labor",
+   "rate": 130,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "VR",
+   "name": "Vendor field service representative",
+   "type": "labor",
+   "rate": 165,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "PO",
+   "name": "Production operator",
+   "type": "labor",
+   "rate": 76,
+   "pf": 1.0,
+   "lib": ""
+  },
+  {
+   "id": "C060",
+   "name": "RT crane 60 t",
+   "type": "equip",
+   "rate": 165
+  },
+  {
+   "id": "C120",
+   "name": "Hydraulic truck crane 120 t",
+   "type": "equip",
+   "rate": 300
+  },
+  {
+   "id": "FK",
+   "name": "Telehandler",
+   "type": "equip",
+   "rate": 62
+  },
+  {
+   "id": "EXC",
+   "name": "Excavator",
+   "type": "equip",
+   "rate": 110
+  },
+  {
+   "id": "DZ",
+   "name": "Dozer",
+   "type": "equip",
+   "rate": 115
+  },
+  {
+   "id": "MG",
+   "name": "Motor grader",
+   "type": "equip",
+   "rate": 105
+  },
+  {
+   "id": "RL",
+   "name": "Vibratory roller",
+   "type": "equip",
+   "rate": 70
+  },
+  {
+   "id": "WT",
+   "name": "Water truck",
+   "type": "equip",
+   "rate": 60
+  },
+  {
+   "id": "DT",
+   "name": "Dump truck",
+   "type": "equip",
+   "rate": 75
+  },
+  {
+   "id": "TR",
+   "name": "Trencher",
+   "type": "equip",
+   "rate": 95
+  },
+  {
+   "id": "SB",
+   "name": "Side boom",
+   "type": "equip",
+   "rate": 140
+  },
+  {
+   "id": "FUS",
+   "name": "HDPE fusion machine",
+   "type": "equip",
+   "rate": 45
+  },
+  {
+   "id": "WRT",
+   "name": "Welding rig truck",
+   "type": "equip",
+   "rate": 30
+  },
+  {
+   "id": "HT",
+   "name": "Hydrotest pump",
+   "type": "equip",
+   "rate": 18
+  },
+  {
+   "id": "AC",
+   "name": "Air compressor 900 cfm",
+   "type": "equip",
+   "rate": 40
+  },
+  {
+   "id": "N2",
+   "name": "Nitrogen unit",
+   "type": "equip",
+   "rate": 160
+  },
+  {
+   "id": "VAC",
+   "name": "Vacuum truck",
+   "type": "equip",
+   "rate": 85
+  },
+  {
+   "id": "BD",
+   "name": "Bucket / digger derrick truck",
+   "type": "equip",
+   "rate": 120
+  },
+  {
+   "id": "PMP",
+   "name": "Concrete pump",
+   "type": "equip",
+   "rate": 150
+  },
+  {
+   "id": "ML",
+   "name": "Boom lift 60 ft",
+   "type": "equip",
+   "rate": 42
+  }
+ ],
+ "materials": [
+  {
+   "id": "AGG",
+   "desc": "Caliche / crushed aggregate, placed",
+   "unit": "ton",
+   "price": 26,
+   "cat": "Civil",
+   "waste": 6
+  },
+  {
+   "id": "LINER",
+   "desc": "Containment liner, 40 mil",
+   "unit": "sf",
+   "price": 1.4,
+   "cat": "Civil",
+   "waste": 8
+  },
+  {
+   "id": "CONC",
+   "desc": "Structural concrete, 4,000 psi",
+   "unit": "cy",
+   "price": 210,
+   "cat": "Civil",
+   "waste": 4
+  },
+  {
+   "id": "REBAR",
+   "desc": "Reinforcing steel",
+   "unit": "ton",
+   "price": 1600,
+   "cat": "Civil",
+   "waste": 4
+  },
+  {
+   "id": "COND",
+   "desc": "Conductor pipe, 20 in, set and grouted",
+   "unit": "ft",
+   "price": 95,
+   "cat": "Civil",
+   "waste": 2
+  },
+  {
+   "id": "CULV",
+   "desc": "Culvert, 24 in CMP",
+   "unit": "ft",
+   "price": 48,
+   "cat": "Civil",
+   "waste": 3
+  },
+  {
+   "id": "PIPE-WH",
+   "desc": "Wellsite piping, 4 in average, sch 80, with fittings",
+   "unit": "ft",
+   "price": 62,
+   "cat": "Piping",
+   "waste": 5
+  },
+  {
+   "id": "PIPE-FAC",
+   "desc": "Facility piping, 6 in average, with fittings",
+   "unit": "ft",
+   "price": 105,
+   "cat": "Piping",
+   "waste": 5
+  },
+  {
+   "id": "FL-STL",
+   "desc": "Flowline pipe, 6 in steel, FBE coated",
+   "unit": "ft",
+   "price": 34,
+   "cat": "Pipeline",
+   "waste": 3
+  },
+  {
+   "id": "FL-HDPE",
+   "desc": "Flowline pipe, 8 in HDPE DR11",
+   "unit": "ft",
+   "price": 16,
+   "cat": "Pipeline",
+   "waste": 3
+  },
+  {
+   "id": "VALVE",
+   "desc": "Valves, average",
+   "unit": "ea",
+   "price": 1800,
+   "cat": "Piping",
+   "waste": 2
+  },
+  {
+   "id": "STL",
+   "desc": "Structural steel, pipe rack and supports",
+   "unit": "ton",
+   "price": 3900,
+   "cat": "Steel",
+   "waste": 2
+  },
+  {
+   "id": "CBL-LV",
+   "desc": "LV power and control cable",
+   "unit": "ft",
+   "price": 6,
+   "cat": "Electrical",
+   "waste": 4
+  },
+  {
+   "id": "CBL-OH",
+   "desc": "Overhead conductor, 477 ACSR",
+   "unit": "ft",
+   "price": 2.6,
+   "cat": "Electrical",
+   "waste": 3
+  },
+  {
+   "id": "POLE",
+   "desc": "Distribution pole, class 2, 45 ft, framed",
+   "unit": "ea",
+   "price": 2400,
+   "cat": "Electrical",
+   "waste": 1
+  },
+  {
+   "id": "TRAY",
+   "desc": "Cable tray, 18 in, with supports",
+   "unit": "ft",
+   "price": 72,
+   "cat": "Electrical",
+   "waste": 4
+  },
+  {
+   "id": "PAINT",
+   "desc": "Coating system, touch-up",
+   "unit": "sf",
+   "price": 3.2,
+   "cat": "Coatings",
+   "waste": 6
+  }
+ ],
+ "modules": [
+  {
+   "id": "UP-MOB",
+   "name": "Mobilization, permits and temporary facilities",
+   "rev": 1,
+   "category": "General",
+   "desc": "Mobilize the field: execution plan, permits and the site safety plan, field office, laydown and pipe yard, temporary power and water, and housing where the field is remote.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Yard and laydown area",
+     "type": "number",
+     "default": 6,
+     "unit": "acres",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "CAMP",
+     "prompt": "Temporary housing (crew camp) needed?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Laborer crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 2,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Execution plan, permits and site safety plan",
+     "dur": "40",
+     "crew": {
+      "GF": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Mobilize"
+    },
+    {
+     "id": "A020",
+     "desc": "Field office, laydown and pipe yard ({ACRES} acres)",
+     "dur": "ACRES*8/max(1, CREW/4)",
+     "crew": {
+      "LB": "CREW",
+      "OP": "2"
+     },
+     "equip": {
+      "DZ": "1",
+      "FK": "1"
+     },
+     "phase": "Mobilize",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Temporary housing set-up",
+     "dur": "120",
+     "crew": {
+      "RA": "4",
+      "EL": "1",
+      "PF": "1"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Mobilize",
+     "when": "CAMP",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Field ready for construction",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Mobilize",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG",
+     "qty": "ACRES*900"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-ROAD",
+   "name": "Lease roads and access",
+   "rev": 1,
+   "category": "Site and civil",
+   "desc": "New lease roads and upgrades to county roads: survey and stake, clear, cut and fill, culverts and cattle guards, caliche surfacing, compaction and grading.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Lease road length",
+     "type": "number",
+     "default": 2,
+     "unit": "mi",
+     "min": 0.1,
+     "max": 50
+    },
+    {
+     "kind": "scope",
+     "key": "TERR",
+     "prompt": "Terrain",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Flat, light clearing",
+       "value": 1
+      },
+      {
+       "label": "Rolling or brush, moderate clearing",
+       "value": 1.4
+      },
+      {
+       "label": "Rough or wet, heavy work",
+       "value": 2
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CULV",
+     "prompt": "Culverts and cattle guards",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Road crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Survey and stake road ({MI} mi)",
+     "dur": "MI*8",
+     "crew": {
+      "FM": "1",
+      "LB": "2"
+     },
+     "equip": {},
+     "phase": "Survey"
+    },
+    {
+     "id": "A020",
+     "desc": "Clear and grub",
+     "dur": "MI*30*TERR/max(1, CREW/6)",
+     "crew": {
+      "OP": "2",
+      "LB": "CREW"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Clear",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Cut, fill and compact subgrade",
+     "dur": "MI*60*TERR/max(1, CREW/6)",
+     "crew": {
+      "OP": "CREW"
+     },
+     "equip": {
+      "DZ": "1",
+      "MG": "1",
+      "RL": "1",
+      "WT": "1"
+     },
+     "phase": "Grade",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Culverts and cattle guards ({CULV})",
+     "dur": "CULV*8",
+     "crew": {
+      "OP": "1",
+      "LB": "3"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Drainage",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Caliche surfacing and final grade",
+     "dur": "MI*40/max(1, CREW/6)",
+     "crew": {
+      "OP": "CREW"
+     },
+     "equip": {
+      "MG": "1",
+      "RL": "1",
+      "DT": "3",
+      "WT": "1"
+     },
+     "phase": "Surface",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG",
+     "qty": "MI*7800"
+    },
+    {
+     "id": "M020",
+     "item": "CULV",
+     "qty": "CULV*40"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-PAD",
+   "name": "Well pad construction",
+   "rev": 1,
+   "category": "Site and civil",
+   "desc": "Build the drilling pad: strip topsoil, cut and fill, compact, caliche, stormwater berms, cellars and conductor pipe for each well, and rig anchors, ready for the drilling rig.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "NPAD",
+     "prompt": "Well pads",
+     "type": "number",
+     "default": 1,
+     "unit": "pads",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "WELLS",
+     "prompt": "Wells per pad",
+     "type": "number",
+     "default": 6,
+     "unit": "wells",
+     "min": 1,
+     "max": 32
+    },
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Pad area",
+     "type": "number",
+     "default": 5,
+     "unit": "acres",
+     "min": 1,
+     "max": 30
+    },
+    {
+     "kind": "scope",
+     "key": "COND",
+     "prompt": "Set and grout conductor pipe?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CLEN",
+     "prompt": "Conductor depth",
+     "type": "number",
+     "default": 80,
+     "unit": "ft",
+     "min": 20,
+     "max": 200,
+     "show_if": "COND"
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Pad crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Strip topsoil and stockpile",
+     "dur": "NPAD*ACRES*6/max(1, CREW/6)",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Strip"
+    },
+    {
+     "id": "A020",
+     "desc": "Cut, fill and compact pad",
+     "dur": "NPAD*ACRES*24/max(1, CREW/6)",
+     "crew": {
+      "OP": "CREW"
+     },
+     "equip": {
+      "DZ": "1",
+      "MG": "1",
+      "RL": "1",
+      "WT": "1"
+     },
+     "phase": "Grade",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Caliche surfacing and berms",
+     "dur": "NPAD*ACRES*14/max(1, CREW/6)",
+     "crew": {
+      "OP": "CREW",
+      "LB": "2"
+     },
+     "equip": {
+      "MG": "1",
+      "RL": "1",
+      "DT": "3"
+     },
+     "phase": "Surface",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Cellars and conductor pipe ({WELLS} per pad)",
+     "dur": "NPAD*WELLS*10",
+     "crew": {
+      "RA": "4",
+      "OP": "1",
+      "WD": "1"
+     },
+     "equip": {
+      "EXC": "1",
+      "WRT": "1"
+     },
+     "phase": "Cellars",
+     "when": "COND",
+     "preds": [
+      "A020"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Rig anchors, survey and pad released to drilling",
+     "dur": "NPAD*12",
+     "crew": {
+      "FM": "1",
+      "RA": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Release",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG",
+     "qty": "NPAD*ACRES*1500"
+    },
+    {
+     "id": "M020",
+     "item": "COND",
+     "qty": "NPAD*WELLS*CLEN",
+     "when": "COND"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-FPAD",
+   "name": "Facility pad, foundations and containment",
+   "rev": 1,
+   "category": "Site and civil",
+   "desc": "The central facility site: pad grading, equipment foundations and skid supports, tank ring walls, lined secondary containment and the facility fence.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "ACRES",
+     "prompt": "Facility pad area",
+     "type": "number",
+     "default": 8,
+     "unit": "acres",
+     "min": 1,
+     "max": 80
+    },
+    {
+     "kind": "var",
+     "key": "CY",
+     "prompt": "Foundation concrete",
+     "type": "number",
+     "default": 600,
+     "unit": "cy",
+     "min": 0,
+     "max": 20000
+    },
+    {
+     "kind": "var",
+     "key": "TANKS",
+     "prompt": "Tanks in containment",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 0,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Civil crew size",
+     "type": "number",
+     "default": 10,
+     "unit": "heads",
+     "min": 4,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Grade and compact facility pad",
+     "dur": "ACRES*22/max(1, CREW/6)",
+     "crew": {
+      "OP": "4",
+      "LB": "2"
+     },
+     "equip": {
+      "DZ": "1",
+      "MG": "1",
+      "RL": "1",
+      "WT": "1"
+     },
+     "phase": "Grade"
+    },
+    {
+     "id": "A020",
+     "desc": "Form, rebar and embeds",
+     "dur": "CY*0.6/max(1, CREW/8)",
+     "crew": {
+      "CP": "CREW",
+      "IW": "2"
+     },
+     "equip": {
+      "FK": "1"
+     },
+     "phase": "Foundations",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Place concrete ({CY} cy)",
+     "dur": "CY*0.18/max(1, CREW/8)",
+     "crew": {
+      "CF": "3",
+      "LB": "CREW"
+     },
+     "equip": {
+      "PMP": "1"
+     },
+     "phase": "Foundations",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 30
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Tank ring walls and lined containment",
+     "dur": "TANKS*14",
+     "crew": {
+      "OP": "2",
+      "LB": "4",
+      "CP": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Containment",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Facility fence and gates",
+     "dur": "max(24, ACRES*6)",
+     "crew": {
+      "LB": "3"
+     },
+     "equip": {},
+     "phase": "Site",
+     "preds": [
+      "A010"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "AGG",
+     "qty": "ACRES*1400"
+    },
+    {
+     "id": "M020",
+     "item": "CONC",
+     "qty": "CY"
+    },
+    {
+     "id": "M030",
+     "item": "REBAR",
+     "qty": "CY*0.07"
+    },
+    {
+     "id": "M040",
+     "item": "LINER",
+     "qty": "TANKS*2200"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-WHU",
+   "name": "Wellhead hook-up and wellsite piping",
+   "rev": 1,
+   "category": "Wellsite",
+   "desc": "After the rig and frac crews leave: production tree connections, chokes and flowline risers, the pad manifold and test header, sand separators, chemical injection skids and the wellsite instrument stands.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "WELLS",
+     "prompt": "Wells hooked up",
+     "type": "number",
+     "default": 6,
+     "unit": "wells",
+     "min": 1,
+     "max": 64
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Wellsite piping",
+     "type": "number",
+     "default": 1200,
+     "unit": "ft",
+     "min": 0,
+     "max": 50000
+    },
+    {
+     "kind": "scope",
+     "key": "SAND",
+     "prompt": "Sand separators at the pad?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "CHEM",
+     "prompt": "Chemical injection skids?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Hook-up crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Hook-up crew mobilized to the pad",
+     "dur": "8",
+     "crew": {
+      "FM": "1",
+      "RA": "2"
+     },
+     "equip": {},
+     "phase": "Mobilize"
+    },
+    {
+     "id": "A020",
+     "desc": "Wellhead connections, chokes and risers ({WELLS} wells)",
+     "dur": "WELLS*20/max(1, CREW/4)",
+     "crew": {
+      "PF": "CREW",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2",
+      "FK": "1"
+     },
+     "phase": "Hook-up",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pad manifold, test header and piping ({LF} ft)",
+     "dur": "LF*0.35/max(1, CREW/4)",
+     "crew": {
+      "PF": "CREW",
+      "WD": "2",
+      "RA": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Set sand separators",
+     "dur": "WELLS*6",
+     "crew": {
+      "RG": "2",
+      "PF": "2"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Equipment",
+     "when": "SAND",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Set chemical injection skids and tubing",
+     "dur": "WELLS*4",
+     "crew": {
+      "PF": "2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Equipment",
+     "when": "CHEM",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Pressure test wellsite piping",
+     "dur": "max(10, LF*0.01)",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030",
+      "A040",
+      "A050"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-WH",
+     "qty": "LF"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "WELLS*6+LF/80"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300"
+   ]
+  },
+  {
+   "id": "UP-ALIFT",
+   "name": "Artificial lift",
+   "rev": 1,
+   "category": "Wellsite",
+   "desc": "Lift for each well once flowing pressure falls: gas lift injection lines and meters, electric submersible pump (ESP) surface equipment and VFDs, or rod pump units on the pads.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "WELLS",
+     "prompt": "Wells",
+     "type": "number",
+     "default": 6,
+     "unit": "wells",
+     "min": 1,
+     "max": 64
+    },
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Lift method",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Gas lift",
+       "value": 1
+      },
+      {
+       "label": "ESP surface equipment and VFD",
+       "value": 1.4
+      },
+      {
+       "label": "Rod pump unit on pad",
+       "value": 1.8
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set lift equipment ({WELLS} wells)",
+     "dur": "WELLS*8*KIND",
+     "crew": {
+      "RG": "2",
+      "RA": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Gas lift lines, injection meters and piping",
+     "dur": "WELLS*12/max(1, CREW/4)",
+     "crew": {
+      "PF": "CREW",
+      "WD": "1"
+     },
+     "equip": {
+      "WRT": "1"
+     },
+     "phase": "Piping",
+     "when": "KIND==1",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Power, VFD and motor connections",
+     "dur": "WELLS*10*KIND/max(1, CREW/4)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Electrical",
+     "when": "KIND>1",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Lift start-up with the vendor",
+     "dur": "WELLS*4",
+     "crew": {
+      "VR": "1",
+      "PO": "1"
+     },
+     "equip": {},
+     "phase": "Start-up",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-WH",
+     "qty": "WELLS*150",
+     "when": "KIND==1"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-LV",
+     "qty": "WELLS*600",
+     "when": "KIND>1"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300"
+   ]
+  },
+  {
+   "id": "UP-FLOW",
+   "name": "Flowlines and gathering lines",
+   "rev": 1,
+   "category": "Gathering",
+   "desc": "Buried lines from the pads to the central facility -- production flowlines, gas lift supply and water lines -- in welded steel or fused HDPE: clear, ditch, string, weld or fuse, lower in, backfill, test and clean up.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Line length",
+     "type": "number",
+     "default": 15000,
+     "unit": "ft",
+     "min": 100,
+     "max": 500000
+    },
+    {
+     "kind": "scope",
+     "key": "MAT",
+     "prompt": "Pipe",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Welded steel, FBE coated",
+       "value": 1
+      },
+      {
+       "label": "Fused HDPE",
+       "value": 0
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "XING",
+     "prompt": "Road and line crossings",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Line crew size",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 4,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Clear and grade right-of-way",
+     "dur": "LF*0.004/max(1, CREW/8)",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Clear and grade"
+    },
+    {
+     "id": "A020",
+     "desc": "Ditch ({LF} ft)",
+     "dur": "LF*0.008/max(1, CREW/8)",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "TR": "1",
+      "EXC": "1"
+     },
+     "phase": "Ditch",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Haul and string pipe",
+     "dur": "LF*0.003",
+     "crew": {
+      "OP": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "SB": "1",
+      "FK": "1"
+     },
+     "phase": "String",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Weld steel line pipe",
+     "dur": "LF*0.012/max(1, CREW/8)",
+     "crew": {
+      "WD": "ceil(CREW/3)",
+      "PF": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "WRT": "ceil(CREW/3)"
+     },
+     "phase": "Weld",
+     "when": "MAT==1",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A045",
+     "desc": "Fuse HDPE line pipe",
+     "dur": "LF*0.0066/max(1, CREW/8)",
+     "crew": {
+      "HF": "ceil(CREW/4)",
+      "LB": "3"
+     },
+     "equip": {
+      "FUS": "ceil(CREW/4)"
+     },
+     "phase": "Fuse",
+     "when": "MAT==0",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Field joint coating and holiday test",
+     "dur": "LF*0.002",
+     "crew": {
+      "PT": "2"
+     },
+     "equip": {},
+     "phase": "Coat",
+     "when": "MAT==1",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Lower in, pad and backfill",
+     "dur": "LF*0.006/max(1, CREW/8)",
+     "crew": {
+      "OP": "3",
+      "LB": "CREW"
+     },
+     "equip": {
+      "SB": "1",
+      "EXC": "1"
+     },
+     "phase": "Lower in",
+     "preds": [
+      {
+       "id": "A040",
+       "type": "SS",
+       "lag": 20
+      },
+      {
+       "id": "A045",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Road and line crossings ({XING})",
+     "dur": "XING*10",
+     "crew": {
+      "OP": "1",
+      "PF": "2",
+      "LB": "2"
+     },
+     "equip": {
+      "EXC": "1"
+     },
+     "phase": "Crossings",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A080",
+     "desc": "Tie-ins at the pad and facility",
+     "dur": "max(16, XING*2)",
+     "crew": {
+      "PF": "2",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Tie-in",
+     "preds": [
+      "A060",
+      "A070"
+     ]
+    },
+    {
+     "id": "A090",
+     "desc": "Hydrotest, dewater and dry",
+     "dur": "max(20, LF*0.002)",
+     "crew": {
+      "PF": "2",
+      "LB": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1",
+      "AC": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A080"
+     ]
+    },
+    {
+     "id": "A100",
+     "desc": "Clean-up and restoration",
+     "dur": "LF*0.003/max(1, CREW/8)",
+     "crew": {
+      "OP": "2",
+      "LB": "CREW"
+     },
+     "equip": {
+      "DZ": "1"
+     },
+     "phase": "Clean-up",
+     "preds": [
+      "A090"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "FL-STL",
+     "qty": "LF",
+     "when": "MAT==1"
+    },
+    {
+     "id": "M020",
+     "item": "FL-HDPE",
+     "qty": "LF",
+     "when": "MAT==0"
+    },
+    {
+     "id": "M030",
+     "item": "VALVE",
+     "qty": "max(4, XING)"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U400",
+    "U100",
+    "U200",
+    "U300"
+   ]
+  },
+  {
+   "id": "UP-SEP",
+   "name": "Separation and treating equipment",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Inlet slug catcher or free-water knockout, production and test separators, heater treaters and gun barrels: set, level, anchor and hook up skid piping, with burner management on fired vessels.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Vessels and skids",
+     "type": "number",
+     "default": 8,
+     "unit": "ea",
+     "min": 1,
+     "max": 120
+    },
+    {
+     "kind": "var",
+     "key": "FIRED",
+     "prompt": "Heater treaters (fired)",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 40
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and level vessels and skids ({N})",
+     "dur": "N*6",
+     "crew": {
+      "RG": "2",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Anchor and grout",
+     "dur": "N*3",
+     "crew": {
+      "MW": "2",
+      "CF": "1"
+     },
+     "equip": {},
+     "phase": "Set",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 6
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Skid interconnect piping",
+     "dur": "N*24/max(1, CREW/4)",
+     "crew": {
+      "PF": "CREW",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Burner management and stacks on fired vessels ({FIRED})",
+     "dur": "FIRED*20",
+     "crew": {
+      "IT": "1",
+      "PF": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Fired",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Pressure test and mechanical completion",
+     "dur": "N*2",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "N*120"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "N*6"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-TANK",
+   "name": "Tank battery, vapor recovery and LACT",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Oil and water storage tanks on ring walls, walkways and stairs, thief hatches and vents, the vapor recovery unit, the LACT unit and the truck load-out.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TANKS",
+     "prompt": "Storage tanks",
+     "type": "number",
+     "default": 12,
+     "unit": "ea",
+     "min": 1,
+     "max": 100
+    },
+    {
+     "kind": "scope",
+     "key": "VRU",
+     "prompt": "Vapor recovery unit?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "scope",
+     "key": "LACT",
+     "prompt": "LACT unit to the oil pipeline?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "LOAD",
+     "prompt": "Truck load-out spots",
+     "type": "number",
+     "default": 2,
+     "unit": "ea",
+     "min": 0,
+     "max": 20
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set tanks ({TANKS})",
+     "dur": "TANKS*5",
+     "crew": {
+      "RG": "2",
+      "RA": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Tanks"
+    },
+    {
+     "id": "A020",
+     "desc": "Walkways, stairs and tank appurtenances",
+     "dur": "TANKS*8",
+     "crew": {
+      "IW": "2",
+      "PF": "1"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Tanks",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tank battery piping and manifolds",
+     "dur": "TANKS*14",
+     "crew": {
+      "PF": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Vapor recovery unit and vapor piping",
+     "dur": "60",
+     "crew": {
+      "PF": "3",
+      "MW": "1",
+      "VR": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "VRU",
+     "when": "VRU",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "LACT unit set and tie-in",
+     "dur": "50",
+     "crew": {
+      "PF": "3",
+      "IT": "1",
+      "VR": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "LACT",
+     "when": "LACT",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Truck load-out ({LOAD} spots)",
+     "dur": "LOAD*30",
+     "crew": {
+      "PF": "2",
+      "CP": "2"
+     },
+     "equip": {},
+     "phase": "Load-out",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A070",
+     "desc": "Leak test and tank battery walkdown",
+     "dur": "max(12, TANKS*1.5)",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {},
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030",
+      "A040",
+      "A050",
+      "A060"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "TANKS*140"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "TANKS*5"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-COMP",
+   "name": "Gas compression",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Packaged reciprocating or screw compressors for gas sales, gas lift or vapor recovery boost: set the packages, align, suction and discharge piping, coolers, scrubbers and blowdown, then start-up with the packager.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Compressor packages",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "scope",
+     "key": "HP",
+     "prompt": "Package size",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Up to 1,500 hp",
+       "value": 1
+      },
+      {
+       "label": "1,500 to 5,000 hp",
+       "value": 1.8
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Crew size",
+     "type": "number",
+     "default": 6,
+     "unit": "heads",
+     "min": 3,
+     "max": 30
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set compressor packages and coolers ({N})",
+     "dur": "N*12*HP",
+     "crew": {
+      "RG": "3",
+      "MW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Level, align and grout",
+     "dur": "N*16*HP",
+     "crew": {
+      "MW": "2",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Align",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 8
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Suction, discharge and blowdown piping",
+     "dur": "N*60*HP/max(1, CREW/4)",
+     "crew": {
+      "PF": "CREW",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Pressure test and purge",
+     "dur": "N*6",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1",
+      "N2": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Compressor start-up with the packager",
+     "dur": "N*12",
+     "crew": {
+      "VR": "1",
+      "MW": "1",
+      "PO": "1"
+     },
+     "equip": {},
+     "phase": "Start-up",
+     "preds": [
+      "A020",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "N*300*HP"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "N*10"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-DEHY",
+   "name": "Gas dehydration and treating",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "TEG dehydration with its reboiler and BTEX control, H2S treating where the gas is sour, and the sales gas meter run.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "N",
+     "prompt": "Dehydration trains",
+     "type": "number",
+     "default": 1,
+     "unit": "ea",
+     "min": 1,
+     "max": 12
+    },
+    {
+     "kind": "scope",
+     "key": "SOUR",
+     "prompt": "H2S treating?",
+     "type": "yesno",
+     "default": 0
+    },
+    {
+     "kind": "scope",
+     "key": "METER",
+     "prompt": "Sales gas meter run?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set contactor, reboiler and skids",
+     "dur": "N*30",
+     "crew": {
+      "RG": "2",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Interconnect piping and BTEX condenser",
+     "dur": "N*90",
+     "crew": {
+      "PF": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "H2S treating skid and piping",
+     "dur": "N*80",
+     "crew": {
+      "PF": "4",
+      "WD": "2",
+      "IT": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Treating",
+     "when": "SOUR",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Sales gas meter run and tie-in",
+     "dur": "40",
+     "crew": {
+      "PF": "2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Meter",
+     "when": "METER",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Pressure test and purge",
+     "dur": "N*10",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1",
+      "N2": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "N*500"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "N*14"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-WATER",
+   "name": "Produced water and saltwater disposal",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Produced water handling: skim tanks, filtration, transfer and injection pumps, the SWD wellhead hook-up and the water piping, sized by barrels of water per day.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "BWPD",
+     "prompt": "Produced water",
+     "type": "number",
+     "default": 30000,
+     "unit": "bwpd",
+     "min": 1000,
+     "max": 500000
+    },
+    {
+     "kind": "var",
+     "key": "PUMPS",
+     "prompt": "Transfer and injection pumps",
+     "type": "number",
+     "default": 4,
+     "unit": "ea",
+     "min": 1,
+     "max": 40
+    },
+    {
+     "kind": "scope",
+     "key": "SWD",
+     "prompt": "Saltwater disposal well hook-up?",
+     "type": "yesno",
+     "default": 1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set skim tanks and filtration skids",
+     "dur": "max(40, BWPD*0.002)",
+     "crew": {
+      "RG": "2",
+      "RA": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Set and align pumps ({PUMPS})",
+     "dur": "PUMPS*14",
+     "crew": {
+      "MW": "2",
+      "RG": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Pumps",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Water piping and manifolds",
+     "dur": "max(80, BWPD*0.005)",
+     "crew": {
+      "PF": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "SWD wellhead hook-up and injection line",
+     "dur": "60",
+     "crew": {
+      "PF": "3",
+      "WD": "1"
+     },
+     "equip": {
+      "WRT": "1"
+     },
+     "phase": "SWD",
+     "when": "SWD",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Pressure test",
+     "dur": "max(12, PUMPS*3)",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030",
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "max(600, BWPD*0.04)"
+    },
+    {
+     "id": "M020",
+     "item": "VALVE",
+     "qty": "PUMPS*4+10"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-FLARE",
+   "name": "Flare, combustors and relief",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Emissions control and relief: flare stack or enclosed combustors, the knockout drum, the relief and blowdown header to the flare, and the pilot and ignition system.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "KIND",
+     "prompt": "Control device",
+     "type": "choice",
+     "options": [
+      {
+       "label": "Elevated flare stack",
+       "value": 1
+      },
+      {
+       "label": "Enclosed combustors",
+       "value": 0.7
+      }
+     ],
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "HDR",
+     "prompt": "Relief and blowdown header",
+     "type": "number",
+     "default": 800,
+     "unit": "ft",
+     "min": 0,
+     "max": 20000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Flare stack or combustors and knockout drum",
+     "dur": "60*KIND",
+     "crew": {
+      "RG": "3",
+      "IW": "2",
+      "OP": "1"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Set"
+    },
+    {
+     "id": "A020",
+     "desc": "Relief and blowdown header ({HDR} ft)",
+     "dur": "HDR*0.12",
+     "crew": {
+      "PF": "4",
+      "WD": "2"
+     },
+     "equip": {
+      "WRT": "2"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pilot, ignition and flame monitoring",
+     "dur": "24",
+     "crew": {
+      "IT": "1",
+      "EL": "1",
+      "VR": "1"
+     },
+     "equip": {},
+     "phase": "Ignition",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Test and purge",
+     "dur": "12",
+     "crew": {
+      "PF": "2",
+      "QC": "1"
+     },
+     "equip": {
+      "N2": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "PIPE-FAC",
+     "qty": "HDR"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-RACK",
+   "name": "Pipe rack and facility interconnect piping",
+   "rev": 1,
+   "category": "Central facility",
+   "desc": "Pipe rack or sleepers through the facility and the interconnect piping between separation, treating, compression, tanks and water, with supports, testing and coating.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "TONS",
+     "prompt": "Pipe rack and support steel",
+     "type": "number",
+     "default": 40,
+     "unit": "ton",
+     "min": 0,
+     "max": 2000
+    },
+    {
+     "kind": "var",
+     "key": "LF",
+     "prompt": "Interconnect piping",
+     "type": "number",
+     "default": 6000,
+     "unit": "ft",
+     "min": 0,
+     "max": 200000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Piping crew size",
+     "type": "number",
+     "default": 10,
+     "unit": "heads",
+     "min": 4,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Erect pipe rack and sleepers ({TONS} t)",
+     "dur": "TONS*1.6",
+     "crew": {
+      "IW": "4",
+      "RG": "1"
+     },
+     "equip": {
+      "C060": "1"
+     },
+     "phase": "Rack"
+    },
+    {
+     "id": "A020",
+     "desc": "Interconnect piping ({LF} ft)",
+     "dur": "LF*1.1/CREW",
+     "crew": {
+      "PF": "CREW",
+      "WD": "max(2, ceil(CREW/4))"
+     },
+     "equip": {
+      "WRT": "3"
+     },
+     "phase": "Piping",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Pipe supports",
+     "dur": "LF*0.012",
+     "crew": {
+      "PF": "2",
+      "WD": "1"
+     },
+     "equip": {},
+     "phase": "Supports",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Hydrotest interconnect piping",
+     "dur": "max(20, LF*0.006)",
+     "crew": {
+      "PF": "3",
+      "QC": "1"
+     },
+     "equip": {
+      "HT": "1"
+     },
+     "phase": "Test",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Coating touch-up",
+     "dur": "LF*0.004",
+     "crew": {
+      "PT": "2"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Coating",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "STL",
+     "qty": "TONS"
+    },
+    {
+     "id": "M020",
+     "item": "PIPE-FAC",
+     "qty": "LF"
+    },
+    {
+     "id": "M030",
+     "item": "VALVE",
+     "qty": "LF/70"
+    },
+    {
+     "id": "M040",
+     "item": "PAINT",
+     "qty": "LF*1.8"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U500",
+    "U600"
+   ]
+  },
+  {
+   "id": "UP-OHL",
+   "name": "Overhead power distribution",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Field power from the utility point of delivery: overhead distribution line to each pad and the facility, pole-mounted transformers and reclosers, and the facility switchgear.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "MI",
+     "prompt": "Overhead line",
+     "type": "number",
+     "default": 4,
+     "unit": "mi",
+     "min": 0.1,
+     "max": 100
+    },
+    {
+     "kind": "var",
+     "key": "SPAN",
+     "prompt": "Average span",
+     "type": "number",
+     "default": 300,
+     "unit": "ft",
+     "min": 150,
+     "max": 600
+    },
+    {
+     "kind": "var",
+     "key": "XFMR",
+     "prompt": "Pole-mount or pad-mount transformers",
+     "type": "number",
+     "default": 6,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set and frame poles",
+     "dur": "MI*5280/SPAN*1.5",
+     "crew": {
+      "LN": "3",
+      "OP": "1"
+     },
+     "equip": {
+      "BD": "1"
+     },
+     "phase": "Poles"
+    },
+    {
+     "id": "A020",
+     "desc": "String and sag conductor ({MI} mi)",
+     "dur": "MI*24",
+     "crew": {
+      "LN": "4",
+      "OP": "1"
+     },
+     "equip": {
+      "BD": "1"
+     },
+     "phase": "Conductor",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Transformers, reclosers and services ({XFMR})",
+     "dur": "XFMR*6",
+     "crew": {
+      "LN": "3"
+     },
+     "equip": {
+      "BD": "1"
+     },
+     "phase": "Transformers",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Facility switchgear and power-up",
+     "dur": "40",
+     "crew": {
+      "EL": "4",
+      "LN": "1"
+     },
+     "equip": {},
+     "phase": "Energize",
+     "preds": [
+      "A030"
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "POLE",
+     "qty": "MI*5280/SPAN"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-OH",
+     "qty": "MI*5280*3.1"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-ELEC",
+   "name": "Facility and pad electrical",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "MCC / VFD buildings or E-houses, cable tray and conduit, power and control cable to every motor, heater and instrument, grounding and area lighting on the pads and facility.",
+   "queries": [
+    {
+     "kind": "scope",
+     "key": "EHOUSE",
+     "prompt": "MCC / VFD building or E-house?",
+     "type": "yesno",
+     "default": 1
+    },
+    {
+     "kind": "var",
+     "key": "TRAY",
+     "prompt": "Cable tray and conduit",
+     "type": "number",
+     "default": 3000,
+     "unit": "ft",
+     "min": 0,
+     "max": 100000
+    },
+    {
+     "kind": "var",
+     "key": "CABLE",
+     "prompt": "Power and control cable",
+     "type": "number",
+     "default": 60000,
+     "unit": "ft",
+     "min": 0,
+     "max": 2000000
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Electrician crew size",
+     "type": "number",
+     "default": 8,
+     "unit": "heads",
+     "min": 2,
+     "max": 60
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Set MCC / VFD building",
+     "dur": "30",
+     "crew": {
+      "EL": "3",
+      "RG": "2"
+     },
+     "equip": {
+      "C120": "1"
+     },
+     "phase": "Equipment",
+     "when": "EHOUSE"
+    },
+    {
+     "id": "A020",
+     "desc": "Cable tray and conduit",
+     "dur": "TRAY*0.15/max(1, CREW/6)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {
+      "ML": "1"
+     },
+     "phase": "Raceway",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "Pull power and control cable",
+     "dur": "CABLE*0.006/max(1, CREW/6)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Cable",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Terminations and motor connections",
+     "dur": "CABLE*0.003/max(1, CREW/6)",
+     "crew": {
+      "EL": "CREW"
+     },
+     "equip": {},
+     "phase": "Terminate",
+     "preds": [
+      {
+       "id": "A030",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Grounding and area lighting",
+     "dur": "max(40, TRAY*0.02)",
+     "crew": {
+      "EL": "3"
+     },
+     "equip": {},
+     "phase": "Lighting",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    }
+   ],
+   "materials": [
+    {
+     "id": "M010",
+     "item": "TRAY",
+     "qty": "TRAY"
+    },
+    {
+     "id": "M020",
+     "item": "CBL-LV",
+     "qty": "CABLE"
+    }
+   ],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-AUTO",
+   "name": "Automation, SCADA and safety systems",
+   "rev": 1,
+   "category": "Electrical",
+   "desc": "Wellsite RTUs and the facility PLC, field instruments and analyzers, emergency shutdown and gas detection, radio or fiber to the SCADA host, and the point-to-point and loop checks.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "IO",
+     "prompt": "I/O points",
+     "type": "number",
+     "default": 1500,
+     "unit": "ea",
+     "min": 50,
+     "max": 50000
+    },
+    {
+     "kind": "var",
+     "key": "INST",
+     "prompt": "Field instruments",
+     "type": "number",
+     "default": 350,
+     "unit": "ea",
+     "min": 0,
+     "max": 10000
+    },
+    {
+     "kind": "var",
+     "key": "RTU",
+     "prompt": "Wellsite RTUs and radios",
+     "type": "number",
+     "default": 3,
+     "unit": "ea",
+     "min": 0,
+     "max": 200
+    },
+    {
+     "kind": "var",
+     "key": "CREW",
+     "prompt": "Instrument crew size",
+     "type": "number",
+     "default": 4,
+     "unit": "heads",
+     "min": 2,
+     "max": 40
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "PLC and RTU panels, radios and network",
+     "dur": "max(40, IO*0.02+RTU*8)",
+     "crew": {
+      "AT": "2",
+      "EL": "1"
+     },
+     "equip": {},
+     "phase": "Controls"
+    },
+    {
+     "id": "A020",
+     "desc": "Instrument installation and tubing",
+     "dur": "INST*2.2/CREW",
+     "crew": {
+      "IT": "CREW"
+     },
+     "equip": {},
+     "phase": "Instruments",
+     "preds": []
+    },
+    {
+     "id": "A030",
+     "desc": "ESD and gas detection devices",
+     "dur": "max(24, INST*0.1)",
+     "crew": {
+      "IT": "2"
+     },
+     "equip": {},
+     "phase": "Safety",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 20
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Point-to-point and loop checks",
+     "dur": "IO*0.35/max(2, ceil(CREW/2))",
+     "crew": {
+      "IT": "max(2, ceil(CREW/2))",
+      "AT": "1"
+     },
+     "equip": {},
+     "phase": "Checks",
+     "preds": [
+      "A010",
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 40
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "SCADA host integration and alarm tests",
+     "dur": "60",
+     "crew": {
+      "AT": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "SCADA",
+     "preds": [
+      "A040"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-PCX",
+   "name": "Pre-commissioning and turnover",
+   "rev": 1,
+   "category": "Commissioning",
+   "desc": "Construction to operations by system: walkdowns and punch lists, flushing and blowdown, nitrogen purge and leak test, ESD function tests, and system turnover packages to the production team.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "SYS",
+     "prompt": "Systems",
+     "type": "number",
+     "default": 24,
+     "unit": "ea",
+     "min": 1,
+     "max": 600
+    },
+    {
+     "kind": "var",
+     "key": "PUNCH",
+     "prompt": "Punch items",
+     "type": "number",
+     "default": 600,
+     "unit": "ea",
+     "min": 0,
+     "max": 20000
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "System walkdowns",
+     "dur": "SYS*4",
+     "crew": {
+      "QC": "1",
+      "CX": "1",
+      "FM": "1"
+     },
+     "equip": {},
+     "phase": "Walkdown"
+    },
+    {
+     "id": "A020",
+     "desc": "Flush, blow down and nitrogen purge",
+     "dur": "SYS*5",
+     "crew": {
+      "PF": "3",
+      "CX": "1",
+      "PO": "1"
+     },
+     "equip": {
+      "N2": "1",
+      "AC": "1"
+     },
+     "phase": "Purge",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "ESD function and shutdown key tests",
+     "dur": "max(24, SYS*2)",
+     "crew": {
+      "IT": "2",
+      "AT": "1",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "ESD",
+     "preds": [
+      {
+       "id": "A010",
+       "type": "SS",
+       "lag": 10
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "Clear punch and turn over systems",
+     "dur": "PUNCH*0.5/4",
+     "crew": {
+      "PF": "2",
+      "EL": "2"
+     },
+     "equip": {},
+     "phase": "Turnover",
+     "preds": [
+      "A020",
+      "A030"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  },
+  {
+   "id": "UP-START",
+   "name": "Start-up, first oil and well turn-in-line",
+   "rev": 1,
+   "category": "Commissioning",
+   "desc": "Introduce hydrocarbons system by system, bring wells on one at a time (turn-in-line), tune separators and treaters, first sales through the LACT and the gas meter, and a stable-operation run before handover.",
+   "queries": [
+    {
+     "kind": "var",
+     "key": "WELLS",
+     "prompt": "Wells turned in line",
+     "type": "number",
+     "default": 6,
+     "unit": "wells",
+     "min": 1,
+     "max": 128
+    },
+    {
+     "kind": "var",
+     "key": "TEAMS",
+     "prompt": "Start-up teams",
+     "type": "number",
+     "default": 1,
+     "unit": "teams",
+     "min": 1,
+     "max": 6
+    },
+    {
+     "kind": "var",
+     "key": "RUN",
+     "prompt": "Stable operation run",
+     "type": "number",
+     "default": 72,
+     "unit": "h",
+     "min": 12,
+     "max": 720
+    }
+   ],
+   "tasks": [
+    {
+     "id": "A010",
+     "desc": "Introduce hydrocarbons to the facility",
+     "dur": "24",
+     "crew": {
+      "CX": "1",
+      "PO": "2",
+      "IT": "1"
+     },
+     "equip": {},
+     "phase": "Start-up"
+    },
+    {
+     "id": "A020",
+     "desc": "Turn wells in line ({WELLS})",
+     "dur": "WELLS*6/TEAMS",
+     "crew": {
+      "CX": "TEAMS",
+      "PO": "TEAMS*2"
+     },
+     "equip": {},
+     "phase": "Turn-in-line",
+     "preds": [
+      "A010"
+     ]
+    },
+    {
+     "id": "A030",
+     "desc": "Tune separators, treaters and compression",
+     "dur": "40",
+     "crew": {
+      "CX": "1",
+      "VR": "1",
+      "IT": "1",
+      "PO": "1"
+     },
+     "equip": {},
+     "phase": "Tuning",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 12
+      }
+     ]
+    },
+    {
+     "id": "A040",
+     "desc": "First oil sales and gas sales",
+     "dur": "12",
+     "crew": {
+      "CX": "1",
+      "PO": "1"
+     },
+     "equip": {},
+     "phase": "First oil",
+     "preds": [
+      {
+       "id": "A020",
+       "type": "SS",
+       "lag": 12
+      }
+     ]
+    },
+    {
+     "id": "A050",
+     "desc": "Stable operation run ({RUN} h)",
+     "dur": "RUN",
+     "crew": {
+      "PO": "2",
+      "CX": "1"
+     },
+     "equip": {},
+     "phase": "Handover",
+     "preds": [
+      "A030",
+      "A040"
+     ]
+    },
+    {
+     "id": "A060",
+     "desc": "Handover to production operations",
+     "dur": "0",
+     "crew": {},
+     "equip": {},
+     "phase": "Handover",
+     "preds": [
+      "A050"
+     ]
+    }
+   ],
+   "materials": [],
+   "author": "VissRad",
+   "updated": "2026-10-27",
+   "source": {
+    "kind": "archetype"
+   },
+   "units": [
+    "U100",
+    "U200",
+    "U300",
+    "U400",
+    "U500",
+    "U600",
+    "U700",
+    "U000"
+   ]
+  }
+ ],
+ "worklist": [
+  {
+   "id": "WI001",
+   "wo": "WP-000-001",
+   "tag": "MOB",
+   "desc": "Field mobilization and pipe yard",
+   "unit": "U000",
+   "module_id": "UP-MOB",
+   "answers": {
+    "ACRES": 8,
+    "CAMP": 0
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI002",
+   "wo": "WP-000-002",
+   "tag": "ROAD",
+   "desc": "Lease roads to pads A, B and C",
+   "unit": "U000",
+   "module_id": "UP-ROAD",
+   "answers": {
+    "MI": 3.5,
+    "TERR": 1.4,
+    "CULV": 6,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI001"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-UP1-CIV-0001",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI003",
+   "wo": "WP-100-003",
+   "tag": "PAD-A",
+   "desc": "Pad A: build pad, cellars and conductors",
+   "unit": "U100",
+   "module_id": "UP-PAD",
+   "answers": {
+    "NPAD": 1,
+    "WELLS": 6,
+    "ACRES": 5,
+    "COND": 1,
+    "CLEN": 80
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-UP1-CIV-0101",
+     "sheet": "",
+     "rev": "A"
+    }
+   ]
+  },
+  {
+   "id": "WI004",
+   "wo": "WP-200-004",
+   "tag": "PAD-B",
+   "desc": "Pad B: build pad, cellars and conductors",
+   "unit": "U200",
+   "module_id": "UP-PAD",
+   "answers": {
+    "NPAD": 1,
+    "WELLS": 8,
+    "ACRES": 6,
+    "COND": 1,
+    "CLEN": 80
+   },
+   "status": "Approved",
+   "offset": 100,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI005",
+   "wo": "WP-300-005",
+   "tag": "PAD-C",
+   "desc": "Pad C: build pad, cellars and conductors",
+   "unit": "U300",
+   "module_id": "UP-PAD",
+   "answers": {
+    "NPAD": 1,
+    "WELLS": 6,
+    "ACRES": 5,
+    "COND": 1,
+    "CLEN": 80
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI006",
+   "wo": "WP-500-006",
+   "tag": "FPAD",
+   "desc": "Central facility pad, foundations and containment",
+   "unit": "U500",
+   "module_id": "UP-FPAD",
+   "answers": {
+    "ACRES": 10,
+    "CY": 750,
+    "TANKS": 14,
+    "CREW": 12
+   },
+   "status": "Approved",
+   "offset": 50,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-UP1-CIV-0501",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI007",
+   "wo": "WP-500-007",
+   "tag": "SEP",
+   "desc": "Inlet separation, test separator and heater treaters",
+   "unit": "U500",
+   "module_id": "UP-SEP",
+   "answers": {
+    "N": 10,
+    "FIRED": 3,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "SYN-UP1-PRC-0501",
+     "sheet": "",
+     "rev": "C"
+    }
+   ]
+  },
+  {
+   "id": "WI008",
+   "wo": "WP-500-008",
+   "tag": "TANK",
+   "desc": "Tank battery, VRU, LACT and truck load-out",
+   "unit": "U500",
+   "module_id": "UP-TANK",
+   "answers": {
+    "TANKS": 14,
+    "VRU": 1,
+    "LACT": 1,
+    "LOAD": 2
+   },
+   "status": "Approved",
+   "offset": 250,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "SYN-UP1-PRC-0502",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI009",
+   "wo": "WP-500-009",
+   "tag": "COMP",
+   "desc": "Three gas compressor packages, 1,380 hp",
+   "unit": "U500",
+   "module_id": "UP-COMP",
+   "answers": {
+    "N": 3,
+    "HP": 1,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI010",
+   "wo": "WP-500-010",
+   "tag": "DEHY",
+   "desc": "TEG dehydration and sales gas meter",
+   "unit": "U500",
+   "module_id": "UP-DEHY",
+   "answers": {
+    "N": 1,
+    "SOUR": 0,
+    "METER": 1
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI011",
+   "wo": "WP-600-011",
+   "tag": "WATER",
+   "desc": "Produced water handling and SWD hook-up",
+   "unit": "U600",
+   "module_id": "UP-WATER",
+   "answers": {
+    "BWPD": 40000,
+    "PUMPS": 5,
+    "SWD": 1
+   },
+   "status": "Approved",
+   "offset": 250,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI012",
+   "wo": "WP-500-012",
+   "tag": "FLARE",
+   "desc": "Enclosed combustors and relief header",
+   "unit": "U500",
+   "module_id": "UP-FLARE",
+   "answers": {
+    "KIND": 0.7,
+    "HDR": 900
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI013",
+   "wo": "WP-500-013",
+   "tag": "RACK",
+   "desc": "Facility pipe rack and interconnect piping",
+   "unit": "U500",
+   "module_id": "UP-RACK",
+   "answers": {
+    "TONS": 45,
+    "LF": 7200,
+    "CREW": 12
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI007"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI014",
+   "wo": "WP-400-014",
+   "tag": "FLOW",
+   "desc": "Steel flowlines and gas lift lines, pads to the facility",
+   "unit": "U400",
+   "module_id": "UP-FLOW",
+   "answers": {
+    "LF": 26000,
+    "MAT": 1,
+    "XING": 8,
+    "CREW": 10
+   },
+   "status": "Approved",
+   "offset": 300,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "LAY",
+     "doc_no": "SYN-UP1-PLN-0401",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI015",
+   "wo": "WP-400-015",
+   "tag": "WATERLINE",
+   "desc": "HDPE produced water lines to the facility",
+   "unit": "U400",
+   "module_id": "UP-FLOW",
+   "answers": {
+    "LF": 18000,
+    "MAT": 0,
+    "XING": 6,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI016",
+   "wo": "WP-100-016",
+   "tag": "WHU-A",
+   "desc": "Pad A wellhead hook-up",
+   "unit": "U100",
+   "module_id": "UP-WHU",
+   "answers": {
+    "WELLS": 6,
+    "LF": 1100,
+    "SAND": 1,
+    "CHEM": 1,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 1200,
+   "note": "",
+   "after": [
+    "WI003"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI017",
+   "wo": "WP-200-017",
+   "tag": "WHU-B",
+   "desc": "Pad B wellhead hook-up",
+   "unit": "U200",
+   "module_id": "UP-WHU",
+   "answers": {
+    "WELLS": 8,
+    "LF": 1400,
+    "SAND": 1,
+    "CHEM": 1,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 1300,
+   "note": "",
+   "after": [
+    "WI004",
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI018",
+   "wo": "WP-300-018",
+   "tag": "WHU-C",
+   "desc": "Pad C wellhead hook-up",
+   "unit": "U300",
+   "module_id": "UP-WHU",
+   "answers": {
+    "WELLS": 6,
+    "LF": 1100,
+    "SAND": 1,
+    "CHEM": 1,
+    "CREW": 6
+   },
+   "status": "Approved",
+   "offset": 1400,
+   "note": "",
+   "after": [
+    "WI005",
+    "WI017"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI019",
+   "wo": "WP-100-019",
+   "tag": "ALIFT",
+   "desc": "Gas lift on all twenty wells",
+   "unit": "U100",
+   "module_id": "UP-ALIFT",
+   "answers": {
+    "WELLS": 20,
+    "KIND": 1,
+    "CREW": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI016"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI020",
+   "wo": "WP-700-020",
+   "tag": "OHL",
+   "desc": "Overhead power to the pads and facility",
+   "unit": "U700",
+   "module_id": "UP-OHL",
+   "answers": {
+    "MI": 5.5,
+    "SPAN": 300,
+    "XFMR": 8
+   },
+   "status": "Approved",
+   "offset": 200,
+   "note": "",
+   "after": [
+    "WI002"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "SLD",
+     "doc_no": "SYN-UP1-ELE-0001",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI021",
+   "wo": "WP-700-021",
+   "tag": "ELEC",
+   "desc": "Facility and pad electrical, MCC / VFD building",
+   "unit": "U700",
+   "module_id": "UP-ELEC",
+   "answers": {
+    "EHOUSE": 1,
+    "TRAY": 3600,
+    "CABLE": 72000,
+    "CREW": 8
+   },
+   "status": "Approved",
+   "offset": 400,
+   "note": "",
+   "after": [
+    "WI006"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI022",
+   "wo": "WP-700-022",
+   "tag": "AUTO",
+   "desc": "Facility PLC, pad RTUs, ESD, gas detection and SCADA",
+   "unit": "U700",
+   "module_id": "UP-AUTO",
+   "answers": {
+    "IO": 1800,
+    "INST": 420,
+    "RTU": 3,
+    "CREW": 4
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI021"
+   ],
+   "extra_mat": [],
+   "drawing_refs": [
+    {
+     "type": "PID",
+     "doc_no": "SYN-UP1-INS-0001",
+     "sheet": "",
+     "rev": "B"
+    }
+   ]
+  },
+  {
+   "id": "WI023",
+   "wo": "WP-000-023",
+   "tag": "PCX",
+   "desc": "Pre-commissioning and system turnover",
+   "unit": "U000",
+   "module_id": "UP-PCX",
+   "answers": {
+    "SYS": 30,
+    "PUNCH": 750
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI007",
+    "WI008",
+    "WI009",
+    "WI010",
+    "WI011",
+    "WI012",
+    "WI013",
+    "WI014",
+    "WI015",
+    "WI018",
+    "WI019",
+    "WI020",
+    "WI022"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  },
+  {
+   "id": "WI024",
+   "wo": "WP-000-024",
+   "tag": "START",
+   "desc": "First oil: start-up and turn twenty wells in line",
+   "unit": "U000",
+   "module_id": "UP-START",
+   "answers": {
+    "WELLS": 20,
+    "TEAMS": 2,
+    "RUN": 72
+   },
+   "status": "Approved",
+   "offset": 0,
+   "note": "",
+   "after": [
+    "WI023"
+   ],
+   "extra_mat": [],
+   "drawing_refs": []
+  }
+ ],
+ "catalog_map": [],
+ "more_events": []
+}

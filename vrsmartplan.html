@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRSmartPlan &mdash; from the estimate to a working schedule and its controls</title>
+<meta name="description" content="VRSmartPlan, formerly VRProject: estimating, scheduling, eight planners, turnaround and maintenance, and VRControls project controls and cost tracking. Open it in the browser or install it on Windows and Mac.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="video.other">
+<meta property="og:title" content="VRSmartPlan &mdash; from the estimate to a working schedule and its controls">
+<meta property="og:description" content="VRSmartPlan, formerly VRProject: estimating, scheduling, eight planners, turnaround and maintenance, and VRControls project controls and cost tracking. Open it in the browser or install it on Windows and Mac.">
+<meta property="og:url" content="https://vissrad.com/vrsmartplan.html">
+<meta property="og:image" content="https://vissrad.com/assets/img/vrproject-og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="VRSmartPlan product walkthrough from VissRad">
+<meta property="og:video" content="https://vissrad.com/assets/video/vrproject-walkthrough.mp4?v=3">
+<meta property="og:video:type" content="video/mp4">
+<meta property="og:video:width" content="1920">
+<meta property="og:video:height" content="1080">
+<meta property="og:site_name" content="VissRad">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VRSmartPlan &mdash; from the estimate to a working schedule and its controls">
+<meta name="twitter:description" content="VRSmartPlan, formerly VRProject: estimating, scheduling, eight planners, turnaround and maintenance, and VRControls project controls and cost tracking. Open it in the browser or install it on Windows and Mac.">
+<meta name="twitter:image" content="https://vissrad.com/assets/img/vrproject-og.jpg">
+<link rel="canonical" href="https://vissrad.com/vrsmartplan.html">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@700,800&f[]=satoshi@400,500,700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<script>try{var t=localStorage.getItem('vissrad-theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}</script>
+<style>
+.vrp-chapters{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:var(--space-2) var(--space-6);margin-top:var(--space-4);padding:0;list-style:none}
+.vrp-ch{all:unset;cursor:pointer;display:block;width:100%;box-sizing:border-box;padding:var(--space-2) var(--space-3);border-radius:var(--radius-sm,6px);color:var(--color-text-muted,inherit);font-size:0.95rem}
+.vrp-ch:hover,.vrp-ch:focus-visible{background:var(--color-surface-2,rgba(255,255,255,.06));color:var(--color-text,inherit)}
+.vrp-ch:focus-visible{outline:2px solid var(--color-primary,#e23a34);outline-offset:1px}
+.vrp-ch .mono{display:inline-block;min-width:3.2em;color:var(--color-primary,#e23a34)}
+</style>
+</head>
+<body>
+
+<a class="sr-only" href="#main">Skip to content</a>
+
+<header class="header">
+  <div class="header__inner">
+    <a class="logo" href="index.html" aria-label="VissRad home">
+      <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="54" height="17">
+      <span class="logo__type">VissRad</span>
+    </a>
+      <p class="header__tag">&ldquo;Wisdom In Decision Making&rdquo;</p>
+    <nav class="nav" aria-label="Main">
+      <a href="platform.html">Platform</a>
+      <a href="modules.html">Modules</a>
+      <a href="demo.html">Demo</a>
+      <a href="company.html">Company</a>
+    </nav>
+    <div class="header__actions">
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch color theme"></button>
+      <a class="btn btn--primary btn--sm" href="contact.html">Request a demo</a>
+      <button class="icon-btn burger" type="button" data-burger aria-expanded="false" aria-label="Open menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"><path d="M3.5 7h17M3.5 12h17M3.5 17h17"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<div class="drawer" data-drawer data-open="false">
+  <a href="platform.html">Platform</a>
+  <a href="modules.html">Modules</a>
+  <a href="demo.html">Demo</a>
+  <a href="company.html">Company</a>
+  <a class="btn btn--primary" href="contact.html">Request a demo</a>
+</div>
+
+<main id="main">
+
+  <section class="pagehead gridbg">
+    <div class="wrap">
+      <p class="eyebrow">VRSmartPlan</p>
+      <h1 class="h-1">From the estimate to a working schedule and its controls.</h1>
+      <p class="lede" style="margin-top:var(--space-6)">VRSmartPlan, formerly VRProject, brings thirteen tools together on one tool bar: VREstimator, the VRScheduler Schedule Editor and schedule analysis, VRPlanner and seven specialist planners, VRTAR turnarounds, VRCMMS maintenance and VRControls project controls and cost tracking. The Schedule Editor sends its schedule to VRControls to set the baseline, then each statused update to report earned, actual and budget hours, SPI and CPI. It runs the same online in the browser or installed on a Windows or Mac computer.</p>
+      <div class="btn-row" style="margin-top:var(--space-8)">
+        <a class="btn btn--primary" href="/VRSmartPlan/" target="_blank" rel="noopener">Open VRSmartPlan</a>
+        <a class="btn btn--ghost" href="#download">Download for Windows and Mac</a>
+        <a class="btn btn--ghost" href="#walkthrough">Watch the walkthrough</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="walkthrough">
+    <div class="wrap">
+      <video id="vrp-video" controls preload="metadata" playsinline poster="assets/img/vrproject-poster.jpg" style="width:100%;border:1px solid var(--color-border);border-radius:var(--radius-md);background:#000">
+        <source src="assets/video/vrproject-walkthrough.mp4?v=3" type="video/mp4">
+        Your browser cannot play embedded video. <a class="link" href="assets/video/vrproject-walkthrough.mp4?v=3">Download the walkthrough instead</a>.
+      </video>
+      <p class="field__hint" style="margin-top:var(--space-4)">7:06, 1080p, narrated, with captions on screen. Recorded before the rename, so it says VRProject, and before VRControls was added. Every project shown is synthetic demo data.</p>
+      <div class="btn-row" style="margin-top:var(--space-6)">
+        <a class="btn btn--primary" href="contact.html">Request a walkthrough</a>
+        <a class="btn btn--ghost" href="assets/video/vrproject-walkthrough.mp4?v=3" download>Download the video</a>
+        <a class="btn btn--ghost" href="downloads/VRProject-Getting-Started-Tutorial.pdf" target="_blank" rel="noopener">Getting started tutorial (PDF)</a>
+      </div>
+      <div style="margin-top:var(--space-10)">
+        <h2 class="h-3">Jump to a section</h2>
+        <ul role="list" class="vrp-chapters">
+          <li><button type="button" class="vrp-ch" data-t="0"><span class="mono">0:00</span> Opening</button></li>
+          <li><button type="button" class="vrp-ch" data-t="17"><span class="mono">0:17</span> Twelve tools, one tool bar</button></li>
+          <li><button type="button" class="vrp-ch" data-t="41"><span class="mono">0:41</span> VREstimator: takeoff, CAD, cost and proposal</button></li>
+          <li><button type="button" class="vrp-ch" data-t="96"><span class="mono">1:36</span> VRScheduler: editor, analysis, DCMA and risk</button></li>
+          <li><button type="button" class="vrp-ch" data-t="155"><span class="mono">2:35</span> VRPlanner step-out, work steps and loading</button></li>
+          <li><button type="button" class="vrp-ch" data-t="191"><span class="mono">3:11</span> Seven specialist planners</button></li>
+          <li><button type="button" class="vrp-ch" data-t="265"><span class="mono">4:25</span> The Preparation tab</button></li>
+          <li><button type="button" class="vrp-ch" data-t="304"><span class="mono">5:04</span> Hand-off to the Schedule Editor</button></li>
+          <li><button type="button" class="vrp-ch" data-t="327"><span class="mono">5:27</span> Progress by rules of credit</button></li>
+          <li><button type="button" class="vrp-ch" data-t="346"><span class="mono">5:46</span> VRTAR turnarounds</button></li>
+          <li><button type="button" class="vrp-ch" data-t="372"><span class="mono">6:12</span> VRCMMS maintenance</button></li>
+          <li><button type="button" class="vrp-ch" data-t="389"><span class="mono">6:29</span> Your data, online or installed</button></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rule" id="download">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">Download</p>
+        <h2 class="h-1">VRSmartPlan on your own computer.</h2>
+        <p class="lede">All thirteen tools installed on a Windows or Mac computer. It runs from the installed files: no internet connection, no server and no administrator rights.</p>
+      </div>
+      <div class="grid grid-3">
+        <article class="card reveal">
+          <p class="chip chip--accent">Windows 10 and 11</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Install on Windows</h3>
+          <p class="small" style="margin-top:var(--space-3)">Double-click the zip to open it, then double-click <strong>Install VRSmartPlan</strong>; there is no need to extract it first. It adds a Desktop icon and a Start menu entry for each tool, and opens in Microsoft Edge in its own window.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip chip--accent">macOS</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Install on a Mac</h3>
+          <p class="small" style="margin-top:var(--space-3)">Double-click the zip, then double-click <strong>Install VRSmartPlan (Mac)</strong>. The apps go in ~/Applications/VRSmartPlan and open in Google Chrome or Microsoft Edge. macOS asks once to allow the installer.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Coming from VRProject</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Your records come with you</h3>
+          <p class="small" style="margin-top:var(--space-3)">On a computer that has VRProject installed, the first VRSmartPlan install copies its records across and leaves VRProject as it was. Records stay on the computer in a private profile and are not uploaded anywhere.</p>
+        </article>
+      </div>
+      <div class="btn-row reveal" style="margin-top:var(--space-8)">
+        <a class="btn btn--primary" href="downloads/VRSmartPlan-Setup.zip" download>Download VRSmartPlan for Windows and Mac (zip)</a>
+        <a class="btn btn--ghost" href="downloads/VRSmartPlan-README.txt" target="_blank" rel="noopener">Installation guide</a>
+        <a class="btn btn--ghost" href="downloads/VissRad-EULA.txt" target="_blank" rel="noopener">Licence</a>
+      </div>
+      <p class="field__hint reveal" style="margin-top:var(--space-4)" data-vrsp-version></p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer__grid">
+      <div>
+        <a class="logo" href="index.html" aria-label="VissRad home">
+          <img class="logo__mark" src="assets/brand/mark-red.svg" alt="" width="54" height="17">
+          <span class="logo__type">VissRad</span>
+        </a>
+        <p class="footer__tag">Wisdom in decision making</p>
+        <p class="small" style="margin-top:var(--space-5);max-width:34ch">Integrated project controls, completions and finance applications for industrial capital projects.</p>
+        <p class="small" style="margin-top:var(--space-5);max-width:34ch">Built by <a class="link" href="https://penningtongrp.com" rel="noopener">Pennington Group Associates</a> &mdash; data driven project management &amp; controls.</p>
+      </div>
+      <div>
+        <h3>Product</h3>
+        <ul role="list">
+          <li><a href="platform.html">Platform</a></li>
+          <li><a href="modules.html">All modules</a></li>
+          <li><a href="platform.html#link">Link exchange</a></li>
+          <li><a href="platform.html#deployment">Deployment</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Evaluate</h3>
+        <ul role="list">
+          <li><a href="/app/" target="_blank" rel="noopener">Live demo</a></li>
+          <li><a href="contact.html">Request a demo</a></li>
+          <li><a href="modules.html#vissradai">VRAI</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul role="list">
+          <li><a href="company.html">About</a></li>
+          <li><a href="company.html#services">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="https://penningtongrp.com" rel="noopener">Pennington Group</a></li>
+          <li><a href="legal.html">Terms &amp; legal</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__base">
+      <p>&copy; 2026 Pennington Group LLC. All rights reserved. VissRad&trade; and the VissRad application names are trademarks of Pennington Group LLC. <a href="legal.html">Terms &amp; legal</a></p>
+      <p class="mono">Houston, Texas &middot; vissrad.com</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
+<script>
+document.querySelectorAll('.vrp-ch').forEach(function(b){b.addEventListener('click',function(){var v=document.getElementById('vrp-video');v.currentTime=+b.dataset.t;v.play();v.scrollIntoView({behavior:'smooth',block:'center'});});});
+</script>
+</body>
+</html>
