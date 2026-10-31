@@ -661,5 +661,30 @@ a.lnk:hover { text-decoration: underline; }
 @media (max-width: 720px) { .toolmenu-list { position: fixed; left: 12px; right: 12px; width: auto; top: 56px; } }
 @media print { .toolmenu { display: none !important; } }
 
-/* VRSmartPlan: the product name ahead of the tool links, when the row has room. */
-@media (min-width: 1440px) { .modrail::before { content: "VRSmartPlan"; display: flex; align-items: center; font-family: Montserrat, Inter, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1.1px; text-transform: uppercase; color: var(--accent, #E23A34); padding: 0 12px 0 2px; margin-right: 6px; border-right: 1px solid var(--border-hi, var(--border, #2E3440)); white-space: nowrap; } }
+/* VRSmartPlan: thirteen tools and the product name in one row. Measured widths of
+   the row: 1704px with dots and full padding, 1520px tighter, 1299px without
+   the dots, 1230px at the tightest; the name adds about 115px, so it shows from 1440px. */
+@media (min-width: 1561px) and (max-width: 1839px) {
+  .modrail { gap: 0; padding: 0 10px; }
+  .modrail a { padding: 8px 9px; gap: 6px; letter-spacing: 0; }
+}
+@media (min-width: 1361px) and (max-width: 1639px) {
+  .modrail { gap: 0; padding: 0 10px; }
+  .modrail a { padding: 8px 7px; gap: 0; letter-spacing: 0; }
+  .modrail a .dot { display: none; }
+}
+@media (max-width: 1360px) {
+  .modrail { gap: 0; padding: 0 10px; }
+  .modrail a { padding: 8px 7px; gap: 0; letter-spacing: 0; }
+  .modrail a .dot { display: none; }
+}
+@media (max-width: 1299px) {
+  .modrail { padding: 0 6px; }
+  .modrail a { padding: 8px 5px; font-size: 11.5px; }
+}
+@media (min-width: 1440px) {
+  .modrail::before { content: "VRSmartPlan"; display: flex; align-items: center; flex: 0 0 auto;
+    font-family: Montserrat, Inter, sans-serif; font-weight: 800; font-size: 11px; letter-spacing: 1.1px;
+    text-transform: uppercase; color: var(--accent, #E23A34); padding: 0 12px 0 2px; margin-right: 6px;
+    border-right: 1px solid var(--border-hi, var(--border, #2E3440)); white-space: nowrap; }
+}
