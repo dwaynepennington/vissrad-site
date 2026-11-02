@@ -1,0 +1,369 @@
+# VRSmartPlan Desktop setup. Copy ALL of this text, paste it into Python (IDLE or the python
+# window) and press Enter until it starts. It puts VRSmartPlan on your Desktop.
+exec(chr(10).join(l.split('|', 1)[1] if '|' in l else '' for l in r'''
+|# VRSmartPlan - Desktop setup (paste-in Python). Python 3.8 or newer, nothing to install.
+|# Puts a VRSmartPlan folder and an "Open VRSmartPlan" shortcut on your Desktop.
+|# Run it again at any time to update; your records are kept.
+|import os, sys, json, hashlib, zipfile, shutil, subprocess, struct, tempfile, time, uuid, urllib.request
+|
+|NAME = "VRSmartPlan"
+|BASE = os.environ.get("VRSMARTPLAN_BASE", "https://vissrad.com/downloads/")
+|MANIFEST = "VRSmartPlan-desktop.json"
+|WIN = os.name == "nt"
+|MAC = sys.platform == "darwin"
+|
+|
+|def say(msg="", warn=False):
+|    print(("  ! " if warn else "  ") + msg, flush=True)
+|
+|
+|class SetupError(Exception):
+|    pass
+|
+|
+|def desktop_dir():
+|    if WIN:
+|        try:
+|            import ctypes
+|            from ctypes import wintypes
+|
+|            class GUID(ctypes.Structure):
+|                _fields_ = [("a", wintypes.DWORD), ("b", wintypes.WORD), ("c", wintypes.WORD), ("d", ctypes.c_ubyte * 8)]
+|
+|            u = uuid.UUID("B4BFCC3A-DB2C-424C-B029-7FE99A87C641")  # FOLDERID_Desktop (follows OneDrive)
+|            g = GUID(u.time_low, u.time_mid, u.time_hi_version, (ctypes.c_ubyte * 8)(*u.bytes[8:]))
+|            p = ctypes.c_wchar_p()
+|            if ctypes.windll.shell32.SHGetKnownFolderPath(ctypes.byref(g), 0, None, ctypes.byref(p)) == 0:
+|                path = p.value
+|                ctypes.windll.ole32.CoTaskMemFree(p)
+|                if path and os.path.isdir(path):
+|                    return path
+|        except Exception:
+|            pass
+|    path = os.path.join(os.path.expanduser("~"), "Desktop")
+|    os.makedirs(path, exist_ok=True)
+|    return path
+|
+|
+|def data_root(product):
+|    # Browser profile (your records) lives outside the Desktop so OneDrive never syncs or locks it.
+|    if WIN:
+|        return os.path.join(os.environ.get("LOCALAPPDATA") or os.path.expanduser("~\\AppData\\Local"), product)
+|    if MAC:
+|        return os.path.join(os.path.expanduser("~/Library/Application Support"), product)
+|    return os.path.join(os.environ.get("XDG_DATA_HOME") or os.path.expanduser("~/.local/share"), product)
+|
+|
+|def fetch(url, dest=None):
+|    try:
+|        req = urllib.request.Request(url, headers={"User-Agent": "VRSmartPlan-desktop-setup"})
+|        with urllib.request.urlopen(req, timeout=120) as r:
+|            if dest is None:
+|                return r.read()
+|            with open(dest, "wb") as f:
+|                shutil.copyfileobj(r, f, 1 << 20)
+|            return None
+|    except Exception as first:
+|        curl = shutil.which("curl.exe" if WIN else "curl") or shutil.which("curl")
+|        if not curl:
+|            raise SetupError("Could not download %s (%s)" % (url, first))
+|        out = dest or os.path.join(tempfile.gettempdir(), "vrsmartplan-%d.tmp" % os.getpid())
+|        r = subprocess.run([curl, "-fsSL", "--retry", "2", "-o", out, url], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+|        if r.returncode != 0:
+|            raise SetupError("Could not download %s (%s; curl: %s)" % (url, first, r.stderr.decode("utf-8", "replace").strip()))
+|        if dest is None:
+|            with open(out, "rb") as f:
+|                data = f.read()
+|            os.remove(out)
+|            return data
+|        return None
+|
+|
+|def find_browser():
+|    override = os.environ.get("VRSMARTPLAN_BROWSER")
+|    if override:
+|        return override
+|    found = []
+|    if WIN:
+|        try:
+|            import winreg
+|            for exe in ("msedge.exe", "chrome.exe"):
+|                ap = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\App Paths\\" + exe
+|                for hive, key in ((winreg.HKEY_CURRENT_USER, ap), (winreg.HKEY_LOCAL_MACHINE, ap),
+|                                  (winreg.HKEY_LOCAL_MACHINE, ap.replace("SOFTWARE\\", "SOFTWARE\\WOW6432Node\\"))):
+|                    try:
+|                        with winreg.OpenKey(hive, key) as k:
+|                            found.append(str(winreg.QueryValue(k, None)).strip('"'))
+|                    except OSError:
+|                        pass
+|        except Exception:
+|            pass
+|        for sub in (r"Microsoft\Edge\Application\msedge.exe", r"Google\Chrome\Application\chrome.exe"):
+|            for base in (os.environ.get("ProgramFiles(x86)"), os.environ.get("ProgramFiles"), os.environ.get("LOCALAPPDATA")):
+|                if base:
+|                    found.append(os.path.join(base, sub))
+|    elif MAC:
+|        for app in ("Microsoft Edge", "Google Chrome"):
+|            for base in ("/Applications", os.path.expanduser("~/Applications")):
+|                found.append(os.path.join(base, app + ".app", "Contents", "MacOS", app))
+|    else:
+|        for exe in ("microsoft-edge", "google-chrome", "chromium", "chromium-browser"):
+|            p = shutil.which(exe)
+|            if p:
+|                found.append(p)
+|    for p in found:
+|        if p and os.path.isfile(p):
+|            return p
+|    return None
+|
+|
+|def file_url(path):
+|    import pathlib
+|    return pathlib.Path(path).resolve().as_uri()
+|
+|
+|def browser_args(page, profile):
+|    return ["--app=" + file_url(page), "--user-data-dir=" + profile, "--allow-file-access-from-files",
+|            "--no-first-run", "--no-default-browser-check", "--start-maximized"]
+|
+|
+|def win_quote(a):
+|    return '"' + a + '"' if (" " in a or "&" in a) else a
+|
+|
+|def write_lnk(path, target, args, workdir, icon, desc):
+|    # Windows shortcut (.lnk, MS-SHLLINK) written directly: no PowerShell or COM needed.
+|    def sd(s):
+|        return struct.pack("<H", len(s)) + s.encode("utf-16-le")
+|    flags = 0x02 | 0x04 | 0x10 | 0x20 | 0x80 | (0x40 if icon else 0)
+|    header = struct.pack("<I16sII3QIiIHHII", 0x4C, uuid.UUID("00021401-0000-0000-C000-000000000046").bytes_le,
+|                         flags, 0x20, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0)
+|    volume = struct.pack("<IIII", 17, 3, 0, 16) + b"\0"
+|    try:
+|        ansi = target.encode("mbcs", "replace")
+|    except LookupError:
+|        ansi = target.encode("ascii", "replace")
+|    base_a, suffix_a = ansi + b"\0", b"\0"
+|    base_u, suffix_u = target.encode("utf-16-le") + b"\0\0", b"\0\0"
+|    hsize = 0x24
+|    o_vol = hsize
+|    o_base = o_vol + len(volume)
+|    o_suf = o_base + len(base_a)
+|    o_base_u = o_suf + len(suffix_a)
+|    o_suf_u = o_base_u + len(base_u)
+|    total = o_suf_u + len(suffix_u)
+|    info = struct.pack("<IIIIIIIII", total, hsize, 1, o_vol, o_base, 0, o_suf, o_base_u, o_suf_u) + volume + base_a + suffix_a + base_u + suffix_u
+|    strings = sd(desc) + sd(workdir) + sd(args) + (sd(icon) if icon else b"")
+|    with open(path, "wb") as f:
+|        f.write(header + info + strings + b"\0\0\0\0")
+|
+|
+|def make_launcher(folder, title, browser, page, profile, icon, desc):
+|    """Returns the path of the shortcut it made."""
+|    if WIN:
+|        if browser:
+|            path = os.path.join(folder, title + ".lnk")
+|            write_lnk(path, browser, " ".join(win_quote(a) for a in browser_args(page, profile)),
+|                      os.path.dirname(page), icon, desc)
+|        else:
+|            path = os.path.join(folder, title + ".url")
+|            with open(path, "w", encoding="utf-8") as f:
+|                f.write("[InternetShortcut]\r\nURL=%s\r\n" % file_url(page))
+|        return path
+|    path = os.path.join(folder, title + (".command" if MAC else ".sh"))
+|    q = lambda s: "'" + s.replace("'", "'\\''") + "'"
+|    if MAC and browser and ".app/Contents/MacOS/" in browser:
+|        app = browser.split("/Contents/MacOS/")[0]
+|        cmd = "open -na %s --args %s" % (q(app), " ".join(q(a) for a in browser_args(page, profile)))
+|    elif browser:
+|        cmd = "%s %s >/dev/null 2>&1 &" % (q(browser), " ".join(q(a) for a in browser_args(page, profile)))
+|    else:
+|        cmd = ("open " if MAC else "xdg-open ") + q(page)
+|    with open(path, "w", encoding="utf-8", newline="\n") as f:
+|        f.write("#!/bin/bash\n# %s\n%s\n" % (desc, cmd))
+|    os.chmod(path, 0o755)
+|    return path
+|
+|
+|def launch(browser, page, profile):
+|    if browser:
+|        if MAC and ".app/Contents/MacOS/" in browser:
+|            subprocess.Popen(["open", "-na", browser.split("/Contents/MacOS/")[0], "--args"] + browser_args(page, profile))
+|        else:
+|            subprocess.Popen([browser] + browser_args(page, profile), stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+|    elif WIN:
+|        os.startfile(page)
+|    else:
+|        subprocess.Popen(["open" if MAC else "xdg-open", page])
+|
+|
+|SKIP_DIRS = {"Cache", "Code Cache", "GPUCache", "DawnCache", "DawnGraphiteCache", "DawnWebGPUCache", "GrShaderCache",
+|             "GraphiteDawnCache", "ShaderCache", "Crashpad", "Crash Reports", "component_crx_cache", "Network",
+|             "optimization_guide_model_store", "Safe Browsing", "BrowserMetrics", "blob_storage", "CacheStorage",
+|             "ScriptCache", "Download Service", "Sessions", "Snapshots"}
+|SKIP_FILES = {"lockfile", "SingletonLock", "SingletonCookie", "SingletonSocket", "LOCK", "Cookies", "History",
+|              "Visited Links"}
+|RECORD_DIRS = {"Local Storage", "IndexedDB", "Session Storage", "databases", "File System", "shared_proto_db"}
+|
+|
+|def copy_records(src, dest):
+|    """Copies the records of an earlier install into a new profile. Returns False if records were locked."""
+|    lost = []
+|    for root, dirs, files in os.walk(src):
+|        dirs[:] = [d for d in dirs if d not in SKIP_DIRS]
+|        rel = os.path.relpath(root, src)
+|        for name in files:
+|            if name in SKIP_FILES or name.endswith("-journal"):
+|                continue
+|            target = os.path.join(dest, rel, name)
+|            os.makedirs(os.path.dirname(target), exist_ok=True)
+|            ok = False
+|            for _ in range(4):
+|                try:
+|                    shutil.copy2(os.path.join(root, name), target)
+|                    ok = True
+|                    break
+|                except OSError:
+|                    time.sleep(0.5)
+|            parts = set(os.path.normpath(os.path.join(rel, name)).split(os.sep))
+|            if not ok and parts & RECORD_DIRS:
+|                lost.append(os.path.join(rel, name))
+|    return not lost
+|
+|
+|def safe_extract(zpath, dest):
+|    with zipfile.ZipFile(zpath) as z:
+|        for m in z.infolist():
+|            p = os.path.normpath(m.filename)
+|            if p.startswith("..") or os.path.isabs(p) or ":" in p:
+|                raise SetupError("The download contains an unsafe file name: " + m.filename)
+|        z.extractall(dest)
+|
+|
+|def main():
+|    print()
+|    say(NAME + " - Desktop setup")
+|    say("-" * 26)
+|    if sys.version_info < (3, 8):
+|        raise SetupError("Python 3.8 or newer is needed (this is %s)." % sys.version.split()[0])
+|    desk = desktop_dir()
+|    home = os.path.join(desk, NAME)
+|    app = os.path.join(home, "app")
+|    root = data_root(NAME + " Desktop")
+|    profile = os.path.join(root, "profile")
+|    say("Desktop folder: " + home)
+|
+|    say("Checking for the latest version ...")
+|    try:
+|        man = json.loads(fetch(BASE + MANIFEST).decode("utf-8"))
+|    except SetupError as e:
+|        say(str(e), warn=True)
+|        raise SetupError("Could not reach vissrad.com. Check that this page opens in Edge: " + BASE + MANIFEST
+|                         + " . If it does not, your network blocks it; ask for the files on a USB stick or a shared folder.")
+|    version = man["version"]
+|    ver_file = os.path.join(home, "VERSION.txt")
+|    current = ""
+|    if os.path.isfile(ver_file):
+|        with open(ver_file, encoding="utf-8") as f:
+|            current = f.readline().strip().replace("version ", "")
+|    if current == version and os.path.isfile(os.path.join(app, "index.html")):
+|        say("Version %s is already on your Desktop." % version)
+|    else:
+|        say("Downloading version %s (%.1f MB) ..." % (version, man["size"] / 1048576.0))
+|        os.makedirs(home, exist_ok=True)
+|        tmp = tempfile.mkdtemp(prefix="vrsmartplan-")
+|        try:
+|            zpath = os.path.join(tmp, "app.zip")
+|            fetch(BASE + man["file"], zpath)
+|            h = hashlib.sha256()
+|            with open(zpath, "rb") as f:
+|                for block in iter(lambda: f.read(1 << 20), b""):
+|                    h.update(block)
+|            if os.path.getsize(zpath) != man["size"] or h.hexdigest() != man["sha256"].lower():
+|                raise SetupError("The download did not match its checksum, so nothing was changed. Try again later.")
+|            say("Download checked (SHA-256 matches).")
+|            fresh = os.path.join(tmp, "unpacked")
+|            safe_extract(zpath, fresh)
+|            if not os.path.isfile(os.path.join(fresh, "app", "index.html")):
+|                raise SetupError("The download is not a VRSmartPlan package, so nothing was changed.")
+|            old = app + ".old"
+|            if os.path.isdir(old):
+|                shutil.rmtree(old, ignore_errors=True)
+|            if os.path.isdir(app):
+|                os.rename(app, old)
+|            shutil.move(os.path.join(fresh, "app"), app)
+|            shutil.rmtree(old, ignore_errors=True)
+|            for extra in ("tools.txt",):
+|                if os.path.isfile(os.path.join(fresh, extra)):
+|                    shutil.copy2(os.path.join(fresh, extra), os.path.join(app, extra))
+|        finally:
+|            shutil.rmtree(tmp, ignore_errors=True)
+|        with open(ver_file, "w", encoding="utf-8") as f:
+|            f.write("version %s\nsame build as https://vissrad.com/VRSmartPlan/\ninstalled %s by the Desktop setup\n"
+|                    % (version, time.strftime("%Y-%m-%d %H:%M")))
+|
+|    if not os.path.isdir(profile):
+|        for earlier in (NAME, "VRProject"):
+|            src = os.path.join(data_root(earlier), "profile")
+|            if os.path.isdir(src):
+|                say("Copying your %s records ..." % earlier)
+|                if copy_records(src, profile):
+|                    say("Your %s records were copied; %s itself was not changed." % (earlier, earlier))
+|                else:
+|                    shutil.rmtree(profile, ignore_errors=True)
+|                    say("%s is open, so its records could not be copied. Close it and run this setup again" % earlier
+|                        + " to bring them over, or carry on with an empty %s." % NAME, warn=True)
+|                break
+|    os.makedirs(profile, exist_ok=True)
+|
+|    browser = find_browser()
+|    if browser:
+|        say("Opens in: %s (its own window)" % os.path.basename(browser))
+|    else:
+|        say("Microsoft Edge and Google Chrome were not found; %s will open in your default browser." % NAME, warn=True)
+|    icon = os.path.join(app, "assets", "vissrad.ico") if WIN else None
+|    say("Creating the shortcuts ...")
+|    index = os.path.join(app, "index.html")
+|    main_link = make_launcher(desk, "Open " + NAME, browser, index, profile, icon,
+|                              NAME + " - estimating, scheduling, planning and project controls")
+|    tools_dir = os.path.join(home, "Open one tool")
+|    os.makedirs(tools_dir, exist_ok=True)
+|    tools_txt = os.path.join(app, "tools.txt")
+|    count = 0
+|    if os.path.isfile(tools_txt):
+|        with open(tools_txt, encoding="utf-8") as f:
+|            for line in f:
+|                if line.strip() and not line.startswith("#"):
+|                    parts = line.rstrip("\r\n").split("|")
+|                    page = os.path.join(app, parts[1], "index.html")
+|                    if os.path.isfile(page):
+|                        make_launcher(tools_dir, parts[0], browser, page, profile, icon, parts[3])
+|                        count += 1
+|    make_launcher(home, "Open " + NAME, browser, index, profile, icon, NAME)
+|    with open(os.path.join(home, "README.txt"), "w", encoding="utf-8") as f:
+|        f.write(NAME + " on your Desktop\n\n"
+|                "Open it: double-click \"Open %s\" on your Desktop (or in this folder).\n"
+|                "One tool on its own: the \"Open one tool\" folder.\n"
+|                "Update: paste the setup into Python again. Your records are kept.\n"
+|                "Your records are saved in the %s window's own browser profile:\n  %s\n"
+|                "Use Export in each tool to keep copies (Excel, CSV, XER, or the tool's save file).\n"
+|                "Remove: delete this folder, the \"Open %s\" shortcut, and the folder above.\n"
+|                % (NAME, NAME, profile, NAME))
+|    say("Desktop shortcut: " + os.path.basename(main_link) + "; %d single-tool shortcuts in \"Open one tool\"." % count)
+|    if os.environ.get("VRSMARTPLAN_NO_LAUNCH") != "1":
+|        say("Opening %s ..." % NAME)
+|        launch(browser, index, profile)
+|    say("")
+|    say("Done. Next time, double-click \"Open %s\" on your Desktop." % NAME)
+|    print()
+|
+|
+|try:
+|    main()
+|except SetupError as e:
+|    say(str(e), warn=True)
+|    say("Setup did not finish.", warn=True)
+|except Exception as e:
+|    say("Setup stopped: %s: %s" % (type(e).__name__, e), warn=True)
+|    say("Setup did not finish.", warn=True)
+'''.splitlines()))
