@@ -1161,6 +1161,19 @@ function viewLibrary(root) {
   drawMh();
 
   root.appendChild(el('div', { style: 'margin-top:10px' },
+    card('Cost Book: public rates and prices', [
+      el('div', { style: 'color:var(--text-dim);font-size:12.5px;line-height:1.5;margin-bottom:8px' },
+        'Davis-Bacon and BLS wages, USACE EP 1110-1-8, FEMA and Caltrans equipment rates, DOT bid prices, FTA and DoD unit costs, '
+        + 'EIA power plant costs, production rates, DoD area cost factors and escalation indices (USCCDB v1.0, CC BY 4.0, and the agencies named). '
+        + 'Select rows and add them to the craft rates, material prices or the shared resource library.'),
+      toolbar(
+        el('button', { class: 'primary', onclick: () => openCostBook() }, 'Open Cost Book\u2026'),
+        el('button', { class: 'ghost', onclick: () => openCostBook('labor-db-la') }, 'Prevailing wages'),
+        el('button', { class: 'ghost', onclick: () => openCostBook('equip-ep1110') }, 'Equipment rates'),
+        el('button', { class: 'ghost', onclick: () => openCostBook('unit-ncdot') }, 'Unit prices'),
+        el('button', { class: 'ghost', onclick: () => openCostBook('index-series') }, 'Escalation'))], { flush: false }).card));
+
+  root.appendChild(el('div', { style: 'margin-top:10px' },
     card('Man-hour library', [toolbarRow, mhWrap], { flush: false }).card));
 
   const weldCols = [
@@ -1195,6 +1208,51 @@ function viewLibrary(root) {
 
   root.appendChild(el('div', { style: 'margin-top:10px' },
     card('Material prices', matTbl.wrap, { flush: true }).card));
+}
+
+/* The Cost Book (../shared/costbook.js and its data in ../shared/costbook/),
+   loaded when first opened. Rows go into the craft rates, the material
+   prices or the shared resource library. */
+function openCostBook(start) {
+  const go = () => window.VRCostBook.open({ start, subtitle: 'Add public rates and prices to this estimate\u2019s library', actions: [
+    { label: 'Add to craft rates', kinds: ['labor'], primary: true, title: 'Base wage and fringe become a craft rate (burden % = fringe / base)', run: costBookCrafts },
+    { label: 'Add to material prices', kinds: ['unit'], primary: true, title: 'Unit prices go into the material price list as Cost Book keys', run: costBookPrices },
+    { label: 'Add to resource library', kinds: ['labor', 'equip'], title: 'The resource library shared by Schedule, Cost, Estimating and the planners', run: (items) => new Promise((ok, bad) => estResources(() => {
+      const res = window.VRCostBook.toResources(items); if (!res.length) { bad(new Error('Nothing to add: the selected rows have no hourly rate.')); return; }
+      const r = window.VissRadResources.upsert(res, 'update'); ok(`Resource library: ${r.added} added, ${r.updated} updated.`);
+    })) }] });
+  if (window.VRCostBook) { go(); return; }
+  const sc = document.createElement('script'); sc.src = '../shared/costbook.js';
+  sc.onload = go; sc.onerror = () => toast('The Cost Book is part of the VRSmartPlan install (shared/costbook) and was not found here.', true);
+  document.head.appendChild(sc);
+}
+function costBookCrafts(items) {
+  let added = 0, updated = 0;
+  items.filter((x) => typeof x.rate === 'number').forEach((x) => {
+    const base = +(x.base || x.rate) || 0; const fr = +x.fringe || 0;
+    const row = { craft: x.name.slice(0, 80), base_rate: base, burden_pct: base ? Math.round(fr / base * 10000) / 10000 : 0, all_in_rate: Math.round((base + fr) * 100) / 100,
+      source: `${x.short}, ${x.period}${fr ? '; burden = fringe' : '; no fringe or burden included'}` };
+    const i = D.crafts.findIndex((c) => c.craft === row.craft);
+    if (i < 0) { D.crafts.push(row); added++; } else { D.crafts[i] = Object.assign(D.crafts[i], row); updated++; }
+  });
+  if (!added && !updated) throw new Error('The selected rows have no wage to add.');
+  saveOverlay(); refreshAll();
+  return `Craft rates: ${added} added, ${updated} updated. Assign them on the takeoff lines or crews.`;
+}
+function costBookPrices(items) {
+  let added = 0;
+  const used = new Set(D.material_prices.map((m) => m.key));
+  items.filter((x) => typeof x.rate === 'number').forEach((x) => {
+    let n = D.material_prices.length + 1, key;
+    do { key = 'CB-' + String(n++).padStart(4, '0'); } while (used.has(key));
+    used.add(key);
+    D.material_prices.push({ key, discipline: 'Cost Book', unit: x.unit, uom: x.unit, unit_material_cost: x.rate,
+      description: `${x.name}${x.area ? ' (' + x.area + ')' : ''}`.slice(0, 160), source: `${x.short}, ${x.period}, tier ${x.tier}${x.code ? ', item ' + x.code : ''}` });
+    added++;
+  });
+  if (!added) throw new Error('The selected rows have no unit price to add.');
+  saveOverlay(); refreshAll();
+  return `Material prices: ${added} added as CB- keys. Bid prices include labor, equipment, overhead and profit.`;
 }
 
 /* The shared VissRad resource library (shared/resources.js), loaded when first used. */
