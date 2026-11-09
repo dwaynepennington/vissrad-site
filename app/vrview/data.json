@@ -3140,7 +3140,7 @@
    "action": "seed_loaded",
    "old_value": null,
    "new_value": "demo dataset (unit + tower backdrops)",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-26 08:15:40",
@@ -3149,7 +3149,7 @@
    "action": "note",
    "old_value": null,
    "new_value": "5 activities have no elevation region across both backdrops (commissioning is not shown on either plate) \u2014 map them in the mapping studio or accept them as unmapped.",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   }
  ],
  "meta": {

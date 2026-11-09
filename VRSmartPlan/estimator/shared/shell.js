@@ -17,7 +17,7 @@
    in shared/standalone.js, which only standalone builds load. */
 const SUITE_STANDALONE = window.VR_STANDALONE || null;
 const SUITE_UP = SUITE_STANDALONE && typeof SUITE_STANDALONE.up === 'string' ? SUITE_STANDALONE.up : '../';
-const SUITE_USER = (window.VRUSER && window.VRUSER.who && window.VRUSER.who()) || (SUITE_STANDALONE ? '' : 'D. Pennington');
+const SUITE_USER = (window.VRUSER && window.VRUSER.who && window.VRUSER.who()) || (SUITE_STANDALONE ? '' : 'PGA Team');
 
 /* The single source of truth for the suite's module list. Order matters: it
    drives the rail on every page and the cards on the launcher. */

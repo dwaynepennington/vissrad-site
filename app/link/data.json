@@ -33090,7 +33090,7 @@
    "action": "configure",
    "old_value": null,
    "new_value": "https://link.vissrad-demo.example.com",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-07-03T23:40:03Z",
@@ -33099,7 +33099,7 @@
    "action": "configure",
    "old_value": null,
    "new_value": "https://link.vissrad-demo.example.com",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-07-21T13:48:07Z",
@@ -33108,7 +33108,7 @@
    "action": "configure",
    "old_value": null,
    "new_value": "https://link.vissrad-demo.example.com",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-21T21:07:56Z",
@@ -33123,7 +33123,7 @@
     "status": "retrying",
     "attempts": 5
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-21T22:59:10Z",
@@ -33137,7 +33137,7 @@
     "status": "error",
     "last_error": "Duplicate commitment_no CMT-4471 conflicts with an existing open commitment"
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-21T23:36:47Z",
@@ -33152,7 +33152,7 @@
     "status": "retrying",
     "attempts": 3
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-22T02:33:14Z",
@@ -33167,7 +33167,7 @@
     "status": "retrying",
     "attempts": 4
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-23T22:43:54Z",
@@ -33178,7 +33178,7 @@
     "status": "failed"
    },
    "new_value": "Cannot acknowledge a failed message; replay to requeue it first.",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-23T22:49:42Z",
@@ -33189,7 +33189,7 @@
     "status": "failed"
    },
    "new_value": "Cannot acknowledge a failed message; replay to requeue it first.",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-24T09:17:10Z",
@@ -33203,7 +33203,7 @@
     "status": "error",
     "last_error": "vendor_id V-1099 not found in local vendor master"
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-25T12:14:17Z",
@@ -33218,7 +33218,7 @@
     "status": "retrying",
     "attempts": 2
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-25T12:57:29Z",
@@ -33232,7 +33232,7 @@
     "status": "error",
     "last_error": "Validation failed: payload.lines[2].amount is not a valid decimal string"
    },
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   }
  ],
  "duplicate_demo_key": "PCS:progress_claim:VR-DEMO-001:00004",

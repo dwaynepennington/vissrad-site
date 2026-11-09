@@ -8,7 +8,7 @@
   "currency": "USD",
   "data_date": "2026-08-26",
   "rfsu": "2026-12-24",
-  "user": "D. Pennington",
+  "user": "PGA Team",
   "estimator": "GEAG Estimating",
   "estimate_date": "2026-07-29",
   "estimate_class": "Class 3",
@@ -1930,7 +1930,7 @@
    "action": "seed",
    "old_value": null,
    "new_value": "Estimate seeded at Class 3",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-26 08:15:41",
@@ -1939,7 +1939,7 @@
    "action": "set_method",
    "old_value": "Parametric",
    "new_value": "Detailed Takeoff",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   },
   {
    "ts": "2026-08-26 08:16:03",
@@ -1948,7 +1948,7 @@
    "action": "set_method",
    "old_value": "Parametric",
    "new_value": "Detailed Takeoff",
-   "user_name": "D. Pennington"
+   "user_name": "PGA Team"
   }
  ],
  "seq": {}

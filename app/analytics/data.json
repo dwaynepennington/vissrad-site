@@ -16698,7 +16698,7 @@
 "last_refreshed":"2026-08-24",
 "period":"2026-08",
 "source_path":"C:\\VissRad\\P6Exports\\ResinPlant\\data",
-"refreshed_by":"D. Pennington"
+"refreshed_by":"PGA Team"
 },
 {
 "family_id":"resinplant_xml",
@@ -16706,7 +16706,7 @@
 "last_refreshed":"2026-08-24",
 "period":"2026-08",
 "source_path":"C:\\VissRad\\P6Exports\\ResinPlant\\P6 XML TEST.xml",
-"refreshed_by":"D. Pennington"
+"refreshed_by":"PGA Team"
 },
 {
 "family_id":"resinplant_eva",
@@ -16714,7 +16714,7 @@
 "last_refreshed":"2026-07-27",
 "period":"2026-07",
 "source_path":"",
-"refreshed_by":"D. Pennington"
+"refreshed_by":"PGA Team"
 },
 {
 "family_id":"openpcs",
@@ -16722,7 +16722,7 @@
 "last_refreshed":"2026-08-25",
 "period":"2026-08",
 "source_path":"C:\\VissRad\\Workbooks\\OpenPCS-Workbook.xlsx",
-"refreshed_by":"D. Pennington"
+"refreshed_by":"PGA Team"
 }
 ],
 "audit":[]
