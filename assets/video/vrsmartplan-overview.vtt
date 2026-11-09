@@ -1,0 +1,325 @@
+WEBVTT
+
+00:00.200 --> 00:03.616
+Most project teams estimate in one tool, schedule in another,
+
+00:03.616 --> 00:05.688
+plan the field work in a spreadsheet,
+
+00:05.688 --> 00:07.928
+and track progress somewhere else again.
+
+00:07.928 --> 00:10.256
+Every one of those steps gets retyped.
+
+00:10.776 --> 00:13.172
+VRSmartPlan, formerly VRProject,
+
+00:13.172 --> 00:16.891
+brings thirteen tools together on one tool bar.
+
+00:16.911 --> 00:18.505
+VREstimator.
+
+00:18.525 --> 00:22.322
+The VRScheduler Schedule Editor and schedule analysis.
+
+00:22.342 --> 00:25.175
+VRPlanner and seven specialist planners.
+
+00:25.195 --> 00:29.013
+VRTAR for turnarounds, VRCMMS for maintenance,
+
+00:29.013 --> 00:33.695
+and VRControls for project controls and cost tracking.
+
+00:34.615 --> 00:38.354
+In this walkthrough, we'll follow the work the way a project does.
+
+00:38.354 --> 00:41.470
+Estimate it, schedule it, plan it, and then control it.
+
+00:41.470 --> 00:44.390
+Every project you'll see is synthetic demo data.
+
+00:45.310 --> 00:46.966
+We'll start with the estimate.
+
+00:48.286 --> 00:51.848
+VREstimator opens on a dashboard for the open estimate:
+
+00:51.848 --> 00:53.921
+total installed cost, man-hours,
+
+00:53.921 --> 00:56.842
+and the breakdown by discipline and craft.
+
+00:57.462 --> 01:01.132
+On the Takeoff Board, quantities are measured straight off the drawing.
+
+01:01.132 --> 01:04.329
+Count, length and area, after you set the drawing's scale.
+
+01:04.949 --> 01:07.410
+Every measurement becomes a takeoff line.
+
+01:07.410 --> 01:11.491
+Each line carries its quantity, its library man-hours and its craft,
+
+01:11.491 --> 01:14.631
+with discipline, global and item factors applied.
+
+01:15.251 --> 01:18.391
+Crews are built from crafts and equipment with their rates,
+
+01:18.391 --> 01:21.571
+so the labor and equipment behind every line is visible.
+
+01:22.191 --> 01:24.726
+The cost breakdown rolls labor, material,
+
+01:24.726 --> 01:28.202
+equipment and subcontract up to total installed cost.
+
+01:28.822 --> 01:33.055
+And on the Schedule tab, takeoff lines become activities. Crew size,
+
+01:33.055 --> 01:36.416
+crews in parallel and shift hours drive the durations,
+
+01:36.416 --> 01:39.231
+and labor and equipment load as resources.
+
+01:39.851 --> 01:42.098
+The proposal carries the estimate class,
+
+01:42.098 --> 01:43.952
+accuracy range and pricing basis,
+
+01:43.952 --> 01:48.365
+and an estimate can't be marked issued while quality checks are still open.
+
+01:48.985 --> 01:50.430
+Next, the schedule.
+
+01:51.750 --> 01:55.613
+The Schedule Editor puts the grid and the bar chart side by side.
+
+01:55.613 --> 01:59.594
+Type durations and predecessors, and the forward and backward pass,
+
+01:59.594 --> 02:02.587
+total float and critical path update as you go.
+
+02:03.207 --> 02:06.897
+The critical path view lists the driving activities with their total
+
+02:06.897 --> 02:10.190
+float, so you can see exactly what moves the finish date.
+
+02:10.810 --> 02:15.166
+The DCMA 14-point assessment shows which checks pass and which fail,
+
+02:15.166 --> 02:17.160
+with thresholds you can set.
+
+02:17.780 --> 02:21.621
+The S-curve plots planned, earned and actual on one dated axis,
+
+02:21.621 --> 02:24.564
+with staffing shown as full-time equivalents.
+
+02:25.184 --> 02:29.509
+And Monte Carlo risk runs duration ranges through the network to give a
+
+02:29.509 --> 02:33.851
+range for the finish date and the cost, explained in plain language.
+
+02:33.871 --> 02:37.863
+Earned value, baselines and version compare sit on the same tab bar.
+
+02:38.483 --> 02:40.061
+Now, the field plan.
+
+02:41.381 --> 02:45.388
+VRPlanner plans the work of a capital project before it's loaded into
+
+02:45.388 --> 02:48.350
+the schedule. The project view shows the man-hours,
+
+02:48.350 --> 02:50.873
+the manpower curve and the cost make-up.
+
+02:51.493 --> 02:55.803
+Each work item is stepped out from a module that asks its own questions.
+
+02:55.803 --> 03:00.113
+Civil, structural steel, piping, equipment, electrical, instrumentation,
+
+03:00.113 --> 03:02.767
+coatings and insulation, and completions.
+
+03:03.387 --> 03:06.596
+The answers give the work steps, with the crew size by craft,
+
+03:06.596 --> 03:09.742
+the equipment, the hours and the materials for each one.
+
+03:10.362 --> 03:13.636
+Work items are sequenced on the project's working calendar,
+
+03:13.636 --> 03:16.245
+and the manpower and equipment loading follows,
+
+03:16.245 --> 03:17.999
+by working day and by craft.
+
+03:18.619 --> 03:21.757
+The Preparation tab runs a gated preparation plan,
+
+03:21.757 --> 03:24.644
+with complexity and readiness scoring, alerts,
+
+03:24.644 --> 03:27.041
+tie-ins and preparation team hours.
+
+03:27.661 --> 03:31.095
+And progress is earned step by step, by rules of credit,
+
+03:31.095 --> 03:33.073
+not typed in as a percentage.
+
+03:33.693 --> 03:36.422
+VRPlanner has seven specialist siblings.
+
+03:37.742 --> 03:41.573
+A data center, a highway and a power outage don't plan the same way.
+
+03:41.573 --> 03:44.955
+So each specialist planner starts from its own work library,
+
+03:44.955 --> 03:47.409
+but all eight share one planning engine.
+
+03:48.329 --> 03:52.074
+VRDCPlanner covers data center campuses, including cooling,
+
+03:52.074 --> 03:56.654
+hall fit-out, rack integration, structured cabling and commissioning.
+
+03:57.274 --> 04:01.972
+VRE&IPlanner breaks electrical and instrumentation work into work steps,
+
+04:01.972 --> 04:04.325
+each with its crew and man-hours.
+
+04:04.945 --> 04:07.930
+VRPowerPlanner covers power plant construction,
+
+04:07.930 --> 04:10.660
+and VRPowerOutage covers the outage itself,
+
+04:10.660 --> 04:13.401
+with progress earned by rules of credit.
+
+04:14.021 --> 04:17.335
+VRUpstreamPlanner covers onshore field development,
+
+04:17.335 --> 04:20.979
+and VRMidstreamPlanner covers pipelines and stations.
+
+04:21.599 --> 04:23.836
+And the newest, VRRailHighwayPlanner,
+
+04:23.836 --> 04:27.462
+covers rail and heavy highway work, with the same man-hours,
+
+04:27.462 --> 04:30.865
+manpower curve and cost make-up from its own library.
+
+04:31.485 --> 04:33.206
+Here's where the tools connect.
+
+04:34.526 --> 04:38.717
+A plan from any of the eight planners goes into the Schedule Editor as
+
+04:38.717 --> 04:42.727
+activities with logic and resources, under the WBS node you choose,
+
+04:42.727 --> 04:44.663
+with one undo to take it out.
+
+04:44.683 --> 04:49.420
+Or it opens as a new schedule, or writes a file for Primavera P6.
+
+04:50.140 --> 04:50.861
+From there,
+
+04:50.861 --> 04:54.989
+the Schedule Editor sends the schedule to VRControls to set the
+
+04:54.989 --> 04:58.461
+baseline, then each statused update to report earned,
+
+04:58.461 --> 05:01.085
+actual and budget hours, SPI and CPI.
+
+05:01.805 --> 05:06.644
+VRControls opens on project health. Budget, earned and actual hours,
+
+05:06.644 --> 05:11.184
+with SPI and CPI worked on hours, and the curves behind them.
+
+05:11.804 --> 05:14.504
+Progress and earned value are tracked by activity,
+
+05:14.504 --> 05:17.404
+with shift-by-shift progress entry from the field.
+
+05:18.024 --> 05:21.869
+And completions sit in the same record, with systems and subsystems,
+
+05:21.869 --> 05:24.387
+the tag register, check sheets and punch.
+
+05:25.007 --> 05:27.334
+Two more tools round out the tool bar.
+
+05:28.654 --> 05:32.862
+VRTAR estimates turnaround scope one item at a time from a module
+
+05:32.862 --> 05:33.380
+library,
+
+05:33.380 --> 05:37.853
+and the whole event re-prices when you change a rate or an answer.
+
+05:38.473 --> 05:43.113
+And VRCMMS runs maintenance, with work orders, preventive maintenance,
+
+05:43.113 --> 05:46.494
+planning and backlog, inventory and reliability.
+
+05:47.114 --> 05:48.490
+Last, how you run it.
+
+05:49.810 --> 05:52.984
+VRSmartPlan runs the same online in the browser,
+
+05:52.984 --> 05:55.962
+or installed on a Windows or Mac computer.
+
+05:55.982 --> 05:58.594
+Installed, it runs from the installed files,
+
+05:58.594 --> 06:02.771
+with no internet connection, no server and no administrator rights.
+
+06:02.791 --> 06:06.130
+And your records stay on the computer, in a private profile.
+
+06:07.050 --> 06:10.819
+Thirteen tools. One tool bar. That's VRSmartPlan.
+
+06:11.219 --> 06:13.055
+Request a demonstration.
