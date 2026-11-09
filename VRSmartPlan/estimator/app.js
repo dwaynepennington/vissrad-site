@@ -1139,7 +1139,8 @@ function viewLibrary(root) {
   const mhWrap = el('div');
   const toolbarRow = toolbar(
     sel('Discipline', discOptions.map((d) => [d, d]), UI.libraryDisc, (v) => { UI.libraryDisc = v; drawMh(); }, 180),
-    searchBox('Search key or description\u2026', (v) => { UI.librarySearch = v; drawMh(); }));
+    searchBox('Search key or description\u2026', (v) => { UI.librarySearch = v; drawMh(); }),
+    el('button', { class: 'ghost', title: 'Search the Planning & Estimating Basis for man-hours to add to this library', onclick: () => openBasis('unit', UI.librarySearch) }, 'Find in basis\u2026'));
 
   function drawMh() {
     mhWrap.textContent = '';
@@ -1172,6 +1173,21 @@ function viewLibrary(root) {
         el('button', { class: 'ghost', onclick: () => openCostBook('equip-ep1110') }, 'Equipment rates'),
         el('button', { class: 'ghost', onclick: () => openCostBook('unit-ncdot') }, 'Unit prices'),
         el('button', { class: 'ghost', onclick: () => openCostBook('index-series') }, 'Escalation'))], { flush: false }).card));
+
+  root.appendChild(el('div', { style: 'margin-top:10px' },
+    card('Planning & Estimating Basis: your workbooks and manuals', [
+      el('div', { style: 'color:var(--text-dim);font-size:12.5px;line-height:1.5;margin-bottom:8px' },
+        'Unit man-hours, the standard unit-work-hour manual, factors, crews, labor and equipment rates, material prices, planning steps and job history, '
+        + 'combined from the legacy estimating workbooks. Search in plain words, click a row to see the file, tab and cell it came from and compare it with '
+        + 'the other workbooks, then tick rows to add them to this estimate\u2019s man-hour library, material prices, craft rates or weld factors. '
+        + 'Private data: installed on this computer only.'),
+      toolbar(
+        el('button', { class: 'primary', onclick: () => openBasis('unit') }, 'Find man-hours\u2026'),
+        el('button', { class: 'ghost', onclick: () => openBasis('manual') }, 'Unit-hour manual'),
+        el('button', { class: 'ghost', onclick: () => openBasis('rates') }, 'Labor & equipment rates'),
+        el('button', { class: 'ghost', onclick: () => openBasis('material') }, 'Material prices'),
+        el('button', { class: 'ghost', onclick: () => openBasis('factor') }, 'Factors'),
+        el('button', { class: 'ghost', onclick: () => openBasis('jobs') }, 'Job history'))], { flush: false }).card));
 
   root.appendChild(el('div', { style: 'margin-top:10px' },
     card('Man-hour library', [toolbarRow, mhWrap], { flush: false }).card));
@@ -1253,6 +1269,92 @@ function costBookPrices(items) {
   if (!added) throw new Error('The selected rows have no unit price to add.');
   saveOverlay(); refreshAll();
   return `Material prices: ${added} added as CB- keys. Bid prices include labor, equipment, overhead and profit.`;
+}
+
+/* The Planning & Estimating Basis (../shared/basis.js and its private data in
+   ../shared/basis/ or this browser's imported copy), loaded when first opened.
+   Ticked rows go into the man-hour library (BS- keys), material prices (BSM-),
+   craft rates or weld factors; every added row keeps its file, tab and cell. */
+function openBasis(start, query) {
+  const go = () => window.VRBasis.open({ start, query: query || '', subtitle: 'Find man-hours, rates and prices and add them to this estimate\u2019s library', actions: [
+    { label: 'Add to man-hour library', packs: ['unit', 'manual', 'rates', 'jobs'], primary: true, accepts: basisIsHours,
+      why: 'only man-hour rows with a number qualify', title: 'Each row becomes a man-hour library item (key BS-\u2026) that takeoff lines can use', run: basisToMh },
+    { label: 'Add to material prices', packs: ['material'], primary: true, accepts: (x) => typeof x.value === 'number',
+      title: 'Each row becomes a material price (key BSM-\u2026)', run: basisToPrices },
+    { label: 'Add to craft rates', packs: ['rates'], accepts: (x) => x.kind === 'labor_rate' && !!window.VRBasis.hourly(x),
+      why: 'only $ per hour labor rates qualify', title: 'Hourly labor rates become craft rates (entered as all-in; set the burden if the rate is a base wage)', run: basisToCrafts },
+    { label: 'Add to weld factors', packs: ['factor'], accepts: (x) => typeof x.value === 'number' && x.value > 0 && x.value < 20,
+      why: 'only factors between 0 and 20 qualify', title: 'Each factor becomes a weld / material factor (key WF-B\u2026)', run: basisToWeld },
+  ] });
+  if (window.VRBasis) { go(); return; }
+  const sc = document.createElement('script'); sc.src = '../shared/basis.js';
+  sc.onload = go; sc.onerror = () => toast('The Planning & Estimating Basis (shared/basis.js) is part of the VRSmartPlan install and was not found here.', true);
+  document.head.appendChild(sc);
+}
+function basisIsHours(x) {
+  if (typeof x.value !== 'number' || !(x.value > 0)) return false;
+  if (x.pack === 'manual') return x.kind === 'unit_hours';
+  if (x.pack === 'rates') return !window.VRBasis.hourly(x) && /hour|\bhrs?\b|\bmh\b|weld time/i.test((x.unit || '') + ' ' + (x.basis || ''));
+  if (x.pack === 'jobs') return /hour|\bmh\b/i.test((x.unit || '') + ' ' + (x.basis || ''));
+  return x.pack === 'unit' && x.kind === 'unit_rate';
+}
+function basisSource(x) { return `Basis: ${x.source}${x.check ? ' (poor scan: check the manual page)' : ''}${x.hours ? '' : '; value basis as written: ' + (x.basis || 'not stated')}`.slice(0, 300); }
+function basisKey(prefix, used, width) {
+  let n = 1, key;
+  do { key = prefix + String(n++).padStart(width || 4, '0'); } while (used.has(key));
+  used.add(key); return key;
+}
+function basisToMh(items) {
+  const used = new Set(D.mh_library.map((m) => m.key)); let added = 0, same = 0; const keys = [];
+  items.forEach((x) => {
+    const unit = (x.uom || x.unit || 'EA').slice(0, 12); const work = (x.name || x.item || '').slice(0, 160); const source = basisSource(x);
+    if (D.mh_library.some((m) => m.work_item === work && m.unit === unit && m.unit_mh === x.value && m.source === source)) { same++; return; }
+    const key = basisKey('BS-', used);
+    D.mh_library.push({ key, discipline: window.VRBasis.estDiscipline(x), work_item: work, description: work, unit, uom: unit, unit_mh: x.value, source });
+    keys.push(key); added++;
+  });
+  if (!added) throw new Error(same ? 'Those rows are already in the man-hour library.' : 'Nothing to add.');
+  saveOverlay(); refreshAll();
+  const notH = items.filter((x) => !x.hours).length;
+  return `Man-hour library: ${added} added (${keys[0]}${keys.length > 1 ? ' \u2026 ' + keys[keys.length - 1] : ''})${same ? ', ' + same + ' already there' : ''}. `
+    + (notH ? `${notH} of them do not state that the value is man-hours: check the value basis in the Source column. ` : '')
+    + 'Use the keys on takeoff lines.';
+}
+function basisToPrices(items) {
+  const used = new Set(D.material_prices.map((m) => m.key)); let added = 0;
+  items.forEach((x) => {
+    const key = basisKey('BSM-', used); const unit = (x.uom || x.unit || 'EA').slice(0, 12);
+    D.material_prices.push({ key, discipline: window.VRBasis.estDiscipline(x), unit, uom: unit, unit_material_cost: x.value,
+      description: (x.name || x.item || '').slice(0, 160), source: basisSource(x) });
+    added++;
+  });
+  if (!added) throw new Error('The ticked rows have no price to add.');
+  saveOverlay(); refreshAll();
+  return `Material prices: ${added} added as BSM- keys. Legacy prices: escalate them to today before you bid.`;
+}
+function basisToCrafts(items) {
+  let added = 0, updated = 0;
+  items.forEach((x) => {
+    const h = window.VRBasis.hourly(x); if (!h) return;
+    const name = ((x.craft && x.craft !== x.item ? x.craft + ' \u2014 ' : '') + (x.item || 'Craft') + (/overtime|double/.test(h.note) ? ' (' + h.note.replace(/^.*?(overtime|double time).*$/, '$1') + ')' : '')).slice(0, 80);
+    const row = { craft: name, base_rate: h.rate, burden_pct: 0, all_in_rate: h.rate, source: basisSource(x) + (h.note ? '; ' + h.note : '') };
+    const i = D.crafts.findIndex((c) => c.craft === row.craft);
+    if (i < 0) { D.crafts.push(row); added++; } else { D.crafts[i] = Object.assign(D.crafts[i], row); updated++; }
+  });
+  if (!added && !updated) throw new Error('The ticked rows have no hourly labor rate.');
+  saveOverlay(); refreshAll();
+  return `Craft rates: ${added} added, ${updated} updated, entered as all-in $/hr with 0% burden. If a rate is a base wage, set its burden on the Library tab.`;
+}
+function basisToWeld(items) {
+  const used = new Set(D.weld_factors.map((w) => w.key)); let added = 0;
+  items.forEach((x) => {
+    const key = basisKey('WF-B', used, 3); const name = (x.name || x.item || '').slice(0, 120);
+    D.weld_factors.push({ key, material: name, description: name, factor: x.value, notes: basisSource(x) });
+    added++;
+  });
+  if (!added) throw new Error('Nothing to add.');
+  saveOverlay(); refreshAll();
+  return `Weld factors: ${added} added as WF-B keys. Pick them on takeoff lines.`;
 }
 
 /* The shared VissRad resource library (shared/resources.js), loaded when first used. */
