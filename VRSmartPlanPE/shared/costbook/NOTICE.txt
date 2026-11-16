@@ -1,0 +1,28 @@
+VRSmartPlan Cost Book - data notice
+
+The Cost Book data sets in this folder are built by tools/build_costbook.py from:
+
+1. United States Construction Cost Database (USCCDB) v1.0
+   Oga, T. (2026). https://doi.org/10.5281/zenodo.22979157
+   Compilation licensed under Creative Commons Attribution 4.0 (CC BY 4.0),
+   https://creativecommons.org/licenses/by/4.0/
+   Changes made: rows filtered to public values (public_domain and published_open_terms),
+   paired (base and fringe, operating and standby rates), regrouped by state and region,
+   and notes rewritten in English.
+   Values from U.S. federal sources (DOL Davis-Bacon, BLS OEWS/PPI/ECI/CPI, USACE EP 1110-1-8
+   and CWCCIS, FEMA, FHWA, FTA, DoD UFC 3-701-01, Census) are works of the U.S. Government,
+   public domain in the United States (17 U.S.C. 105).
+   NJDOT rows are reused under the open terms quoted in the USCCDB source ledger.
+
+2. State and federal publications collected for VRSmartPlan:
+   Caltrans Labor Surcharge and Equipment Rental Rates (2026-09); NCDOT 2025 Division Let
+   Bid Averages; Mississippi DOT LPA Production Parameters (state publications, no stated
+   reuse restriction); EIA AEO Electricity Market Module Table 3 and DoD UFC 3-701-01
+   Tables 4-2 to 4-4 (U.S. federal, public domain).
+
+Not included: values the DoD takes from commercial cost books (RSMeans, Marshall & Swift,
+CostWorks, the TRACES/MII Cost Book behind UFC 3-701-01 Table 6); Texas DOT and Florida
+DOT data; personal-use-only sources.
+
+Rates are references for estimating. Check each one against the current source before
+using it in a bid.
