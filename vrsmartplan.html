@@ -85,6 +85,7 @@
         <a class="btn btn--primary" href="/VRSmartPlan/" target="_blank" rel="noopener">Open VRSmartPlan</a>
         <a class="btn btn--ghost" href="#download">Download for Windows and Mac</a>
         <a class="btn btn--ghost" href="#walkthrough">Watch the walkthrough</a>
+        <a class="btn btn--ghost" href="#weekly-deliveries">Weekly deliveries view</a>
       </div>
     </div>
   </section>
@@ -115,6 +116,41 @@
           <li><button type="button" class="vrp-ch" data-t="324"><span class="mono">5:24</span> VRTAR and VRCMMS</button></li>
           <li><button type="button" class="vrp-ch" data-t="346"><span class="mono">5:46</span> Your data, online or installed</button></li>
         </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--rule" id="weekly-deliveries">
+    <div class="wrap">
+      <div class="sec-head reveal">
+        <p class="eyebrow">VRPT Procurement</p>
+        <h2 class="h-1">Weekly ETA, ROS and P6 view.</h2>
+        <p class="lede">Load the supplier logistics tracker each week alongside the P6 schedule. VRPT Procurement shows every delivery line week by week in three comparisons: ETA vs ROS (will it arrive before it is needed on site), ETA vs P6 (does the forecast support the schedule) and ROS vs P6 (does the ROS date match the schedule's need date). Plus means days ahead, minus means days behind.</p>
+      </div>
+      <figure class="reveal" style="margin:0">
+        <img src="assets/img/vrpt-weekly-vrsmartplan.png?v=1" alt="VRPT Procurement weekly heatmap: ETA vs ROS, ETA vs P6 and ROS vs P6 for each delivery line, one column per week (synthetic sample)" width="1600" height="930" loading="lazy" style="width:100%;height:auto;border:1px solid var(--color-border);border-radius:var(--radius-md)">
+        <figcaption class="field__hint" style="margin-top:var(--space-3)">Synthetic sample project. Each column is one week (Monday to Sunday) and uses the newest tracker report in that week; a dashed box is a week with no report, and faded cells are lines that have arrived.</figcaption>
+      </figure>
+      <div class="grid grid-3" style="margin-top:var(--space-8)">
+        <article class="card reveal">
+          <p class="chip chip--accent">Weekly view</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Heatmap, bars and trend</h3>
+          <p class="small" style="margin-top:var(--space-3)">A weekly heatmap of the three comparisons, the latest week as bars, and a weekly trend of the open lines behind in each. Supplier filters and presets apply to all three.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip chip--accent">Report</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">One PDF for the weekly meeting</h3>
+          <p class="small" style="margin-top:var(--space-3)">The dashboard with the weekly heatmap on top, then the weekly heatmaps, latest-week bars and trend, every delivery line and a supplier summary. Also as PNG or a SharePoint or Teams page.</p>
+        </article>
+        <article class="card reveal">
+          <p class="chip">Excel and Power BI</p>
+          <h3 class="h-3" style="margin-top:var(--space-4)">Weekly data sheets</h3>
+          <p class="small" style="margin-top:var(--space-3)">The Excel export adds Weekly Data (one row per line per week) and Weekly Trend sheets, ready for Power BI, alongside the delivery lines and suppliers.</p>
+        </article>
+      </div>
+      <div class="btn-row reveal" style="margin-top:var(--space-8)">
+        <a class="btn btn--primary" href="/VRSmartPlan/#vrpt-weekly" target="_blank" rel="noopener">Open the weekly view</a>
+        <a class="btn btn--ghost" href="downloads/VRPT-Weekly-Delivery-Report-Sample.pdf" target="_blank" rel="noopener">Sample weekly report (PDF)</a>
       </div>
     </div>
   </section>

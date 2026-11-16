@@ -189,7 +189,7 @@
           <p class="eyebrow">Scheduling and schedule analysis</p>
           <h2 class="h-2">VRSCH</h2>
           <p class="body-muted" style="margin-top:var(--space-5)">Schedule development, analysis and maintenance alongside the Primavera P6 data the rest of the suite consumes, keeping activity structure aligned to the work breakdown structure that progress is measured against. A native schedule editor builds the CPM network in VissRad itself &mdash; activities, WBS, calendars with holidays, FS/SS/FF/SF logic with lags, constraints, progress at a data date and a baseline &mdash; recalculates the critical path on every change and exports to P6 XER or Microsoft Project XML when a client needs one. The same analysis views run over a schedule built here or one imported from P6, so the schedule conversation happens on evidence rather than opinion.</p>
-          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Schedule editor</span><span class="chip">XER and MSP XML export</span><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">MS Project XML</span><span class="chip">S-curve</span><span class="chip">FTE curve</span><span class="chip">Earned value</span><span class="chip">Critical path</span><span class="chip">Float distribution</span><span class="chip">CPM check</span><span class="chip">DCMA 14-point</span><span class="chip">Version comparison</span><span class="chip">Half-step analysis</span><span class="chip">What-if scenarios</span><span class="chip">Monte Carlo</span><span class="chip">Resource levelling</span><span class="chip">Resource files</span><span class="chip">Schedule library</span></div>
+          <div class="mod__tags" style="margin-top:var(--space-6)"><span class="chip">Schedule editor</span><span class="chip">XER and MSP XML export</span><span class="chip">P6 XER, XML, CSV, XLSX</span><span class="chip">MS Project XML</span><span class="chip">S-curve</span><span class="chip">FTE curve</span><span class="chip">Earned value</span><span class="chip">VRPT weekly deliveries</span><span class="chip">Critical path</span><span class="chip">Float distribution</span><span class="chip">CPM check</span><span class="chip">DCMA 14-point</span><span class="chip">Version comparison</span><span class="chip">Half-step analysis</span><span class="chip">What-if scenarios</span><span class="chip">Monte Carlo</span><span class="chip">Resource levelling</span><span class="chip">Resource files</span><span class="chip">Schedule library</span></div>
         </div>
         <div class="grid grid-2" style="gap:var(--space-6)">
           <div>
@@ -259,6 +259,10 @@
           <div>
             <h4 class="h-4">Resource files</h4>
             <p class="small" style="margin-top:var(--space-2)">Resources, limits and assignments are read from P6 and Microsoft Project XML. A separate resource file &mdash; P6 XML, .xer, MSP XML, Excel or CSV &mdash; can be added to a schedule and is matched by Activity ID, so a schedule exported without resources can still be levelled and resource-loaded.</p>
+          </div>
+          <div>
+            <h4 class="h-4">VRPT procurement: weekly ETA, ROS and P6</h4>
+            <p class="small" style="margin-top:var(--space-2)">The supplier logistics tracker loaded each week against the P6 schedule. A weekly heatmap shows every delivery line in three comparisons (ETA vs ROS, ETA vs P6, ROS vs P6), with latest-week bars and a weekly trend. Exports a PDF report with every delivery line, an Excel workbook with weekly sheets for Power BI, and a SharePoint page. <a class="link" href="/app/schedule/index.html#vrpt-weekly" target="_blank" rel="noopener">Open the weekly view</a> or <a class="link" href="downloads/VRPT-Weekly-Delivery-Report-Sample.pdf" target="_blank" rel="noopener">see a sample report (PDF)</a>.</p>
           </div>
           <div>
             <h4 class="h-4">Schedule library</h4>
