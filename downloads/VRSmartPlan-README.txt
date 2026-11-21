@@ -1,9 +1,9 @@
 VRSmartPlan
 ===========
 Estimating, scheduling, planning and project controls workbench from VissRad,
-a Suite of Interactive Smart Tools for Project Delivery. Thirteen tools, reached
-from the bar under the top bar or from the Start menu (on a Mac, from
-~/Applications/VRSmartPlan):
+a Suite of Interactive Smart Tools for Project Delivery. Thirteen tools plus
+the VRRisk add-on, reached from the bar under the top bar or from the Start
+menu (on a Mac, from ~/Applications/VRSmartPlan):
 
     VRScheduler           CPM schedule editor and Primavera P6 / Microsoft
                           Project schedule analysis (the VRSmartPlan icon opens
@@ -28,6 +28,11 @@ from the bar under the top bar or from the Start menu (on a Mac, from
                           budget, earned and actual hours, SPI and CPI, the
                           baseline and progress updates from P6 / MS Project,
                           completions (systems, ITRs) and punch
+    VRRisk (add-on)       risk register: threats, opportunities and issues
+                          on a 5x5 matrix, tied to WBS cost codes and P6
+                          activities, with responses, Monte Carlo and the
+                          audit trail. Needs a license key that includes
+                          the VRRisk add-on (the 14-day trial includes it)
 
 VRTAR and every planner have a Preparation tab: a gated preparation plan timed
 back from the event or construction start, complexity tier, readiness score,
@@ -40,6 +45,12 @@ VRControls on Schedule & Baseline: create work tasks and set the baseline from
 it, or apply a later version as a progress update (actual and remaining
 hours, percent complete). VRControls also reads a P6 XER, P6 XML or MS
 Project XML dropped on its window.
+
+VRRisk opens on a synthetic sample project. Dashboard > Start your own project
+sets up your project (budget, contingency), Import WBS reads a CSV/Excel code
+list or a VREstimator Cost Breakdown export, and P6 activities come from an
+XER. Export register / Import register move a register between computers, or
+into the VissRad Suite VRRisk (same file format).
 
 This package runs on a standalone Windows 10 or 11 computer, or a Mac. It
 needs no internet connection and no admin rights. On a Mac it needs Google

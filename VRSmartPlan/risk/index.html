@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="VRRisk by VissRad, the VRSmartPlan add-on: a risk register of threats, opportunities and issues scored inherent and residual on a 5x5 probability-impact matrix, each risk tied to WBS cost codes and Primavera P6 activities, with exposure against budget and contingency, days against total float, Monte Carlo and response actions. The register file opens in VRRisk in the VissRad Suite. The demonstration project is synthetic.">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VRRisk — risk register add-on · VRSmartPlan</title>
+<link rel="icon" href="../assets/vissrad.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/app_icon_32.png">
+<link rel="apple-touch-icon" href="../assets/app_icon_256.png">
+<meta name="theme-color" content="#0d1014">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../shared/shell.css?v=36743e66f5">
+<style>
+  body { --orange: #E5702A; }
+  body.light { --orange: #C2561A; }
+  .rk-heat { display: grid; gap: 4px; align-items: stretch; }
+  .rk-ax { font-size: 11px; color: var(--text-dim); display: flex; gap: 6px; align-items: center; line-height: 1.2; }
+  .rk-ax b { color: var(--text); font-family: var(--mono); font-weight: 500; }
+  .rk-ax-x { flex-direction: column; text-align: center; gap: 2px; padding-top: 4px; }
+  .rk-cell { position: relative; min-height: 50px; border-radius: 6px; border: 1px solid color-mix(in srgb, var(--c) 45%, transparent);
+    background: color-mix(in srgb, var(--c) 16%, transparent); color: var(--text); cursor: pointer; padding: 0; font: inherit; }
+  .rk-cell.has { background: color-mix(in srgb, var(--c) 34%, transparent); }
+  .rk-cell:hover { outline: 2px solid color-mix(in srgb, var(--c) 70%, transparent); }
+  .rk-cell.on { outline: 2px solid var(--text); }
+  .rk-cell.set { border: 2px dashed var(--text); }
+  .rk-n { display: block; font-size: 17px; font-weight: 700; font-family: var(--display); }
+  .rk-s { position: absolute; right: 5px; bottom: 3px; font-size: 10px; color: var(--text-dim); font-family: var(--mono); }
+  .rk-axis-t { display: flex; justify-content: space-between; font-size: 11px; color: var(--text-faint); margin-top: 4px; padding-left: 4px; }
+  .rk-legend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 11.5px; color: var(--text-dim); margin-top: 8px; }
+  .rk-legend i, .rk-dot { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+  .rk-sq { display: inline-block; min-width: 28px; text-align: center; padding: 1px 6px; border-radius: 4px; font-family: var(--mono); font-size: 12px;
+    background: color-mix(in srgb, var(--c) 26%, transparent); border: 1px solid color-mix(in srgb, var(--c) 60%, transparent); }
+  .rk-mini { display: inline-block; min-width: 18px; text-align: center; border-radius: 4px; font-family: var(--mono); font-size: 11px; background: var(--panel-alt); border: 1px solid var(--border); padding: 0 4px; }
+  table.rk-assess { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  table.rk-assess th, table.rk-assess td { padding: 5px 6px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: middle; }
+  table.rk-assess th { color: var(--text-dim); font-weight: 500; width: 34%; }
+  table.rk-assess tr:first-child th { color: var(--text); font-weight: 600; }
+  .rk-chips { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; margin: 4px 0 6px; }
+  .rk-chip { display: inline-flex; gap: 4px; align-items: center; flex-wrap: wrap; font-size: 12px; padding: 3px 8px; border: 1px solid var(--border); border-radius: 6px; background: var(--panel-alt); }
+  .rk-chip a { color: var(--blue); text-decoration: none; }
+  .rk-bars { display: grid; gap: 8px; }
+  .rk-bar { display: grid; grid-template-columns: minmax(96px, 42%) 1fr 76px; align-items: center; gap: 10px; font-size: 12.5px; }
+  .rk-bar-l { color: var(--text-dim); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .rk-bar-t { height: 10px; background: var(--panel); border: 1px solid var(--border); border-radius: 5px; overflow: hidden; }
+  .rk-bar-f { display: block; height: 100%; border-radius: 5px; min-width: 2px; }
+  .rk-bar-n { text-align: right; }
+  .rk-acol .form-grid { grid-template-columns: 130px 1fr; }
+  .rk-prev { margin-top: 10px; display: flex; gap: 6px; align-items: center; flex-wrap: wrap; }
+  .rk-pick { max-height: 420px; overflow: auto; border: 1px solid var(--border); border-radius: 6px; }
+  .rk-pick-row { display: grid; grid-template-columns: 22px 1fr auto; gap: 8px; align-items: center; padding: 5px 8px; border-bottom: 1px solid var(--border); font-size: 12.5px; cursor: pointer; }
+  .rk-pick-row:hover { background: var(--panel-alt); }
+  .rk-lib { display: flex; justify-content: space-between; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--border); }
+  .rk-set-row { display: grid; grid-template-columns: 170px 1fr; gap: 10px; align-items: center; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 12.5px; }
+  .rk-set-row > .hint { grid-column: 2; }
+  .rk-set-cells { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+</style>
+</head>
+<body>
+
+<div id="loading">
+  <img src="../assets/vissrad_logo_light.png" alt="VissRad" id="load-logo">
+  <div class="t">Loading the risk register&hellip;</div>
+</div>
+
+<div id="app" hidden>
+  <nav class="tabs" id="tabs"></nav>
+  <main id="views"></main>
+  <footer class="statusbar" id="statusbar"></footer>
+</div>
+<script>window.VR_STANDALONE = { title: "VRRisk", home: "https://vissrad.com/", homeLabel: "VissRad \u2197", up: "../", toolBar: true, tools: [{ label: "VRScheduler", href: "../index.html", title: "VRScheduler — CPM schedule editor and P6 schedule analysis", group: "Schedule and estimate" }, { label: "VREstimator", href: "../estimator/index.html", title: "VREstimator — drawing takeoff, assemblies and EPC estimating, sent to the schedule", group: "Schedule and estimate" }, { label: "VRPlanner", href: "../planner/index.html", title: "VRPlanner — capital work planning: work steps, crews, equipment, loaded into the schedule", group: "Planners" }, { label: "VRDCPlanner", href: "../dcplan/index.html", title: "VRDCPlanner — data center construction planning: power, cooling, white space and commissioning L1 to L5", group: "Planners" }, { label: "VRE&IPlanner", href: "../eiplan/index.html", title: "VRE&IPlanner — electrical and instrumentation planning: raceway, cable, terminations, testing and loop checks", group: "Planners" }, { label: "VRPowerPlanner", href: "../pwrplan/index.html", title: "VRPowerPlanner — power plant construction planning for data center campuses: engines, gas turbines, fuel cells, BESS and switchyard", group: "Planners" }, { label: "VRPowerOutage", href: "../pwrout/index.html", title: "VRPowerOutage — power plant outage planning: gas turbine inspections, engine overhauls, HRSG, transformers and return to service", group: "Planners" }, { label: "VRUpstreamPlanner", href: "../upplan/index.html", title: "VRUpstreamPlanner — upstream field development planning: well pads, hook-up, flowlines, central facility and first oil", group: "Planners" }, { label: "VRMidstreamPlanner", href: "../midplan/index.html", title: "VRMidstreamPlanner — midstream planning: pipeline spreads, HDD and bores, compressor, pump and meter stations, terminals", group: "Planners" }, { label: "VRRailHighwayPlanner", href: "../rhplan/index.html", title: "VRRailHighwayPlanner — rail and heavy highway planning: traffic phases, earthwork, paving, bridges, track, turnouts, crossings and signals", group: "Planners" }, { label: "VRTAR", href: "../tar/index.html", title: "VRTAR — turnaround estimating", group: "Turnaround and maintenance" }, { label: "VRCMMS", href: "../cmms/index.html", title: "VRCMMS — maintenance management: assets, work orders, preventive maintenance and backlog", group: "Turnaround and maintenance" }, { label: "VRControls", href: "../controls/index.html", title: "VRControls — project controls and cost tracking: budget, earned and actual hours, SPI and CPI, progress from P6 / MS Project updates, completions and punch", group: "Project controls" }, { label: "VRRisk", href: "../risk/index.html", title: "VRRisk — risk register add-on: 5x5 matrix tied to WBS cost and P6 activities", group: "Project controls", active: true }], file: true, schedule: "../index.html#editor", controls: "../controls/index.html#/schedule", brand: "VRSmartPlan" };</script>
+<script>window.VR_LICENSE_ADDON = { id: "risk", label: "VRRisk" };</script>
+<script src="../shared/license.js?v=b225e4ff15"></script>
+<script src="../shared/lib.js?v=d5788ff27b"></script>
+<script src="../shared/shell.js?v=020fa85af3"></script>
+<script src="../shared/standalone.js?v=3eeaa94984"></script>
+<script src="../shared/records.js?v=4f9cf773bd"></script>
+<script src="../shared/schedlib.js?v=6e94e72667"></script>
+<script src="../shared/sheetio.js?v=ed711b0d86"></script>
+<script src="data.js?v=d5ab8efced"></script>
+<script src="app.js?v=b1b75df50c"></script>
+</body>
+</html>
