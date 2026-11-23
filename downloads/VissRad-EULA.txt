@@ -44,9 +44,14 @@ You must not, and must not allow anyone else to:
 4. modify the Software or create derivative works of it;
 5. remove, obscure or alter any copyright, trademark or other proprietary
    notice;
-6. use the Software, its outputs or its documentation to design, build or
-   benchmark a competing product; or
-7. circumvent any licence key, user limit or technical protection.
+6. use the Software, its outputs, its data or its documentation to design,
+   build, recreate or benchmark a competing or substitute product, or help
+   anyone else do so;
+7. de-obfuscate the Software, or extract its task templates, modules, crews,
+   rates, cost data, libraries or report templates for use outside it;
+8. use the Software or any part of it to train, fine-tune or prompt an
+   artificial-intelligence or machine-learning model, or to build a dataset; or
+9. circumvent any licence key, user limit or technical protection.
 
 ## 4. Ownership
 

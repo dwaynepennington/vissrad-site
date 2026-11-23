@@ -1,4 +1,26 @@
+# vissrad.com - see https://vissrad.com/legal.html
+# AI training and dataset crawlers: not permitted anywhere on this site.
+User-agent: GPTBot
+User-agent: CCBot
+User-agent: ClaudeBot
+User-agent: anthropic-ai
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Bytespider
+User-agent: Meta-ExternalAgent
+User-agent: cohere-ai
+User-agent: Diffbot
+User-agent: Omgilibot
+User-agent: Amazonbot
+Disallow: /
+
+# Everyone else: the marketing pages are open; the application code, builds
+# and downloads are not for crawling.
 User-agent: *
 Allow: /
+Disallow: /app/
+Disallow: /VRSmartPlan/
+Disallow: /downloads/
+Disallow: /tools/
 
 Sitemap: https://vissrad.com/sitemap.xml

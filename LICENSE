@@ -1,15 +1,18 @@
 Copyright (c) 2026 Pennington Group LLC, dba Pennington Group Associates,
 Houston, Texas, USA. All rights reserved.
 
-This repository contains the source of vissrad.com and a compiled build of the
-VissRad browser demo (app/). It is published only so the website can be
+This repository contains the source of vissrad.com and compiled, obfuscated builds of the
+VissRad browser demo (app/) and VRSmartPlan (VRSmartPlan/). It is published only so the website can be
 served. It is NOT open source.
 
 No licence is granted to copy, modify, merge, publish, distribute, sublicense,
-sell, reverse engineer, decompile, de-minify or create derivative works of any
-part of this repository — including the site text, design, graphics, images,
+sell, reverse engineer, decompile, de-minify, de-obfuscate or create derivative
+works of any part of this repository — including the site text, design, graphics, images,
 video, code and the compiled demo — except as needed for a web browser to
-display vissrad.com. Use of the site and the demo is governed by the terms at
+display vissrad.com. No
+right is granted to use any of it, or its outputs, to design, build, recreate or
+benchmark a competing or substitute product, or to train, fine-tune or prompt an
+artificial-intelligence or machine-learning model. Use of the site and the demo is governed by the terms at
 https://vissrad.com/legal.html.
 
 VissRad, VRLink, the VissRad application names, the VissRad logo and the
