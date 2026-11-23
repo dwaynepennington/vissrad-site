@@ -293,7 +293,7 @@ exec(chr(10).join(l.split('|', 1)[1] if '|' in l else '' for l in r'''
 |                os.rename(app, old)
 |            shutil.move(os.path.join(fresh, "app"), app)
 |            shutil.rmtree(old, ignore_errors=True)
-|            for extra in ("tools.txt",):
+|            for extra in ("tools.txt", "EULA.txt", "LICENSE", "THIRD-PARTY-NOTICES.md"):
 |                if os.path.isfile(os.path.join(fresh, extra)):
 |                    shutil.copy2(os.path.join(fresh, extra), os.path.join(app, extra))
 |        finally:
