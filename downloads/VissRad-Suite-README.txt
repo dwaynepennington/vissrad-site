@@ -13,7 +13,7 @@ every module has the suite bar across the top to move between them:
                               planners: data center, E&I, power plant, power
                               outage, upstream, midstream, rail and highway
     Engineering and supply    VRDEng, VRMarkup, VRProCure, VRRFI, VRLink
-    Controls and finance      VRPCS, VRCost, VRChange, VRERP, VRARAP, VRBI
+    Controls and finance      VRPCS, VRCost, VRChange, VRRisk, VRERP, VRARAP, VRBI
     Field execution           VRAWP, VRConstruction, VRSHE, VR4D
     Turnover and operations   VRSU&C (startup and commissioning), VRCMMS
     Assistant                 VRAI
