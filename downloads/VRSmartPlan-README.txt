@@ -24,7 +24,7 @@ menu (on a Mac, from ~/Applications/VRSmartPlan):
                           manpower, materials, progress and adjustments
     VRCMMS                maintenance management: assets, work orders,
                           preventive maintenance, spares and QR asset labels
-    VRControls            project controls and cost tracking: work tasks with
+    VRPCS                 project controls and cost tracking: work tasks with
                           budget, earned and actual hours, SPI and CPI, the
                           baseline and progress updates from P6 / MS Project,
                           completions (systems, ITRs) and punch
@@ -40,11 +40,14 @@ overdue alerts, tie-ins, preparation-team hours by role and month (scaled by
 the tier and the project cost) and your own past jobs as reference events.
 Every tool sends its plan to the Schedule Editor or exports a P6 XER.
 
-In the Schedule Editor, Export > Send to VRControls opens the schedule in
-VRControls on Schedule & Baseline: create work tasks and set the baseline from
+In the Schedule Editor, Export > Send to VRPCS opens the schedule in
+VRPCS on Schedule & Baseline: create work tasks and set the baseline from
 it, or apply a later version as a progress update (actual and remaining
-hours, percent complete). VRControls also reads a P6 XER, P6 XML or MS
+hours, percent complete). VRPCS also reads a P6 XER, P6 XML or MS
 Project XML dropped on its window.
+Send Progress to Schedule Editor (on Schedule & Baseline and on Progress)
+returns percent complete and actual dates to the Schedule Editor, so the
+analysis tabs, the Project Dashboard and the Power BI export show them.
 
 VRRisk opens on a synthetic sample project. Dashboard > Start your own project
 sets up your project (budget, contingency), Import WBS reads a CSV/Excel code
