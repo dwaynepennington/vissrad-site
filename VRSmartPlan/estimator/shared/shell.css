@@ -661,7 +661,7 @@ a.lnk:hover { text-decoration: underline; }
 @media (max-width: 720px) { .toolmenu-list { position: fixed; left: 12px; right: 12px; width: auto; top: 56px; } }
 @media print { .toolmenu { display: none !important; } }
 
-/* VRSmartPlan: fourteen tools (thirteen and the VRRisk add-on) and the product name in
+/* VRSmartPlan: fourteen tools (VRRisk included) and the product name in
    one row. Measured widths of the row with the name: 1884px with dots and full
    padding, 1711px tighter, 1473px without the dots; without the name about 115px
    less, and about 1245px at the tightest, so the name shows from 1480px. */

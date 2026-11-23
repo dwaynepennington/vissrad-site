@@ -1,8 +1,8 @@
 VRSmartPlan
 ===========
 Estimating, scheduling, planning and project controls workbench from VissRad,
-a Suite of Interactive Smart Tools for Project Delivery. Thirteen tools plus
-the VRRisk add-on, reached from the bar under the top bar or from the Start
+a Suite of Interactive Smart Tools for Project Delivery. Fourteen tools,
+VRRisk included, reached from the bar under the top bar or from the Start
 menu (on a Mac, from ~/Applications/VRSmartPlan):
 
     VRScheduler           CPM schedule editor and Primavera P6 / Microsoft
@@ -28,11 +28,11 @@ menu (on a Mac, from ~/Applications/VRSmartPlan):
                           budget, earned and actual hours, SPI and CPI, the
                           baseline and progress updates from P6 / MS Project,
                           completions (systems, ITRs) and punch
-    VRRisk (add-on)       risk register: threats, opportunities and issues
+    VRRisk                risk register: threats, opportunities and issues
                           on a 5x5 matrix, tied to WBS cost codes and P6
                           activities, with responses, Monte Carlo and the
-                          audit trail. Needs a license key that includes
-                          the VRRisk add-on (the 14-day trial includes it)
+                          audit trail. Included in every VRSmartPlan
+                          license and the 14-day trial
 
 VRTAR and every planner have a Preparation tab: a gated preparation plan timed
 back from the event or construction start, complexity tier, readiness score,
