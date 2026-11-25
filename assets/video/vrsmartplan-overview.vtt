@@ -138,188 +138,218 @@ range for the finish date and the cost, explained in plain language.
 02:33.871 --> 02:37.863
 Earned value, baselines and version compare sit on the same tab bar.
 
-02:38.483 --> 02:40.061
+02:38.542 --> 02:40.952
+The Acceleration tab answers the next question:
+
+02:41.252 --> 02:43.062
+what would it take to finish earlier?
+
+02:43.822 --> 02:46.842
+Pick the date you need, how far any one activity can be squeezed,
+
+02:46.842 --> 02:49.152
+and what a day saved costs.
+
+02:49.642 --> 02:52.702
+It shortens the cheapest critical work one working day at a time,
+
+02:52.952 --> 02:55.112
+recalculating the network after every cut,
+
+02:55.402 --> 02:58.962
+so it moves to the next path as soon as the first one stops driving the finish.
+
+02:59.672 --> 03:02.152
+You get the added cost, a time-cost curve, the list of cuts,
+
+03:02.512 --> 03:05.762
+and a schedule file for Primavera P6.
+
+03:06.432 --> 03:09.172
+Here, ten working days cost about seventeen thousand dollars.
+
+03:10.983 --> 03:12.561
 Now, the field plan.
 
-02:41.381 --> 02:45.388
+03:13.881 --> 03:17.888
 VRPlanner plans the work of a capital project before it's loaded into
 
-02:45.388 --> 02:48.350
+03:17.888 --> 03:20.850
 the schedule. The project view shows the man-hours,
 
-02:48.350 --> 02:50.873
+03:20.850 --> 03:23.373
 the manpower curve and the cost make-up.
 
-02:51.493 --> 02:55.803
+03:23.993 --> 03:28.303
 Each work item is stepped out from a module that asks its own questions.
 
-02:55.803 --> 03:00.113
+03:28.303 --> 03:32.613
 Civil, structural steel, piping, equipment, electrical, instrumentation,
 
-03:00.113 --> 03:02.767
+03:32.613 --> 03:35.267
 coatings and insulation, and completions.
 
-03:03.387 --> 03:06.596
+03:35.887 --> 03:39.096
 The answers give the work steps, with the crew size by craft,
 
-03:06.596 --> 03:09.742
+03:39.096 --> 03:42.242
 the equipment, the hours and the materials for each one.
 
-03:10.362 --> 03:13.636
+03:42.862 --> 03:46.136
 Work items are sequenced on the project's working calendar,
 
-03:13.636 --> 03:16.245
+03:46.136 --> 03:48.745
 and the manpower and equipment loading follows,
 
-03:16.245 --> 03:17.999
+03:48.745 --> 03:50.499
 by working day and by craft.
 
-03:18.619 --> 03:21.757
+03:51.119 --> 03:54.257
 The Preparation tab runs a gated preparation plan,
 
-03:21.757 --> 03:24.644
+03:54.257 --> 03:57.144
 with complexity and readiness scoring, alerts,
 
-03:24.644 --> 03:27.041
+03:57.144 --> 03:59.541
 tie-ins and preparation team hours.
 
-03:27.661 --> 03:31.095
+04:00.161 --> 04:03.595
 And progress is earned step by step, by rules of credit,
 
-03:31.095 --> 03:33.073
+04:03.595 --> 04:05.573
 not typed in as a percentage.
 
-03:33.693 --> 03:36.422
+04:06.193 --> 04:08.922
 VRPlanner has seven specialist siblings.
 
-03:37.742 --> 03:41.573
+04:10.242 --> 04:14.073
 A data center, a highway and a power outage don't plan the same way.
 
-03:41.573 --> 03:44.955
+04:14.073 --> 04:17.455
 So each specialist planner starts from its own work library,
 
-03:44.955 --> 03:47.409
+04:17.455 --> 04:19.909
 but all eight share one planning engine.
 
-03:48.329 --> 03:52.074
+04:20.829 --> 04:24.574
 VRDCPlanner covers data center campuses, including cooling,
 
-03:52.074 --> 03:56.654
+04:24.574 --> 04:29.154
 hall fit-out, rack integration, structured cabling and commissioning.
 
-03:57.274 --> 04:01.972
+04:29.774 --> 04:34.472
 VRE&IPlanner breaks electrical and instrumentation work into work steps,
 
-04:01.972 --> 04:04.325
+04:34.472 --> 04:36.825
 each with its crew and man-hours.
 
-04:04.945 --> 04:07.930
+04:37.445 --> 04:40.430
 VRPowerPlanner covers power plant construction,
 
-04:07.930 --> 04:10.660
+04:40.430 --> 04:43.160
 and VRPowerOutage covers the outage itself,
 
-04:10.660 --> 04:13.401
+04:43.160 --> 04:45.901
 with progress earned by rules of credit.
 
-04:14.021 --> 04:17.335
+04:46.521 --> 04:49.835
 VRUpstreamPlanner covers onshore field development,
 
-04:17.335 --> 04:20.979
+04:49.835 --> 04:53.479
 and VRMidstreamPlanner covers pipelines and stations.
 
-04:21.599 --> 04:23.836
+04:54.099 --> 04:56.336
 And the newest, VRRailHighwayPlanner,
 
-04:23.836 --> 04:27.462
+04:56.336 --> 04:59.962
 covers rail and heavy highway work, with the same man-hours,
 
-04:27.462 --> 04:30.865
+04:59.962 --> 05:03.365
 manpower curve and cost make-up from its own library.
 
-04:31.485 --> 04:33.206
+05:03.985 --> 05:05.706
 Here's where the tools connect.
 
-04:34.526 --> 04:38.717
+05:07.026 --> 05:11.217
 A plan from any of the eight planners goes into the Schedule Editor as
 
-04:38.717 --> 04:42.727
+05:11.217 --> 05:15.227
 activities with logic and resources, under the WBS node you choose,
 
-04:42.727 --> 04:44.663
+05:15.227 --> 05:17.163
 with one undo to take it out.
 
-04:44.683 --> 04:49.420
+05:17.183 --> 05:21.920
 Or it opens as a new schedule, or writes a file for Primavera P6.
 
-04:50.140 --> 04:50.861
+05:22.640 --> 05:23.361
 From there,
 
-04:50.861 --> 04:54.989
+05:23.361 --> 05:27.489
 the Schedule Editor sends the schedule to VRControls to set the
 
-04:54.989 --> 04:58.461
+05:27.489 --> 05:30.961
 baseline, then each statused update to report earned,
 
-04:58.461 --> 05:01.085
+05:30.961 --> 05:33.585
 actual and budget hours, SPI and CPI.
 
-05:01.805 --> 05:06.644
+05:34.305 --> 05:39.144
 VRControls opens on project health. Budget, earned and actual hours,
 
-05:06.644 --> 05:11.184
+05:39.144 --> 05:43.684
 with SPI and CPI worked on hours, and the curves behind them.
 
-05:11.804 --> 05:14.504
+05:44.304 --> 05:47.004
 Progress and earned value are tracked by activity,
 
-05:14.504 --> 05:17.404
+05:47.004 --> 05:49.904
 with shift-by-shift progress entry from the field.
 
-05:18.024 --> 05:21.869
+05:50.524 --> 05:54.369
 And completions sit in the same record, with systems and subsystems,
 
-05:21.869 --> 05:24.387
+05:54.369 --> 05:56.887
 the tag register, check sheets and punch.
 
-05:25.007 --> 05:27.334
+05:57.507 --> 05:59.834
 Two more tools round out the tool bar.
 
-05:28.654 --> 05:32.862
+06:01.154 --> 06:05.362
 VRTAR estimates turnaround scope one item at a time from a module
 
-05:32.862 --> 05:33.380
+06:05.362 --> 06:05.880
 library,
 
-05:33.380 --> 05:37.853
+06:05.880 --> 06:10.353
 and the whole event re-prices when you change a rate or an answer.
 
-05:38.473 --> 05:43.113
+06:10.973 --> 06:15.613
 And VRCMMS runs maintenance, with work orders, preventive maintenance,
 
-05:43.113 --> 05:46.494
+06:15.613 --> 06:18.994
 planning and backlog, inventory and reliability.
 
-05:47.114 --> 05:48.490
+06:19.614 --> 06:20.990
 Last, how you run it.
 
-05:49.810 --> 05:52.984
+06:22.310 --> 06:25.484
 VRSmartPlan runs the same online in the browser,
 
-05:52.984 --> 05:55.962
+06:25.484 --> 06:28.462
 or installed on a Windows or Mac computer.
 
-05:55.982 --> 05:58.594
+06:28.482 --> 06:31.094
 Installed, it runs from the installed files,
 
-05:58.594 --> 06:02.771
+06:31.094 --> 06:35.271
 with no internet connection, no server and no administrator rights.
 
-06:02.791 --> 06:06.130
+06:35.291 --> 06:38.630
 And your records stay on the computer, in a private profile.
 
-06:07.050 --> 06:10.819
+06:39.550 --> 06:43.319
 Thirteen tools. One tool bar. That's VRSmartPlan.
 
-06:11.219 --> 06:13.055
+06:43.719 --> 06:45.555
 Request a demonstration.
