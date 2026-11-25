@@ -20,9 +20,20 @@ The Cost Book data sets in this folder are built by tools/build_costbook.py from
    reuse restriction); EIA AEO Electricity Market Module Table 3 and DoD UFC 3-701-01
    Tables 4-2 to 4-4 (U.S. federal, public domain).
 
+3. Power, energy, offshore and field-condition sets (tools/costbook_extra.py, 2026-11):
+   NREL 2023 Annual Technology Baseline (OEDI, CC BY 4.0: "NREL (2023). 2023 Annual Technology
+   Baseline. Golden, CO: National Renewable Energy Laboratory."); Lawrence Berkeley National
+   Laboratory, Utility-Scale Solar, 2025 Data Update (CC BY 4.0: Seel, J., Mulvaney Kemp, J. et
+   al.); PNNL Energy Storage Grand Challenge Cost and Performance Database and INL/RPT-24-77048
+   advanced reactor cost meta-analysis (U.S. DOE national laboratory publications, no reuse
+   restriction stated); BOEM Decommissioning Cost Estimates, FTA Capital Cost Database
+   (October 2026), GSA FY2027 per diem rates and EIA weekly retail fuel prices (U.S. federal,
+   public domain). Changes made: rows reshaped into tables, unit values worked out where shown
+   (for example O&M $ / kW, cost / quantity), and zero or blank estimates left out.
+
 Not included: values the DoD takes from commercial cost books (RSMeans, Marshall & Swift,
 CostWorks, the TRACES/MII Cost Book behind UFC 3-701-01 Table 6); Texas DOT and Florida
-DOT data; personal-use-only sources.
+DOT data; personal-use-only sources; Global Energy Monitor trackers (need a download form).
 
 Rates are references for estimating. Check each one against the current source before
 using it in a bid.
